@@ -62580,19 +62580,19 @@
                 var p = n.ammos[n.weaponIndex] / t.weapons[n.loadout[n.weaponIndex]].ammo;
                 n.isYou && .25 >= p && !n.weapon.nRing ? t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1) + .15 * (1 - p / .25)) : t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1))
             }
-            if (n.recoilForce += n.weapon.recoil, n.isYou) {
-                t.controls && t.controls.gamepad.connected && t.controls.gamepad.rumble(0, n.weapon.rumbleDur || 200, n.weapon.rumble || .5);
-                var u = o.randInt(0, 1) ? -n.weapon.recoilR : n.weapon.recoilR;
-                n.recoilX += u, n.recoilZ += u, n.recoilTween && n.recoilTween.stop();
-                var f = n.weapon.recoilAnim && n.weapon.recoilAnim.time || n.weapon.rate;
-                0 == n.aimVal && n.weapon.recoilAnim && n.weapon.recoilAnim.aimTime && (f = n.weapon.recoilAnim.aimTime), n.recoilTween = new TWEEN.Tween(n).to(n.weapon.recoilAnim || {}, .15 * f).easing(TWEEN.Easing.Linear.None).onComplete(function() {
-                    n.recoilTween = new TWEEN.Tween(n).to({
-                        recoilTweenY: 0,
-                        recoilTweenYM: 0,
-                        recoilTweenZ: 0
-                    }, .95 * f).easing(TWEEN.Easing.Back.Out).start()
-                }).start(), this.cancelInspect(n)
-            }
+            // if (n.recoilForce += n.weapon.recoil, n.isYou) {
+            //     t.controls && t.controls.gamepad.connected && t.controls.gamepad.rumble(0, n.weapon.rumbleDur || 200, n.weapon.rumble || .5);
+            //     var u = o.randInt(0, 1) ? -n.weapon.recoilR : n.weapon.recoilR;
+            //     n.recoilX += u, n.recoilZ += u, n.recoilTween && n.recoilTween.stop();
+            //     var f = n.weapon.recoilAnim && n.weapon.recoilAnim.time || n.weapon.rate;
+            //     0 == n.aimVal && n.weapon.recoilAnim && n.weapon.recoilAnim.aimTime && (f = n.weapon.recoilAnim.aimTime), n.recoilTween = new TWEEN.Tween(n).to(n.weapon.recoilAnim || {}, .15 * f).easing(TWEEN.Easing.Linear.None).onComplete(function() {
+            //         n.recoilTween = new TWEEN.Tween(n).to({
+            //             recoilTweenY: 0,
+            //             recoilTweenYM: 0,
+            //             recoilTweenZ: 0
+            //         }, .95 * f).easing(TWEEN.Easing.Back.Out).start()
+            //     }).start(), this.cancelInspect(n)
+            // }
             if (n.isYou && !t.hideWeapon) {
                 var d = n.weaponMeshes[n.weaponIndex],
                     g = 0 == n.aimVal && n.weapon.scope;
