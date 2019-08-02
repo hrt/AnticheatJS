@@ -1,4 +1,5 @@
 var closest;
+var __i;
 ! function(t) {
     var e = {};
 
@@ -17934,7 +17935,7 @@ var closest;
         swapTime: 300,
         aimSpeed: 0,
         spdMlt: .95,
-        ammo: 999,
+        ammo: 3,
         reload: 1500,
         dmg: 100,
         pierce: .2,
@@ -17992,7 +17993,7 @@ var closest;
         swapTime: 300,
         aimSpeed: 0,
         spdMlt: .95,
-        ammo: 999,
+        ammo: 3,
         reload: 1200,
         dmg: 24,
         pierce: 1,
@@ -18056,7 +18057,7 @@ var closest;
         swapTime: 350,
         aimSpeed: 0,
         spdMlt: 1.05,
-        ammo: 999,
+        ammo: 3,
         reload: 700,
         dmg: 20,
         range: 700,
@@ -18115,7 +18116,7 @@ var closest;
         swapTime: 300,
         aimSpeed: 0,
         spdMlt: 1.04,
-        ammo: 999,
+        ammo: 3,
         reload: 1200,
         dmg: 18,
         pierce: 1,
@@ -18176,7 +18177,7 @@ var closest;
         swapTime: 200,
         aimSpeed: 0,
         spdMlt: 1.04,
-        ammo: 999,
+        ammo: 3,
         reload: 900,
         dmg: 66,
         pierce: .85,
@@ -18238,7 +18239,7 @@ var closest;
         swapTime: 300,
         aimSpeed: 0,
         spdMlt: 1,
-        ammo: 999,
+        ammo: 3,
         shots: 5,
         reload: 1100,
         dmg: 50,
@@ -18298,7 +18299,7 @@ var closest;
         swapTime: 800,
         aimSpeed: 0,
         spdMlt: .79,
-        ammo: 999,
+        ammo: 3,
         reload: 3500,
         dmg: 20,
         pierce: 1,
@@ -18366,7 +18367,7 @@ var closest;
         swapTime: 400,
         aimSpeed: 0,
         spdMlt: 1,
-        ammo: 999,
+        ammo: 3,
         reload: 1500,
         dmg: 34,
         pierce: .2,
@@ -18429,7 +18430,7 @@ var closest;
         swapTime: 600,
         aimSpeed: 0,
         spdMlt: .9,
-        ammo: 999,
+        ammo: 3,
         reload: 1600,
         scale: .00076263407035176,
         leftHoldX: -.1,
@@ -18486,7 +18487,7 @@ var closest;
         swapTime: 300,
         aimSpeed: 0,
         spdMlt: 1.04,
-        ammo: 999,
+        ammo: 3,
         reload: 1200,
         dmg: 18,
         pierce: 1,
@@ -18546,7 +18547,7 @@ var closest;
         swapTime: 200,
         aimSpeed: 0,
         spdMlt: 1,
-        ammo: 999,
+        ammo: 3,
         reload: 1e3,
         dmg: 50,
         pierce: .85,
@@ -18605,7 +18606,7 @@ var closest;
         swapTime: 200,
         aimSpeed: 0,
         spdMlt: 1,
-        ammo: 999,
+        ammo: 3,
         reload: 1500,
         dmg: 50,
         pierce: .85,
@@ -18719,7 +18720,7 @@ var closest;
         swapTime: 200,
         aimSpeed: 0,
         spdMlt: 1,
-        ammo: 999,
+        ammo: 3,
         reload: 1e3,
         dmg: 100,
         pierce: 0,
@@ -66165,13 +66166,13 @@ var closest;
                 if (s.team != null && tmpObj.team == s.team) continue; // why would we want team mate esp
                 // if (!tmpObj.inView) continue;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
-                // todo: inview check
                 var distance = r.getDistance3D(b.x, b.y, b.z, tmpObj.x, tmpObj.y, tmpObj.z);
+                __i = i;
                 if (distance < closestDistance && tmpObj.inView) {
                     closestDistance = distance;
                     closest = tmpObj
                 }
-                c.save(), _.project(n.camera), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.scale(S, S), c.fillStyle = "rgba(0, 0, 0, 0.4)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
+                c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                 var x = s && s.team ? s.team : window.spectating ? 1 : 0;
                 c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
                 let t = tmpObj.name,
@@ -69656,14 +69657,19 @@ var closest;
             }, this.update = function(e) {
                 // aimbot
                 if (closest && closest.health && this.mouseDownR) {
-                    this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, closest.z1, closest.x1)
-                    h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, closest.x1, closest.y1 + 8, closest.z1)
+                    // todo: prediciton
+                    var targetX = closest.x1;
+                    // var targetY = closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is head height
+                    var targetY = closest.y1 + 8 - closest.crouchVal * __i.crouchDst; // this is chest/neck
+                    var targetZ = closest.z1;
+                    this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, targetZ, targetX)
+                    h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, targetX, targetY, targetZ)
 
                     this.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3);
                     this.xDr = (this.object.rotation.y % Math.PI2).round(3)
                 }
 
-                if (this.target) {
+                if (this.target && e) {
                     var n = r.getAngleDist(this.object.rotation.y, this.target.yD);
                     this.object.rotation.y += n * e * a.camChaseTrn, n = r.getAngleDist(h.pitchObject.rotation.x, this.target.xD), this.pitchObject.rotation.x += n * e * a.camChaseTrn, n = r.getDistance3D(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z) * e * a.camChaseSpd;
                     var i = r.getDirection(this.object.position.z, this.object.position.x, this.target.z, this.target.x),
