@@ -1,3 +1,4 @@
+var closest;
 ! function(t) {
     var e = {};
 
@@ -17931,7 +17932,7 @@
         type: 0,
         scope: !0,
         swapTime: 300,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: .95,
         ammo: 999,
         reload: 1500,
@@ -17958,7 +17959,7 @@
         inspectM: .1,
         muzOff: 8,
         muzMlt: 1.6,
-        rate: 900,
+        rate: 0,
         spread: 0,
         zoom: 2.7,
         leanMlt: 1.5,
@@ -17989,7 +17990,7 @@
         zRot: 1,
         type: 0,
         swapTime: 300,
-        aimSpeed: 130,
+        aimSpeed: 0,
         spdMlt: .95,
         ammo: 999,
         reload: 1200,
@@ -18019,7 +18020,7 @@
         muzOff: 5.1,
         muzOffY: -.05,
         muzMlt: 1.4,
-        rate: 110,
+        rate: 0,
         spread: 0,
         minSpread: 5,
         zoom: 1.6,
@@ -18053,7 +18054,7 @@
         type: 1,
         shine: 30,
         swapTime: 350,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1.05,
         ammo: 999,
         reload: 700,
@@ -18082,7 +18083,7 @@
         muzOff: 1.5,
         muzOffY: 0,
         muzMlt: .95,
-        rate: 150,
+        rate: 0,
         spread: 0,
         zoom: 1.4,
         leanMlt: 1,
@@ -18112,7 +18113,7 @@
         noAo: !0,
         type: 0,
         swapTime: 300,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 999,
         reload: 1200,
@@ -18140,7 +18141,7 @@
         caseZOff: -.4,
         muzOff: 2.15,
         muzOffY: .1,
-        rate: 90,
+        rate: 0,
         spread: 0,
         minSpread: 5,
         zoom: 1.65,
@@ -18173,7 +18174,7 @@
         kill: ["", 50],
         type: 0,
         swapTime: 200,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 999,
         reload: 900,
@@ -18201,7 +18202,7 @@
         muzOffY: .2,
         muzMlt: .95,
         range: 700,
-        rate: 390,
+        rate: 0,
         spread: 0,
         zoom: 1.4,
         leanMlt: 1.6,
@@ -18235,7 +18236,7 @@
         physRang: 35,
         physPow: .085,
         swapTime: 300,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1,
         ammo: 999,
         shots: 5,
@@ -18263,7 +18264,7 @@
         muzOff: 6,
         muzMlt: 1.8,
         range: 240,
-        rate: 400,
+        rate: 0,
         innac: 110,
         spread: 0,
         minSpread: 20,
@@ -18295,7 +18296,7 @@
         zRot: .75,
         noAo: !0,
         swapTime: 800,
-        aimSpeed: 200,
+        aimSpeed: 0,
         spdMlt: .79,
         ammo: 999,
         reload: 3500,
@@ -18328,7 +18329,7 @@
         muzOff: 5.5,
         muzOffY: -.14,
         muzMlt: 1.7,
-        rate: 120,
+        rate: 0,
         spread: 0,
         minSpread: 10,
         zoom: 1.3,
@@ -18363,7 +18364,7 @@
         type: 0,
         noAo: !0,
         swapTime: 400,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1,
         ammo: 999,
         reload: 1500,
@@ -18392,7 +18393,7 @@
         muzOff: 4,
         muzOffY: -.05,
         muzMlt: 1.1,
-        rate: 120,
+        rate: 0,
         spread: 0,
         caseZOff: -1.3,
         zoom: 2.1,
@@ -18426,7 +18427,7 @@
         projectile: 0,
         type: 0,
         swapTime: 600,
-        aimSpeed: 200,
+        aimSpeed: 0,
         spdMlt: .9,
         ammo: 999,
         reload: 1600,
@@ -18451,7 +18452,7 @@
         muzOff: 5,
         muzOffY: 0,
         muzMlt: 1.5,
-        rate: 1,
+        rate: 0,
         spread: 0,
         minSpread: 15,
         zoom: 1.5,
@@ -18483,7 +18484,7 @@
         akimbo: !0,
         type: 0,
         swapTime: 300,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 999,
         reload: 1200,
@@ -18512,7 +18513,7 @@
         caseYOff: -.15,
         caseZOff: -.4,
         muzOff: 3.6,
-        rate: 60,
+        rate: 0,
         spread: 0,
         spreadInc: 1.5,
         minSpread: 10,
@@ -18543,7 +18544,7 @@
         kill: ["", 50],
         type: 1,
         swapTime: 200,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1,
         ammo: 999,
         reload: 1e3,
@@ -18569,7 +18570,7 @@
         muzOff: 2,
         muzMlt: 1.1,
         range: 700,
-        rate: 400,
+        rate: 0,
         spread: 0,
         jYMlt: .5,
         zoom: 1.4,
@@ -18602,7 +18603,7 @@
         kill: ["", 50],
         type: 1,
         swapTime: 200,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1,
         ammo: 999,
         reload: 1500,
@@ -18633,7 +18634,7 @@
         muzMlt: 1.1,
         jYMlt: .8,
         range: 700,
-        rate: 150,
+        rate: 0,
         spread: 0,
         zoom: 1.4,
         leanMlt: 1.6,
@@ -18671,8 +18672,8 @@
         },
         type: 1,
         swapTime: 350,
-        aimSpeed: 120,
-        rate: 250,
+        aimSpeed: 0,
+        rate: 0,
         dmg: 50,
         dmgDrop: 0,
         range: 15,
@@ -18716,7 +18717,7 @@
         type: 0,
         projectile: 1,
         swapTime: 200,
-        aimSpeed: 120,
+        aimSpeed: 0,
         spdMlt: 1,
         ammo: 999,
         reload: 1e3,
@@ -18746,7 +18747,7 @@
         muzMlt: 1.1,
         jYMlt: .95,
         range: 700,
-        rate: 150,
+        rate: 0,
         spread: 0,
         zoom: 1.4,
         leanMlt: .3,
@@ -66156,12 +66157,20 @@
             y = "none" == menuHolder.style.display && "none" == endUI.style.display && "none" == killCardHolder.style.display;
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
         var b = n.camera.getWorldPosition();
+        var closestDistance = Number.POSITIVE_INFINITY;
         if ("none" == menuHolder.style.display && "none" == endUI.style.display)
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
+                if (tmpObj.team == s.team) continue; // why would we want team mate esp
                 // if (!tmpObj.inView) continue;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
+                // todo: inview check
+                var distance = r.getDistance3D(b.x, b.y, b.z, tmpObj.x, tmpObj.y, tmpObj.z);
+                if (distance < closestDistance && tmpObj.inView) {
+                    closestDistance = distance;
+                    closest = tmpObj
+                }
                 c.save(), _.project(n.camera), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.scale(S, S), c.fillStyle = "rgba(0, 0, 0, 0.4)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                 var x = s && s.team ? s.team : window.spectating ? 1 : 0;
                 c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
@@ -66175,6 +66184,7 @@
                     h = l + p + (a ? c.measureText(a).width : 0);
                 c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
             }
+
         if (e.mode && e.mode.objective && y && 0 < e.map.manager.objectives.length) {
             var M = !0,
                 _ = e.map.manager.objectives[e.activeObjective];
@@ -69644,12 +69654,21 @@
                 var n = (this.keys[this.crouchKey] ? .08 : .04) * this.specSpeed * e;
                 h.object.position.add(b.multiplyScalar(n)), t.updateFrustum()
             }, this.update = function(e) {
+                // aimbot
+                if (closest && !this.target && this.mouseDownR) {
+                    this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, closest.z1, closest.x1)
+                    h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, closest.x1, closest.y1, closest.z1)
+
+                    this.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3);
+                    this.xDr = (this.object.rotation.y % Math.PI2).round(3)
+                }
+
                 if (this.target) {
                     var n = r.getAngleDist(this.object.rotation.y, this.target.yD);
                     this.object.rotation.y += n * e * a.camChaseTrn, n = r.getAngleDist(h.pitchObject.rotation.x, this.target.xD), this.pitchObject.rotation.x += n * e * a.camChaseTrn, n = r.getDistance3D(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z) * e * a.camChaseSpd;
                     var i = r.getDirection(this.object.position.z, this.object.position.x, this.target.z, this.target.x),
                         s = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z);
-                    this.object.position.x -= n * Math.sin(i) * Math.cos(s), this.object.position.y += n * Math.sin(s), this.object.position.z -= n * Math.cos(i) * Math.cos(s), t.updateFrustum()
+                    this.object.position.x -= n * Math.sin(i) * Math.cos(s), this.object.position.y += n * Math.sin(s), this.object.position.z -= n * Math.cos(i) * Math.cos(s), t.updateFrustum();
                 }
             }, this.coRHQyeRr = function(t, e, n) {
                 var i = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, t, e, n),
