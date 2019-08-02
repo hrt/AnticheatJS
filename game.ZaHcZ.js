@@ -62609,7 +62609,7 @@
             }
             if (null == n.weapon.projectile)
                 for (var b = n.weapon.physPow ? -1 : 0; b < (n.weapon.shots || 1); ++b) {
-                    var w = 0 <= b ? (n.spread + (n.weapon.innac || 0)) * c.spreadAdj : 0,
+                    var w = 0,
                         x = n.xDire + o.randFloat(-w, w),
                         M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w),
                         _ = n.weapon.range;
