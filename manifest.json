@@ -1,0 +1,18 @@
+{
+  "name": "KrunerIo multi hack",
+  "version": "0.9.5",
+  "manifest_version": 2,
+  "description": "https://github.com/hrt",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://krunker.io/*",
+    "background"
+  ],
+  "web_accessible_resources": [
+    "game.js"
+  ],
+  "background": {
+    "scripts": ["run.js"]
+  }
+}

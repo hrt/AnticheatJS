@@ -69607,10 +69607,10 @@ var __i;
             // aimbot
             if (closest && closest.health && this.mouseDownR) {
                 // todo: prediciton
-                var targetX = closest.x1 - closest.oldX + closest.x1;
+                var targetX = /*closest.x1 - closest.oldX  +*/ closest.x1;
                 // var targetY = closest.y1 - closest.oldX + closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is head height
-                var targetY = closest.y1 - closest.oldY + closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is chest/neck
-                var targetZ = closest.z1 - closest.oldZ + closest.z1;
+                var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is chest/neck
+                var targetZ = /*closest.z1 - closest.oldZ +*/ closest.z1;
                 this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, targetZ, targetX)
                 h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, targetX, targetY, targetZ)
 
