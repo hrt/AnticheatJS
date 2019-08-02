@@ -62576,7 +62576,7 @@
         var m = [];
         this.shoot = function(n, i) {
             var r = !1;
-            if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex]--, n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
+            if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex], n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
                 var p = n.ammos[n.weaponIndex] / t.weapons[n.loadout[n.weaponIndex]].ammo;
                 n.isYou && .25 >= p && !n.weapon.nRing ? t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1) + .15 * (1 - p / .25)) : t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1))
             }
@@ -62700,7 +62700,7 @@
                         a.physObj(Q, tt, et, q, K, Math.min(R + $, c.tracerMaxDst), n.weapon && n.weapon.trail, 0, n)
                     }
                 } else if (l) {
-                    w = (n.spread + (n.weapon.innac || 0)) * c.spreadAdj, x = n.xDire + o.randFloat(-w, w), M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w);
+                    w = 0, x = n.xDire + o.randFloat(-w, w), M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w);
                     t.projectiles.init(n.x, n.y + n.height - c.cameraHeight, n.z, x, M, n.weapon.projectile, n)
                 } r && l && t.incStat("h", n)
         }, this.spray = function(e) {
