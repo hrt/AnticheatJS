@@ -62578,7 +62578,7 @@ var __i;
         var m = [];
         this.shoot = function(n, i) {
             var r = !1;
-            if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex], n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
+            if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex]--, n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
                 var p = n.ammos[n.weaponIndex] / t.weapons[n.loadout[n.weaponIndex]].ammo;
                 n.isYou && .25 >= p && !n.weapon.nRing ? t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1) + .15 * (1 - p / .25)) : t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1))
             }
@@ -66168,6 +66168,7 @@ var __i;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = r.getDistance3D(b.x, b.y, b.z, tmpObj.x, tmpObj.y, tmpObj.z);
                 __i = i;
+                closest = null
                 if (distance < closestDistance && tmpObj.inView) {
                     closestDistance = distance;
                     closest = tmpObj
@@ -69603,6 +69604,19 @@ var __i;
             document.addEventListener("pointerlockchange", f, !1), document.addEventListener("mozpointerlockchange", f, !1), document.addEventListener("webkitpointerlockchange", f, !1)
         }
         this.isn = 0, this.tmpInputs = [], this.getISN = function() {
+            // aimbot
+            if (closest && closest.health && this.mouseDownR) {
+                // todo: prediciton
+                var targetX = closest.x1 - closest.oldX + closest.x1;
+                // var targetY = closest.y1 - closest.oldX + closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is head height
+                var targetY = closest.y1 - closest.oldY + closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is chest/neck
+                var targetZ = closest.z1 - closest.oldZ + closest.z1;
+                this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, targetZ, targetX)
+                h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, targetX, targetY, targetZ)
+
+                this.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3);
+                this.xDr = (this.object.rotation.y % Math.PI2).round(3)
+            }
             return this.isn++
         }, this.masterLock = !0, this.sensMlt = 1, this.sensAimMlt = 1, this.locked = !1, this.enabled = !1, t.camera.rotation.set(0, 0, 0), this.pitchObject = new e.Object3D, this.pitchObject.add(t.camera), this.object = new e.Object3D, this.object.add(this.pitchObject);
         var d = Math.PI / 2,
@@ -69655,21 +69669,7 @@ var __i;
                 var n = (this.keys[this.crouchKey] ? .08 : .04) * this.specSpeed * e;
                 h.object.position.add(b.multiplyScalar(n)), t.updateFrustum()
             }, this.update = function(e) {
-                // aimbot
-                if (closest && closest.health && this.mouseDownR) {
-                    // todo: prediciton
-                    var targetX = closest.x1;
-                    // var targetY = closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is head height
-                    var targetY = closest.y1 + 8 - closest.crouchVal * __i.crouchDst; // this is chest/neck
-                    var targetZ = closest.z1;
-                    this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, targetZ, targetX)
-                    h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, targetX, targetY, targetZ)
-
-                    this.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3);
-                    this.xDr = (this.object.rotation.y % Math.PI2).round(3)
-                }
-
-                if (this.target && e) {
+                if (this.target) {
                     var n = r.getAngleDist(this.object.rotation.y, this.target.yD);
                     this.object.rotation.y += n * e * a.camChaseTrn, n = r.getAngleDist(h.pitchObject.rotation.x, this.target.xD), this.pitchObject.rotation.x += n * e * a.camChaseTrn, n = r.getDistance3D(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z) * e * a.camChaseSpd;
                     var i = r.getDirection(this.object.position.z, this.object.position.x, this.target.z, this.target.x),
