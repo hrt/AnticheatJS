@@ -66171,7 +66171,7 @@ var __r;
                 // if (!tmpObj.inView) continue;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                closest = null
+                // closest = null
                 if (distance < closestDistance && tmpObj.inView) {
                     closestDistance = distance;
                     closest = tmpObj
@@ -66194,18 +66194,30 @@ var __r;
             }
 
             // aimbot
-            var target = closest ? closest : closest_outOfView;
-            if (target && target.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
-                // todo: prediciton
-                var targetX = /*target.x1 - target.oldX  +*/ target.x1;
-                // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
-                var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
-                var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
-                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
-                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+            // var target = closest;
+            // if (target/* && target.health*/ && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+            //     // todo: prediciton
+            //     var targetX = /*target.x1 - target.oldX  +*/ target.x1;
+            //     // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
+            //     var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
+            //     var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
+            //     __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+            //     __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
 
-                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
+            //     __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+            //     __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
+            // }
+
+            // bhop
+            if (__h && s && __this.mouseDownX) {
+                // __h.jumpKey
+                // __h.crouchKey
+                __h.keys[__h.crouchKey] = (s.canSlide && !s.didJump);
+                if (!s.didJump) {
+                    __h.keys[__h.jumpKey] = 1;
+                } else {
+                    __h.keys[__h.jumpKey] = 0;
+                }
             }
             
         }
@@ -69648,6 +69660,8 @@ var __r;
         u.addEventListener("mousemove", m, !1);
         var g = function(t) {
             if (!h.masterLock) switch (h.enabled || h.toggle(!0), document.activeElement == chatInput && chatInput.blur(), t.which) {
+                case 5:
+                    h.mouseDownX = 1
                 case 3:
                     h.mouseDownR = 1;
                     break;
@@ -69660,6 +69674,8 @@ var __r;
         }, !1);
         var v = function(t) {
             if (!h.locked) switch (t.which) {
+                case 5:
+                    h.mouseDownX = 0
                 case 3:
                     h.mouseDownR = 0;
                     break;
