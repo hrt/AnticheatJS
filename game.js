@@ -66194,19 +66194,19 @@ var __r;
             }
 
             // aimbot
-            // var target = closest;
-            // if (target/* && target.health*/ && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
-            //     // todo: prediciton
-            //     var targetX = /*target.x1 - target.oldX  +*/ target.x1;
-            //     // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
-            //     var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
-            //     var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
-            //     __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
-            //     __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+            var target = closest;
+            if (target/* && target.health*/ && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+                // todo: prediciton
+                var targetX = /*target.x1 - target.oldX  +*/ target.x1;
+                // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
+                var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
+                var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
+                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
 
-            //     __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-            //     __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
-            // }
+                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
+            }
 
             // bhop
             if (__h && s && __this.mouseDownX) {
@@ -69662,6 +69662,7 @@ var __r;
             if (!h.masterLock) switch (h.enabled || h.toggle(!0), document.activeElement == chatInput && chatInput.blur(), t.which) {
                 case 5:
                     h.mouseDownX = 1
+                    break;
                 case 3:
                     h.mouseDownR = 1;
                     break;
@@ -69676,6 +69677,7 @@ var __r;
             if (!h.locked) switch (t.which) {
                 case 5:
                     h.mouseDownX = 0
+                    break;
                 case 3:
                     h.mouseDownR = 0;
                     break;
