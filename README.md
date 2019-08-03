@@ -12,6 +12,8 @@ http://krunker.io v1.4.7
 - [x] Every day is sunny
 - [x] Auto reload
 - [x] Recoil control ~ new
+- [x] Visibility check
+- [x] Auto shoot & scope
 - [ ] Aimbot prediction
 - [ ] Menu
 - [ ] Configurable keybindings

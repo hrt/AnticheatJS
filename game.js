@@ -66237,13 +66237,11 @@ var __r;
                 // if (!tmpObj.inView) continue; // esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                // closest = null
-                if (distance < closestDistance /*&& tmpObj.inView*/) {
+                closest = null
+                var inView = null == e.canSee(s, tmpObj.x, tmpObj.y, tmpObj.z);
+                if (distance < closestDistance && inView && tmpObj.health > 0) {
                     closestDistance = distance;
                     closest = tmpObj
-                } else if (distance < closestDistance_outOfView && !tmpObj.inView) {
-                    closestDistance_outOfView = distance;
-                    closest_outOfView = tmpObj
                 }
                 c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                 var x = s && s.team ? s.team : window.spectating ? 1 : 0;
@@ -66261,17 +66259,21 @@ var __r;
 
             // aimbot
             var target = closest;
-            if (target && target.active && target.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+            if (target && target.active && target.health && __this && __h && __r && s && s.isYou /*&& __this.mouseDownR*/) {
                 // todo: prediciton
                 var targetX = target.x2;
-                var targetY = target.y2 - 1.5 + i.playerHeight - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
+                var targetY = target.y2 + i.playerHeight - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                console.log(s.recoilAnimY)
                 __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                 __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                 __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                 __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                __h.keys[__h.aimKey] = 1 
+                __this.mouseDownL = 1
+            } else if (__h && __this) {
+                __this.mouseDownL = 0
+                __h.keys[__h.aimKey] = 0
             }
 
 
@@ -68538,7 +68540,7 @@ var __r;
                         }
                         U.push(t[e]), e++
                     } P = t
-            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI)), _.singlePlayer && T.y <= _.map.deathY && Mn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
+            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(0), _.singlePlayer && T.y <= _.map.deathY && Mn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
             function(t) {
                 var e = "";
                 if (T && T.active)
