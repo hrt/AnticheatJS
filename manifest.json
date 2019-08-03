@@ -10,7 +10,7 @@
     "background"
   ],
   "web_accessible_resources": [
-    "game.js"
+    "game.js", "zip-ext.js", "zip.js"
   ],
   "background": {
     "scripts": ["run.js"]
