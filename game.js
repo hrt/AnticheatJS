@@ -66274,7 +66274,13 @@ var __r;
                 __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
             }
 
-            // e.players.simulateShot(s);
+
+            // auto reload
+            if (s && __h && s.ammos[s.weaponIndex] == 0 && __h.keys[__h.reloadKey] == 0) {
+                __h.keys[__h.reloadKey] = 1
+            } else {
+                __h.keys[__h.reloadKey] = 0
+            }
 
             // bhop
             if (__h && s && __this.mouseDownX) {
@@ -66285,6 +66291,7 @@ var __r;
                     __h.keys[__h.jumpKey] = 0;
                 }
             }
+
             
         }
 

@@ -10,6 +10,7 @@ http://krunker.io v1.4.7
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
 - [x] Every day is sunny
+- [x] Auto reload
 - [ ] Aimbot prediction
 - [ ] Menu
 - [ ] Configurable keybindings
