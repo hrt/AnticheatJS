@@ -66329,9 +66329,11 @@ window.addEventListener("keyup", function(e) {
                 __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                 __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                 __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
-                __h.keys[__h.aimKey] = 1;
-                __this.mouseDownL = 1;
-            } else if (__h != null && __this != null) {
+                if (state['Aimkey'].active == 0) {
+                    __h.keys[__h.aimKey] = 1;
+                    __this.mouseDownL = 1;
+                }
+            } else if (__h != null && __this != null && state['Aimkey'].active == 0) {
                 __this.mouseDownL = 0;
                 __h.keys[__h.aimKey] = 0;
             }
