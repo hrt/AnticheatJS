@@ -1,16 +1,21 @@
 # KrunkerMultihack
 http://krunker.io
 
-
-Gameplay: https://youtu.be/R6LBPZxtf3A
-[![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=Fvmn3Obuelo)
-
-- [x] Aimbot (right mouse buttom)
+## Features
+- [x] Aimbot (hold right mouse button)
 - [x] snaplines esp & name esp
 - [x] no visual recoil
 - [x] no quick scope delay
-- [x] auto bunnyhop / slidejump (mouse button 5)
+- [x] perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
+- [ ] Aimbot prediction
+- [ ] Menu
+- [ ] Configurable keybindings
+- [ ] Recoil control
+- [ ] Box esp
+
+Gameplay: https://youtu.be/R6LBPZxtf3A
+[![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=Fvmn3Obuelo)
 
 
 Came across the game this morning and quit it this evening: 
