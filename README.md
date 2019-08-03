@@ -14,9 +14,10 @@ http://krunker.io v1.4.7
 - [x] Recoil control ~ new
 - [x] Visibility check
 - [x] Auto shoot & scope
+- [x] Menu
+- [x] Configurable keybindings
+- [ ] Fix auto shoot for pistols / snipers
 - [ ] Aimbot prediction
-- [ ] Menu
-- [ ] Configurable keybindings
 - [ ] Box esp
 
 Gameplay: https://youtu.be/R6LBPZxtf3A

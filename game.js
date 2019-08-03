@@ -3,6 +3,29 @@ var closest_outOfView;
 var __this;
 var __h;
 var __r;
+var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'OFF': null}
+var state = {
+                'Target': {active: 0, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
+                'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB'], str:'[H]'},
+                'ESP': {active: 0, a:['ON', 'OFF'], str:'[J]'},
+                'BHOP': {active: 0, a:['ON', 'OFF'], str:'[K]'}};
+window.addEventListener("keyup", function(e) {
+    switch (e.which) {
+        case 71:
+        state['Target'].active = (state['Target'].active + 1) % 3
+        break;
+        case 72:
+        state['Aimkey'].active = (state['Aimkey'].active + 1) % 4;
+        break;
+        case 74:
+        state['ESP'].active = (state['ESP'].active + 1) % 2;
+        break;
+        case 75:
+        state['BHOP'].active = (state['BHOP'].active + 1) % 2;
+        break;
+    }
+});
+
 ! function(t) {
     var e = {};
 
@@ -66227,56 +66250,90 @@ var __r;
             v = o.height / t,
             y = "none" == menuHolder.style.display && "none" == endUI.style.display && "none" == killCardHolder.style.display;
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
+
+        // menu
+        c.fillStyle = 'rgba(0,0,0,0.2)';
+        c.fillRect(10, 260, 20 + 200 + 65, 270);
+        var currentx = 20;
+        var currenty = 320;
+        c.font = "30px GameFont";
+        c.textAlign = "left";
+        c.fillStyle = 'rgba(128,128,0,0.8)';
+        c.fillText("Kaboom.io", currentx, currenty);
+        c.fillStyle = 'rgba(0,128,0,0.8)';
+        c.font = "20px GameFont";
+        for (var key in state) {
+            if (state.hasOwnProperty(key)) {
+                c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 50);
+                c.fillText(state[key].a[state[key].active], currentx + 200, currenty);
+            }
+        }
+
+
         var b = n.camera.getWorldPosition();
+        closest = null
         var closestDistance = Number.POSITIVE_INFINITY;
-        var closestDistance_outOfView = Number.POSITIVE_INFINITY;
         if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
                 if (s.team != null && tmpObj.team == s.team) continue; // why would we want team mate esp
+                if (!s) break;
+                if (!s.active) break;
                 // if (!tmpObj.inView) continue; // esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                closest = null
                 var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + i.playerHeight + tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
-                if (inView)
-                    console.log(inView);
                 if (distance < closestDistance && inView && tmpObj.health > 0) {
                     closestDistance = distance;
                     closest = tmpObj
                 }
-                c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
-                var x = s && s.team ? s.team : window.spectating ? 1 : 0;
-                c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
-                let t = tmpObj.name,
-                    a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
-                    o = tmpObj.level;
-                c.font = "30px GameFont";
-                let l = o ? c.measureText(o).width + 10 : 0;
-                c.font = "20px GameFont";
-                let p = c.measureText(t).width + (a ? 5 : 0),
-                    h = l + p + (a ? c.measureText(a).width : 0);
-                c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
+
+                if (stringToInt[state['ESP'].a[state['ESP'].active]] || tmpObj.inView)
+                {
+                    c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
+                    var x = s && s.team ? s.team : window.spectating ? 1 : 0;
+                    c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
+                    let t = tmpObj.name,
+                        a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
+                        o = tmpObj.level;
+                    c.font = "30px GameFont";
+                    let l = o ? c.measureText(o).width + 10 : 0;
+                    c.font = "20px GameFont";
+                    let p = c.measureText(t).width + (a ? 5 : 0),
+                        h = l + p + (a ? c.measureText(a).width : 0);
+                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
+                }
             }
 
-            // aimbot
             var target = closest;
-            if (target && target.active && target.health && __this && __h && __r && s && s.isYou /*&& __this.mouseDownR*/) {
-                // todo: prediciton
+            var aimKey;
+            if (state['Aimkey'].active == 0) {
+                aimKey = true;
+            } else if (state['Aimkey'].active == 1) {
+                aimKey = __this.mouseDownL;
+            } else if (state['Aimkey'].active == 2) {
+                aimKey = __this.mouseDownR;
+            } else if (state['Aimkey'].active == 3) {
+                aimKey = __this.mouseDownX;
+            }
+            // aimbot
+            if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2)) {
+                // todo: prediction
                 var targetX = target.x2;
-                var targetY = target.y2 + i.playerHeight - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
+                var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
+                console.log(targetY)
                 __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                 __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                 __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                 __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
-                __h.keys[__h.aimKey] = 1 
-                __this.mouseDownL = 1
-            } else if (__h && __this) {
-                __this.mouseDownL = 0
-                __h.keys[__h.aimKey] = 0
+                __h.keys[__h.aimKey] = 1;
+                __this.mouseDownL = 1;
+            } else if (__h != null && __this != null) {
+                __this.mouseDownL = 0;
+                __h.keys[__h.aimKey] = 0;
             }
 
 
@@ -66288,7 +66345,7 @@ var __r;
             }
 
             // bhop
-            if (__h && s && __this.mouseDownX) {
+            if (__h && s && stringToInt[state['BHOP'].a[state['BHOP'].active]]) {
                 __h.keys[__h.crouchKey] = (s.canSlide && !s.didJump);
                 if (!s.didJump) {
                     __h.keys[__h.jumpKey] = 1;
@@ -69718,8 +69775,10 @@ var __r;
         }
         this.isn = 0, this.tmpInputs = [], this.getISN = function() {
             __this = this;
-            __h = h;
-            __r = r;
+            if (h)
+                __h = h;
+            if (r)
+                __r = r;
             return this.isn++
         }, this.masterLock = !0, this.sensMlt = 1, this.sensAimMlt = 1, this.locked = !1, this.enabled = !1, t.camera.rotation.set(0, 0, 0), this.pitchObject = new e.Object3D, this.pitchObject.add(t.camera), this.object = new e.Object3D, this.object.add(this.pitchObject);
         var d = Math.PI / 2,
