@@ -1,5 +1,7 @@
 var closest;
-var __i;
+var __this;
+var __h;
+var __r;
 ! function(t) {
     var e = {};
 
@@ -66159,17 +66161,16 @@ var __i;
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
         var b = n.camera.getWorldPosition();
         var closestDistance = Number.POSITIVE_INFINITY;
-        if ("none" == menuHolder.style.display && "none" == endUI.style.display)
+        if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
                 if (s.team != null && tmpObj.team == s.team) continue; // why would we want team mate esp
                 // if (!tmpObj.inView) continue;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
-                var distance = r.getDistance3D(b.x, b.y, b.z, tmpObj.x, tmpObj.y, tmpObj.z);
-                __i = i;
-                closest = null
-                if (distance < closestDistance && tmpObj.inView) {
+                var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
+                // closest = null
+                if (distance < closestDistance/* && tmpObj.inView*/) {
                     closestDistance = distance;
                     closest = tmpObj
                 }
@@ -66186,6 +66187,22 @@ var __i;
                     h = l + p + (a ? c.measureText(a).width : 0);
                 c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
             }
+
+            // aimbot
+            if (closest && closest.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+                // todo: prediciton
+                var targetX = /*closest.x1 - closest.oldX  +*/ closest.x1;
+                // var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + i.playerHeight - closest.crouchVal * i.crouchDst; //  is head
+                var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + 8 - closest.crouchVal * i.crouchDst; //  is chest/neck
+                var targetZ = /*closest.z1 - closest.oldZ +*/ closest.z1;
+                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+
+                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
+            }
+            
+        }
 
         if (e.mode && e.mode.objective && y && 0 < e.map.manager.objectives.length) {
             var M = !0,
@@ -69604,19 +69621,9 @@ var __i;
             document.addEventListener("pointerlockchange", f, !1), document.addEventListener("mozpointerlockchange", f, !1), document.addEventListener("webkitpointerlockchange", f, !1)
         }
         this.isn = 0, this.tmpInputs = [], this.getISN = function() {
-            // aimbot
-            if (closest && closest.health && this.mouseDownR) {
-                // todo: prediciton
-                var targetX = /*closest.x1 - closest.oldX  +*/ closest.x1;
-                // var targetY = closest.y1 - closest.oldX + closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is head height
-                var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + __i.playerHeight - closest.crouchVal * __i.crouchDst; // this is chest/neck
-                var targetZ = /*closest.z1 - closest.oldZ +*/ closest.z1;
-                this.object.rotation.y = r.getDirection(this.object.position.z, this.object.position.x, targetZ, targetX)
-                h.pitchObject.rotation.x = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, targetX, targetY, targetZ)
-
-                this.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3);
-                this.xDr = (this.object.rotation.y % Math.PI2).round(3)
-            }
+            __this = this;
+            __h = h;
+            __r = r;
             return this.isn++
         }, this.masterLock = !0, this.sensMlt = 1, this.sensAimMlt = 1, this.locked = !1, this.enabled = !1, t.camera.rotation.set(0, 0, 0), this.pitchObject = new e.Object3D, this.pitchObject.add(t.camera), this.object = new e.Object3D, this.object.add(this.pitchObject);
         var d = Math.PI / 2,
