@@ -1,4 +1,5 @@
 var closest;
+var closest_outOfView;
 var __this;
 var __h;
 var __r;
@@ -66161,6 +66162,7 @@ var __r;
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
         var b = n.camera.getWorldPosition();
         var closestDistance = Number.POSITIVE_INFINITY;
+        var closestDistance_outOfView = Number.POSITIVE_INFINITY;
         if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
@@ -66169,10 +66171,13 @@ var __r;
                 // if (!tmpObj.inView) continue;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                // closest = null
-                if (distance < closestDistance/* && tmpObj.inView*/) {
+                closest = null
+                if (distance < closestDistance && tmpObj.inView) {
                     closestDistance = distance;
                     closest = tmpObj
+                } else if (distance < closestDistance_outOfView && !tmpObj.inView) {
+                    closestDistance_outOfView = distance;
+                    closest_outOfView = tmpObj
                 }
                 c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                 var x = s && s.team ? s.team : window.spectating ? 1 : 0;
@@ -66189,12 +66194,13 @@ var __r;
             }
 
             // aimbot
-            if (closest && closest.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+            var target = closest ? closest : closest_outOfView;
+            if (target && target.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
                 // todo: prediciton
-                var targetX = /*closest.x1 - closest.oldX  +*/ closest.x1;
-                // var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + i.playerHeight - closest.crouchVal * i.crouchDst; //  is head
-                var targetY = /*closest.y1 - closest.oldY +*/ closest.y1 + 8 - closest.crouchVal * i.crouchDst; //  is chest/neck
-                var targetZ = /*closest.z1 - closest.oldZ +*/ closest.z1;
+                var targetX = /*target.x1 - target.oldX  +*/ target.x1;
+                // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
+                var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
+                var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
                 __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
 
