@@ -9,6 +9,7 @@ http://krunker.io v1.4.7
 - [x] No weapon swap delay
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
+- [x] Every day is sunny
 - [ ] Aimbot prediction
 - [ ] Menu
 - [ ] Configurable keybindings
