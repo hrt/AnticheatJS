@@ -12,3 +12,10 @@ Came across the game this morning and quit it this evening:
 
 
 Load this extension on chrome and you're good to go.
+
+# Anti cheat
+Their "anti script" is mainly the last few lines of the js file ```zip.js```. Any script that is loaded with a source from ```jsdelivr``` or ```raw.githack.com``` gets flagged. This is easy to avoid if need be.
+
+```setInterval(function() {
+    document.querySelectorAll("script[src*='jsdelivr'], script[src*='raw.githack.com']").length && (document.body.innerHTML = "<div style='font-size:28px;margin-top:30px;width:100%;text-align:center'>SCRIPT DETECTED</div>")
+}, 1E4);```
