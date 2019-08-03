@@ -62651,19 +62651,19 @@ var __r;
                 var p = n.ammos[n.weaponIndex] / t.weapons[n.loadout[n.weaponIndex]].ammo;
                 n.isYou && .25 >= p && !n.weapon.nRing ? t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1) + .15 * (1 - p / .25)) : t.playSound(n.weapon.sound, .85, n, !1, o.randFloat(.9, 1))
             }
-            // if (n.recoilForce += n.weapon.recoil, n.isYou) {
-            //     t.controls && t.controls.gamepad.connected && t.controls.gamepad.rumble(0, n.weapon.rumbleDur || 200, n.weapon.rumble || .5);
-            //     var u = o.randInt(0, 1) ? -n.weapon.recoilR : n.weapon.recoilR;
-            //     n.recoilX += u, n.recoilZ += u, n.recoilTween && n.recoilTween.stop();
-            //     var f = n.weapon.recoilAnim && n.weapon.recoilAnim.time || n.weapon.rate;
-            //     0 == n.aimVal && n.weapon.recoilAnim && n.weapon.recoilAnim.aimTime && (f = n.weapon.recoilAnim.aimTime), n.recoilTween = new TWEEN.Tween(n).to(n.weapon.recoilAnim || {}, .15 * f).easing(TWEEN.Easing.Linear.None).onComplete(function() {
-            //         n.recoilTween = new TWEEN.Tween(n).to({
-            //             recoilTweenY: 0,
-            //             recoilTweenYM: 0,
-            //             recoilTweenZ: 0
-            //         }, .95 * f).easing(TWEEN.Easing.Back.Out).start()
-            //     }).start(), this.cancelInspect(n)
-            // }
+            if (n.recoilForce += n.weapon.recoil, n.isYou) {
+                t.controls && t.controls.gamepad.connected && t.controls.gamepad.rumble(0, n.weapon.rumbleDur || 200, n.weapon.rumble || .5);
+                var u = o.randInt(0, 1) ? -n.weapon.recoilR : n.weapon.recoilR;
+                n.recoilX += u, n.recoilZ += u, n.recoilTween && n.recoilTween.stop();
+                var f = n.weapon.recoilAnim && n.weapon.recoilAnim.time || n.weapon.rate;
+                0 == n.aimVal && n.weapon.recoilAnim && n.weapon.recoilAnim.aimTime && (f = n.weapon.recoilAnim.aimTime), n.recoilTween = new TWEEN.Tween(n).to(n.weapon.recoilAnim || {}, .15 * f).easing(TWEEN.Easing.Linear.None).onComplete(function() {
+                    n.recoilTween = new TWEEN.Tween(n).to({
+                        recoilTweenY: 0,
+                        recoilTweenYM: 0,
+                        recoilTweenZ: 0
+                    }, .95 * f).easing(TWEEN.Easing.Back.Out).start()
+                }).start(), this.cancelInspect(n)
+            }
             if (n.isYou && !t.hideWeapon) {
                 var d = n.weaponMeshes[n.weaponIndex],
                     g = 0 == n.aimVal && n.weapon.scope;
@@ -66238,7 +66238,7 @@ var __r;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
                 // closest = null
-                if (distance < closestDistance && tmpObj.inView) {
+                if (distance < closestDistance /*&& tmpObj.inView*/) {
                     closestDistance = distance;
                     closest = tmpObj
                 } else if (distance < closestDistance_outOfView && !tmpObj.inView) {
@@ -66263,13 +66263,13 @@ var __r;
             var target = closest;
             if (target && target.active && target.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
                 // todo: prediciton
-                var targetX = /*target.x1 - target.oldX  +*/ target.x1;
-                // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
-                var targetY = /*target.y1 - target.oldY +*/ target.y1 + 8 - target.crouchVal * i.crouchDst; //  is chest/neck
-                var targetZ = /*target.z1 - target.oldZ +*/ target.z1;
+                var targetX = target.x2;
+                var targetY = target.y2 - 1.5 + i.playerHeight - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
+                var targetZ = target.z2;
+                console.log(s.recoilAnimY)
                 __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
-
+                __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                 __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                 __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
             }
@@ -66278,7 +66278,7 @@ var __r;
             // auto reload
             if (s && __h && s.ammos[s.weaponIndex] == 0 && __h.keys[__h.reloadKey] == 0) {
                 __h.keys[__h.reloadKey] = 1
-            } else {
+            } else if (__h) {
                 __h.keys[__h.reloadKey] = 0
             }
 

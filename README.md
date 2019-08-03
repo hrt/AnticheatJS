@@ -11,10 +11,10 @@ http://krunker.io v1.4.7
 - [x] Anti cheat measures
 - [x] Every day is sunny
 - [x] Auto reload
+- [x] Recoil control ~ new
 - [ ] Aimbot prediction
 - [ ] Menu
 - [ ] Configurable keybindings
-- [ ] Recoil control
 - [ ] Box esp
 
 Gameplay: https://youtu.be/R6LBPZxtf3A
