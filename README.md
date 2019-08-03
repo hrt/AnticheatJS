@@ -32,3 +32,5 @@ window.chH = function(a) {
     } catch (b) {}
 };
 ```
+
+In an attempt to avoid updates which could potentially blacklist this cheat, this extension blocks all javascript files from krunker.io
