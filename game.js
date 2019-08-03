@@ -17935,7 +17935,7 @@ var __r;
         nAuto: !0,
         type: 0,
         scope: !0,
-        swapTime: 300,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: .95,
         ammo: 3,
@@ -17993,7 +17993,7 @@ var __r;
         attachZOff: -.8,
         zRot: 1,
         type: 0,
-        swapTime: 300,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: .95,
         ammo: 30,
@@ -18057,7 +18057,7 @@ var __r;
         kill: ["", 75],
         type: 1,
         shine: 30,
-        swapTime: 350,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1.05,
         ammo: 10,
@@ -18116,7 +18116,7 @@ var __r;
         zRot: .75,
         noAo: !0,
         type: 0,
-        swapTime: 300,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 24,
@@ -18177,7 +18177,7 @@ var __r;
         transp: !0,
         kill: ["", 50],
         type: 0,
-        swapTime: 200,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 6,
@@ -18239,7 +18239,7 @@ var __r;
         type: 0,
         physRang: 35,
         physPow: .085,
-        swapTime: 300,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1,
         ammo: 2,
@@ -18299,7 +18299,7 @@ var __r;
         attachZOff: -.7,
         zRot: .75,
         noAo: !0,
-        swapTime: 800,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: .79,
         ammo: 60,
@@ -18367,7 +18367,7 @@ var __r;
         zRot: .7,
         type: 0,
         noAo: !0,
-        swapTime: 400,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1,
         ammo: 8,
@@ -18430,7 +18430,7 @@ var __r;
         noAo: !0,
         projectile: 0,
         type: 0,
-        swapTime: 600,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: .9,
         ammo: 1,
@@ -18487,7 +18487,7 @@ var __r;
         noAim: !0,
         akimbo: !0,
         type: 0,
-        swapTime: 300,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1.04,
         ammo: 18,
@@ -18547,7 +18547,7 @@ var __r;
         transp: !0,
         kill: ["", 50],
         type: 1,
-        swapTime: 200,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1,
         ammo: 6,
@@ -18606,7 +18606,7 @@ var __r;
         minRec: 50,
         kill: ["", 50],
         type: 1,
-        swapTime: 200,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1,
         ammo: 4,
@@ -18675,7 +18675,7 @@ var __r;
             }).start()
         },
         type: 1,
-        swapTime: 350,
+        swapTime: 1,
         aimSpeed: 0,
         rate: 250,
         dmg: 50,
@@ -18720,7 +18720,7 @@ var __r;
         kill: ["", 100],
         type: 0,
         projectile: 1,
-        swapTime: 200,
+        swapTime: 1,
         aimSpeed: 0,
         spdMlt: 1,
         ammo: 1,
@@ -62579,6 +62579,72 @@ var __r;
             }
         };
         var m = [];
+        this.simulateShot = function(n) {
+            var m = [];
+            var r = !1;
+            if (n.weapon &&null == n.weapon.projectile)
+                for (var b = n.weapon.physPow ? -1 : 0; b < (n.weapon.shots || 1); ++b) {
+                    var w = 0 <= b ? (n.spread + (n.weapon.innac || 0)) * c.spreadAdj : 0,
+                        x =  n.xDire + o.randFloat(-w, w),
+                        M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w),
+                        _ = n.weapon.range;
+
+                    0 > b && (_ = n.weapon.physRang), m.length = 0;
+                    for (var S = 0, T = 1 / (_ * Math.sin(x + Math.PI) * Math.cos(M)), E = 1 / (_ * Math.cos(x + Math.PI) * Math.cos(M)), k = 1 / (_ * Math.sin(M)), A = n.y + n.height - c.cameraHeight, L = 0; L < t.map.manager.objects.length; ++L)(h = t.map.manager.objects[L]).active && !h.noShoot && ((S = o.lineInRect(n.x, n.z, A, T, E, k, h.x - h.width, h.z - h.length, h.y - h.height, h.x + h.width, h.z + h.length, h.y + h.height)) && 1 >= S && m.push({
+                        obj: h,
+                        dst: S
+                    }));
+                    if (l && 0 <= b)
+                        for (L = 0; L < this.list.length; ++L) this.list[L].active && n != this.list[L] && (!n.team || n.team != this.list[L].team) && ((h = this.fetchState(this.list[L], n.ping)) && ((S = o.lineInRect(n.x, n.z, A, T, E, k, h.x - this.list[L].scale - c.hitBoxPad, h.z - this.list[L].scale - c.hitBoxPad, h.y, h.x + this.list[L].scale + c.hitBoxPad, h.z + this.list[L].scale + c.hitBoxPad, h.y + this.list[L].height + c.hitBoxPad)) && 1 >= S && m.push({
+                            player: !0,
+                            obj: this.list[L],
+                            dst: S
+                        })));
+                    var P = t.map.terrain;
+                    if (P) {
+                        var C = P.raycast(n.x, -n.z, A, 1 / T, -1 / E, 1 / k);
+                        if (C) {
+                            let t = o.getDistance3D(n.x, A, n.z, C.x, C.z, -C.y);
+                            m.push({
+                                terrain: !0,
+                                dst: t / _
+                            })
+                        }
+                    }
+                    var R = _;
+                    if (m.length) {
+                        m.sort(o.orderByDst);
+                        var I = n.weapon.dmg;
+                        for (L = 0; L < m.length; ++L) {
+                            if (R = _ * (h = m[L]).dst, 0 > b) {
+                                var O = (1 - h.dst) * (n.weapon.physPow * (t.config ? t.config.impulseMlt : 1)),
+                                    D = O * Math.sin(x + Math.PI) * Math.cos(M);
+                                n.xVel -= D;
+                                var z = O * Math.cos(x + Math.PI) * Math.cos(M);
+                                n.zVel -= z;
+                                var B = O * Math.sin(M);
+                                n.yVel -= B, n.onGround = !1, l;
+                                break
+                            }
+                            if (!l) break;
+                            var N = n.weapon.dropStart || 0,
+                                j = Math.min(1, 1 - (1 - h.dst) * _ / (_ - N)),
+                                U = I - n.weapon.dmgDrop * j,
+                                F = !1,
+                                H = !1;
+                            if (h.player) {
+                                var G = A + R * Math.sin(M);
+                                F = h.obj.y + h.obj.height - G < c.headScale, H = h.obj.y + c.legHeight > G, U *= F && !n.weapon.noHeadShot ? 1.5 : 1, U *= H ? .5 : 1
+                                console.log(U)
+                                if (U > 0)
+                                    return U;
+                            }
+                        }
+                        return 0;
+                    }
+                }
+            return 0;
+        },
         this.shoot = function(n, i) {
             var r = !1;
             if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex]--, n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
@@ -66168,7 +66234,7 @@ var __r;
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
                 if (s.team != null && tmpObj.team == s.team) continue; // why would we want team mate esp
-                // if (!tmpObj.inView) continue;
+                // if (!tmpObj.inView) continue; // esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
                 // closest = null
@@ -66205,8 +66271,10 @@ var __r;
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
 
                 __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3)
+                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
             }
+
+            // e.players.simulateShot(s);
 
             // bhop
             if (__h && s && __this.mouseDownX) {

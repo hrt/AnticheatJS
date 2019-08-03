@@ -6,6 +6,7 @@ http://krunker.io v1.4.7
 - [x] Snaplines esp & name esp
 - [x] No visual recoil
 - [x] No quick scope delay
+- [x] No weapon swap delay
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
 - [ ] Aimbot prediction
