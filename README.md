@@ -3,10 +3,10 @@ http://krunker.io
 
 ## Features
 - [x] Aimbot (hold right mouse button)
-- [x] snaplines esp & name esp
-- [x] no visual recoil
-- [x] no quick scope delay
-- [x] perfect bunnyhop / slidejump (hold mouse button 5)
+- [x] Snaplines esp & name esp
+- [x] No visual recoil
+- [x] No quick scope delay
+- [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
 - [ ] Aimbot prediction
 - [ ] Menu
