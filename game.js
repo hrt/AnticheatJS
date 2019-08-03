@@ -65724,7 +65724,8 @@ var __r;
                     if (!(o = this.map.manager.objects[m]).noShoot && o.active && !o.transparent) {
                         var g = r.lineInRect(t.x, t.z, d, h, u, f, o.x - Math.max(0, o.width - a), o.z - Math.max(0, o.length - a), o.y - Math.max(0, o.height - a), o.x + Math.max(0, o.width - a), o.z + Math.max(0, o.length - a), o.y + Math.max(0, o.height - a));
                         if (g && 1 > g) return g
-                    } var v = this.map.terrain;
+                    }
+                var v = this.map.terrain;
                 if (v) {
                     var y = v.raycast(t.x, -t.z, d, 1 / h, -1 / u, 1 / f);
                     if (y) return r.getDistance3D(t.x, t.y, t.z, y.x, y.z, -y.y)
@@ -66238,7 +66239,9 @@ var __r;
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
                 closest = null
-                var inView = null == e.canSee(s, tmpObj.x, tmpObj.y, tmpObj.z);
+                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + i.playerHeight + tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
+                if (inView)
+                    console.log(inView);
                 if (distance < closestDistance && inView && tmpObj.health > 0) {
                     closestDistance = distance;
                     closest = tmpObj
