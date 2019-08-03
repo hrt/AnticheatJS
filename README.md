@@ -21,3 +21,14 @@ setInterval(function() {
     document.querySelectorAll("script[src*='jsdelivr'], script[src*='raw.githack.com']").length && (document.body.innerHTML = "<div style='font-size:28px;margin-top:30px;width:100%;text-align:center'>SCRIPT DETECTED</div>")
 }, 1E4);
 ```
+
+
+The anti script also checks if certain classes are defined under the ```window``` object:
+
+```
+window.chH = function(a) {
+    try {
+        null == window.hack && null == window.iUb && null == window.hags && null == window.aimbot && null == window.nxtrun && null == window.KrunkAimDotTK && null == window.wallHackEnabled || !a.socket || (a.send("hc"), a.socket.close())
+    } catch (b) {}
+};
+```
