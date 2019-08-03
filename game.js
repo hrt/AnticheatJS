@@ -66195,7 +66195,7 @@ var __r;
 
             // aimbot
             var target = closest;
-            if (target/* && target.health*/ && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
+            if (target && target.active && target.health && __this && __h && __r && s && s.isYou && __this.mouseDownR) {
                 // todo: prediciton
                 var targetX = /*target.x1 - target.oldX  +*/ target.x1;
                 // var targetY = /*target.y1 - target.oldY +*/ target.y1 + i.playerHeight - target.crouchVal * i.crouchDst; //  is head
@@ -66210,8 +66210,6 @@ var __r;
 
             // bhop
             if (__h && s && __this.mouseDownX) {
-                // __h.jumpKey
-                // __h.crouchKey
                 __h.keys[__h.crouchKey] = (s.canSlide && !s.didJump);
                 if (!s.didJump) {
                     __h.keys[__h.jumpKey] = 1;
