@@ -20,7 +20,7 @@ http://krunker.io v1.4.7
 - [ ] Box esp
 
 Gameplay: https://youtu.be/R6LBPZxtf3A
-[![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=Fvmn3Obuelo)
+[![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=-UGY3wrfor0)
 
 
 Came across the game this morning and quit it this evening: 
