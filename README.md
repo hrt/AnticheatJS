@@ -5,7 +5,12 @@ http://krunker.io
 Gameplay: https://youtu.be/R6LBPZxtf3A
 [![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=Fvmn3Obuelo)
 
-aimbot, snaplines esp, name esp, no visual recoil and quick scoping - Aimbot actives if you hold down right
+- [x] Aimbot (right mouse buttom)
+- [x] snaplines esp & name esp
+- [x] no visual recoil
+- [x] no quick scope delay
+- [x] auto bunnyhop / slidejump (mouse button 5)
+- [x] Anti cheat measures
 
 
 Came across the game this morning and quit it this evening: 
