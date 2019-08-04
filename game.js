@@ -62652,72 +62652,6 @@ window.addEventListener("keyup", function(e) {
             }
         };
         var m = [];
-        this.simulateShot = function(n) {
-            var m = [];
-            var r = !1;
-            if (n.weapon &&null == n.weapon.projectile)
-                for (var b = n.weapon.physPow ? -1 : 0; b < (n.weapon.shots || 1); ++b) {
-                    var w = 0 <= b ? (n.spread + (n.weapon.innac || 0)) * c.spreadAdj : 0,
-                        x =  n.xDire + o.randFloat(-w, w),
-                        M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w),
-                        _ = n.weapon.range;
-
-                    0 > b && (_ = n.weapon.physRang), m.length = 0;
-                    for (var S = 0, T = 1 / (_ * Math.sin(x + Math.PI) * Math.cos(M)), E = 1 / (_ * Math.cos(x + Math.PI) * Math.cos(M)), k = 1 / (_ * Math.sin(M)), A = n.y + n.height - c.cameraHeight, L = 0; L < t.map.manager.objects.length; ++L)(h = t.map.manager.objects[L]).active && !h.noShoot && ((S = o.lineInRect(n.x, n.z, A, T, E, k, h.x - h.width, h.z - h.length, h.y - h.height, h.x + h.width, h.z + h.length, h.y + h.height)) && 1 >= S && m.push({
-                        obj: h,
-                        dst: S
-                    }));
-                    if (l && 0 <= b)
-                        for (L = 0; L < this.list.length; ++L) this.list[L].active && n != this.list[L] && (!n.team || n.team != this.list[L].team) && ((h = this.fetchState(this.list[L], n.ping)) && ((S = o.lineInRect(n.x, n.z, A, T, E, k, h.x - this.list[L].scale - c.hitBoxPad, h.z - this.list[L].scale - c.hitBoxPad, h.y, h.x + this.list[L].scale + c.hitBoxPad, h.z + this.list[L].scale + c.hitBoxPad, h.y + this.list[L].height + c.hitBoxPad)) && 1 >= S && m.push({
-                            player: !0,
-                            obj: this.list[L],
-                            dst: S
-                        })));
-                    var P = t.map.terrain;
-                    if (P) {
-                        var C = P.raycast(n.x, -n.z, A, 1 / T, -1 / E, 1 / k);
-                        if (C) {
-                            let t = o.getDistance3D(n.x, A, n.z, C.x, C.z, -C.y);
-                            m.push({
-                                terrain: !0,
-                                dst: t / _
-                            })
-                        }
-                    }
-                    var R = _;
-                    if (m.length) {
-                        m.sort(o.orderByDst);
-                        var I = n.weapon.dmg;
-                        for (L = 0; L < m.length; ++L) {
-                            if (R = _ * (h = m[L]).dst, 0 > b) {
-                                var O = (1 - h.dst) * (n.weapon.physPow * (t.config ? t.config.impulseMlt : 1)),
-                                    D = O * Math.sin(x + Math.PI) * Math.cos(M);
-                                n.xVel -= D;
-                                var z = O * Math.cos(x + Math.PI) * Math.cos(M);
-                                n.zVel -= z;
-                                var B = O * Math.sin(M);
-                                n.yVel -= B, n.onGround = !1, l;
-                                break
-                            }
-                            if (!l) break;
-                            var N = n.weapon.dropStart || 0,
-                                j = Math.min(1, 1 - (1 - h.dst) * _ / (_ - N)),
-                                U = I - n.weapon.dmgDrop * j,
-                                F = !1,
-                                H = !1;
-                            if (h.player) {
-                                var G = A + R * Math.sin(M);
-                                F = h.obj.y + h.obj.height - G < c.headScale, H = h.obj.y + c.legHeight > G, U *= F && !n.weapon.noHeadShot ? 1.5 : 1, U *= H ? .5 : 1
-                                console.log(U)
-                                if (U > 0)
-                                    return U;
-                            }
-                        }
-                        return 0;
-                    }
-                }
-            return 0;
-        },
         this.shoot = function(n, i) {
             var r = !1;
             if (l && t.incStat("s", n), n.reloads[n.weaponIndex] = n.weapon.rate, n.ammos[n.weaponIndex]--, n.didShoot = !0, this.updatePlayerAmmo(n), t.playSound) {
@@ -66384,6 +66318,9 @@ window.addEventListener("keyup", function(e) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
+                var dx = targetX - s.x;
+                var dz = targetZ - s.z;
+                var distance = Math.sqrt(dx * dx + dz * dz);
                 if (s.weapon.nAuto == 1) {
                     if (s.didShoot) {
                         if (state['Aimkey'].active == 0) {
@@ -66395,7 +66332,7 @@ window.addEventListener("keyup", function(e) {
                     }
 
                     if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot)) && aimKey) {
-                        if (state['Aimkey'].active == 0) {
+                        if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                             __this.mouseDownR = 1;                           
                         }
                         if (s.recoilForce < 0.01 && (s.aimVal == 0 || state['Aimkey'].active != 0)) {
@@ -66404,13 +66341,13 @@ window.addEventListener("keyup", function(e) {
                             // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                             __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                             __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
-                            if (state['Aimkey'].active == 0) {
+                            if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                                 __this.mouseDownL = 1;
                             }
                         }
                     }
                 } else if (aimKey) {
-                    if (state['Aimkey'].active == 0) {
+                    if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                         __this.mouseDownR = 1;
                     }
                     __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
@@ -66418,11 +66355,11 @@ window.addEventListener("keyup", function(e) {
                     __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
                     __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
                     __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
-                    if (state['Aimkey'].active == 0) {
+                    if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                         __this.mouseDownL = 1;
                     }
                 }
-            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0) {
+            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0 || s.weapon.name == 'Hands') {
                 __this.mouseDownL = 0;
                 if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 0) {
                     __this.mouseDownR = 0;
