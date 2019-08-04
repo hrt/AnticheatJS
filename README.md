@@ -3,14 +3,12 @@ http://krunker.io v1.4.7
 
 ## Features
 - [x] Aimbot (hold right mouse button)
+- [x] Fake Lag ~ that annoying lagger who no one can hit
 - [x] Snaplines esp & name esp
-- [x] No quick scope delay -> gives quick scope points but is not accurate as scoping at the start since it is server sided
-- [x] No weapon swap delay
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
-- [x] Every day is sunny
 - [x] Auto reload
-- [x] Recoil control ~ new
+- [x] Recoil control
 - [x] Visibility check
 - [x] Auto shoot & scope
 - [x] Menu
@@ -18,7 +16,6 @@ http://krunker.io v1.4.7
 - [x] Fix auto shoot / quick scope for snipers
 - [x] No death delay
 - [x] Auto respawn
-- [ ] Box esp
 
 Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0
 [![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=-UGY3wrfor0)

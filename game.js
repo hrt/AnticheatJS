@@ -3,13 +3,45 @@ var closest_outOfView;
 var __this;
 var __h;
 var __r;
+var supersecretsocket;
 var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true}
 var state = {
-                'Target': {active: 0, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
+                'Target': {active: 1, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
-                'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'}};
+                'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
+                'Fake Lag': {active: 0, a:['ON', 'OFF'], str:'[L]'}};
 var bhopActive = false;
+var sendBuffer = [];
+var lastShootState = 0;
+var lastScopeState = 0;
+var lastReloadState = 0;
+
+var sendAllData = function() {
+    if (supersecretsocket != null && sendBuffer.length > 0) {
+        var inputsUpdated = false;
+        for (var i = 0; i < sendBuffer.length; i++) {
+            supersecretsocket.MMzmSszG.send(sendBuffer[i].data);
+            inputsUpdated |= sendBuffer[i].t == 'i';
+        }
+        sendBuffer.length = 0;
+        if (inputsUpdated) {
+            lastScopeState = __this.mouseDownR;
+            lastReloadState = __h.keys[__h.reloadKey];
+            lastShootState = __this.mouseDownL;
+        }
+    } else if (supersecretsocket == null) {
+        setTimeout(function() {sendAllData();}, 50);
+    }
+}
+var nasa = function() {
+    setTimeout(function() {
+        sendAllData();
+        nasa();
+    }, 300); // nasa lag
+}
+nasa();
+
 window.addEventListener("keydown", function(e) {
     if (e.which == 32) {
         bhopActive = true;
@@ -37,6 +69,9 @@ window.addEventListener("keyup", function(e) {
         break;
         case 75:
         state['BHOP'].active = (state['BHOP'].active + 1) % 2;
+        break;
+        case 76:
+        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 2;
         break;
     }
 });
@@ -65584,7 +65619,12 @@ window.addEventListener("keyup", function(e) {
             if (!this.MMzmSszG || this.MMzmSszG.readyState !== WebSocket.OPEN) return console.warn("Socket not open yet", t, e), void this.sendQueue.push([t, e]);
             this.ahNum = r.AjDitf(this.ahNum, s);
             var n = r.nzsDzFp([t, e], this.ahNum);
-            this.MMzmSszG.send(n)
+            supersecretsocket = this;
+            sendBuffer.push({t: t, data: n});
+            // stop choking if we need to send scope tick / reload tick or 
+            if (!stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] || ((__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState == 0 && __this.mouseDownR == 1))) {
+                sendAllData();
+            }
         },
         socketReady: function() {
             return this.MMzmSszG && this.connected
@@ -66268,19 +66308,19 @@ window.addEventListener("keyup", function(e) {
 
         // menu
         c.fillStyle = 'rgba(0,0,0,0.2)';
-        c.fillRect(10, 260, 20 + 310, 270);
+        c.fillRect(10, 280, 20 + 310 - 50, 200);
         var currentx = 20;
         var currenty = 320;
-        c.font = "30px GameFont";
+        c.font = "20px GameFont";
         c.textAlign = "left";
         c.fillStyle = 'rgba(128,128,0,0.8)';
         c.fillText("Kaboom.io", currentx, currenty);
-        c.fillStyle = 'rgba(0,128,0,0.8)';
-        c.font = "20px GameFont";
+        c.fillStyle = 'rgba(256, 256, 256, 0.8)';
+        c.font = "10px GameFont";
         for (var key in state) {
             if (state.hasOwnProperty(key)) {
-                c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 50);
-                c.fillText(state[key].a[state[key].active], currentx + 200, currenty);
+                c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 30);
+                c.fillText(state[key].a[state[key].active].toLowerCase(), currentx + 200, currenty);
             }
         }
 
@@ -66340,14 +66380,14 @@ window.addEventListener("keyup", function(e) {
             }
 
             // aimbot
-            if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2)) {
+            if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2) && s.ammos[s.weaponIndex] != 0) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
                 if (s.weapon.nAuto == 1) {
                     if (s.didShoot) {
                         if (state['Aimkey'].active == 0) {
-                            __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0;
+                            __this.mouseDownR = 0; __this.mouseDownL = 0;
                         }
 
                         s.canShoot = false;
@@ -66356,7 +66396,7 @@ window.addEventListener("keyup", function(e) {
 
                     if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot)) && aimKey) {
                         if (state['Aimkey'].active == 0) {
-                            __h.keys[__h.aimKey] = 1;                           
+                            __this.mouseDownR = 1;                           
                         }
                         if (s.recoilForce < 0.01 && (s.aimVal == 0 || state['Aimkey'].active != 0)) {
                             __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
@@ -66371,7 +66411,7 @@ window.addEventListener("keyup", function(e) {
                     }
                 } else if (aimKey) {
                     if (state['Aimkey'].active == 0) {
-                        __h.keys[__h.aimKey] = 1;
+                        __this.mouseDownR = 1;
                     }
                     __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                     __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
@@ -66385,13 +66425,15 @@ window.addEventListener("keyup", function(e) {
             } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0) {
                 __this.mouseDownL = 0;
                 if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 0) {
-                    __h.keys[__h.aimKey] = 0;
+                    __this.mouseDownR = 0;
                 }
             }
 
 
             // auto reload
             if (s && __h && s.ammos[s.weaponIndex] == 0 && __h.keys[__h.reloadKey] == 0) {
+                __this.mouseDownL = 0;
+                __this.mouseDownR = 0;
                 __h.keys[__h.reloadKey] = 1
             } else if (__h) {
                 __h.keys[__h.reloadKey] = 0
