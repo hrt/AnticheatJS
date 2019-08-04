@@ -62,3 +62,4 @@ In an attempt to avoid updates which could potentially blacklist this cheat, thi
 2. Enable Developer mode by ticking the checkbox in the upper-right corner.
 3. Click on the "Load unpacked extension..." button.
 4. Select the extracted directory.
+5. Now play krunker.io and you should notice a difference.
