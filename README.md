@@ -17,6 +17,8 @@ http://krunker.io v1.4.7
 - [x] Menu
 - [x] Configurable keybindings
 - [x] Fix auto shoot / quick scope for snipers
+- [x] No death delay
+- [x] Auto respawn
 - [ ] Box esp
 
 Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0

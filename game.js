@@ -66323,15 +66323,19 @@ window.addEventListener("keyup", function(e) {
 
             var target = closest;
             var aimKey;
-            if (state['Aimkey'].active == 0) {
-                aimKey = true;
-            } else if (state['Aimkey'].active == 1) {
-                aimKey = __this.mouseDownL;
-            } else if (state['Aimkey'].active == 2) {
-                aimKey = __this.mouseDownR;
-            } else if (state['Aimkey'].active == 3) {
-                aimKey = __this.mouseDownX;
-            } else if (state['Aimkey'].active == 4) {
+            if  (__this) {
+                if (state['Aimkey'].active == 0) {
+                    aimKey = true;
+                } else if (state['Aimkey'].active == 1) {
+                    aimKey = __this.mouseDownL;
+                } else if (state['Aimkey'].active == 2) {
+                    aimKey = __this.mouseDownR;
+                } else if (state['Aimkey'].active == 3) {
+                    aimKey = __this.mouseDownX;
+                } else if (state['Aimkey'].active == 4) {
+                    aimKey = false;
+                }
+            } else {
                 aimKey = false;
             }
 
@@ -68420,7 +68424,7 @@ window.addEventListener("keyup", function(e) {
                 }
                 killCardHolder.firstChild.data = A ? a.get("player.killed") : a.get("player.died"), killCard.style.display = A ? "inline-block" : "none", killCard.innerHTML = o, b.toggleGameUI(!1), setTimeout(function() {
                     Ct()
-                }, i.deathDelay)
+                }, 0)
             }
             if (!s && Z) {
                 var p = k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(k.name) : k.name) + "</span>",
