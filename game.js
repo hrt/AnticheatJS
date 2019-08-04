@@ -3,12 +3,27 @@ var closest_outOfView;
 var __this;
 var __h;
 var __r;
-var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null}
+var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true}
 var state = {
                 'Target': {active: 0, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
-                'BHOP': {active: 0, a:['ON', 'OFF'], str:'[K]'}};
+                'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'}};
+var bhopActive = false;
+window.addEventListener("keydown", function(e) {
+    if (e.which == 32) {
+        bhopActive = true;
+        e.stopPropagation();
+    }
+}, true);
+
+window.addEventListener("keyup", function(e) {
+    if (e.which == 32) {
+        bhopActive = false;
+        e.stopPropagation();
+    }
+}, true);
+
 window.addEventListener("keyup", function(e) {
     switch (e.which) {
         case 71:
@@ -66253,7 +66268,7 @@ window.addEventListener("keyup", function(e) {
 
         // menu
         c.fillStyle = 'rgba(0,0,0,0.2)';
-        c.fillRect(10, 260, 20 + 200 + 65, 270);
+        c.fillRect(10, 260, 20 + 310, 270);
         var currentx = 20;
         var currenty = 320;
         c.font = "30px GameFont";
@@ -66323,7 +66338,6 @@ window.addEventListener("keyup", function(e) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                console.log(targetY)
                 __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                 __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                 __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
@@ -66347,7 +66361,7 @@ window.addEventListener("keyup", function(e) {
             }
 
             // bhop
-            if (__h && s && stringToInt[state['BHOP'].a[state['BHOP'].active]]) {
+            if (__h && s && (bhopActive || stringToInt[state['BHOP'].a[state['BHOP'].active]])) {
                 __h.keys[__h.crouchKey] = (s.canSlide && !s.didJump);
                 if (!s.didJump) {
                     __h.keys[__h.jumpKey] = 1;
