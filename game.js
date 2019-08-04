@@ -66314,7 +66314,7 @@ window.addEventListener("keyup", function(e) {
         c.font = "20px GameFont";
         c.textAlign = "left";
         c.fillStyle = 'rgba(128,128,0,0.8)';
-        c.fillText("Kaboom.io", currentx, currenty);
+        c.fillText("Hero Hunter", currentx, currenty);
         c.fillStyle = 'rgba(256, 256, 256, 0.8)';
         c.font = "10px GameFont";
         for (var key in state) {
