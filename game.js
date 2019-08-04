@@ -17974,7 +17974,7 @@ window.addEventListener("keyup", function(e) {
         type: 0,
         scope: !0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: .95,
         ammo: 3,
         reload: 1500,
@@ -18032,7 +18032,7 @@ window.addEventListener("keyup", function(e) {
         zRot: 1,
         type: 0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 130,
         spdMlt: .95,
         ammo: 30,
         reload: 1200,
@@ -18096,7 +18096,7 @@ window.addEventListener("keyup", function(e) {
         type: 1,
         shine: 30,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1.05,
         ammo: 10,
         reload: 700,
@@ -18155,7 +18155,7 @@ window.addEventListener("keyup", function(e) {
         noAo: !0,
         type: 0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1.04,
         ammo: 24,
         reload: 1200,
@@ -18216,7 +18216,7 @@ window.addEventListener("keyup", function(e) {
         kill: ["", 50],
         type: 0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1.04,
         ammo: 6,
         reload: 900,
@@ -18278,7 +18278,7 @@ window.addEventListener("keyup", function(e) {
         physRang: 35,
         physPow: .085,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1,
         ammo: 2,
         shots: 5,
@@ -18338,7 +18338,7 @@ window.addEventListener("keyup", function(e) {
         zRot: .75,
         noAo: !0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 200,
         spdMlt: .79,
         ammo: 60,
         reload: 3500,
@@ -18406,7 +18406,7 @@ window.addEventListener("keyup", function(e) {
         type: 0,
         noAo: !0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1,
         ammo: 8,
         reload: 1500,
@@ -18469,7 +18469,7 @@ window.addEventListener("keyup", function(e) {
         projectile: 0,
         type: 0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 200,
         spdMlt: .9,
         ammo: 1,
         reload: 1600,
@@ -18526,7 +18526,7 @@ window.addEventListener("keyup", function(e) {
         akimbo: !0,
         type: 0,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1.04,
         ammo: 18,
         reload: 1200,
@@ -18586,7 +18586,7 @@ window.addEventListener("keyup", function(e) {
         kill: ["", 50],
         type: 1,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1,
         ammo: 6,
         reload: 1e3,
@@ -18645,7 +18645,7 @@ window.addEventListener("keyup", function(e) {
         kill: ["", 50],
         type: 1,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1,
         ammo: 4,
         reload: 1500,
@@ -18714,7 +18714,7 @@ window.addEventListener("keyup", function(e) {
         },
         type: 1,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         rate: 250,
         dmg: 50,
         dmgDrop: 0,
@@ -18759,7 +18759,7 @@ window.addEventListener("keyup", function(e) {
         type: 0,
         projectile: 1,
         swapTime: 1,
-        aimSpeed: 0,
+        aimSpeed: 120,
         spdMlt: 1,
         ammo: 1,
         reload: 1e3,
@@ -66332,24 +66332,42 @@ window.addEventListener("keyup", function(e) {
             } else if (state['Aimkey'].active == 3) {
                 aimKey = __this.mouseDownX;
             }
+
             // aimbot
             if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2)) {
-                // todo: prediction
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
-                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
-                __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
                 if (state['Aimkey'].active == 0) {
-                    __h.keys[__h.aimKey] = 1;
-                    __this.mouseDownL = 1;
+                    if (s.weapon.noAo) {
+                        if (s.didShoot) { __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0; s.canShoot = false; setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85) }
+
+                        if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot))) {
+                            __h.keys[__h.aimKey] = 1;                           
+                            if (s.recoilForce < 0.01 && s.aimVal == 0) {
+                                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                                // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                                __this.mouseDownL = 1;
+                            }
+                        }
+                    } else {
+                        __h.keys[__h.aimKey] = 1;
+                        __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                        __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                        __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                        __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                        __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                        __this.mouseDownL = 1;
+                    }
                 }
-            } else if (__h != null && __this != null && state['Aimkey'].active == 0) {
+            } else if (__h != null && __this != null && s != null) {
                 __this.mouseDownL = 0;
-                __h.keys[__h.aimKey] = 0;
+                if (s.weapon.noAo || s.aimVal == 1) {
+                    __h.keys[__h.aimKey] = 0;
+                }
             }
 
 
