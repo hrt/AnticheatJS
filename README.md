@@ -4,7 +4,7 @@ http://krunker.io v1.4.7
 ## Features
 - [x] Aimbot (hold right mouse button)
 - [x] Snaplines esp & name esp
-- [x] No visual recoil
+- [x] ~~~ No visual recoil ~~~
 - [x] No quick scope delay -> gives quick scope points but is not accurate as scoping at the start since it is server sided
 - [x] No weapon swap delay
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
