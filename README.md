@@ -16,8 +16,7 @@ http://krunker.io v1.4.7
 - [x] Auto shoot & scope
 - [x] Menu
 - [x] Configurable keybindings
-- [ ] Fix auto shoot for pistols / snipers
-- [ ] Aimbot prediction
+- [x] Fix auto shoot / quick scope for snipers
 - [ ] Box esp
 
 Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0
