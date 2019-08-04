@@ -66285,13 +66285,14 @@ window.addEventListener("keyup", function(e) {
                     c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
-                        o = tmpObj.level;
+                        o = tmpObj.level,
+                        w = tmpObj.weapon.name;
                     c.font = "30px GameFont";
                     let l = o ? c.measureText(o).width + 10 : 0;
                     c.font = "20px GameFont";
                     let p = c.measureText(t).width + (a ? 5 : 0),
                         h = l + p + (a ? c.measureText(a).width : 0);
-                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
+                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -40), c.fillText(w, -h / 2, 0), c.restore()
                 }
             }
 

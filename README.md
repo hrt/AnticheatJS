@@ -4,7 +4,7 @@ Hero Hunter v1.4.7
 ## Features
 - [x] Aimbot (hold right mouse button)
 - [x] Fake Lag ~ that annoying lagger who no one can hit
-- [x] Snaplines esp & name esp
+- [x] Snaplines esp & name esp & weapon esp
 - [x] Perfect bunnyhop / slidejump (hold mouse button 5)
 - [x] Anti cheat measures
 - [x] Auto reload
