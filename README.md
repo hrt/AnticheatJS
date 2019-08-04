@@ -28,12 +28,12 @@ Came across the game this morning and quit it this evening:
 
 Load this extension on chrome and you're good to go.
 
-# How does it work
+## Features How does it work
 The game loads a file generally called ```game.js```. We abuse the powers of the local user to use our altered version of ```game.js``` which patches certain functions. For example we can have name esp (see players through walls) by removing a simple check during a loop to render player information:
 
 ```if (!tmpObj.inView) continue;```
 
-# Anti cheat
+## Features Anti cheat
 Their "anti script" is mainly the last few lines of the js file ```zip.js```. Any script that is loaded with a source from ```jsdelivr``` or ```raw.githack.com``` gets flagged. This is easy to avoid if need be.
 
 ```
@@ -54,3 +54,12 @@ window.chH = function(a) {
 ```
 
 In an attempt to avoid updates which could potentially blacklist this cheat, this extension blocks all javascript files from krunker.io. Obviously this is also trivial to bypass: for example, they could be running javascript remotely since things like ```Array.from(document.scripts).filter(x=>x.src&&/js\/game\.[^\.]+\.js\?build=.+/.test(x.src)).length?'checkin':'loadin'``` are sent to the client through websockets - not necessarily for anti cheating.
+
+
+## A noobs step by step
+0. Clone/download this repository and extract it into a folder.
+1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
+2. Enable Developer mode by ticking the checkbox in the upper-right corner.
+3. Click on the "Load unpacked extension..." button.
+4. Select the extracted directory.
+5. Now play krunker.io and you should notice a difference.
