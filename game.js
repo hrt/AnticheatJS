@@ -66340,8 +66340,15 @@ window.addEventListener("keyup", function(e) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                if (s.weapon.noAo) {
-                    if (s.didShoot) { __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0; s.canShoot = false; setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85) }
+                if (s.weapon.nAuto == 1) {
+                    if (s.didShoot) {
+                        if (state['Aimkey'].active == 0) {
+                            __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0;
+                        }
+
+                        s.canShoot = false;
+                        setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85)
+                    }
 
                     if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot)) && aimKey) {
                         if (state['Aimkey'].active == 0) {
@@ -66371,9 +66378,9 @@ window.addEventListener("keyup", function(e) {
                         __this.mouseDownL = 1;
                     }
                 }
-            } else if (__h != null && __this != null && s != null) {
+            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0) {
                 __this.mouseDownL = 0;
-                if (s.weapon.noAo || s.aimVal == 1) {
+                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 1) {
                     __h.keys[__h.aimKey] = 0;
                 }
             }
