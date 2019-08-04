@@ -66347,7 +66347,7 @@ window.addEventListener("keyup", function(e) {
                         if (state['Aimkey'].active == 0) {
                             __h.keys[__h.aimKey] = 1;                           
                         }
-                        if (s.recoilForce < 0.01 && s.aimVal == 0) {
+                        if (s.recoilForce < 0.01 && (s.aimVal == 0 || state['Aimkey'].active != 0)) {
                             __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                             __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                             // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
