@@ -6,7 +6,7 @@ var __r;
 var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true}
 var state = {
                 'Target': {active: 0, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
-                'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB'], str:'[H]'},
+                'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'}};
 var bhopActive = false;
@@ -30,7 +30,7 @@ window.addEventListener("keyup", function(e) {
         state['Target'].active = (state['Target'].active + 1) % 3
         break;
         case 72:
-        state['Aimkey'].active = (state['Aimkey'].active + 1) % 4;
+        state['Aimkey'].active = (state['Aimkey'].active + 1) % 5;
         break;
         case 74:
         state['ESP'].active = (state['ESP'].active + 1) % 3;
@@ -66331,6 +66331,8 @@ window.addEventListener("keyup", function(e) {
                 aimKey = __this.mouseDownR;
             } else if (state['Aimkey'].active == 3) {
                 aimKey = __this.mouseDownX;
+            } else if (state['Aimkey'].active == 4) {
+                aimKey = false;
             }
 
             // aimbot
@@ -66338,28 +66340,34 @@ window.addEventListener("keyup", function(e) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                if (state['Aimkey'].active == 0) {
-                    if (s.weapon.noAo) {
-                        if (s.didShoot) { __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0; s.canShoot = false; setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85) }
+                if (s.weapon.noAo) {
+                    if (s.didShoot) { __h.keys[__h.aimKey] = 0; __this.mouseDownL = 0; s.canShoot = false; setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85) }
 
-                        if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot))) {
+                    if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot)) && aimKey) {
+                        if (state['Aimkey'].active == 0) {
                             __h.keys[__h.aimKey] = 1;                           
-                            if (s.recoilForce < 0.01 && s.aimVal == 0) {
-                                __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
-                                __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
-                                // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                                __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                                __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                        }
+                        if (s.recoilForce < 0.01 && s.aimVal == 0) {
+                            __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                            __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                            // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                            __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                            __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                            if (state['Aimkey'].active == 0) {
                                 __this.mouseDownL = 1;
                             }
                         }
-                    } else {
+                    }
+                } else if (aimKey) {
+                    if (state['Aimkey'].active == 0) {
                         __h.keys[__h.aimKey] = 1;
-                        __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
-                        __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
-                        __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                        __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                        __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                    }
+                    __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                    __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                    __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                    __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
+                    __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                    if (state['Aimkey'].active == 0) {
                         __this.mouseDownL = 1;
                     }
                 }
