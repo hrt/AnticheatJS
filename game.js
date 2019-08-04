@@ -66380,7 +66380,7 @@ window.addEventListener("keyup", function(e) {
                 }
             } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0) {
                 __this.mouseDownL = 0;
-                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 1) {
+                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 0) {
                     __h.keys[__h.aimKey] = 0;
                 }
             }
