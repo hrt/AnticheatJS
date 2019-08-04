@@ -25,7 +25,7 @@ var sendAllData = function() {
             inputsUpdated |= sendBuffer[i].t == 'i';
         }
         sendBuffer.length = 0;
-        if (inputsUpdated) {
+        if (inputsUpdated && __this && __h) {
             lastScopeState = __this.mouseDownR;
             lastReloadState = __h.keys[__h.reloadKey];
             lastShootState = __this.mouseDownL;
@@ -66283,6 +66283,17 @@ window.addEventListener("keyup", function(e) {
                     c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                     var x = s && s.team ? s.team : window.spectating ? 1 : 0;
                     c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
+                    if (s.team == null || s.team != tmpObj.team) {
+                        var dx = tmpObj.x - s.x;
+                        var dy = tmpObj.y - s.y;
+                        var dz = tmpObj.z - s.z;
+                        var distance = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                        var hcolor = ((tmpObj.health) / tmpObj.maxHealth) * 255
+                        c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
+                        c.lineWidth = 3;
+                        var playerwidth = 2200/distance;
+                        c.strokeRect(-playerwidth, 2, playerwidth, 10000/distance);
+                    }
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
                         o = tmpObj.level,
@@ -66293,6 +66304,7 @@ window.addEventListener("keyup", function(e) {
                     let p = c.measureText(t).width + (a ? 5 : 0),
                         h = l + p + (a ? c.measureText(a).width : 0);
                     c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -40), c.fillText(w, -h / 2, 0), c.restore()
+
                 }
             }
 
@@ -66360,7 +66372,7 @@ window.addEventListener("keyup", function(e) {
                         __this.mouseDownL = 1;
                     }
                 }
-            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0 || s.weapon.name == 'Hands') {
+            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0 || (s && s.weapon.name == 'Hands')) {
                 __this.mouseDownL = 0;
                 if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 0) {
                     __this.mouseDownR = 0;
