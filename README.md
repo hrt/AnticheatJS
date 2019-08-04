@@ -57,7 +57,7 @@ In an attempt to avoid updates which could potentially blacklist this cheat, thi
 
 
 ## How to install
-0. Download the repository [here](https://github.com/wallopthecat/Krunker-hack/archive/master.zip) and extract it.
+0. Download the repository [here](https://github.com/hrt/Kaboom.io/archive/master.zip) and extract it.
 1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
 2. Enable Developer mode by ticking the checkbox in the upper-right corner.
 3. Click on the "Load unpacked extension..." button.
