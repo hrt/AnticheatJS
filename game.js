@@ -43,6 +43,9 @@ var nasa = function() {
 nasa();
 
 window.addEventListener("keydown", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
     if (e.which == 32) {
         bhopActive = true;
         e.stopPropagation();
@@ -50,6 +53,9 @@ window.addEventListener("keydown", function(e) {
 }, true);
 
 window.addEventListener("keyup", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
     if (e.which == 32) {
         bhopActive = false;
         e.stopPropagation();
@@ -57,6 +63,9 @@ window.addEventListener("keyup", function(e) {
 }, true);
 
 window.addEventListener("keyup", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
     switch (e.which) {
         case 71:
         state['Target'].active = (state['Target'].active + 1) % 3
@@ -66257,7 +66266,6 @@ window.addEventListener("keyup", function(e) {
                 c.fillText(state[key].a[state[key].active].toLowerCase(), currentx + 200, currenty);
             }
         }
-
 
         var b = n.camera.getWorldPosition();
         closest = null
