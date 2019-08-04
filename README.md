@@ -20,7 +20,7 @@ http://krunker.io v1.4.7
 - [ ] Aimbot prediction
 - [ ] Box esp
 
-Gameplay: https://youtu.be/R6LBPZxtf3A
+Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0
 [![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot.png?raw=true)](https://www.youtube.com/watch?v=-UGY3wrfor0)
 
 
