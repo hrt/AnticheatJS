@@ -66274,13 +66274,12 @@ window.addEventListener("keyup", function(e) {
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
-                if (s.team != null && tmpObj.team == s.team && stringToInt[state['ESP'].a[state['ESP'].active]] == 1) continue; // why would we want team mate esp
                 if (!s) break;
                 if (!s.active) break;
-                // if (!tmpObj.inView) continue; // esp
+                if (s.team != null && tmpObj.team == s.team && stringToInt[state['ESP'].a[state['ESP'].active]] == 1) continue; // why would we want team mate esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + i.playerHeight + tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
+                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + 10 - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
                 if (distance < closestDistance && inView && tmpObj.health > 0 && !(s.team != null && tmpObj.team == s.team)) {
                     closestDistance = distance;
                     closest = tmpObj
