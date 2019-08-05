@@ -24,6 +24,7 @@ var lastPositionState = {x: 0, y: 0, z: 0};
 var ogL = 0;
 var ogR = 0;
 var loadedImages = {};
+var threatFakeLag = false;
 
 var sendAllData = function(force) {
     var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
@@ -44,7 +45,7 @@ var sendAllData = function(force) {
             lastScopeState = __this.mouseDownR;
             lastReloadState = __h.keys[__h.reloadKey];
             lastShootState = __this.mouseDownL;
-            lastPositionState = {x: __e.x, y: __e.y, z: __e.z};
+            lastPositionState = {x: __this.object.position.x, y: __this.object.position.y, z: __this.object.position.z};
             lastFlush = new Date();
         }
     } else if (supersecretsocket == null) {
@@ -65598,7 +65599,7 @@ window.addEventListener("keyup", function(e) {
             supersecretsocket = this;
             sendBuffer.push({t: t, data: n});
             // stop choking if we need to send scope tick / reload tick or 
-            var flush = (__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState != __this.mouseDownR);
+            var flush = (__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState != __this.mouseDownR) || threatFakeLag;
             sendAllData(flush);
         },
         socketReady: function() {
@@ -66304,6 +66305,7 @@ window.addEventListener("keyup", function(e) {
         var b = n.camera.getWorldPosition();
         closest = null
         var closestDistance = Number.POSITIVE_INFINITY;
+        threatFakeLag = false;
         if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
             __me = s;
             __e = e;
@@ -66317,19 +66319,23 @@ window.addEventListener("keyup", function(e) {
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
                 var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + stringToInt[state['Target'].a[state['Target'].active]] - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
 
-                // var isAimingAtUs = false;
-                // if (inView) {
-                //     var requiredDireY = __r.getDirection(tmpObj.z, tmpObj.x, __this.object.position.z, __this.object.position.x);
-                //     var requiredDireX = __r.getXDir(tmpObj.x, tmpObj.y + i.playerHeight - tmpObj.crouchVal * i.crouchDst, tmpObj.z, __this.object.position.x, __this.object.position.y, __this.object.position.z);
-                //     requiredDireY = (requiredDireY).round(3);
-                //     requiredDireX = (requiredDireX).round(3);
-                //     var dx = (tmpObj.xDire - requiredDireX + Math.PI + Math.PI)% Math.PI;
-                //     var dy = (tmpObj.yDire - requiredDireY + Math.PI2 + Math.PI2)% Math.PI2;
-                //     dx = Math.min(dx, Math.PI - dx);
-                //     dy = Math.min(dy, Math.PI2 - dy);
-                //     console.log(dx * 180 / Math.PI);
-                //     console.log(dy * 180 / Math.PI);
-                // }
+                if (inView && !threatFakeLag) {
+                    var calcAngDistance = function(a, b) {
+                        var requiredDireY = __r.getDirection(a.z, a.x, b.z, b.x);
+                        var requiredDireX = __r.getXDir(a.x, a.y + i.playerHeight - a.crouchVal * i.crouchDst, a.z, b.x, b.y - 3, b.z);
+                        var dx = (a.xDire - requiredDireY + Math.PI2 + Math.PI2) % Math.PI2;
+                        var dy = (a.yDire - requiredDireX + Math.PI2 + Math.PI2) % Math.PI;
+                        dx = Math.min(dx, Math.PI2 - dx)*180/Math.PI;
+                        dy = Math.min(dy, Math.PI - dy)*180/Math.PI;
+                        var distance = Math.sqrt(dx * dx + dy * dy);
+                        return distance;
+                    };
+
+                    var distanceToOld = calcAngDistance(tmpObj, lastPositionState);
+                    var distanceToNew = calcAngDistance(tmpObj, __this.object.position);
+
+                    threatFakeLag = distanceToOld < 6 && distanceToNew >= 6;
+                }
 
                 if (distance < closestDistance && inView && tmpObj.health > 0 && !(s.team != null && tmpObj.team == s.team)) {
                     closestDistance = distance;
@@ -66347,7 +66353,7 @@ window.addEventListener("keyup", function(e) {
                         c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
                         c.lineWidth = 3;
                         var playerwidth = 2500/distance;
-                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 10500/distance);
+                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 12000/distance);
                     }
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
