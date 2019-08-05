@@ -22,6 +22,7 @@ var lastFlush = new Date();
 var lastPositionState = {x: 0, y: 0, z: 0};
 var ogL = 0;
 var ogR = 0;
+var loadedImages = {};
 
 var sendAllData = function(force) {
     var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
@@ -66329,14 +66330,18 @@ window.addEventListener("keyup", function(e) {
                     }
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
-                        o = tmpObj.level,
-                        w = tmpObj.weapon.name;
+                        o = tmpObj.level;
                     c.font = "30px GameFont";
                     let l = o ? c.measureText(o).width + 10 : 0;
                     c.font = "20px GameFont";
                     let p = c.measureText(t).width + (a ? 5 : 0),
                         h = l + p + (a ? c.measureText(a).width : 0);
-                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -40), c.fillText(w, -h / 2, 0), c.restore()
+                        if (loadedImages[tmpObj.weapon.icon] == null) {
+                            // lazy load icons
+                            loadedImages[tmpObj.weapon.icon] = new Image;
+                            loadedImages[tmpObj.weapon.icon].src = "./textures/weapons/" + tmpObj.weapon.icon + ".png";
+                        }
+                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -70), c.drawImage(loadedImages[tmpObj.weapon.icon], -50, 0, 103, 52), c.restore()
 
                 }
             }
