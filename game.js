@@ -25,7 +25,7 @@ var sendAllData = function(force) {
     var msSinceLastFlush = (new Date()).getTime() - lastFlush.getTime();
     var letsFlush = msSinceLastFlush >= flushInterval || force;
     if (flushInterval == -1) {
-        letsFlush = (__me && Math.abs(__me.yVel) < 0.005) || force;
+        letsFlush = !__me || !__me.active || Math.abs(__me.yVel) < 0.005 || force;
     }
 
     if (supersecretsocket != null && sendBuffer.length > 0 && letsFlush) {
