@@ -12,7 +12,7 @@ var state = {
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
-                'Fake Lag': {active: 0, a:['ON JUMP', 'LITTLE', 'TELEPORT', 'OFF'], str:'[L]'}};
+                'Fake Lag': {active: 0, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'}};
 var menuActive = true;
 var bhopActive = false;
 var sendBuffer = [];
