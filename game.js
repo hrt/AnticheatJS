@@ -13,6 +13,7 @@ var state = {
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
                 'Fake Lag': {active: 0, a:['ON JUMP', 'LITTLE', 'TELEPORT', 'OFF'], str:'[L]'}};
+var menuActive = true;
 var bhopActive = false;
 var sendBuffer = [];
 var lastShootState = 0;
@@ -88,6 +89,9 @@ window.addEventListener("keyup", function(e) {
     if (e.which == 32) {
         bhopActive = false;
         e.stopPropagation();
+    }
+    if (e.which == 36 || e.which == 45 || e.which == 46) { // insert home delete
+        menuActive = ! menuActive;
     }
 }, true);
 
@@ -66278,20 +66282,22 @@ window.addEventListener("keyup", function(e) {
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
 
         // menu
-        c.fillStyle = 'rgba(0,0,0,0.2)';
-        c.fillRect(10, 280, 20 + 310 - 50, 200);
-        var currentx = 20;
-        var currenty = 320;
-        c.font = "20px GameFont";
-        c.textAlign = "left";
-        c.fillStyle = 'rgba(128,128,0,0.8)';
-        c.fillText("Hero Hunter", currentx, currenty);
-        c.fillStyle = 'rgba(256, 256, 256, 0.8)';
-        c.font = "10px GameFont";
-        for (var key in state) {
-            if (state.hasOwnProperty(key)) {
-                c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 30);
-                c.fillText(state[key].a[state[key].active].toLowerCase(), currentx + 200, currenty);
+        if (menuActive) {
+            c.fillStyle = 'rgba(0,0,0,0.2)';
+            c.fillRect(10, 280, 20 + 310 - 50, 200);
+            var currentx = 20;
+            var currenty = 320;
+            c.font = "20px GameFont";
+            c.textAlign = "left";
+            c.fillStyle = 'rgba(128,128,0,0.8)';
+            c.fillText("Hero Hunter", currentx, currenty);
+            c.fillStyle = 'rgba(256, 256, 256, 0.8)';
+            c.font = "10px GameFont";
+            for (var key in state) {
+                if (state.hasOwnProperty(key)) {
+                    c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 30);
+                    c.fillText(state[key].a[state[key].active].toLowerCase(), currentx + 200, currenty);
+                }
             }
         }
 

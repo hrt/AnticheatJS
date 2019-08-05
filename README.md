@@ -61,3 +61,4 @@ In an attempt to avoid updates which could potentially blacklist this cheat, thi
 3. Click on the "Load unpacked extension..." button.
 4. Select the extracted directory.
 5. Now play krunker.io and you should notice a difference.
+Toggle menu on/off with insert/home/delete
