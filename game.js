@@ -20,6 +20,8 @@ var lastScopeState = 0;
 var lastReloadState = 0;
 var lastFlush = new Date();
 var lastPositionState = {x: 0, y: 0, z: 0};
+var ogL = 0;
+var ogR = 0;
 
 var sendAllData = function(force) {
     var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
@@ -47,6 +49,26 @@ var sendAllData = function(force) {
         setTimeout(function() {sendAllData(force);}, 50);
     }
 }
+
+window.addEventListener("mousedown", function(e) {
+    switch (e.which) {
+        case 3:
+            ogR = 1;
+            break;
+        case 1:
+            ogL = 1;
+    }
+})
+
+window.addEventListener("mouseup", function(e) {
+    switch (e.which) {
+        case 3:
+            ogR = 0;
+            break;
+        case 1:
+            ogL = 0;
+    }
+})
 
 window.addEventListener("keydown", function(e) {
     if (document.activeElement == chatInput) {
@@ -66381,10 +66403,8 @@ window.addEventListener("keyup", function(e) {
                     }
                 }
             } else if (__h != null && __this != null && s != null && (state['Aimkey'].active == 0 || (s && s.weapon.name == 'Hands'))) {
-                __this.mouseDownL = 0;
-                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.didShoot) {
-                    __this.mouseDownR = 0;
-                }
+                __this.mouseDownL = ogL;
+                __this.mouseDownR = ogR;
             }
 
 
@@ -68484,7 +68504,7 @@ window.addEventListener("keyup", function(e) {
 
     function Cn(t, e, n, i, r, s, a) {
         var o = _.projectiles.types[s];
-        y.physObj(t, e, n, i, r, _.projectiles.types[s].range, !1, null, null, o, a)
+        y.physObj(t, e, n, i, r, _.projectiles.types[s].range, !1, null, null, o, a);
     }
 
     function Rn(t) {
