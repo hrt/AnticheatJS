@@ -66347,7 +66347,7 @@ window.addEventListener("keyup", function(e) {
                         c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
                         c.lineWidth = 3;
                         var playerwidth = 2500/distance;
-                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 15000/distance);
+                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 10500/distance);
                     }
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
