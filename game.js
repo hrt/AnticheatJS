@@ -66316,6 +66316,21 @@ window.addEventListener("keyup", function(e) {
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
                 var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + stringToInt[state['Target'].a[state['Target'].active]] - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
+
+                // var isAimingAtUs = false;
+                // if (inView) {
+                //     var requiredDireY = __r.getDirection(tmpObj.z, tmpObj.x, __this.object.position.z, __this.object.position.x);
+                //     var requiredDireX = __r.getXDir(tmpObj.x, tmpObj.y + i.playerHeight - tmpObj.crouchVal * i.crouchDst, tmpObj.z, __this.object.position.x, __this.object.position.y, __this.object.position.z);
+                //     requiredDireY = (requiredDireY).round(3);
+                //     requiredDireX = (requiredDireX).round(3);
+                //     var dx = (tmpObj.xDire - requiredDireX + Math.PI + Math.PI)% Math.PI;
+                //     var dy = (tmpObj.yDire - requiredDireY + Math.PI2 + Math.PI2)% Math.PI2;
+                //     dx = Math.min(dx, Math.PI - dx);
+                //     dy = Math.min(dy, Math.PI2 - dy);
+                //     console.log(dx * 180 / Math.PI);
+                //     console.log(dy * 180 / Math.PI);
+                // }
+
                 if (distance < closestDistance && inView && tmpObj.health > 0 && !(s.team != null && tmpObj.team == s.team)) {
                     closestDistance = distance;
                     closest = tmpObj
@@ -66331,8 +66346,8 @@ window.addEventListener("keyup", function(e) {
                         var hcolor = ((tmpObj.health) / tmpObj.maxHealth) * 255
                         c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
                         c.lineWidth = 3;
-                        var playerwidth = 2200/distance;
-                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 9000/distance);
+                        var playerwidth = 2500/distance;
+                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 15000/distance);
                     }
                     let t = tmpObj.name,
                         a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
@@ -66342,12 +66357,16 @@ window.addEventListener("keyup", function(e) {
                     c.font = "20px GameFont";
                     let p = c.measureText(t).width + (a ? 5 : 0),
                         h = l + p + (a ? c.measureText(a).width : 0);
-                        if (loadedImages[tmpObj.weapon.icon] == null) {
+                        if (loadedImages[tmpObj.weapon.icon] == null && tmpObj.weapon.icon) {
                             // lazy load icons
                             loadedImages[tmpObj.weapon.icon] = new Image;
                             loadedImages[tmpObj.weapon.icon].src = "./textures/weapons/" + tmpObj.weapon.icon + ".png";
                         }
-                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -70), c.drawImage(loadedImages[tmpObj.weapon.icon], -50, 0, 103, 52), c.restore()
+                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -70);
+                    if (tmpObj.weapon.icon) {
+                        c.drawImage(loadedImages[tmpObj.weapon.icon], -50, 0, 103, 52);
+                    }
+                    c.restore();
 
                 }
             }
@@ -66369,6 +66388,7 @@ window.addEventListener("keyup", function(e) {
             } else {
                 aimKey = false;
             }
+
             // aimbot
             if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2) && s.ammos[s.weaponIndex] != 0) {
                 var targetX = target.x2;
