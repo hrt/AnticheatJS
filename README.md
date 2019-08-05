@@ -43,10 +43,10 @@ Came across the game this morning and quit it this evening:
 
 Load this extension on chrome and you're good to go.
 
-## Features How does it work
+## How does it work
 The game loads a file generally called ```game.js```. We abuse the powers of the local user to use our altered version of ```game.js``` which patches certain functions. For example we can have name esp (see players through walls) by removing a simple team check during a render loop to show player cards: ```if (!tmpObj.inView) continue;```
 
-## Features Anti cheat
+## Anti cheat
 Their "anti script" is mainly the last few lines of the js file ```zip.js```. Any script that is loaded with a source from ```jsdelivr``` or ```raw.githack.com``` gets flagged. This is easy to avoid if need be.
 
 ```
