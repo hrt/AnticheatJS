@@ -3,22 +3,32 @@ var closest_outOfView;
 var __this;
 var __h;
 var __r;
+var __me;
+var __e;
 var supersecretsocket;
-var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true}
+var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true, 'LITTLE': 300, 'TELEPORT': 2000, 'ON JUMP': -1}
 var state = {
                 'Target': {active: 1, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
-                'Fake Lag': {active: 0, a:['ON', 'OFF'], str:'[L]'}};
+                'Fake Lag': {active: 0, a:['ON JUMP', 'LITTLE', 'TELEPORT', 'OFF'], str:'[L]'}};
 var bhopActive = false;
 var sendBuffer = [];
 var lastShootState = 0;
 var lastScopeState = 0;
 var lastReloadState = 0;
+var lastFlush = new Date();
 
-var sendAllData = function() {
-    if (supersecretsocket != null && sendBuffer.length > 0) {
+var sendAllData = function(force) {
+    var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
+    var msSinceLastFlush = (new Date()).getTime() - lastFlush.getTime();
+    var letsFlush = msSinceLastFlush >= flushInterval || force;
+    if (flushInterval == -1) {
+        letsFlush = (__me && Math.abs(__me.yVel) < 0.005) || force;
+    }
+
+    if (supersecretsocket != null && sendBuffer.length > 0 && letsFlush) {
         var inputsUpdated = false;
         for (var i = 0; i < sendBuffer.length; i++) {
             supersecretsocket.MMzmSszG.send(sendBuffer[i].data);
@@ -29,18 +39,12 @@ var sendAllData = function() {
             lastScopeState = __this.mouseDownR;
             lastReloadState = __h.keys[__h.reloadKey];
             lastShootState = __this.mouseDownL;
+            lastFlush = new Date();
         }
     } else if (supersecretsocket == null) {
-        setTimeout(function() {sendAllData();}, 50);
+        setTimeout(function() {sendAllData(force);}, 50);
     }
 }
-var nasa = function() {
-    setTimeout(function() {
-        sendAllData();
-        nasa();
-    }, 300); // nasa lag
-}
-nasa();
 
 window.addEventListener("keydown", function(e) {
     if (document.activeElement == chatInput) {
@@ -80,7 +84,7 @@ window.addEventListener("keyup", function(e) {
         state['BHOP'].active = (state['BHOP'].active + 1) % 2;
         break;
         case 76:
-        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 2;
+        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 3;
         break;
     }
 });
@@ -18047,7 +18051,7 @@ window.addEventListener("keyup", function(e) {
         muzMlt: 1.6,
         rate: 900,
         spread: 0,
-        zoom: 2.7,
+        zoom: 1,
         leanMlt: 1.5,
         recoil: .009,
         recoilR: .02,
@@ -18109,7 +18113,7 @@ window.addEventListener("keyup", function(e) {
         rate: 110,
         spread: 0,
         minSpread: 5,
-        zoom: 1.6,
+        zoom: 1,
         leanMlt: 1.5,
         recoil: .003,
         recoilR: .02,
@@ -18171,7 +18175,7 @@ window.addEventListener("keyup", function(e) {
         muzMlt: .95,
         rate: 150,
         spread: 0,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: 1,
         recoil: .006,
         recoilR: .01,
@@ -18230,7 +18234,7 @@ window.addEventListener("keyup", function(e) {
         rate: 90,
         spread: 0,
         minSpread: 5,
-        zoom: 1.65,
+        zoom: 15,
         jYMlt: .8,
         leanMlt: 1,
         recoil: .0034,
@@ -18290,7 +18294,7 @@ window.addEventListener("keyup", function(e) {
         range: 700,
         rate: 390,
         spread: 0,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .013,
         recoilR: .035,
@@ -18354,7 +18358,7 @@ window.addEventListener("keyup", function(e) {
         innac: 110,
         spread: 0,
         minSpread: 20,
-        zoom: 1.25,
+        zoom: 15,
         leanMlt: 1.6,
         recoil: .016,
         recoilR: .015,
@@ -18418,7 +18422,7 @@ window.addEventListener("keyup", function(e) {
         rate: 120,
         spread: 0,
         minSpread: 10,
-        zoom: 1.3,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .0032,
         recoilR: .014,
@@ -18482,7 +18486,7 @@ window.addEventListener("keyup", function(e) {
         rate: 120,
         spread: 0,
         caseZOff: -1.3,
-        zoom: 2.1,
+        zoom: 1,
         recoil: .01,
         recoilR: .012,
         recover: .98,
@@ -18541,7 +18545,7 @@ window.addEventListener("keyup", function(e) {
         rate: 1,
         spread: 0,
         minSpread: 15,
-        zoom: 1.5,
+        zoom: 1,
         leanMlt: 1.4,
         landBob: .8,
         recoil: .008,
@@ -18603,7 +18607,7 @@ window.addEventListener("keyup", function(e) {
         spread: 0,
         spreadInc: 1.5,
         minSpread: 10,
-        zoom: 1.5,
+        zoom: 1,
         leanMlt: .6,
         recoil: .0034,
         recoilR: .015,
@@ -18659,7 +18663,7 @@ window.addEventListener("keyup", function(e) {
         rate: 400,
         spread: 0,
         jYMlt: .5,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .01,
         recoilR: .01,
@@ -18722,7 +18726,7 @@ window.addEventListener("keyup", function(e) {
         range: 700,
         rate: 150,
         spread: 0,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .006,
         recoilR: .01,
@@ -18777,7 +18781,7 @@ window.addEventListener("keyup", function(e) {
         xOrg: 0,
         yOrg: 0,
         zOrg: 0,
-        zoom: 1.5,
+        zoom: 1,
         leanMlt: 1,
         recoil: .006,
         recoilR: .01,
@@ -18835,7 +18839,7 @@ window.addEventListener("keyup", function(e) {
         range: 700,
         rate: 150,
         spread: 0,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: .3,
         recoil: .007,
         recoilR: .01,
@@ -65565,9 +65569,8 @@ window.addEventListener("keyup", function(e) {
             supersecretsocket = this;
             sendBuffer.push({t: t, data: n});
             // stop choking if we need to send scope tick / reload tick or 
-            if (!stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] || ((__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState == 0 && __this.mouseDownR == 1))) {
-                sendAllData();
-            }
+            var flush = (__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState != __this.mouseDownR);
+            sendAllData(flush);
         },
         socketReady: function() {
             return this.MMzmSszG && this.connected
@@ -66271,6 +66274,8 @@ window.addEventListener("keyup", function(e) {
         closest = null
         var closestDistance = Number.POSITIVE_INFINITY;
         if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
+            __me = s;
+            __e = e;
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
@@ -66279,7 +66284,7 @@ window.addEventListener("keyup", function(e) {
                 if (s.team != null && tmpObj.team == s.team && stringToInt[state['ESP'].a[state['ESP'].active]] == 1) continue; // why would we want team mate esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
                 var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
-                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + 10 - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
+                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + stringToInt[state['Target'].a[state['Target'].active]] - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
                 if (distance < closestDistance && inView && tmpObj.health > 0 && !(s.team != null && tmpObj.team == s.team)) {
                     closestDistance = distance;
                     closest = tmpObj
@@ -66379,9 +66384,9 @@ window.addEventListener("keyup", function(e) {
                         __this.mouseDownL = 1;
                     }
                 }
-            } else if (__h != null && __this != null && s != null && state['Aimkey'].active == 0 || (s && s.weapon.name == 'Hands')) {
+            } else if (__h != null && __this != null && s != null && (state['Aimkey'].active == 0 || (s && s.weapon.name == 'Hands'))) {
                 __this.mouseDownL = 0;
-                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.aimVal == 0) {
+                if (s.weapon.nAuto == null || s.weapon.nAuto == false || s.didShoot) {
                     __this.mouseDownR = 0;
                 }
             }
