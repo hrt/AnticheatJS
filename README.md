@@ -3,6 +3,8 @@ Hero Hunter v1.4.7
 
 ## How to install
 <a href="https://github.com/hrt/HeroHunter/releases/download/1.0/HeroHunter.zip"><img src="https://i.imgur.com/wmLcH3i.png" width="100" height="100"></a>
+
+
 0. Download the latest release [here](https://github.com/hrt/HeroHunter/releases/download/1.0/HeroHunter.zip) and extract it.
 1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
 2. Enable Developer mode by ticking the checkbox in the upper-right corner.
