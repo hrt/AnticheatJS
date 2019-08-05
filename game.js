@@ -13,6 +13,7 @@ var state = {
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
                 'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'},
+                'Anti Aim': {active: 1, a:['ON', 'OFF'], str:'[P]'},
                 'Third Person': {active: 1, a:['ON', 'OFF'], str:'[F]'}
             };
 var menuActive = true;
@@ -121,6 +122,9 @@ window.addEventListener("keyup", function(e) {
         break;
         case 70:
         state['Third Person'].active = (state['Third Person'].active + 1) % 2;
+        break;
+        case 80:
+        state['Anti Aim'].active = (state['Anti Aim'].active + 1) % 2;
         break;
     }
 });
@@ -66292,7 +66296,7 @@ window.addEventListener("keyup", function(e) {
         // menu
         if (menuActive) {
             c.fillStyle = 'rgba(0,0,0,0.2)';
-            c.fillRect(10, 280, 20 + 310 - 50, 240);
+            c.fillRect(10, 280, 20 + 310 - 50, 270);
             var currentx = 20;
             var currenty = 320;
             c.font = "20px GameFont";
@@ -66426,8 +66430,8 @@ window.addEventListener("keyup", function(e) {
                             __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                             __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                             // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                            __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                            __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                            __this.yDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : (__h.pitchObject.rotation.x % Math.PI2)) + Math.PI2 + Math.PI2).round(3);
+                            __this.xDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : (__this.object.rotation.y % Math.PI2)) + Math.PI2 + Math.PI2).round(3);
                             if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                                 __this.mouseDownL = 1;
                             }
@@ -66440,8 +66444,8 @@ window.addEventListener("keyup", function(e) {
                     __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                     __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                     __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                    __this.yDr = (__h.pitchObject.rotation.x % Math.PI2).round(3);
-                    __this.xDr = (__this.object.rotation.y % Math.PI2).round(3);
+                    __this.yDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : (__h.pitchObject.rotation.x % Math.PI2)).round(3);
+                    __this.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : (__this.object.rotation.y % Math.PI2)).round(3);
                     if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                         __this.mouseDownL = 1;
                     }
@@ -68338,7 +68342,7 @@ window.addEventListener("keyup", function(e) {
     }
 
     function cn(t) {
-        S.object.rotation.y = t, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
+        S.object.rotation.y = t, S.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (S.object.rotation.y + Math.PI2 * 10) : (S.object.rotation.y % Math.PI2)).round(3)
     }
     window.loadUserMod = function(t, e, n) {
         j ? (j = !1, selectHostMod(e)) : (showWindow(4), document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("generic.loading")), loadModPack(e, !0, t, n))
@@ -68424,7 +68428,7 @@ window.addEventListener("keyup", function(e) {
                     var i = document.getElementById("tScoreC" + T.team);
                     i && (i.className = "tScoreC you")
                 }
-                hudClassImg.src = nt.length ? nt : "/textures/classes/icon_" + T.classIndex + ".png", S.object.rotation.y = T.xDire, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
+                hudClassImg.src = nt.length ? nt : "/textures/classes/icon_" + T.classIndex + ".png", S.object.rotation.y = T.xDire, S.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (S.object.rotation.y + Math.PI2 * 10) : (S.object.rotation.y % Math.PI2)).round(3)
             }
             Gn(k.health, k.sid, null, null), n += 19
         }
@@ -69908,7 +69912,7 @@ window.addEventListener("keyup", function(e) {
                         s = a.mouseSens * r * (h.target ? a.camChaseSen : 1) * (t.camera.fov / t.fov);
                     h.pitchObject.rotation.x -= i * s * (h.invertY ? -1 : 1), h.unlockView || (h.pitchObject.rotation.x = Math.max(-d, Math.min(d, h.pitchObject.rotation.x)));
                     var o = Math.abs(h.pitchObject.rotation.x % (2 * Math.PI));
-                    dirFlip = o > Math.PI / 2 && o < Math.PI + Math.PI / 2 ? -1 : 1, h.object.rotation.y -= n * s * dirFlip, h.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3), h.xDr = (h.object.rotation.y % Math.PI2).round(3)
+                    dirFlip = o > Math.PI / 2 && o < Math.PI + Math.PI / 2 ? -1 : 1, h.object.rotation.y -= n * s * dirFlip, h.yDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (h.pitchObject.rotation.x + Math.PI2 * 10) : (h.pitchObject.rotation.x % Math.PI2)).round(3), h.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (h.object.rotation.y + Math.PI2 * 10) : (h.object.rotation.y % Math.PI2)).round(3)
                 }
             };
         u.addEventListener("mousemove", m, !1);
