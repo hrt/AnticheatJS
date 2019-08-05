@@ -1,4 +1,4 @@
-var closest;
+fvar closest;
 var closest_outOfView;
 var __this;
 var __h;
@@ -114,7 +114,7 @@ window.addEventListener("keyup", function(e) {
         state['BHOP'].active = (state['BHOP'].active + 1) % 2;
         break;
         case 76:
-        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 3;
+        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 4;
         break;
     }
 });
