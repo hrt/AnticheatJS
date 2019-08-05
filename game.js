@@ -19,6 +19,7 @@ var lastShootState = 0;
 var lastScopeState = 0;
 var lastReloadState = 0;
 var lastFlush = new Date();
+var lastPositionState = {x: 0, y: 0, z: 0};
 
 var sendAllData = function(force) {
     var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
@@ -39,6 +40,7 @@ var sendAllData = function(force) {
             lastScopeState = __this.mouseDownR;
             lastReloadState = __h.keys[__h.reloadKey];
             lastShootState = __this.mouseDownL;
+            lastPositionState = {x: __e.x, y: __e.y, z: __e.z};
             lastFlush = new Date();
         }
     } else if (supersecretsocket == null) {
@@ -66295,11 +66297,8 @@ window.addEventListener("keyup", function(e) {
                     c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
                     var x = s && s.team ? s.team : window.spectating ? 1 : 0;
                     c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
-                    if (s.team == null || s.team != tmpObj.team) {
-                        var dx = tmpObj.x - s.x;
-                        var dy = tmpObj.y - s.y;
-                        var dz = tmpObj.z - s.z;
-                        var distance = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                    if (s.team == null || s.team != tmpObj.team && __r) {
+                        var distance = __r.getDistance3D(tmpObj.x, tmpObj.y, tmpObj.z, s.x, s.y, s.z);
                         var hcolor = ((tmpObj.health) / tmpObj.maxHealth) * 255
                         c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
                         c.lineWidth = 3;
@@ -66337,15 +66336,12 @@ window.addEventListener("keyup", function(e) {
             } else {
                 aimKey = false;
             }
-
             // aimbot
             if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2) && s.ammos[s.weaponIndex] != 0) {
                 var targetX = target.x2;
                 var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
                 var targetZ = target.z2;
-                var dx = targetX - s.x;
-                var dz = targetZ - s.z;
-                var distance = Math.sqrt(dx * dx + dz * dz);
+                var distance = __r.getDistance3D(targetX, targetY, targetZ, s.x, s.y, s.z);
                 if (s.weapon.nAuto == 1) {
                     if (s.didShoot) {
                         if (state['Aimkey'].active == 0) {
