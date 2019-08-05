@@ -1,6 +1,20 @@
 # Krunker Multihack
 Hero Hunter v1.4.7
 
+<a href="https://github.com/hrt/HeroHunter/releases/download/1.0/HeroHunter.zip"><img src="https://i.imgur.com/wmLcH3i.png" width="100" height="100"></a>
+
+
+## How to install
+
+0. Download the latest release [here](https://github.com/hrt/HeroHunter/releases/download/1.0/HeroHunter.zip) and extract it.
+1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
+2. Enable Developer mode by ticking the checkbox in the upper-right corner.
+3. Click on the "Load unpacked extension..." button.
+4. Select the extracted directory.
+5. Now play krunker.io and you should notice a difference.
+
+Toggle menu on/off with insert/home/delete
+
 ## Features
 - [x] Aimbot (hold right mouse button)
 - [x] Fake Lag ~ that annoying lagger who no one can hit
@@ -30,10 +44,10 @@ Came across the game this morning and quit it this evening:
 
 Load this extension on chrome and you're good to go.
 
-## Features How does it work
+## How does it work
 The game loads a file generally called ```game.js```. We abuse the powers of the local user to use our altered version of ```game.js``` which patches certain functions. For example we can have name esp (see players through walls) by removing a simple team check during a render loop to show player cards: ```if (!tmpObj.inView) continue;```
 
-## Features Anti cheat
+## Anti cheat
 Their "anti script" is mainly the last few lines of the js file ```zip.js```. Any script that is loaded with a source from ```jsdelivr``` or ```raw.githack.com``` gets flagged. This is easy to avoid if need be.
 
 ```
@@ -54,13 +68,3 @@ window.chH = function(a) {
 ```
 
 In an attempt to avoid updates which could potentially blacklist this cheat, this extension blocks all javascript files from krunker.io. Obviously this is also trivial to bypass: for example, they could be running javascript remotely since things like ```Array.from(document.scripts).filter(x=>x.src&&/js\/game\.[^\.]+\.js\?build=.+/.test(x.src)).length?'checkin':'loadin'``` are sent to the client through websockets - not necessarily for anti cheating.
-
-
-## How to install
-0. Download the repository [here](https://github.com/hrt/HeroHunter/archive/master.zip) and extract it.
-1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
-2. Enable Developer mode by ticking the checkbox in the upper-right corner.
-3. Click on the "Load unpacked extension..." button.
-4. Select the extracted directory.
-5. Now play krunker.io and you should notice a difference.
-Toggle menu on/off with insert/home/delete
