@@ -6,7 +6,7 @@ var __r;
 var __me;
 var __e;
 var supersecretsocket;
-var stringToInt = {'HEAD': 10, 'NECK': 8, 'CHEST': 5, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true, 'LITTLE': 300, 'TELEPORT': 2000, 'ON JUMP': -1}
+var stringToInt = {'HEAD': 12, 'NECK': 10, 'CHEST': 8, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true, 'LITTLE': 300, 'TELEPORT': 2000, 'ON JUMP': -1}
 var state = {
                 'Target': {active: 1, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
@@ -29,10 +29,11 @@ var threatFakeLag = false;
 var sendAllData = function(force) {
     var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
     var msSinceLastFlush = (new Date()).getTime() - lastFlush.getTime();
-    var letsFlush = msSinceLastFlush >= flushInterval || force;
+    var letsFlush = msSinceLastFlush >= flushInterval;
     if (flushInterval == -1) {
-        letsFlush = !__me || !__me.active || Math.abs(__me.yVel) < 0.005 || force;
+        letsFlush = !__me || !__me.active || Math.abs(__me.yVel) < 0.005;
     }
+    letsFlush |= force;
 
     if (supersecretsocket != null && sendBuffer.length > 0 && letsFlush) {
         var inputsUpdated = false;
@@ -65598,7 +65599,7 @@ window.addEventListener("keyup", function(e) {
             this.ahNum = r.AjDitf(this.ahNum, s);
             var n = r.nzsDzFp([t, e], this.ahNum);
             supersecretsocket = this;
-            sendBuffer.push({t: t, data: n});
+            sendBuffer.push({t: t, e: e, data: n});
             // stop choking if we need to send scope tick / reload tick or 
             var flush = (__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState != __this.mouseDownR) || threatFakeLag;
             sendAllData(flush);
