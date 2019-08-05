@@ -13,7 +13,7 @@ var state = {
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
                 'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'},
-                'Third Person': {active: 0, a:['ON', 'OFF'], str:'[F]'}
+                'Third Person': {active: 1, a:['ON', 'OFF'], str:'[F]'}
             };
 var menuActive = true;
 var bhopActive = false;
