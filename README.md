@@ -17,6 +17,7 @@ Hero Hunter v1.4.7
 - [x] No death delay
 - [x] Auto respawn
 - [x] Box esp
+- [x] Third person
 
 Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0
 [![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot2.png?raw=true)](https://www.youtube.com/watch?v=-UGY3wrfor0)

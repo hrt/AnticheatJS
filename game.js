@@ -12,7 +12,9 @@ var state = {
                 'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
                 'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
-                'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'}};
+                'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'},
+                'Third Person': {active: 0, a:['ON', 'OFF'], str:'[F]'}
+            };
 var menuActive = true;
 var bhopActive = false;
 var sendBuffer = [];
@@ -116,6 +118,9 @@ window.addEventListener("keyup", function(e) {
         break;
         case 76:
         state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 4;
+        break;
+        case 70:
+        state['Third Person'].active = (state['Third Person'].active + 1) % 2;
         break;
     }
 });
@@ -62479,26 +62484,26 @@ window.addEventListener("keyup", function(e) {
                     _ = Math.cos(2 * n.stepVal) / 2 * x,
                     S = -Math.sin(n.stepChase) * x,
                     T = -Math.cos(2 * n.stepChase) / 2 * x,
-                    E = t.config.thirdPerson ? 0 : 1 - n.aimVal,
+                    E = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 0 : 1 - n.aimVal,
                     k = .5 * (.5 >= E ? E : .5 - (E - .5)),
                     A = n.swapTime / n.weapon.swapTime,
                     L = n.weapon.xOff,
                     P = 0;
                 0 < n.reloadTimer && (P = .5 < (P = 1 - n.reloadTimer / n.weapon.reload) ? .5 - (P - .5) : P);
                 var C = 1.5 * (1 - .88 * (1 - n.aimVal)) * e.weaponLean;
-                e.moveMesh(n.objInstances, n.x, n.y + (n.isYou && !t.config.thirdPerson ? 0 : Math.abs(3.5 * M)), n.z), e.rotateMesh(n.objInstances, n.xDire + (n.isYou ? t.config.thirdPerson ? .5 * -M : 0 : 2 * -M)), _ -= _ * (n.crouchVal * c.crouchAnimMlt), M -= M * (n.crouchVal * c.crouchAnimMlt);
+                e.moveMesh(n.objInstances, n.x, n.y + (n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 0 : Math.abs(3.5 * M)), n.z), e.rotateMesh(n.objInstances, n.xDire + (n.isYou ? (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? .5 * -M : 0 : 2 * -M)), _ -= _ * (n.crouchVal * c.crouchAnimMlt), M -= M * (n.crouchVal * c.crouchAnimMlt);
                 for (var R = 0; R < n.legMeshes.length; ++R) n.legMeshes[R].rotation.x = M * (1 == R || 3 == R ? 1 : -1) * 7 + (1 < R ? -.6 : 0);
                 var I;
                 for (R = 0; R < n.armMeshes.length; ++R) I = -(n[(0 == R ? "l" : "r") + "HndTweenA"] || 0), n.armMeshes[R].position.z = I || M * (R ? -1 : 1) * 12, n.armMeshes[R].rotation.x = .1 * I, n.armMeshes[R].rotation.z = .1 * I * (R ? -1 : 1), n.armMeshes[R].position.x = -.3 * I * (R ? -1 : 1);
                 var O = t.attach[n.weapon.attach],
                     D = O && O.aimOffY || 0;
                 n.weaponMeshes[n.weaponIndex].flapMesh && n.weapon.flap && (fRot = 3 * T + 2.8 * n.recoilAnim - n.leanAnimZ - 3 * n.leanAnimX - 1.8 * n.landBobYR + f + .1 * n.crouchVal, e.rotateMesh(n.weaponMeshes[n.weaponIndex].flapMesh, n.weapon.flap.rot * n.swapTweenA + fRot, null, null));
-                var z = t.config.thirdPerson ? .4 : 1;
-                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !t.config.thirdPerson ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
+                var z = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? .4 : 1;
+                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
             }
         }, this.updateHeight = function(n) {
             var i = c.crouchDst * n.crouchVal;
-            if (!e || n.isYou && !t.config.thirdPerson) n.height = c.playerHeight - i;
+            if (!e || n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null)) n.height = c.playerHeight - i;
             else {
                 var r = c.crouchLean * n.crouchVal;
                 e.rotateMesh(n.lowerBody, 0, r + .5 * n.yDire, 0), n.upperBody.rotation.x -= r, e.moveMesh(n.lowerBody, 0, c.legHeight - i, 0);
@@ -62506,7 +62511,7 @@ window.addEventListener("keyup", function(e) {
             }
         }, this.generateMeshes = function(n, r, s = !1) {
             var o = t.classes[n.classIndex].colors,
-                l = t.config.thirdPerson || !r;
+                l = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) || !r;
             if (n.objInstances = e.genObj3D(n.x, n.y, n.z), n.lowerBody = e.genObj3D(0, c.legHeight, 0), l && n.lowerBody.add(e.genBody(o[1], o[2], o[4], o[0], n.isPreview || n.isYou)), n.upperBody = e.genObj3D(0, 0, 0), n.lowerBody.add(n.upperBody), 0 <= n.backIndex && l && (n.backMesh = e.genObj3D(0, (c.playerHeight - c.legHeight - c.headScale) / 2 - (t.store.skins[n.backIndex].sitOff || 0), -(t.store.skins[n.backIndex].sitOffZ || 0)), n.lowerBody.add(n.backMesh), e.loadMesh({
                     src: "body/body_" + t.store.skins[n.backIndex].id,
                     texSrc: t.store.skins[n.backIndex].tex ? "body/body_" + t.store.skins[n.backIndex].id + "_" + t.store.skins[n.backIndex].tex : null,
@@ -66287,7 +66292,7 @@ window.addEventListener("keyup", function(e) {
         // menu
         if (menuActive) {
             c.fillStyle = 'rgba(0,0,0,0.2)';
-            c.fillRect(10, 280, 20 + 310 - 50, 200);
+            c.fillRect(10, 280, 20 + 310 - 50, 240);
             var currentx = 20;
             var currenty = 320;
             c.font = "20px GameFont";
@@ -68670,7 +68675,7 @@ window.addEventListener("keyup", function(e) {
                         spinItemName.style.opacity = l, spinItemName.style.marginTop = .6 * n + "px", spinItemName.style.fontSize = n / 6.5 * l + "px", spinItemName.children[0].style.fontSize = n / 12 * l + "px", spinItemName.style.padding = n / 20 * l + "px", spinItemName.style.paddingLeft = n / 2 * l + "px", spinItemName.style.paddingRight = n / 2 * l + "px", De.position.x != Pe && (De.position.x -= .2 * (De.position.x - Pe), .05 >= Math.abs(Pe - De.position.x) && (De.position.x = Pe), De.lookAt(fe.position)), Ie += .0018 * t, de.position.y = de.orgYP + .45 * Math.sin(Ie), de.rotation.x = de.orgXR + -.03 * Math.sin(.9 * Ie), ze.render(fe, De)
                     }
                 }
-            }(q), Yt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? (_.config.thirdPerson ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, S.scrollDelta], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.tmpInputs.push(L), function(t) {
+            }(q), Yt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? ((stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, S.scrollDelta], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.tmpInputs.push(L), function(t) {
                 if (We && T && T.active) {
                     for (var e = {
                             time: Y,
@@ -68702,7 +68707,7 @@ window.addEventListener("keyup", function(e) {
                         }, n = 0; n < _.players.list.length; ++n)(k = _.players.list[n]) != T && k.active && e.players.push([k.sid, k.classIndex, k.weaponIndex, k.xDr, k.yDr, k.crouchVal, k.x, k.y, k.z]);
                     for (Ge.states.push(e), n = Ge.states.length - 1; 0 <= n; --n) Y - Ge.states[n].time > Ve && Ge.states.splice(n, 1)
                 }
-            }(L), T.procInputs(L, _), S.SigUOXgE(T.x, T.y + T.height - i.cameraHeight, T.z), S.CUhoPlasP(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.kNLeIr(Math.max(58, T.spread * yt), _.config.thirdPerson && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
+            }(L), T.procInputs(L, _), S.SigUOXgE(T.x, T.y + T.height - i.cameraHeight, T.z), S.CUhoPlasP(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.kNLeIr(Math.max(58, T.spread * yt), (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
                 for (var e = U.length ? 1 : 0; e < t.length;)
                     if (2 == e && P && P[2] == t[2] && P[3] == t[3]) U.push("i"), e += 2;
                     else {
