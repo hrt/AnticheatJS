@@ -9,8 +9,8 @@ var supersecretsocket;
 var stringToInt = {'HEAD': 12, 'NECK': 10, 'CHEST': 8, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true, 'LITTLE': 300, 'TELEPORT': 2000, 'ON JUMP': -1}
 var state = {
                 'Target': {active: 1, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
-                'Aimkey': {active: 0, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
-                'ESP': {active: 0, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
+                'Aimkey': {active: 4, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
+                'ESP': {active: 2, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
                 'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
                 'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'},
                 'Anti Aim': {active: 1, a:['ON', 'OFF'], str:'[P]'},
@@ -21033,9 +21033,9 @@ window.addEventListener("keyup", function(e) {
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8220268,
-            light: 16771304,
-            sky: 14141126,
-            fog: 13812161,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 918.7540927106669,
             dthY: -100,
             camPos: [11, 33, -217],
@@ -26396,9 +26396,9 @@ window.addEventListener("keyup", function(e) {
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8093324,
-            light: 5461350,
-            sky: 6716054,
-            fog: 7832738,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 722.1829102596926,
             dthY: -100,
             nAmb: 1,
@@ -39764,9 +39764,9 @@ window.addEventListener("keyup", function(e) {
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8555670,
-            light: 16120058,
-            sky: 13883868,
-            fog: 13030361,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 601.943118216585,
             dthY: -100,
             camPos: [-13, 93, -6],
@@ -46237,9 +46237,9 @@ window.addEventListener("keyup", function(e) {
             sizeMlt: 2,
             shadowR: 4096,
             ambient: 6184555,
-            light: 3358064,
-            sky: 0,
-            fog: 3551876,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 888.9947618183014,
             dthY: -118.35524224550045,
             modes: [0],
@@ -66430,8 +66430,8 @@ window.addEventListener("keyup", function(e) {
                             __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
                             __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
                             // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
-                            __this.yDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : (__h.pitchObject.rotation.x % Math.PI2)) + Math.PI2 + Math.PI2).round(3);
-                            __this.xDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : (__this.object.rotation.y % Math.PI2)) + Math.PI2 + Math.PI2).round(3);
+                            __this.yDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : ((__h.pitchObject.rotation.x) % Math.PI2))).round(3);
+                            __this.xDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : ((__this.object.rotation.y) % Math.PI2))).round(3);
                             if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
                                 __this.mouseDownL = 1;
                             }

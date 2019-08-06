@@ -33,6 +33,7 @@ Toggle menu on/off with insert/home/delete
 - [x] Box esp
 - [x] Third person
 - [x] Anti Aim
+- [x] Everyday is sunny
 
 Gameplay: https://www.youtube.com/watch?v=-UGY3wrfor0
 [![Alt text](https://github.com/hrt/KrunkerMultihack/blob/master/screenshot2.png?raw=true)](https://www.youtube.com/watch?v=-UGY3wrfor0)
