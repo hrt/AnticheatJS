@@ -1,3 +1,134 @@
+var closest;
+var closest_outOfView;
+var __this;
+var __h;
+var __r;
+var __me;
+var __e;
+var supersecretsocket;
+var stringToInt = {'HEAD': 12, 'NECK': 10, 'CHEST': 8, 'ON': 1, 'ALL': 2, 'ENEMY': 1, 'OFF': null, 'MANUAL': false, 'AUTO': true, 'LITTLE': 300, 'TELEPORT': 2000, 'ON JUMP': -1}
+var state = {
+                'Target': {active: 1, a:['HEAD', 'NECK', 'CHEST'], str:'[G]'},
+                'Aimkey': {active: 4, a:['AUTO', 'LMB', 'RMB', 'SMB', 'OFF'], str:'[H]'},
+                'ESP': {active: 2, a:['ENEMY', 'ALL', 'OFF'], str:'[J]'},
+                'BHOP': {active: 1, a:['AUTO', 'MANUAL'], str:'[K]'},
+                'Fake Lag': {active: 3, a:['LITTLE', 'TELEPORT', 'ON JUMP', 'OFF'], str:'[L]'},
+                'Anti Aim': {active: 1, a:['ON', 'OFF'], str:'[P]'},
+                'Third Person': {active: 1, a:['ON', 'OFF'], str:'[F]'}
+            };
+var menuActive = true;
+var bhopActive = false;
+var sendBuffer = [];
+var lastShootState = 0;
+var lastScopeState = 0;
+var lastReloadState = 0;
+var lastFlush = new Date();
+var lastPositionState = {x: 0, y: 0, z: 0};
+var ogL = 0;
+var ogR = 0;
+var loadedImages = {};
+var threatFakeLag = false;
+
+var sendAllData = function(force) {
+    var flushInterval = stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] ? stringToInt[state['Fake Lag'].a[state['Fake Lag'].active]] : 0;
+    var msSinceLastFlush = (new Date()).getTime() - lastFlush.getTime();
+    var letsFlush = msSinceLastFlush >= flushInterval;
+    if (flushInterval == -1) {
+        letsFlush = !__me || !__me.active || Math.abs(__me.yVel) < 0.005;
+    }
+    letsFlush |= force;
+
+    if (supersecretsocket != null && sendBuffer.length > 0 && letsFlush) {
+        var inputsUpdated = false;
+        for (var i = 0; i < sendBuffer.length; i++) {
+            supersecretsocket.mGHoTaTsoUp.send(sendBuffer[i].data);
+            inputsUpdated |= sendBuffer[i].t == 'i';
+        }
+        sendBuffer.length = 0;
+        if (inputsUpdated && __this && __h) {
+            lastScopeState = __this.mouseDownR;
+            lastReloadState = __h.keys[__h.reloadKey];
+            lastShootState = __this.mouseDownL;
+            lastPositionState = {x: __this.object.position.x, y: __this.object.position.y, z: __this.object.position.z};
+            lastFlush = new Date();
+        }
+    } else if (supersecretsocket == null) {
+        setTimeout(function() {sendAllData(force);}, 50);
+    }
+}
+
+window.addEventListener("mousedown", function(e) {
+    switch (e.which) {
+        case 3:
+            ogR = 1;
+            break;
+        case 1:
+            ogL = 1;
+    }
+})
+
+window.addEventListener("mouseup", function(e) {
+    switch (e.which) {
+        case 3:
+            ogR = 0;
+            break;
+        case 1:
+            ogL = 0;
+    }
+})
+
+window.addEventListener("keydown", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
+    if (e.which == 32) {
+        bhopActive = true;
+        e.stopPropagation();
+    }
+}, true);
+
+window.addEventListener("keyup", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
+    if (e.which == 32) {
+        bhopActive = false;
+        e.stopPropagation();
+    }
+    if (e.which == 36 || e.which == 45 || e.which == 46) { // insert home delete
+        menuActive = ! menuActive;
+    }
+}, true);
+
+window.addEventListener("keyup", function(e) {
+    if (document.activeElement == chatInput) {
+        return;
+    }
+    switch (e.which) {
+        case 71:
+        state['Target'].active = (state['Target'].active + 1) % 3
+        break;
+        case 72:
+        state['Aimkey'].active = (state['Aimkey'].active + 1) % 5;
+        break;
+        case 74:
+        state['ESP'].active = (state['ESP'].active + 1) % 3;
+        break;
+        case 75:
+        state['BHOP'].active = (state['BHOP'].active + 1) % 2;
+        break;
+        case 76:
+        state['Fake Lag'].active = (state['Fake Lag'].active + 1) % 4;
+        break;
+        case 70:
+        state['Third Person'].active = (state['Third Person'].active + 1) % 2;
+        break;
+        case 80:
+        state['Anti Aim'].active = (state['Anti Aim'].active + 1) % 2;
+        break;
+    }
+});
+
 ! function(t) {
     var e = {};
 
@@ -17968,8 +18099,8 @@
         muzOff: 8,
         muzMlt: 1.6,
         rate: 900,
-        spread: 260,
-        zoom: 2.7,
+        spread: 0,
+        zoom: 1,
         leanMlt: 1.5,
         recoil: .009,
         recoilR: .02,
@@ -18032,7 +18163,7 @@
         muzMlt: 1.4,
         spread: 100,
         minSpread: 5,
-        zoom: 1.6,
+        zoom: 1,
         leanMlt: 1.5,
         recoil: .003,
         recoilR: .02,
@@ -18094,8 +18225,8 @@
         muzOffY: 0,
         muzMlt: .95,
         rate: 150,
-        spread: 90,
-        zoom: 1.4,
+        spread: 0,
+        zoom: 1,
         leanMlt: 1,
         recoil: .006,
         recoilR: .01,
@@ -18153,9 +18284,9 @@
         muzOff: 2.15,
         muzOffY: .1,
         rate: 90,
-        spread: 90,
+        spread: 0,
         minSpread: 5,
-        zoom: 1.65,
+        zoom: 1,
         jYMlt: .8,
         leanMlt: 1,
         recoil: .0034,
@@ -18214,8 +18345,8 @@
         muzMlt: .95,
         range: 700,
         rate: 390,
-        spread: 100,
-        zoom: 1.4,
+        spread: 0,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .013,
         recoilR: .035,
@@ -18278,9 +18409,9 @@
         range: 240,
         rate: 400,
         innac: 110,
-        spread: 120,
+        spread: 0,
         minSpread: 20,
-        zoom: 1.25,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .016,
         recoilR: .015,
@@ -18343,9 +18474,9 @@
         muzOffY: -.14,
         muzMlt: 1.7,
         rate: 120,
-        spread: 300,
+        spread: 0,
         minSpread: 10,
-        zoom: 1.3,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .0032,
         recoilR: .014,
@@ -18408,9 +18539,9 @@
         muzOffY: -.05,
         muzMlt: 1.1,
         rate: 120,
-        spread: 250,
+        spread: 0,
         caseZOff: -1.3,
-        zoom: 2.1,
+        zoom: 1,
         recoil: .01,
         recoilR: .012,
         recover: .98,
@@ -18468,9 +18599,9 @@
         muzOffY: 0,
         muzMlt: 1.5,
         rate: 1,
-        spread: 120,
+        spread: 0,
         minSpread: 15,
-        zoom: 1.5,
+        zoom: 1,
         leanMlt: 1.4,
         landBob: .8,
         recoil: .008,
@@ -18529,10 +18660,10 @@
         caseZOff: -.4,
         muzOff: 3.6,
         rate: 60,
-        spread: 40,
+        spread: 0,
         spreadInc: 1.5,
         minSpread: 10,
-        zoom: 1.5,
+        zoom: 1,
         leanMlt: .6,
         recoil: .0034,
         recoilR: .015,
@@ -18586,9 +18717,9 @@
         muzMlt: 1.1,
         range: 700,
         rate: 400,
-        spread: 150,
+        spread: 0,
         jYMlt: .5,
-        zoom: 1.4,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .01,
         recoilR: .01,
@@ -18650,8 +18781,8 @@
         jYMlt: .8,
         range: 700,
         rate: 150,
-        spread: 150,
-        zoom: 1.4,
+        spread: 0,
+        zoom: 1,
         leanMlt: 1.6,
         recoil: .006,
         recoilR: .01,
@@ -18718,7 +18849,7 @@
         dmgDrop: 0,
         range: 15,
         spdMlt: 1.1,
-        spread: 100,
+        spread: 0,
         leftHoldY: -.82,
         leftHoldX: 1.5,
         rightHoldX: -1.5,
@@ -18789,8 +18920,8 @@
         jYMlt: .95,
         range: 700,
         rate: 150,
-        spread: 300,
-        zoom: 1.4,
+        spread: 0,
+        zoom: 1,
         leanMlt: .3,
         recoil: .007,
         recoilR: .01,
@@ -20936,9 +21067,9 @@
             terrainGrsCol: "#4a6904",
             terrainDrtCol: "#8c6835",
             skyDome: !1,
-            skyDomeCol0: "#ffffff",
-            skyDomeCol1: "#7196a2",
-            skyDomeCol2: "#184452",
+            skyDomeCol0: "#7bd7ff",
+            skyDomeCol1: "#f7d4b4",
+            skyDomeCol2: "#dce8ed",
             zone: !1,
             zoneSize: 500,
             zoneSpeed: 1,
@@ -20948,9 +21079,9 @@
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8220268,
-            light: 16771304,
-            sky: 14141126,
-            fog: 13812161,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 918.7540927106669,
             dthY: -100,
             camPos: [11, 33, -217],
@@ -26299,9 +26430,9 @@
             terrainGrsCol: "#4a6904",
             terrainDrtCol: "#8c6835",
             skyDome: !1,
-            skyDomeCol0: "#3fb1b7",
-            skyDomeCol1: "#00cffc",
-            skyDomeCol2: "#1faedc",
+            skyDomeCol0: "#7bd7ff",
+            skyDomeCol1: "#f7d4b4",
+            skyDomeCol2: "#dce8ed",
             zone: !1,
             zoneSize: 500,
             zoneSpeed: 1,
@@ -26311,9 +26442,9 @@
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8093324,
-            light: 5461350,
-            sky: 6716054,
-            fog: 7832738,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 722.1829102596926,
             dthY: -100,
             nAmb: 1,
@@ -39881,9 +40012,9 @@
             terrainGrsCol: "#4a6904",
             terrainDrtCol: "#8c6835",
             skyDome: !1,
-            skyDomeCol0: "#ffffff",
-            skyDomeCol1: "#7196a2",
-            skyDomeCol2: "#184452",
+            skyDomeCol0: "#7bd7ff",
+            skyDomeCol1: "#f7d4b4",
+            skyDomeCol2: "#dce8ed",
             zone: !1,
             zoneSize: 500,
             zoneSpeed: 1,
@@ -39893,9 +40024,9 @@
             sizeMlt: 2,
             shadowR: 1024,
             ambient: 8555670,
-            light: 16120058,
-            sky: 13883868,
-            fog: 13030361,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 601.943118216585,
             dthY: -100,
             camPos: [-13, 93, -6],
@@ -46354,9 +46485,9 @@
             terrainGrsCol: "#4a6904",
             terrainDrtCol: "#8c6835",
             skyDome: !0,
-            skyDomeCol0: "#071250",
-            skyDomeCol1: "#452e7d",
-            skyDomeCol2: "#2f3b7d",
+            skyDomeCol0: "#7bd7ff",
+            skyDomeCol1: "#f7d4b4",
+            skyDomeCol2: "#dce8ed",
             zone: !1,
             zoneSize: 500,
             zoneSpeed: 1,
@@ -46366,9 +46497,9 @@
             sizeMlt: 2,
             shadowR: 4096,
             ambient: 6184555,
-            light: 3358064,
-            sky: 0,
-            fog: 3551876,
+            light: 16777215,
+            sky: 14477549,
+            fog: 12294553,
             fogD: 888.9947618183014,
             dthY: -118.35524224550045,
             modes: [0],
@@ -62666,26 +62797,26 @@
                     _ = Math.cos(2 * n.stepVal) / 2 * x,
                     S = -Math.sin(n.stepChase) * x,
                     T = -Math.cos(2 * n.stepChase) / 2 * x,
-                    E = t.config.thirdPerson ? 0 : 1 - n.aimVal,
+                    E = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 0 : 1 - n.aimVal,
                     k = .5 * (.5 >= E ? E : .5 - (E - .5)),
                     A = n.swapTime / n.weapon.swapTime,
                     L = n.weapon.xOff,
                     P = 0;
                 0 < n.reloadTimer && (P = .5 < (P = 1 - n.reloadTimer / n.weapon.reload) ? .5 - (P - .5) : P);
                 var C = 1.5 * (1 - .88 * (1 - n.aimVal)) * e.weaponLean;
-                e.moveMesh(n.objInstances, n.x, n.y + (n.isYou && !t.config.thirdPerson ? 0 : Math.abs(3.5 * M)), n.z), e.rotateMesh(n.objInstances, n.xDire + (n.isYou ? t.config.thirdPerson ? .5 * -M : 0 : 2 * -M)), _ -= _ * (n.crouchVal * c.crouchAnimMlt), M -= M * (n.crouchVal * c.crouchAnimMlt);
+                e.moveMesh(n.objInstances, n.x, n.y + (n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 0 : Math.abs(3.5 * M)), n.z), e.rotateMesh(n.objInstances, n.xDire + (n.isYou ? (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? .5 * -M : 0 : 2 * -M)), _ -= _ * (n.crouchVal * c.crouchAnimMlt), M -= M * (n.crouchVal * c.crouchAnimMlt);
                 for (var R = 0; R < n.legMeshes.length; ++R) n.legMeshes[R].rotation.x = M * (1 == R || 3 == R ? 1 : -1) * 7 + (1 < R ? -.6 : 0);
                 var I;
                 for (R = 0; R < n.armMeshes.length; ++R) I = -(n[(0 == R ? "l" : "r") + "HndTweenA"] || 0), n.armMeshes[R].position.z = M * (R ? -1 : 1) * (0 <= n.meleeIndex ? 1 : 4), 0 <= n.meleeIndex && n.weapon.melee ? (n.armMeshes[R].rotation.x = n.armMeshes[R].xR || 0, n.armMeshes[R].rotation.y = n.armMeshes[R].yR || 0, n.armMeshes[R].position.x = n.armMeshes[R].xP || 0, n.armMeshes[R].position.y = n.armMeshes[R].yP || 0, 1 == R ? (n.armMeshes[1].rotation.z = n.armMeshes[R].zR + .12 * n.crouchVal + -1 * T + .2 * n.jumpBobY, n.meleeAnim && n.weaponGeos[n.weaponIndex] && (n.armMeshes[1].rotation.z += n.meleeAnim.armR || 0, n.armMeshes[1].rotation.y += n.meleeAnim.armT || 0, n.armMeshes[1].position.x += n.meleeAnim.armM || 0, n.armMeshes[1].position.z += n.meleeAnim.armE || 0, n.armMeshes[1].position.y += n.meleeAnim.armY || 0, n.weaponGeos[n.weaponIndex] && (n.weaponGeos[n.weaponIndex].rotation.z = n.weaponGeos[n.weaponIndex].zR + (n.meleeAnim.weaR || 0), n.weaponGeos[n.weaponIndex].position.x = n.weaponGeos[n.weaponIndex].xP + (n.meleeAnim.weaM || 0)))) : n.meleeAnim && n.weaponGeos[n.weaponIndex] && (n.armMeshes[0].position.z += n.meleeAnim.lArm || 0, n.armMeshes[0].position.x -= .3 * (n.meleeAnim.lArm || 0))) : (I && (n.armMeshes[R].position.z = I), n.armMeshes[R].rotation.x = .1 * I, n.armMeshes[R].rotation.z = (n.armMeshes[R].zR || 0) + .1 * I * (R ? -1 : 1), n.armMeshes[R].position.x = -.3 * I * (R ? -1 : 1));
                 var O = t.attach[n.weapon.attach],
                     D = O && O.aimOffY || 0;
                 n.weaponMeshes[n.weaponIndex].flapMesh && n.weapon.flap && (fRot = 3 * T + 2.8 * n.recoilAnim - n.leanAnimZ - 3 * n.leanAnimX - 1.8 * n.landBobYR + f + .1 * n.crouchVal, e.rotateMesh(n.weaponMeshes[n.weaponIndex].flapMesh, n.weapon.flap.rot * n.swapTweenA + fRot, null, null));
-                var z = t.config.thirdPerson ? .4 : 1;
-                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !t.config.thirdPerson ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C - .25 * (n.swapTweenR || 0) + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + .1 * (n.swapTweenR || 0) + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
+                var z = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? .4 : 1;
+                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C - .25 * (n.swapTweenR || 0) + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + .1 * (n.swapTweenR || 0) + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
             }
         }, this.updateHeight = function(n) {
             var i = c.crouchDst * n.crouchVal;
-            if (!e || n.isYou && !t.config.thirdPerson) n.height = c.playerHeight - i;
+            if (!e || n.isYou && !(stringToInt[state['Third Person'].a[state['Third Person'].active]] != null)) n.height = c.playerHeight - i;
             else {
                 var r = c.crouchLean * n.crouchVal;
                 e.rotateMesh(n.lowerBody, 0, r + .5 * n.yDire, 0), n.upperBody.rotation.x -= r, e.moveMesh(n.lowerBody, 0, c.legHeight - i, 0);
@@ -62693,7 +62824,7 @@
             }
         }, this.generateMeshes = function(n, r, s = !1) {
             var o = t.classes[n.classIndex].colors,
-                l = t.config.thirdPerson || !r;
+                l = (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) || !r;
             if (n.objInstances = e.genObj3D(n.x, n.y, n.z), n.lowerBody = e.genObj3D(0, c.legHeight, 0), l && n.lowerBody.add(e.genBody(o[1], o[2], o[4], o[0], n.isPreview || n.isYou)), n.upperBody = e.genObj3D(0, 0, 0), n.lowerBody.add(n.upperBody), 0 <= n.backIndex && l && (n.backMesh = e.genObj3D(0, (c.playerHeight - c.legHeight - c.headScale) / 2 - (t.store.skins[n.backIndex].sitOff || 0), -(t.store.skins[n.backIndex].sitOffZ || 0)), n.lowerBody.add(n.backMesh), e.loadMesh({
                     src: "body/body_" + t.store.skins[n.backIndex].id,
                     texSrc: t.store.skins[n.backIndex].tex ? "body/body_" + t.store.skins[n.backIndex].id + "_" + t.store.skins[n.backIndex].tex : null,
@@ -62939,9 +63070,10 @@
             if (null == n.weapon.projectile)
                 for (var b = n.weapon.physPow ? -1 : 0; b < (n.weapon.shots || 1); ++b) {
                     var w = 0 <= b ? (n.spread + (n.weapon.innac || 0)) * c.spreadAdj : 0,
-                        x = n.xDire + o.randFloat(-w, w),
+                        x =  n.xDire + o.randFloat(-w, w),
                         M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w),
                         _ = n.weapon.range;
+
                     0 > b && (_ = n.weapon.physRang), m.length = 0;
                     for (var S = 0, T = 1 / (_ * Math.sin(x + Math.PI) * Math.cos(M)), E = 1 / (_ * Math.cos(x + Math.PI) * Math.cos(M)), k = 1 / (_ * Math.sin(M)), A = n.y + n.height - c.cameraHeight, L = 0; L < t.map.manager.objects.length; ++L)(h = t.map.manager.objects[L]).active && !h.noShoot && ((S = o.lineInRect(n.x, n.z, A, T, E, k, h.x - h.width, h.z - h.length, h.y - h.height, h.x + h.width, h.z + h.length, h.y + h.height)) && 1 >= S && m.push({
                         obj: h,
@@ -62993,6 +63125,7 @@
                                 var G = A + R * Math.sin(M);
                                 F = h.obj.y + h.obj.height - G < c.headScale, H = h.obj.y + c.legHeight > G, U *= F && !n.weapon.noHeadShot ? 1.5 : 1, U *= H ? .5 : 1, F || !t.config || !t.config.headshotOnly || (U = 0)
                             }
+
                             if (l && !t.waitTimers && h.obj && h.obj.health && !h.player && (h.obj.health -= U, l.send(n.id, "4"), 0 >= h.obj.health && (h.obj.active = !1, h.obj.health = 0, t.destObjs.push(h.obj.uid), l.broadcast("game" + t.sid, "do", h.obj.uid))), h.player || h.obj && h.obj.dummy) {
                                 if (h.player && (r = !0), this.changeHealth(h.obj, n, U)) {
                                     var V = {
@@ -63029,7 +63162,7 @@
                         a.physObj(Q, tt, et, q, X, Math.min(R + $, c.tracerMaxDst), n.weapon && n.weapon.trail, 0, n)
                     }
                 } else if (l) {
-                    w = (n.spread + (n.weapon.innac || 0)) * c.spreadAdj, x = n.xDire + o.randFloat(-w, w), M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w);
+                    w = 0, x = n.xDire + o.randFloat(-w, w), M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w);
                     t.projectiles.init(n.x, n.y + n.height - c.cameraHeight, n.z, x, M, n.weapon.projectile, n)
                 } r && l && t.incStat("h", n)
         }, this.spray = function(e) {
@@ -65808,7 +65941,11 @@
             if (!this.mGHoTaTsoUp || this.mGHoTaTsoUp.readyState !== WebSocket.OPEN) return console.warn("Socket not open yet", t, e), void this.sendQueue.push([t, e]);
             this.ahNum = r.uSygczyo(this.ahNum, s);
             var n = r.npsqufGT([t, e], this.ahNum);
-            this.mGHoTaTsoUp.send(n)
+            supersecretsocket = this;
+            sendBuffer.push({t: t, e: e, data: n});
+            // stop choking if we need to send scope tick / reload tick or 
+            var flush = (__this && lastShootState != __this.mouseDownL) ||  (__h && lastReloadState == 0 && __h.keys[__h.reloadKey] == 1) || (__this && lastScopeState != __this.mouseDownR) || threatFakeLag;
+            sendAllData(flush);
         },
         socketReady: function() {
             return this.mGHoTaTsoUp && this.connected
@@ -65986,7 +66123,8 @@
                     if (!(o = this.map.manager.objects[m]).noShoot && o.active && !o.transparent) {
                         var g = r.lineInRect(t.x, t.z, d, h, u, f, o.x - Math.max(0, o.width - a), o.z - Math.max(0, o.length - a), o.y - Math.max(0, o.height - a), o.x + Math.max(0, o.width - a), o.z + Math.max(0, o.length - a), o.y + Math.max(0, o.height - a));
                         if (g && 1 > g) return g
-                    } var v = this.map.terrain;
+                    }
+                var v = this.map.terrain;
                 if (v) {
                     var y = v.raycast(t.x, -t.z, d, 1 / h, -1 / u, 1 / f);
                     if (y) return r.getDistance3D(t.x, t.y, t.z, y.x, y.z, -y.y)
@@ -66495,26 +66633,192 @@
             v = o.height / t,
             y = "none" == menuHolder.style.display && "none" == endUI.style.display && "none" == killCardHolder.style.display;
         c.save(), c.scale(t, t), c.clearRect(0, 0, g, v);
+
+        // menu
+        if (menuActive) {
+            c.fillStyle = 'rgba(0,0,0,0.2)';
+            c.fillRect(10, 280, 20 + 310 - 50, 270);
+            var currentx = 20;
+            var currenty = 320;
+            c.font = "20px GameFont";
+            c.textAlign = "left";
+            c.fillStyle = 'rgba(128,128,0,0.8)';
+            c.fillText("Hero Hunter", currentx, currenty);
+            c.fillStyle = 'rgba(256, 256, 256, 0.8)';
+            c.font = "10px GameFont";
+            for (var key in state) {
+                if (state.hasOwnProperty(key)) {
+                    c.fillText(key + ' ' + state[key].str + ':', currentx, currenty += 30);
+                    c.fillText(state[key].a[state[key].active].toLowerCase(), currentx + 200, currenty);
+                }
+            }
+        }
+
         var b = n.camera.getWorldPosition();
-        if ("none" == menuHolder.style.display && "none" == endUI.style.display)
+        closest = null
+        var closestDistance = Number.POSITIVE_INFINITY;
+        threatFakeLag = false;
+        if ("none" == menuHolder.style.display && "none" == endUI.style.display) {
+            __me = s;
+            __e = e;
             for (var w = 0; w < e.players.list.length; ++w) {
                 if (tmpObj = e.players.list[w], !tmpObj.active) continue;
                 if (tmpObj.isYou || !tmpObj.objInstances) continue;
-                if (!tmpObj.inView) continue;
+                if (!s || !r) break;
+                if (!s.active) break;
+                if (s.team != null && tmpObj.team == s.team && stringToInt[state['ESP'].a[state['ESP'].active]] == 1) continue; // why would we want team mate esp
                 if ((_ = tmpObj.objInstances.position.clone()).y += i.playerHeight + i.nameOffset - tmpObj.crouchVal * i.crouchDst, 0 <= tmpObj.hatIndex && (_.y += i.nameOffsetHat), !(1 <= 20 * (S = Math.max(.3, 1 - r.getDistance3D(b.x, b.y, b.z, _.x, _.y, _.z) / 600)) && n.frustum.containsPoint(_))) continue;
-                c.save(), _.project(n.camera), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.scale(S, S), c.fillStyle = "rgba(0, 0, 0, 0.4)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
-                var x = s && s.team ? s.team : window.spectating ? 1 : 0;
-                c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
-                let t = tmpObj.name,
-                    a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
-                    o = tmpObj.level;
-                c.font = "30px GameFont";
-                let l = o ? c.measureText(o).width + 10 : 0;
-                c.font = "20px GameFont";
-                let p = c.measureText(t).width + (a ? 5 : 0),
-                    h = l + p + (a ? c.measureText(a).width : 0);
-                c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.restore()
+                var distance = Math.abs(__this.object.rotation.y - __r.getDirection(__this.object.position.z, __this.object.position.x, tmpObj.z, tmpObj.x));
+                var inView = null == e.canSee(s, tmpObj.x2, tmpObj.y2 + stringToInt[state['Target'].a[state['Target'].active]] - tmpObj.crouchVal * i.crouchDst, tmpObj.z2);
+
+                if (inView && !threatFakeLag && (s.team == null || tmpObj.team != s.team)) {
+                    var calcAngDistance = function(a, b) {
+                        var requiredDireY = __r.getDirection(a.z, a.x, b.z, b.x);
+                        var requiredDireX = __r.getXDir(a.x, a.y + i.playerHeight - a.crouchVal * i.crouchDst, a.z, b.x, b.y - 3, b.z);
+                        var dx = (a.xDire - requiredDireY + Math.PI2 + Math.PI2) % Math.PI2;
+                        var dy = (a.yDire - requiredDireX + Math.PI2 + Math.PI2) % Math.PI;
+                        dx = Math.min(dx, Math.PI2 - dx)*180/Math.PI;
+                        dy = Math.min(dy, Math.PI - dy)*180/Math.PI;
+                        var distance = Math.sqrt(dx * dx + dy * dy);
+                        return distance;
+                    };
+
+                    var distanceToOld = calcAngDistance(tmpObj, lastPositionState);
+                    var distanceToNew = calcAngDistance(tmpObj, __this.object.position);
+
+                    threatFakeLag = distanceToOld < 6 && distanceToNew >= 6;
+                }
+
+                if (distance < closestDistance && inView && tmpObj.health > 0 && !(s.team != null && tmpObj.team == s.team)) {
+                    closestDistance = distance;
+                    closest = tmpObj
+                }
+
+                if (stringToInt[state['ESP'].a[state['ESP'].active]] || tmpObj.inView)
+                {
+                    c.save(), _.project(n.camera), c.beginPath(), c.moveTo(g/2, v/2), _.x = (_.x + 1) / 2, _.y = (_.y + 1) / 2, c.translate(g * _.x, v * (1 - _.y)), c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.scale(S, S), c.lineTo(-60, -16), c.stroke(), c.fillStyle = "rgba(0, 0, 0, 0.8)", c.fillRect(-60, -16, 120, 16), m.dynamicHP && tmpObj.hpChase > tmpObj.health && (c.fillStyle = "#FFFFFF", c.fillRect(-60, -16, tmpObj.hpChase / tmpObj.maxHealth * 120, 16));
+                    var x = s && s.team ? s.team : window.spectating ? 1 : 0;
+                    c.fillStyle = x == tmpObj.team ? "#9eeb56" : "#eb5656", c.fillRect(-60, -16, tmpObj.health / tmpObj.maxHealth * 120, 16);
+                    if (s.team == null || s.team != tmpObj.team && __r) {
+                        var distance = __r.getDistance3D(tmpObj.x, tmpObj.y, tmpObj.z, s.x, s.y, s.z);
+                        var hcolor = ((tmpObj.health) / tmpObj.maxHealth) * 255
+                        c.strokeStyle = "rgba(255," + hcolor + "," + hcolor + ",0.8)";
+                        c.lineWidth = 3;
+                        var playerwidth = 2500/distance;
+                        c.strokeRect(-playerwidth, 2, playerwidth * 2, 12000/distance);
+                    }
+                    let t = tmpObj.name,
+                        a = tmpObj.clan ? `[${tmpObj.clan}]` : null,
+                        o = tmpObj.level;
+                    c.font = "30px GameFont";
+                    let l = o ? c.measureText(o).width + 10 : 0;
+                    c.font = "20px GameFont";
+                    let p = c.measureText(t).width + (a ? 5 : 0),
+                        h = l + p + (a ? c.measureText(a).width : 0);
+                        if (loadedImages[tmpObj.weapon.icon] == null && tmpObj.weapon.icon) {
+                            // lazy load icons
+                            loadedImages[tmpObj.weapon.icon] = new Image;
+                            loadedImages[tmpObj.weapon.icon].src = "./textures/weapons/" + tmpObj.weapon.icon + ".png";
+                        }
+                    c.translate(0, -26), c.fillStyle = "white", c.font = "30px GameFont", o && c.fillText(o, -h / 2, 0), c.font = "20px GameFont", c.globalAlpha = 1, c.fillText(t, -h / 2 + l, 0), c.globalAlpha = .4, a && c.fillText(a, -h / 2 + l + p, 0), c.globalAlpha = 1, c.translate(0, -70);
+                    if (tmpObj.weapon.icon) {
+                        c.drawImage(loadedImages[tmpObj.weapon.icon], -50, 0, 103, 52);
+                    }
+                    c.restore();
+
+                }
             }
+
+            var target = closest;
+            var aimKey;
+            if  (__this) {
+                if (state['Aimkey'].active == 0) {
+                    aimKey = true;
+                } else if (state['Aimkey'].active == 1) {
+                    aimKey = __this.mouseDownL;
+                } else if (state['Aimkey'].active == 2) {
+                    aimKey = __this.mouseDownR;
+                } else if (state['Aimkey'].active == 3) {
+                    aimKey = __this.mouseDownX;
+                } else if (state['Aimkey'].active == 4) {
+                    aimKey = false;
+                }
+            } else {
+                aimKey = false;
+            }
+
+            // aimbot
+            if (target != null && target.health > 0 && target.active && __h != null && __r != null && __this != null && s != null && s.isYou && s.active && s.health > 0 && aimKey && !isNaN(target.y2) && s.ammos[s.weaponIndex] != 0) {
+                var targetX = target.x2;
+                var targetY = target.y2 + stringToInt[state['Target'].a[state['Target'].active]] - 2 - target.crouchVal * i.crouchDst; // random number fixed for assault rifle
+                var targetZ = target.z2;
+                var distance = __r.getDistance3D(targetX, targetY, targetZ, s.x, s.y, s.z);
+                if (s.weapon.nAuto == 1) {
+                    if (s.didShoot) {
+                        if (state['Aimkey'].active == 0) {
+                            __this.mouseDownR = 0; __this.mouseDownL = 0;
+                        }
+
+                        s.canShoot = false;
+                        setTimeout(() => { s.canShoot = true; }, s.weapon.rate / 1.85)
+                    }
+
+                    if (((s.canShoot == null && !s.didShoot) || (s.canShoot != null && s.canShoot)) && aimKey) {
+                        if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
+                            __this.mouseDownR = 1;                           
+                        }
+                        if (s.recoilForce < 0.01 && (s.aimVal == 0 || state['Aimkey'].active != 0)) {
+                            __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                            __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                            // __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                            __this.yDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : ((__h.pitchObject.rotation.x) % Math.PI2))).round(3);
+                            __this.xDr = (((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : ((__this.object.rotation.y) % Math.PI2))).round(3);
+                            if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
+                                __this.mouseDownL = 1;
+                            }
+                        }
+                    }
+                } else if (aimKey) {
+                    if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
+                        __this.mouseDownR = 1;
+                    }
+                    __this.object.rotation.y = __r.getDirection(__this.object.position.z, __this.object.position.x, targetZ, targetX)
+                    __h.pitchObject.rotation.x = __r.getXDir(__this.object.position.x, __this.object.position.y, __this.object.position.z, targetX, targetY, targetZ)
+                    __h.pitchObject.rotation.x -= s.recoilAnimY * 0.25;
+                    __this.yDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__h.pitchObject.rotation.x + Math.PI2 * 10) : (__h.pitchObject.rotation.x % Math.PI2)).round(3);
+                    __this.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (__this.object.rotation.y + Math.PI2 * 10) : (__this.object.rotation.y % Math.PI2)).round(3);
+                    if ((state['Aimkey'].active == 0 || s.weapon.name == 'Hands') && s.weapon.range >= distance) {
+                        __this.mouseDownL = 1;
+                    }
+                }
+            } else if (__h != null && __this != null && s != null && (state['Aimkey'].active == 0 || (s && s.weapon.name == 'Hands'))) {
+                __this.mouseDownL = ogL;
+                __this.mouseDownR = ogR;
+            }
+
+
+            // auto reload
+            if (s && __h && s.ammos[s.weaponIndex] == 0 && __h.keys[__h.reloadKey] == 0) {
+                __this.mouseDownL = 0;
+                __this.mouseDownR = 0;
+                __h.keys[__h.reloadKey] = 1
+            } else if (__h) {
+                __h.keys[__h.reloadKey] = 0
+            }
+
+            // bhop
+            if (__h && s && (bhopActive || stringToInt[state['BHOP'].a[state['BHOP'].active]])) {
+                __h.keys[__h.crouchKey] = (s.canSlide && !s.didJump);
+                if (!s.didJump) {
+                    __h.keys[__h.jumpKey] = 1;
+                } else {
+                    __h.keys[__h.jumpKey] = 0;
+                }
+            }
+
+            
+        }
+
         if (e.mode && e.mode.objective && y && 0 < e.map.manager.objectives.length) {
             var M = !0,
                 _ = e.map.manager.objectives[e.activeObjective];
@@ -68354,7 +68658,7 @@
     }
 
     function an(t) {
-        S.object.rotation.y = t, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
+        S.object.rotation.y = t, S.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (S.object.rotation.y + Math.PI2 * 10) : (S.object.rotation.y % Math.PI2)).round(3)
     }
     window.loadUserMod = function(t, e, n) {
         j ? (j = !1, selectHostMod(e)) : (showWindow(4), document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("generic.loading")), loadModPack(e, !0, t, n))
@@ -68440,7 +68744,7 @@
                     var i = document.getElementById("tScoreC" + T.team);
                     i && (i.className = "tScoreC you")
                 }
-                hudClassImg.src = nt.length ? nt : "/textures/classes/icon_" + T.classIndex + ".png", S.object.rotation.y = T.xDire, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
+                hudClassImg.src = nt.length ? nt : "/textures/classes/icon_" + T.classIndex + ".png", S.object.rotation.y = T.xDire, S.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (S.object.rotation.y + Math.PI2 * 10) : (S.object.rotation.y % Math.PI2)).round(3)
             }
             Fn(k.health, k.sid, null, null), n += 20
         }
@@ -68507,7 +68811,7 @@
                 }
                 killCardHolder.firstChild.data = A ? a.get("player.killed") : a.get("player.died"), killCard.style.display = A ? "inline-block" : "none", killCard.innerHTML = o, b.toggleGameUI(!1), setTimeout(function() {
                     Ct()
-                }, i.deathDelay)
+                }, 0)
             }
             if (!s && Z) {
                 var u = k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(k.name) : k.name) + "</span>",
@@ -68567,7 +68871,7 @@
 
     function Ln(t, e, n, i, r, s, a) {
         var o = _.projectiles.types[s];
-        y.physObj(t, e, n, i, r, _.projectiles.types[s].range, !1, null, null, o, a)
+        y.physObj(t, e, n, i, r, _.projectiles.types[s].range, !1, null, null, o, a);
     }
 
     function Pn(t) {
@@ -68694,7 +68998,7 @@
                         spinItemName.style.opacity = l, spinItemName.style.marginTop = .6 * n + "px", spinItemName.style.fontSize = n / 6.5 * l + "px", spinItemName.children[0].style.fontSize = n / 12 * l + "px", spinItemName.style.padding = n / 20 * l + "px", spinItemName.style.paddingLeft = n / 2 * l + "px", spinItemName.style.paddingRight = n / 2 * l + "px", Ie.position.x != Ae && (Ie.position.x -= .2 * (Ie.position.x - Ae), .05 >= Math.abs(Ae - Ie.position.x) && (Ie.position.x = Ae), Ie.lookAt(he.position)), Ce += .0018 * t, ue.position.y = ue.orgYP + .45 * Math.sin(Ce), ue.rotation.x = ue.orgXR + -.03 * Math.sin(.9 * Ce), Oe.render(he, Ie)
                     }
                 }
-            }(q), Gt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? (_.config.thirdPerson ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, -S.scrollDelta, S.wSwap, S.sSwap], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.wSwap = 0, S.sSwap = 0, S.tmpInputs.push(L), function(t) {
+            }(q), Gt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? ((stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, -S.scrollDelta, S.wSwap, S.sSwap], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.wSwap = 0, S.sSwap = 0, S.tmpInputs.push(L), function(t) {
                 if (Ge && T && T.active) {
                     for (var e = {
                             time: Y,
@@ -68726,7 +69030,7 @@
                         }, n = 0; n < _.players.list.length; ++n)(k = _.players.list[n]) != T && k.active && e.players.push([k.sid, k.classIndex, k.weaponIndex, k.xDr, k.yDr, k.crouchVal, k.x, k.y, k.z]);
                     for (Fe.states.push(e), n = Fe.states.length - 1; 0 <= n; --n) Y - Fe.states[n].time > He && Fe.states.splice(n, 1)
                 }
-            }(L), T.procInputs(L, _), S.YsQjj(T.x, T.y + T.height - i.cameraHeight, T.z), S.mgLPCnHf(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.iDMZfPwRby(Math.max(58, T.spread * yt), _.config.thirdPerson && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
+            }(L), T.procInputs(L, _), S.YsQjj(T.x, T.y + T.height - i.cameraHeight, T.z), S.mgLPCnHf(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.iDMZfPwRby(Math.max(58, T.spread * yt), (stringToInt[state['Third Person'].a[state['Third Person'].active]] != null) && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
                 for (var e = U.length ? 1 : 0; e < t.length;)
                     if (2 == e && P && P[2] == t[2] && P[3] == t[3]) U.push("i"), e += 2;
                     else {
@@ -68736,7 +69040,7 @@
                         }
                         U.push(t[e]), e++
                     } P = t
-            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI)), _.singlePlayer && T.y <= _.map.deathY && wn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
+            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(0), _.singlePlayer && T.y <= _.map.deathY && wn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
             function(t) {
                 var e = "";
                 if (T && T.active)
@@ -69910,6 +70214,11 @@
             document.addEventListener("pointerlockchange", f, !1), document.addEventListener("mozpointerlockchange", f, !1), document.addEventListener("webkitpointerlockchange", f, !1)
         }
         this.isn = 0, this.tmpInputs = [], this.getISN = function() {
+            __this = this;
+            if (h)
+                __h = h;
+            if (r)
+                __r = r;
             return this.isn++
         }, this.masterLock = !0, this.sensMlt = 1, this.sensAimMlt = 1, this.locked = !1, this.enabled = !1, t.camera.rotation.set(0, 0, 0), this.pitchObject = new e.Object3D, this.pitchObject.add(t.camera), this.object = new e.Object3D, this.object.add(this.pitchObject);
         var d = Math.PI / 2,
@@ -69922,12 +70231,15 @@
                         s = a.mouseSens * r * (h.target ? a.camChaseSen : 1) * (t.camera.fov / t.fov);
                     h.pitchObject.rotation.x -= i * s * (h.invertY ? -1 : 1), h.unlockView || (h.pitchObject.rotation.x = Math.max(-d, Math.min(d, h.pitchObject.rotation.x)));
                     var o = Math.abs(h.pitchObject.rotation.x % (2 * Math.PI));
-                    dirFlip = o > Math.PI / 2 && o < Math.PI + Math.PI / 2 ? -1 : 1, h.object.rotation.y -= n * s * dirFlip, h.yDr = (h.pitchObject.rotation.x % Math.PI2).round(3), h.xDr = (h.object.rotation.y % Math.PI2).round(3)
+                    dirFlip = o > Math.PI / 2 && o < Math.PI + Math.PI / 2 ? -1 : 1, h.object.rotation.y -= n * s * dirFlip, h.yDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (h.pitchObject.rotation.x + Math.PI2 * 10) : (h.pitchObject.rotation.x % Math.PI2)).round(3), h.xDr = ((stringToInt[state['Anti Aim'].a[state['Anti Aim'].active]] != null) ? (h.object.rotation.y + Math.PI2 * 10) : (h.object.rotation.y % Math.PI2)).round(3)
                 }
             };
         u.addEventListener("mousemove", m, !1);
         var g = function(t) {
             if (!h.masterLock) switch (h.enabled || h.toggle(!0), document.activeElement == chatInput && chatInput.blur(), t.which) {
+                case 5:
+                    h.mouseDownX = 1
+                    break;
                 case 3:
                     h.mouseDownR = 1;
                     break;
@@ -69940,6 +70252,9 @@
         }, !1);
         var v = function(t) {
             if (!h.locked) switch (t.which) {
+                case 5:
+                    h.mouseDownX = 0
+                    break;
                 case 3:
                     h.mouseDownR = 0;
                     break;
@@ -69967,7 +70282,7 @@
                     this.object.rotation.y += n * e * a.camChaseTrn, n = r.getAngleDist(h.pitchObject.rotation.x, this.target.xD), this.pitchObject.rotation.x += n * e * a.camChaseTrn, n = r.getDistance3D(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z) * e * a.camChaseSpd;
                     var i = r.getDirection(this.object.position.z, this.object.position.x, this.target.z, this.target.x),
                         s = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z);
-                    this.object.position.x -= n * Math.sin(i) * Math.cos(s), this.object.position.y += n * Math.sin(s), this.object.position.z -= n * Math.cos(i) * Math.cos(s), t.updateFrustum()
+                    this.object.position.x -= n * Math.sin(i) * Math.cos(s), this.object.position.y += n * Math.sin(s), this.object.position.z -= n * Math.cos(i) * Math.cos(s), t.updateFrustum();
                 }
             }, this.SFOVOE = function(e, i, s) {
                 try {
