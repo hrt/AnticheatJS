@@ -271,7 +271,7 @@
     }), n.d(e, "AlphaFormat", function() {
         return Ut
     }), n.d(e, "AlwaysDepth", function() {
-        return X
+        return K
     }), n.d(e, "AmbientLight", function() {
         return Ac
     }), n.d(e, "AmbientLightProbe", function() {
@@ -333,7 +333,7 @@
     }), n.d(e, "BoxHelper", function() {
         return np
     }), n.d(e, "BufferAttribute", function() {
-        return Xn
+        return Kn
     }), n.d(e, "BufferGeometry", function() {
         return ci
     }), n.d(e, "BufferGeometryLoader", function() {
@@ -387,7 +387,7 @@
     }), n.d(e, "CubeTexture", function() {
         return Wi
     }), n.d(e, "CubeTextureLoader", function() {
-        return Ko
+        return Xo
     }), n.d(e, "CubeUVReflectionMapping", function() {
         return vt
     }), n.d(e, "CubeUVRefractionMapping", function() {
@@ -503,7 +503,7 @@
     }), n.d(e, "Font", function() {
         return qc
     }), n.d(e, "FontLoader", function() {
-        return Xc
+        return Kc
     }), n.d(e, "FrontFaceDirectionCCW", function() {
         return d
     }), n.d(e, "FrontFaceDirectionCW", function() {
@@ -515,7 +515,7 @@
     }), n.d(e, "GammaEncoding", function() {
         return Re
     }), n.d(e, "Geometry", function() {
-        return Kn
+        return Xn
     }), n.d(e, "GeometryUtils", function() {
         return Np
     }), n.d(e, "GreaterDepth", function() {
@@ -531,7 +531,7 @@
     }), n.d(e, "HemisphereLight", function() {
         return wc
     }), n.d(e, "HemisphereLightHelper", function() {
-        return Kl
+        return Xl
     }), n.d(e, "HemisphereLightProbe", function() {
         return el
     }), n.d(e, "IcosahedronBufferGeometry", function() {
@@ -601,7 +601,7 @@
     }), n.d(e, "LightProbe", function() {
         return tl
     }), n.d(e, "LightProbeHelper", function() {
-        return Xl
+        return Kl
     }), n.d(e, "LightShadow", function() {
         return xc
     }), n.d(e, "Line", function() {
@@ -711,7 +711,7 @@
     }), n.d(e, "NearestMipMapNearestFilter", function() {
         return _t
     }), n.d(e, "NeverDepth", function() {
-        return K
+        return X
     }), n.d(e, "NoBlending", function() {
         return E
     }), n.d(e, "NoColors", function() {
@@ -783,7 +783,7 @@
     }), n.d(e, "PointLightHelper", function() {
         return Yl
     }), n.d(e, "Points", function() {
-        return Ks
+        return Xs
     }), n.d(e, "PointsMaterial", function() {
         return qs
     }), n.d(e, "PolarGridHelper", function() {
@@ -873,7 +873,7 @@
     }), n.d(e, "RGB_PVRTC_4BPPV1_Format", function() {
         return Qt
     }), n.d(e, "RGB_S3TC_DXT1_Format", function() {
-        return Xt
+        return Kt
     }), n.d(e, "RawShaderMaterial", function() {
         return fo
     }), n.d(e, "Ray", function() {
@@ -885,7 +885,7 @@
     }), n.d(e, "RectAreaLightHelper", function() {
         return ql
     }), n.d(e, "RedFormat", function() {
-        return Kt
+        return Xt
     }), n.d(e, "ReinhardToneMapping", function() {
         return ot
     }), n.d(e, "RepeatWrapping", function() {
@@ -933,7 +933,7 @@
     }), n.d(e, "SphereBufferGeometry", function() {
         return Za
     }), n.d(e, "SphereGeometry", function() {
-        return Xa
+        return Ka
     }), n.d(e, "Spherical", function() {
         return Nl
     }), n.d(e, "SphericalHarmonics3", function() {
@@ -977,13 +977,13 @@
     }), n.d(e, "TetrahedronGeometry", function() {
         return ra
     }), n.d(e, "TextBufferGeometry", function() {
-        return Ka
+        return Xa
     }), n.d(e, "TextGeometry", function() {
         return qa
     }), n.d(e, "Texture", function() {
         return pn
     }), n.d(e, "TextureLoader", function() {
-        return Xo
+        return Ko
     }), n.d(e, "TorusBufferGeometry", function() {
         return va
     }), n.d(e, "TorusGeometry", function() {
@@ -1059,7 +1059,7 @@
     }), n.d(e, "VertexNormalsHelper", function() {
         return Gl
     }), n.d(e, "VideoTexture", function() {
-        return Xs
+        return Ks
     }), n.d(e, "WebGLMultisampleRenderTarget", function() {
         return fn
     }), n.d(e, "WebGLRenderTarget", function() {
@@ -1176,8 +1176,8 @@
         W = 208,
         Y = 209,
         q = 210,
-        K = 0,
-        X = 1,
+        X = 0,
+        K = 1,
         Z = 2,
         J = 3,
         $ = 4,
@@ -1230,8 +1230,8 @@
         Wt = Ht,
         Yt = 1026,
         qt = 1027,
-        Kt = 1028,
-        Xt = 33776,
+        Xt = 1028,
+        Kt = 33776,
         Zt = 33777,
         Jt = 33778,
         $t = 33779,
@@ -2157,7 +2157,7 @@
             return t[e] = n[0], t[e + 1] = n[1], t[e + 2] = n[2], t[e + 3] = n[3], t[e + 4] = n[4], t[e + 5] = n[5], t[e + 6] = n[6], t[e + 7] = n[7], t[e + 8] = n[8], t
         }
     });
-    var qe, Ke, Xe, Ze, Je, $e, Qe, tn, en, nn, rn, sn, an, on, cn = {
+    var qe, Xe, Ke, Ze, Je, $e, Qe, tn, en, nn, rn, sn, an, on, cn = {
             getDataURL: function(t) {
                 var e;
                 if ("undefined" == typeof HTMLCanvasElement) return t.src;
@@ -2444,7 +2444,7 @@
             return this.x = Math.max(t.x, Math.min(e.x, this.x)), this.y = Math.max(t.y, Math.min(e.y, this.y)), this.z = Math.max(t.z, Math.min(e.z, this.z)), this.w = Math.max(t.w, Math.min(e.w, this.w)), this
         },
         clampScalar: function(t, e) {
-            return void 0 === qe && (qe = new hn, Ke = new hn), qe.set(t, t, t, t), Ke.set(e, e, e, e), this.clamp(qe, Ke)
+            return void 0 === qe && (qe = new hn, Xe = new hn), qe.set(t, t, t, t), Xe.set(e, e, e, e), this.clamp(qe, Xe)
         },
         clampLength: function(t, e) {
             var n = this.length();
@@ -2679,8 +2679,8 @@
         union: function(t) {
             return this.min.min(t.min), this.max.max(t.max), this
         },
-        applyMatrix4: (Xe = [new We, new We, new We, new We, new We, new We, new We, new We], function(t) {
-            return this.isEmpty() ? this : (Xe[0].set(this.min.x, this.min.y, this.min.z).applyMatrix4(t), Xe[1].set(this.min.x, this.min.y, this.max.z).applyMatrix4(t), Xe[2].set(this.min.x, this.max.y, this.min.z).applyMatrix4(t), Xe[3].set(this.min.x, this.max.y, this.max.z).applyMatrix4(t), Xe[4].set(this.max.x, this.min.y, this.min.z).applyMatrix4(t), Xe[5].set(this.max.x, this.min.y, this.max.z).applyMatrix4(t), Xe[6].set(this.max.x, this.max.y, this.min.z).applyMatrix4(t), Xe[7].set(this.max.x, this.max.y, this.max.z).applyMatrix4(t), this.setFromPoints(Xe), this)
+        applyMatrix4: (Ke = [new We, new We, new We, new We, new We, new We, new We, new We], function(t) {
+            return this.isEmpty() ? this : (Ke[0].set(this.min.x, this.min.y, this.min.z).applyMatrix4(t), Ke[1].set(this.min.x, this.min.y, this.max.z).applyMatrix4(t), Ke[2].set(this.min.x, this.max.y, this.min.z).applyMatrix4(t), Ke[3].set(this.min.x, this.max.y, this.max.z).applyMatrix4(t), Ke[4].set(this.max.x, this.min.y, this.min.z).applyMatrix4(t), Ke[5].set(this.max.x, this.min.y, this.max.z).applyMatrix4(t), Ke[6].set(this.max.x, this.max.y, this.min.z).applyMatrix4(t), Ke[7].set(this.max.x, this.max.y, this.max.z).applyMatrix4(t), this.setFromPoints(Ke), this)
         }),
         translate: function(t) {
             return this.min.add(t), this.max.add(t), this
@@ -4577,7 +4577,7 @@
     });
     var Wn, Yn, qn = 0;
 
-    function Kn() {
+    function Xn() {
         Object.defineProperty(this, "id", {
             value: qn += 2
         }), this.uuid = He.generateUUID(), this.name = "", this.type = "Geometry", this.vertices = [], this.colors = [], this.faces = [], this.faceVertexUvs = [
@@ -4585,7 +4585,7 @@
         ], this.morphTargets = [], this.morphNormals = [], this.skinWeights = [], this.skinIndices = [], this.lineDistances = [], this.boundingBox = null, this.boundingSphere = null, this.elementsNeedUpdate = !1, this.verticesNeedUpdate = !1, this.uvsNeedUpdate = !1, this.normalsNeedUpdate = !1, this.colorsNeedUpdate = !1, this.lineDistancesNeedUpdate = !1, this.groupsNeedUpdate = !1
     }
 
-    function Xn(t, e, n) {
+    function Kn(t, e, n) {
         if (Array.isArray(t)) throw new TypeError("THREE.BufferAttribute: array should be a Typed Array.");
         this.name = "", this.array = t, this.itemSize = e, this.count = void 0 !== t ? t.length / e : 0, this.normalized = !0 === n, this.dynamic = !1, this.updateRange = {
             offset: 0,
@@ -4594,39 +4594,39 @@
     }
 
     function Zn(t, e, n) {
-        Xn.call(this, new Int8Array(t), e, n)
+        Kn.call(this, new Int8Array(t), e, n)
     }
 
     function Jn(t, e, n) {
-        Xn.call(this, new Uint8Array(t), e, n)
+        Kn.call(this, new Uint8Array(t), e, n)
     }
 
     function $n(t, e, n) {
-        Xn.call(this, new Uint8ClampedArray(t), e, n)
+        Kn.call(this, new Uint8ClampedArray(t), e, n)
     }
 
     function Qn(t, e, n) {
-        Xn.call(this, new Int16Array(t), e, n)
+        Kn.call(this, new Int16Array(t), e, n)
     }
 
     function ti(t, e, n) {
-        Xn.call(this, new Uint16Array(t), e, n)
+        Kn.call(this, new Uint16Array(t), e, n)
     }
 
     function ei(t, e, n) {
-        Xn.call(this, new Int32Array(t), e, n)
+        Kn.call(this, new Int32Array(t), e, n)
     }
 
     function ni(t, e, n) {
-        Xn.call(this, new Uint32Array(t), e, n)
+        Kn.call(this, new Uint32Array(t), e, n)
     }
 
     function ii(t, e, n) {
-        Xn.call(this, new Float32Array(t), e, n)
+        Kn.call(this, new Float32Array(t), e, n)
     }
 
     function ri(t, e, n) {
-        Xn.call(this, new Float64Array(t), e, n)
+        Kn.call(this, new Float64Array(t), e, n)
     }
 
     function si() {
@@ -4638,8 +4638,8 @@
         for (var e = t[0], n = 1, i = t.length; n < i; ++n) t[n] > e && (e = t[n]);
         return e
     }
-    Kn.prototype = Object.assign(Object.create(i.prototype), {
-        constructor: Kn,
+    Xn.prototype = Object.assign(Object.create(i.prototype), {
+        constructor: Xn,
         isGeometry: !0,
         applyMatrix: function(t) {
             for (var e = (new Ye).getNormalMatrix(t), n = 0, i = this.vertices.length; n < i; n++) {
@@ -4760,7 +4760,7 @@
             var t, e, n, i, r;
             for (n = 0, i = this.faces.length; n < i; n++)
                 for ((r = this.faces[n]).__originalFaceNormal ? r.__originalFaceNormal.copy(r.normal) : r.__originalFaceNormal = r.normal.clone(), r.__originalVertexNormals || (r.__originalVertexNormals = []), t = 0, e = r.vertexNormals.length; t < e; t++) r.__originalVertexNormals[t] ? r.__originalVertexNormals[t].copy(r.vertexNormals[t]) : r.__originalVertexNormals[t] = r.vertexNormals[t].clone();
-            var s = new Kn;
+            var s = new Xn;
             for (s.faces = this.faces, t = 0, e = this.morphTargets.length; t < e; t++) {
                 if (!this.morphNormals[t]) {
                     this.morphNormals[t] = {}, this.morphNormals[t].faceNormals = [], this.morphNormals[t].vertexNormals = [];
@@ -4934,7 +4934,7 @@
             return t.data = {}, t.data.vertices = i, t.data.normals = o, l.length > 0 && (t.data.colors = l), h.length > 0 && (t.data.uvs = [h]), t.data.faces = a, t
         },
         clone: function() {
-            return (new Kn).copy(this)
+            return (new Xn).copy(this)
         },
         copy: function(t) {
             var e, n, i, r, s, a;
@@ -4997,11 +4997,11 @@
                 type: "dispose"
             })
         }
-    }), Object.defineProperty(Xn.prototype, "needsUpdate", {
+    }), Object.defineProperty(Kn.prototype, "needsUpdate", {
         set: function(t) {
             !0 === t && this.version++
         }
-    }), Object.assign(Xn.prototype, {
+    }), Object.assign(Kn.prototype, {
         isBufferAttribute: !0,
         onUploadCallback: function() {},
         setArray: function(t) {
@@ -5100,7 +5100,7 @@
                 normalized: this.normalized
             }
         }
-    }), Zn.prototype = Object.create(Xn.prototype), Zn.prototype.constructor = Zn, Jn.prototype = Object.create(Xn.prototype), Jn.prototype.constructor = Jn, $n.prototype = Object.create(Xn.prototype), $n.prototype.constructor = $n, Qn.prototype = Object.create(Xn.prototype), Qn.prototype.constructor = Qn, ti.prototype = Object.create(Xn.prototype), ti.prototype.constructor = ti, ei.prototype = Object.create(Xn.prototype), ei.prototype.constructor = ei, ni.prototype = Object.create(Xn.prototype), ni.prototype.constructor = ni, ii.prototype = Object.create(Xn.prototype), ii.prototype.constructor = ii, ri.prototype = Object.create(Xn.prototype), ri.prototype.constructor = ri, Object.assign(si.prototype, {
+    }), Zn.prototype = Object.create(Kn.prototype), Zn.prototype.constructor = Zn, Jn.prototype = Object.create(Kn.prototype), Jn.prototype.constructor = Jn, $n.prototype = Object.create(Kn.prototype), $n.prototype.constructor = $n, Qn.prototype = Object.create(Kn.prototype), Qn.prototype.constructor = Qn, ti.prototype = Object.create(Kn.prototype), ti.prototype.constructor = ti, ei.prototype = Object.create(Kn.prototype), ei.prototype.constructor = ei, ni.prototype = Object.create(Kn.prototype), ni.prototype.constructor = ni, ii.prototype = Object.create(Kn.prototype), ii.prototype.constructor = ii, ri.prototype = Object.create(Kn.prototype), ri.prototype.constructor = ri, Object.assign(si.prototype, {
         computeGroups: function(t) {
             for (var e, n = [], i = void 0, r = t.faces, s = 0; s < r.length; s++) {
                 var a = r[s];
@@ -5184,7 +5184,7 @@
     }
 
     function li(t, e, n, i, r, s) {
-        Kn.call(this), this.type = "BoxGeometry", this.parameters = {
+        Xn.call(this), this.type = "BoxGeometry", this.parameters = {
             width: t,
             height: e,
             depth: n,
@@ -5244,7 +5244,7 @@
     }
 
     function hi(t, e, n, i) {
-        Kn.call(this), this.type = "PlaneGeometry", this.parameters = {
+        Xn.call(this), this.type = "PlaneGeometry", this.parameters = {
             width: t,
             height: e,
             widthSegments: n,
@@ -5298,7 +5298,7 @@
             Array.isArray(t) ? this.index = new(ai(t) > 65535 ? ni : ti)(t, 1) : this.index = t
         },
         addAttribute: function(t, e) {
-            return e && e.isBufferAttribute || e && e.isInterleavedBufferAttribute ? "index" === t ? (console.warn("THREE.BufferGeometry.addAttribute: Use .setIndex() for index attribute."), this.setIndex(e), this) : (this.attributes[t] = e, this) : (console.warn("THREE.BufferGeometry: .addAttribute() now expects ( name, attribute )."), this.addAttribute(t, new Xn(arguments[1], arguments[2])))
+            return e && e.isBufferAttribute || e && e.isInterleavedBufferAttribute ? "index" === t ? (console.warn("THREE.BufferGeometry.addAttribute: Use .setIndex() for index attribute."), this.setIndex(e), this) : (this.attributes[t] = e, this) : (console.warn("THREE.BufferGeometry: .addAttribute() now expects ( name, attribute )."), this.addAttribute(t, new Kn(arguments[1], arguments[2])))
         },
         getAttribute: function(t) {
             return this.attributes[t]
@@ -5404,21 +5404,21 @@
         },
         fromDirectGeometry: function(t) {
             var e = new Float32Array(3 * t.vertices.length);
-            if (this.addAttribute("position", new Xn(e, 3).copyVector3sArray(t.vertices)), t.normals.length > 0) {
+            if (this.addAttribute("position", new Kn(e, 3).copyVector3sArray(t.vertices)), t.normals.length > 0) {
                 var n = new Float32Array(3 * t.normals.length);
-                this.addAttribute("normal", new Xn(n, 3).copyVector3sArray(t.normals))
+                this.addAttribute("normal", new Kn(n, 3).copyVector3sArray(t.normals))
             }
             if (t.colors.length > 0) {
                 var i = new Float32Array(3 * t.colors.length);
-                this.addAttribute("color", new Xn(i, 3).copyColorsArray(t.colors))
+                this.addAttribute("color", new Kn(i, 3).copyColorsArray(t.colors))
             }
             if (t.uvs.length > 0) {
                 var r = new Float32Array(2 * t.uvs.length);
-                this.addAttribute("uv", new Xn(r, 2).copyVector2sArray(t.uvs))
+                this.addAttribute("uv", new Kn(r, 2).copyVector2sArray(t.uvs))
             }
             if (t.uvs2.length > 0) {
                 var s = new Float32Array(2 * t.uvs2.length);
-                this.addAttribute("uv2", new Xn(s, 2).copyVector2sArray(t.uvs2))
+                this.addAttribute("uv2", new Kn(s, 2).copyVector2sArray(t.uvs2))
             }
             for (var a in this.groups = t.groups, t.morphTargets) {
                 for (var o = [], c = t.morphTargets[a], l = 0, p = c.length; l < p; l++) {
@@ -5485,7 +5485,7 @@
                 e = this.attributes;
             if (e.position) {
                 var n = e.position.array;
-                if (void 0 === e.normal) this.addAttribute("normal", new Xn(new Float32Array(n.length), 3));
+                if (void 0 === e.normal) this.addAttribute("normal", new Kn(new Float32Array(n.length), 3));
                 else
                     for (var i = e.normal.array, r = 0, s = i.length; r < s; r++) i[r] = 0;
                 var a, o, c, l = e.normal.array,
@@ -5525,7 +5525,7 @@
                     s = e[o] * i;
                     for (var l = 0; l < i; l++) r[a++] = n[s++]
                 }
-                return new Xn(r, i)
+                return new Kn(r, i)
             }
             if (null === this.index) return console.warn("THREE.BufferGeometry.toNonIndexed(): Geometry is already non-indexed."), this;
             var e = new ci,
@@ -5629,7 +5629,7 @@
                 type: "dispose"
             })
         }
-    }), li.prototype = Object.create(Kn.prototype), li.prototype.constructor = li, pi.prototype = Object.create(ci.prototype), pi.prototype.constructor = pi, hi.prototype = Object.create(Kn.prototype), hi.prototype.constructor = hi, ui.prototype = Object.create(ci.prototype), ui.prototype.constructor = ui;
+    }), li.prototype = Object.create(Xn.prototype), li.prototype.constructor = li, pi.prototype = Object.create(ci.prototype), pi.prototype.constructor = pi, hi.prototype = Object.create(Xn.prototype), hi.prototype.constructor = hi, ui.prototype = Object.create(ci.prototype), ui.prototype.constructor = ui;
     var fi = 0;
 
     function di() {
@@ -6531,8 +6531,8 @@
             this.image = t
         }
     }), Yi.prototype = Object.create(pn.prototype), Yi.prototype.constructor = Yi, Yi.prototype.isDataTexture2DArray = !0, qi.prototype = Object.create(pn.prototype), qi.prototype.constructor = qi, qi.prototype.isDataTexture3D = !0;
-    var Ki = new pn,
-        Xi = new Yi,
+    var Xi = new pn,
+        Ki = new Yi,
         Zi = new qi,
         Ji = new Wi,
         $i = [],
@@ -6643,13 +6643,13 @@
     function dr(t, e, n) {
         var i = this.cache,
             r = n.allocateTextureUnit();
-        i[0] !== r && (t.uniform1i(this.addr, r), i[0] = r), n.safeSetTexture2D(e || Ki, r)
+        i[0] !== r && (t.uniform1i(this.addr, r), i[0] = r), n.safeSetTexture2D(e || Xi, r)
     }
 
     function mr(t, e, n) {
         var i = this.cache,
             r = n.allocateTextureUnit();
-        i[0] !== r && (t.uniform1i(this.addr, r), i[0] = r), n.setTexture2DArray(e || Xi, r)
+        i[0] !== r && (t.uniform1i(this.addr, r), i[0] = r), n.setTexture2DArray(e || Ki, r)
     }
 
     function gr(t, e, n) {
@@ -6738,7 +6738,7 @@
         var i = e.length,
             r = ar(n, i);
         t.uniform1iv(this.addr, r);
-        for (var s = 0; s !== i; ++s) n.safeSetTexture2D(e[s] || Ki, r[s])
+        for (var s = 0; s !== i; ++s) n.safeSetTexture2D(e[s] || Xi, r[s])
     }
 
     function Or(t, e, n) {
@@ -6953,11 +6953,11 @@
         return "" !== t
     }
 
-    function Kr(t, e) {
+    function Xr(t, e) {
         return t.replace(/NUM_DIR_LIGHTS/g, e.numDirLights).replace(/NUM_SPOT_LIGHTS/g, e.numSpotLights).replace(/NUM_RECT_AREA_LIGHTS/g, e.numRectAreaLights).replace(/NUM_POINT_LIGHTS/g, e.numPointLights).replace(/NUM_HEMI_LIGHTS/g, e.numHemiLights)
     }
 
-    function Xr(t, e) {
+    function Kr(t, e) {
         return t.replace(/NUM_CLIPPING_PLANES/g, e.numClippingPlanes).replace(/UNION_CLIPPING_PLANES/g, e.numClippingPlanes - e.numClipIntersection)
     }
 
@@ -7032,7 +7032,7 @@
                 return e.join("\n")
             }(l),
             E = c.createProgram();
-        if (i.isRawShaderMaterial ? ((y = [T].filter(qr).join("\n")).length > 0 && (y += "\n"), (b = [S, T].filter(qr).join("\n")).length > 0 && (b += "\n")) : (y = ["precision " + s.precision + " float;", "precision " + s.precision + " int;", "#define SHADER_NAME " + r.name, T, s.supportsVertexTextures ? "#define VERTEX_TEXTURES" : "", "#define GAMMA_FACTOR " + _, "#define MAX_BONES " + s.maxBones, s.useFog && s.fog ? "#define USE_FOG" : "", s.useFog && s.fogExp ? "#define FOG_EXP2" : "", s.map ? "#define USE_MAP" : "", s.envMap ? "#define USE_ENVMAP" : "", s.envMap ? "#define " + d : "", s.lightMap ? "#define USE_LIGHTMAP" : "", s.aoMap ? "#define USE_AOMAP" : "", s.emissiveMap ? "#define USE_EMISSIVEMAP" : "", s.bumpMap ? "#define USE_BUMPMAP" : "", s.normalMap ? "#define USE_NORMALMAP" : "", s.normalMap && s.objectSpaceNormalMap ? "#define OBJECTSPACE_NORMALMAP" : "", s.displacementMap && s.supportsVertexTextures ? "#define USE_DISPLACEMENTMAP" : "", s.specularMap ? "#define USE_SPECULARMAP" : "", s.roughnessMap ? "#define USE_ROUGHNESSMAP" : "", s.metalnessMap ? "#define USE_METALNESSMAP" : "", s.alphaMap ? "#define USE_ALPHAMAP" : "", s.vertexTangents ? "#define USE_TANGENT" : "", s.vertexColors ? "#define USE_COLOR" : "", s.flatShading ? "#define FLAT_SHADED" : "", s.skinning ? "#define USE_SKINNING" : "", s.useVertexTexture ? "#define BONE_TEXTURE" : "", s.morphTargets ? "#define USE_MORPHTARGETS" : "", s.morphNormals && !1 === s.flatShading ? "#define USE_MORPHNORMALS" : "", s.doubleSided ? "#define DOUBLE_SIDED" : "", s.flipSided ? "#define FLIP_SIDED" : "", s.shadowMapEnabled ? "#define USE_SHADOWMAP" : "", s.shadowMapEnabled ? "#define " + u : "", s.sizeAttenuation ? "#define USE_SIZEATTENUATION" : "", s.logarithmicDepthBuffer ? "#define USE_LOGDEPTHBUF" : "", s.logarithmicDepthBuffer && (a.isWebGL2 || e.get("EXT_frag_depth")) ? "#define USE_LOGDEPTHBUF_EXT" : "", "uniform mat4 modelMatrix;", "uniform mat4 modelViewMatrix;", "uniform mat4 projectionMatrix;", "uniform mat4 viewMatrix;", "uniform mat3 normalMatrix;", "uniform vec3 cameraPosition;", "attribute vec3 position;", "attribute vec3 normal;", "attribute vec2 uv;", "#ifdef USE_TANGENT", "\tattribute vec4 tangent;", "#endif", "#ifdef USE_COLOR", "\tattribute vec3 color;", "#endif", "#ifdef USE_MORPHTARGETS", "\tattribute vec3 morphTarget0;", "\tattribute vec3 morphTarget1;", "\tattribute vec3 morphTarget2;", "\tattribute vec3 morphTarget3;", "\t#ifdef USE_MORPHNORMALS", "\t\tattribute vec3 morphNormal0;", "\t\tattribute vec3 morphNormal1;", "\t\tattribute vec3 morphNormal2;", "\t\tattribute vec3 morphNormal3;", "\t#else", "\t\tattribute vec3 morphTarget4;", "\t\tattribute vec3 morphTarget5;", "\t\tattribute vec3 morphTarget6;", "\t\tattribute vec3 morphTarget7;", "\t#endif", "#endif", "#ifdef USE_SKINNING", "\tattribute vec4 skinIndex;", "\tattribute vec4 skinWeight;", "#endif", "\n"].filter(qr).join("\n"), b = [S, "precision " + s.precision + " float;", "precision " + s.precision + " int;", "#define SHADER_NAME " + r.name, T, s.alphaTest ? "#define ALPHATEST " + s.alphaTest + (s.alphaTest % 1 ? "" : ".0") : "", "#define GAMMA_FACTOR " + _, s.useFog && s.fog ? "#define USE_FOG" : "", s.useFog && s.fogExp ? "#define FOG_EXP2" : "", s.map ? "#define USE_MAP" : "", s.matcap ? "#define USE_MATCAP" : "", s.envMap ? "#define USE_ENVMAP" : "", s.envMap ? "#define " + f : "", s.envMap ? "#define " + d : "", s.envMap ? "#define " + m : "", s.lightMap ? "#define USE_LIGHTMAP" : "", s.aoMap ? "#define USE_AOMAP" : "", s.emissiveMap ? "#define USE_EMISSIVEMAP" : "", s.bumpMap ? "#define USE_BUMPMAP" : "", s.normalMap ? "#define USE_NORMALMAP" : "", s.normalMap && s.objectSpaceNormalMap ? "#define OBJECTSPACE_NORMALMAP" : "", s.specularMap ? "#define USE_SPECULARMAP" : "", s.roughnessMap ? "#define USE_ROUGHNESSMAP" : "", s.metalnessMap ? "#define USE_METALNESSMAP" : "", s.alphaMap ? "#define USE_ALPHAMAP" : "", s.vertexTangents ? "#define USE_TANGENT" : "", s.vertexColors ? "#define USE_COLOR" : "", s.gradientMap ? "#define USE_GRADIENTMAP" : "", s.flatShading ? "#define FLAT_SHADED" : "", s.doubleSided ? "#define DOUBLE_SIDED" : "", s.flipSided ? "#define FLIP_SIDED" : "", s.shadowMapEnabled ? "#define USE_SHADOWMAP" : "", s.shadowMapEnabled ? "#define " + u : "", s.premultipliedAlpha ? "#define PREMULTIPLIED_ALPHA" : "", s.physicallyCorrectLights ? "#define PHYSICALLY_CORRECT_LIGHTS" : "", s.logarithmicDepthBuffer ? "#define USE_LOGDEPTHBUF" : "", s.logarithmicDepthBuffer && (a.isWebGL2 || e.get("EXT_frag_depth")) ? "#define USE_LOGDEPTHBUF_EXT" : "", s.envMap && (a.isWebGL2 || e.get("EXT_shader_texture_lod")) ? "#define TEXTURE_LOD_EXT" : "", "uniform mat4 viewMatrix;", "uniform vec3 cameraPosition;", s.toneMapping !== st ? "#define TONE_MAPPING" : "", s.toneMapping !== st ? xn.tonemapping_pars_fragment : "", s.toneMapping !== st ? Yr("toneMapping", s.toneMapping) : "", s.dithering ? "#define DITHERING" : "", s.outputEncoding || s.mapEncoding || s.matcapEncoding || s.envMapEncoding || s.emissiveMapEncoding ? xn.encodings_pars_fragment : "", s.mapEncoding ? Wr("mapTexelToLinear", s.mapEncoding) : "", s.matcapEncoding ? Wr("matcapTexelToLinear", s.matcapEncoding) : "", s.envMapEncoding ? Wr("envMapTexelToLinear", s.envMapEncoding) : "", s.emissiveMapEncoding ? Wr("emissiveMapTexelToLinear", s.emissiveMapEncoding) : "", s.outputEncoding ? (w = "linearToOutputTexel", x = s.outputEncoding, M = Vr(x), "vec4 " + w + "( vec4 value ) { return LinearTo" + M[0] + M[1] + "; }") : "", s.depthPacking ? "#define DEPTH_PACKING " + i.depthPacking : "", "\n"].filter(qr).join("\n")), p = Xr(p = Kr(p = Zr(p), s), s), h = Xr(h = Kr(h = Zr(h), s), s), p = Jr(p), h = Jr(h), a.isWebGL2 && !i.isRawShaderMaterial) {
+        if (i.isRawShaderMaterial ? ((y = [T].filter(qr).join("\n")).length > 0 && (y += "\n"), (b = [S, T].filter(qr).join("\n")).length > 0 && (b += "\n")) : (y = ["precision " + s.precision + " float;", "precision " + s.precision + " int;", "#define SHADER_NAME " + r.name, T, s.supportsVertexTextures ? "#define VERTEX_TEXTURES" : "", "#define GAMMA_FACTOR " + _, "#define MAX_BONES " + s.maxBones, s.useFog && s.fog ? "#define USE_FOG" : "", s.useFog && s.fogExp ? "#define FOG_EXP2" : "", s.map ? "#define USE_MAP" : "", s.envMap ? "#define USE_ENVMAP" : "", s.envMap ? "#define " + d : "", s.lightMap ? "#define USE_LIGHTMAP" : "", s.aoMap ? "#define USE_AOMAP" : "", s.emissiveMap ? "#define USE_EMISSIVEMAP" : "", s.bumpMap ? "#define USE_BUMPMAP" : "", s.normalMap ? "#define USE_NORMALMAP" : "", s.normalMap && s.objectSpaceNormalMap ? "#define OBJECTSPACE_NORMALMAP" : "", s.displacementMap && s.supportsVertexTextures ? "#define USE_DISPLACEMENTMAP" : "", s.specularMap ? "#define USE_SPECULARMAP" : "", s.roughnessMap ? "#define USE_ROUGHNESSMAP" : "", s.metalnessMap ? "#define USE_METALNESSMAP" : "", s.alphaMap ? "#define USE_ALPHAMAP" : "", s.vertexTangents ? "#define USE_TANGENT" : "", s.vertexColors ? "#define USE_COLOR" : "", s.flatShading ? "#define FLAT_SHADED" : "", s.skinning ? "#define USE_SKINNING" : "", s.useVertexTexture ? "#define BONE_TEXTURE" : "", s.morphTargets ? "#define USE_MORPHTARGETS" : "", s.morphNormals && !1 === s.flatShading ? "#define USE_MORPHNORMALS" : "", s.doubleSided ? "#define DOUBLE_SIDED" : "", s.flipSided ? "#define FLIP_SIDED" : "", s.shadowMapEnabled ? "#define USE_SHADOWMAP" : "", s.shadowMapEnabled ? "#define " + u : "", s.sizeAttenuation ? "#define USE_SIZEATTENUATION" : "", s.logarithmicDepthBuffer ? "#define USE_LOGDEPTHBUF" : "", s.logarithmicDepthBuffer && (a.isWebGL2 || e.get("EXT_frag_depth")) ? "#define USE_LOGDEPTHBUF_EXT" : "", "uniform mat4 modelMatrix;", "uniform mat4 modelViewMatrix;", "uniform mat4 projectionMatrix;", "uniform mat4 viewMatrix;", "uniform mat3 normalMatrix;", "uniform vec3 cameraPosition;", "attribute vec3 position;", "attribute vec3 normal;", "attribute vec2 uv;", "#ifdef USE_TANGENT", "\tattribute vec4 tangent;", "#endif", "#ifdef USE_COLOR", "\tattribute vec3 color;", "#endif", "#ifdef USE_MORPHTARGETS", "\tattribute vec3 morphTarget0;", "\tattribute vec3 morphTarget1;", "\tattribute vec3 morphTarget2;", "\tattribute vec3 morphTarget3;", "\t#ifdef USE_MORPHNORMALS", "\t\tattribute vec3 morphNormal0;", "\t\tattribute vec3 morphNormal1;", "\t\tattribute vec3 morphNormal2;", "\t\tattribute vec3 morphNormal3;", "\t#else", "\t\tattribute vec3 morphTarget4;", "\t\tattribute vec3 morphTarget5;", "\t\tattribute vec3 morphTarget6;", "\t\tattribute vec3 morphTarget7;", "\t#endif", "#endif", "#ifdef USE_SKINNING", "\tattribute vec4 skinIndex;", "\tattribute vec4 skinWeight;", "#endif", "\n"].filter(qr).join("\n"), b = [S, "precision " + s.precision + " float;", "precision " + s.precision + " int;", "#define SHADER_NAME " + r.name, T, s.alphaTest ? "#define ALPHATEST " + s.alphaTest + (s.alphaTest % 1 ? "" : ".0") : "", "#define GAMMA_FACTOR " + _, s.useFog && s.fog ? "#define USE_FOG" : "", s.useFog && s.fogExp ? "#define FOG_EXP2" : "", s.map ? "#define USE_MAP" : "", s.matcap ? "#define USE_MATCAP" : "", s.envMap ? "#define USE_ENVMAP" : "", s.envMap ? "#define " + f : "", s.envMap ? "#define " + d : "", s.envMap ? "#define " + m : "", s.lightMap ? "#define USE_LIGHTMAP" : "", s.aoMap ? "#define USE_AOMAP" : "", s.emissiveMap ? "#define USE_EMISSIVEMAP" : "", s.bumpMap ? "#define USE_BUMPMAP" : "", s.normalMap ? "#define USE_NORMALMAP" : "", s.normalMap && s.objectSpaceNormalMap ? "#define OBJECTSPACE_NORMALMAP" : "", s.specularMap ? "#define USE_SPECULARMAP" : "", s.roughnessMap ? "#define USE_ROUGHNESSMAP" : "", s.metalnessMap ? "#define USE_METALNESSMAP" : "", s.alphaMap ? "#define USE_ALPHAMAP" : "", s.vertexTangents ? "#define USE_TANGENT" : "", s.vertexColors ? "#define USE_COLOR" : "", s.gradientMap ? "#define USE_GRADIENTMAP" : "", s.flatShading ? "#define FLAT_SHADED" : "", s.doubleSided ? "#define DOUBLE_SIDED" : "", s.flipSided ? "#define FLIP_SIDED" : "", s.shadowMapEnabled ? "#define USE_SHADOWMAP" : "", s.shadowMapEnabled ? "#define " + u : "", s.premultipliedAlpha ? "#define PREMULTIPLIED_ALPHA" : "", s.physicallyCorrectLights ? "#define PHYSICALLY_CORRECT_LIGHTS" : "", s.logarithmicDepthBuffer ? "#define USE_LOGDEPTHBUF" : "", s.logarithmicDepthBuffer && (a.isWebGL2 || e.get("EXT_frag_depth")) ? "#define USE_LOGDEPTHBUF_EXT" : "", s.envMap && (a.isWebGL2 || e.get("EXT_shader_texture_lod")) ? "#define TEXTURE_LOD_EXT" : "", "uniform mat4 viewMatrix;", "uniform vec3 cameraPosition;", s.toneMapping !== st ? "#define TONE_MAPPING" : "", s.toneMapping !== st ? xn.tonemapping_pars_fragment : "", s.toneMapping !== st ? Yr("toneMapping", s.toneMapping) : "", s.dithering ? "#define DITHERING" : "", s.outputEncoding || s.mapEncoding || s.matcapEncoding || s.envMapEncoding || s.emissiveMapEncoding ? xn.encodings_pars_fragment : "", s.mapEncoding ? Wr("mapTexelToLinear", s.mapEncoding) : "", s.matcapEncoding ? Wr("matcapTexelToLinear", s.matcapEncoding) : "", s.envMapEncoding ? Wr("envMapTexelToLinear", s.envMapEncoding) : "", s.emissiveMapEncoding ? Wr("emissiveMapTexelToLinear", s.emissiveMapEncoding) : "", s.outputEncoding ? (w = "linearToOutputTexel", x = s.outputEncoding, M = Vr(x), "vec4 " + w + "( vec4 value ) { return LinearTo" + M[0] + M[1] + "; }") : "", s.depthPacking ? "#define DEPTH_PACKING " + i.depthPacking : "", "\n"].filter(qr).join("\n")), p = Kr(p = Xr(p = Zr(p), s), s), h = Kr(h = Xr(h = Zr(h), s), s), p = Jr(p), h = Jr(h), a.isWebGL2 && !i.isRawShaderMaterial) {
             var k = !1,
                 A = /^\s*#version\s+300\s+es\s*\n/;
             i.isShaderMaterial && null !== p.match(A) && null !== h.match(A) && (k = !0, p = p.replace(A, ""), h = h.replace(A, "")), y = ["#version 300 es\n", "#define attribute in", "#define varying out", "#define texture2D texture"].join("\n") + "\n" + y, b = ["#version 300 es\n", "#define varying in", k ? "" : "out highp vec4 pc_fragColor;", k ? "" : "#define gl_FragColor pc_fragColor", "#define gl_FragDepthEXT gl_FragDepth", "#define texture2D texture", "#define textureCube texture", "#define texture2DProj textureProj", "#define texture2DLodEXT textureLod", "#define texture2DProjLodEXT textureProjLod", "#define textureCubeLodEXT textureLod", "#define texture2DGradEXT textureGrad", "#define texture2DProjGradEXT textureProjGrad", "#define textureCubeGradEXT textureGrad"].join("\n") + "\n" + b
@@ -7623,10 +7623,10 @@
                     setFunc: function(e) {
                         if (i !== e) {
                             if (e) switch (e) {
-                                case K:
+                                case X:
                                     t.depthFunc(512);
                                     break;
-                                case X:
+                                case K:
                                     t.depthFunc(519);
                                     break;
                                 case Z:
@@ -8200,7 +8200,7 @@
                 if (t === Vt) return 6410;
                 if (t === Yt) return 6402;
                 if (t === qt) return 34041;
-                if (t === Kt) return 6403;
+                if (t === Xt) return 6403;
                 if (t === R) return 32774;
                 if (t === I) return 32778;
                 if (t === O) return 32779;
@@ -8215,8 +8215,8 @@
                 if (t === W) return 774;
                 if (t === Y) return 775;
                 if (t === q) return 776;
-                if ((t === Xt || t === Zt || t === Jt || t === $t) && null !== (i = e.get("WEBGL_compressed_texture_s3tc"))) {
-                    if (t === Xt) return i.COMPRESSED_RGB_S3TC_DXT1_EXT;
+                if ((t === Kt || t === Zt || t === Jt || t === $t) && null !== (i = e.get("WEBGL_compressed_texture_s3tc"))) {
+                    if (t === Kt) return i.COMPRESSED_RGB_S3TC_DXT1_EXT;
                     if (t === Zt) return i.COMPRESSED_RGBA_S3TC_DXT1_EXT;
                     if (t === Jt) return i.COMPRESSED_RGBA_S3TC_DXT3_EXT;
                     if (t === $t) return i.COMPRESSED_RGBA_S3TC_DXT5_EXT
@@ -8626,10 +8626,10 @@
             W = new hn,
             Y = null,
             q = e.width,
-            K = e.height,
-            X = 1,
-            Z = new hn(0, 0, q, K),
-            J = new hn(0, 0, q, K),
+            X = e.height,
+            K = 1,
+            Z = new hn(0, 0, q, X),
+            J = new hn(0, 0, q, X),
             $ = !1,
             Q = new bn,
             tt = new Bi,
@@ -8639,7 +8639,7 @@
             rt = new We;
 
         function st() {
-            return null === N ? X : 1
+            return null === N ? K : 1
         }
         try {
             var ot = {
@@ -8666,7 +8666,7 @@
         }
 
         function ct() {
-            m = new Ni(d), (g = new zi(d, m, t)).isWebGL2 || (m.get("WEBGL_depth_texture"), m.get("OES_texture_float"), m.get("OES_texture_half_float"), m.get("OES_texture_half_float_linear"), m.get("OES_standard_derivatives"), m.get("OES_element_index_uint"), m.get("ANGLE_instanced_arrays")), m.get("OES_texture_float_linear"), R = new ms(d, m, g), (v = new fs(d, m, R, g)).scissor(W.copy(J).multiplyScalar(X)), v.viewport(V.copy(Z).multiplyScalar(X)), y = new Fi(d), w = new ts, x = new ds(d, m, v, w, g, R, y), M = new On(d), _ = new ji(d, M, y), S = new Vi(_, y), L = new Gi(d), T = new Qr(I, m, g, x), E = new rs, k = new ls, A = new Oi(I, v, S, c), P = new Di(d, m, y, g), C = new Ui(d, m, y, g), y.programs = T.programs, I.context = d, I.capabilities = g, I.extensions = m, I.properties = w, I.renderLists = E, I.state = v, I.info = y
+            m = new Ni(d), (g = new zi(d, m, t)).isWebGL2 || (m.get("WEBGL_depth_texture"), m.get("OES_texture_float"), m.get("OES_texture_half_float"), m.get("OES_texture_half_float_linear"), m.get("OES_standard_derivatives"), m.get("OES_element_index_uint"), m.get("ANGLE_instanced_arrays")), m.get("OES_texture_float_linear"), R = new ms(d, m, g), (v = new fs(d, m, R, g)).scissor(W.copy(J).multiplyScalar(K)), v.viewport(V.copy(Z).multiplyScalar(K)), y = new Fi(d), w = new ts, x = new ds(d, m, v, w, g, R, y), M = new On(d), _ = new ji(d, M, y), S = new Vi(_, y), L = new Gi(d), T = new Qr(I, m, g, x), E = new rs, k = new ls, A = new Oi(I, v, S, c), P = new Di(d, m, y, g), C = new Ui(d, m, y, g), y.programs = T.programs, I.context = d, I.capabilities = g, I.extensions = m, I.properties = w, I.renderLists = E, I.state = v, I.info = y
         }
         ct();
         var lt = "undefined" != typeof navigator && "xr" in navigator && "supportsSession" in navigator.xr ? new Ps(I) : new Ls(I);
@@ -8704,27 +8704,27 @@
             var t = m.get("WEBGL_lose_context");
             t && t.restoreContext()
         }, this.getPixelRatio = function() {
-            return X
+            return K
         }, this.setPixelRatio = function(t) {
-            void 0 !== t && (X = t, this.setSize(q, K, !1))
+            void 0 !== t && (K = t, this.setSize(q, X, !1))
         }, this.getSize = function(t) {
-            return void 0 === t && (console.warn("WebGLRenderer: .getsize() now requires a Vector2 as an argument"), t = new Ge), t.set(q, K)
+            return void 0 === t && (console.warn("WebGLRenderer: .getsize() now requires a Vector2 as an argument"), t = new Ge), t.set(q, X)
         }, this.setSize = function(t, n, i) {
-            lt.isPresenting() ? console.warn("THREE.WebGLRenderer: Can't change size while VR device is presenting.") : (q = t, K = n, e.width = t * X, e.height = n * X, !1 !== i && (e.style.width = t + "px", e.style.height = n + "px"), this.setViewport(0, 0, t, n))
+            lt.isPresenting() ? console.warn("THREE.WebGLRenderer: Can't change size while VR device is presenting.") : (q = t, X = n, e.width = t * K, e.height = n * K, !1 !== i && (e.style.width = t + "px", e.style.height = n + "px"), this.setViewport(0, 0, t, n))
         }, this.getDrawingBufferSize = function(t) {
-            return void 0 === t && (console.warn("WebGLRenderer: .getdrawingBufferSize() now requires a Vector2 as an argument"), t = new Ge), t.set(q * X, K * X)
+            return void 0 === t && (console.warn("WebGLRenderer: .getdrawingBufferSize() now requires a Vector2 as an argument"), t = new Ge), t.set(q * K, X * K)
         }, this.setDrawingBufferSize = function(t, n, i) {
-            q = t, K = n, X = i, e.width = t * i, e.height = n * i, this.setViewport(0, 0, t, n)
+            q = t, X = n, K = i, e.width = t * i, e.height = n * i, this.setViewport(0, 0, t, n)
         }, this.getCurrentViewport = function(t) {
             return void 0 === t && (console.warn("WebGLRenderer: .getCurrentViewport() now requires a Vector4 as an argument"), t = new hn), t.copy(V)
         }, this.getViewport = function(t) {
             return t.copy(Z)
         }, this.setViewport = function(t, e, n, i) {
-            t.isVector4 ? Z.set(t.x, t.y, t.z, t.w) : Z.set(t, e, n, i), v.viewport(V.copy(Z).multiplyScalar(X))
+            t.isVector4 ? Z.set(t.x, t.y, t.z, t.w) : Z.set(t, e, n, i), v.viewport(V.copy(Z).multiplyScalar(K))
         }, this.getScissor = function(t) {
             return t.copy(J)
         }, this.setScissor = function(t, e, n, i) {
-            t.isVector4 ? J.set(t.x, t.y, t.z, t.w) : J.set(t, e, n, i), v.scissor(W.copy(J).multiplyScalar(X))
+            t.isVector4 ? J.set(t.x, t.y, t.z, t.w) : J.set(t, e, n, i), v.scissor(W.copy(J).multiplyScalar(K))
         }, this.getScissorTest = function() {
             return $
         }, this.setScissorTest = function(t) {
@@ -8997,7 +8997,7 @@
             }(_, n), n.isLineDashedMaterial && function(t, e) {
                 t.dashSize.value = e.dashSize, t.totalSize.value = e.dashSize + e.gapSize, t.scale.value = e.scale
             }(_, n)) : n.isPointsMaterial ? function(t, e) {
-                t.diffuse.value.copy(e.color), t.opacity.value = e.opacity, t.size.value = e.size * X, t.scale.value = .5 * K, t.map.value = e.map, null !== e.map && (!0 === e.map.matrixAutoUpdate && e.map.updateMatrix(), t.uvTransform.value.copy(e.map.matrix))
+                t.diffuse.value.copy(e.color), t.opacity.value = e.opacity, t.size.value = e.size * K, t.scale.value = .5 * X, t.map.value = e.map, null !== e.map && (!0 === e.map.matrixAutoUpdate && e.map.updateMatrix(), t.uvTransform.value.copy(e.map.matrix))
             }(_, n) : n.isSpriteMaterial ? function(t, e) {
                 t.diffuse.value.copy(e.color), t.opacity.value = e.opacity, t.rotation.value = e.rotation, t.map.value = e.map, null !== e.map && (!0 === e.map.matrixAutoUpdate && e.map.updateMatrix(), t.uvTransform.value.copy(e.map.matrix))
             }(_, n) : n.isShadowMaterial && (_.color.value.copy(n.color), _.opacity.value = n.opacity), void 0 !== _.ltc_1 && (_.ltc_1.value = Cn.LTC_1), void 0 !== _.ltc_2 && (_.ltc_2.value = Cn.LTC_2), Fr.upload(d, r.uniformsList, _, x)), n.isShaderMaterial && !0 === n.uniformsNeedUpdate && (Fr.upload(d, r.uniformsList, _, x), n.uniformsNeedUpdate = !1), n.isSpriteMaterial && M.setValue(d, "center", i.center), M.setValue(d, "modelViewMatrix", i.modelViewMatrix), M.setValue(d, "normalMatrix", i.normalMatrix), M.setValue(d, "modelMatrix", i.matrixWorld), y
@@ -9078,7 +9078,7 @@
             if (t) {
                 var s = w.get(t).__webglFramebuffer;
                 t.isWebGLRenderTargetCube ? (i = s[e || 0], r = !0) : i = t.isWebGLMultisampleRenderTarget ? w.get(t).__webglMultisampledFramebuffer : s, V.copy(t.viewport), W.copy(t.scissor), Y = t.scissorTest
-            } else V.copy(Z).multiplyScalar(X), W.copy(J).multiplyScalar(X), Y = $;
+            } else V.copy(Z).multiplyScalar(K), W.copy(J).multiplyScalar(K), Y = $;
             if (j !== i && (d.bindFramebuffer(36160, i), j = i), v.viewport(V), v.scissor(W), v.setScissorTest(Y), r) {
                 var a = w.get(t.texture);
                 d.framebufferTexture2D(36160, 36064, 34069 + (e || 0), a.__webglTexture, n || 0)
@@ -9199,13 +9199,13 @@
         di.call(this), this.type = "PointsMaterial", this.color = new Ln(16777215), this.map = null, this.size = 1, this.sizeAttenuation = !0, this.morphTargets = !1, this.lights = !1, this.setValues(t)
     }
 
-    function Ks(t, e) {
+    function Xs(t, e) {
         Vn.call(this), this.type = "Points", this.geometry = void 0 !== t ? t : new ci, this.material = void 0 !== e ? e : new qs({
             color: 16777215 * Math.random()
         })
     }
 
-    function Xs(t, e, n, i, r, s, a, o, c) {
+    function Ks(t, e, n, i, r, s, a, o, c) {
         pn.call(this, t, e, n, i, r, s, a, o, c), this.format = void 0 !== a ? a : Ft, this.minFilter = void 0 !== s ? s : Tt, this.magFilter = void 0 !== r ? r : Tt, this.generateMipmaps = !1
     }
 
@@ -9266,7 +9266,7 @@
     }
 
     function ta(t, e, n) {
-        Kn.call(this), this.type = "ParametricGeometry", this.parameters = {
+        Xn.call(this), this.type = "ParametricGeometry", this.parameters = {
             func: t,
             slices: e,
             stacks: n
@@ -9309,7 +9309,7 @@
     }
 
     function na(t, e, n, i) {
-        Kn.call(this), this.type = "PolyhedronGeometry", this.parameters = {
+        Xn.call(this), this.type = "PolyhedronGeometry", this.parameters = {
             vertices: t,
             indices: e,
             radius: n,
@@ -9394,7 +9394,7 @@
     }
 
     function ra(t, e) {
-        Kn.call(this), this.type = "TetrahedronGeometry", this.parameters = {
+        Xn.call(this), this.type = "TetrahedronGeometry", this.parameters = {
             radius: t,
             detail: e
         }, this.fromBufferGeometry(new sa(t, e)), this.mergeVertices()
@@ -9408,7 +9408,7 @@
     }
 
     function aa(t, e) {
-        Kn.call(this), this.type = "OctahedronGeometry", this.parameters = {
+        Xn.call(this), this.type = "OctahedronGeometry", this.parameters = {
             radius: t,
             detail: e
         }, this.fromBufferGeometry(new oa(t, e)), this.mergeVertices()
@@ -9422,7 +9422,7 @@
     }
 
     function ca(t, e) {
-        Kn.call(this), this.type = "IcosahedronGeometry", this.parameters = {
+        Xn.call(this), this.type = "IcosahedronGeometry", this.parameters = {
             radius: t,
             detail: e
         }, this.fromBufferGeometry(new la(t, e)), this.mergeVertices()
@@ -9438,7 +9438,7 @@
     }
 
     function pa(t, e) {
-        Kn.call(this), this.type = "DodecahedronGeometry", this.parameters = {
+        Xn.call(this), this.type = "DodecahedronGeometry", this.parameters = {
             radius: t,
             detail: e
         }, this.fromBufferGeometry(new ha(t, e)), this.mergeVertices()
@@ -9455,7 +9455,7 @@
     }
 
     function ua(t, e, n, i, r, s) {
-        Kn.call(this), this.type = "TubeGeometry", this.parameters = {
+        Xn.call(this), this.type = "TubeGeometry", this.parameters = {
             path: t,
             tubularSegments: e,
             radius: n,
@@ -9516,7 +9516,7 @@
     }
 
     function da(t, e, n, i, r, s, a) {
-        Kn.call(this), this.type = "TorusKnotGeometry", this.parameters = {
+        Xn.call(this), this.type = "TorusKnotGeometry", this.parameters = {
             radius: t,
             tube: e,
             tubularSegments: n,
@@ -9575,7 +9575,7 @@
     }
 
     function ga(t, e, n, i, r) {
-        Kn.call(this), this.type = "TorusGeometry", this.parameters = {
+        Xn.call(this), this.type = "TorusGeometry", this.parameters = {
             radius: t,
             tube: e,
             radialSegments: n,
@@ -9994,8 +9994,8 @@
         isLineLoop: !0
     }), qs.prototype = Object.create(di.prototype), qs.prototype.constructor = qs, qs.prototype.isPointsMaterial = !0, qs.prototype.copy = function(t) {
         return di.prototype.copy.call(this, t), this.color.copy(t.color), this.map = t.map, this.size = t.size, this.sizeAttenuation = t.sizeAttenuation, this.morphTargets = t.morphTargets, this
-    }, Ks.prototype = Object.assign(Object.create(Vn.prototype), {
-        constructor: Ks,
+    }, Xs.prototype = Object.assign(Object.create(Vn.prototype), {
+        constructor: Xs,
         isPoints: !0,
         raycast: function() {
             var t = new wn,
@@ -10050,17 +10050,17 @@
         clone: function() {
             return new this.constructor(this.geometry, this.material).copy(this)
         }
-    }), Xs.prototype = Object.assign(Object.create(pn.prototype), {
-        constructor: Xs,
+    }), Ks.prototype = Object.assign(Object.create(pn.prototype), {
+        constructor: Ks,
         isVideoTexture: !0,
         update: function() {
             var t = this.image;
             t.readyState >= t.HAVE_CURRENT_DATA && (this.needsUpdate = !0)
         }
-    }), Zs.prototype = Object.create(pn.prototype), Zs.prototype.constructor = Zs, Zs.prototype.isCompressedTexture = !0, Js.prototype = Object.create(pn.prototype), Js.prototype.constructor = Js, Js.prototype.isCanvasTexture = !0, $s.prototype = Object.create(pn.prototype), $s.prototype.constructor = $s, $s.prototype.isDepthTexture = !0, Qs.prototype = Object.create(ci.prototype), Qs.prototype.constructor = Qs, ta.prototype = Object.create(Kn.prototype), ta.prototype.constructor = ta, ea.prototype = Object.create(ci.prototype), ea.prototype.constructor = ea, na.prototype = Object.create(Kn.prototype), na.prototype.constructor = na, ia.prototype = Object.create(ci.prototype), ia.prototype.constructor = ia, ra.prototype = Object.create(Kn.prototype), ra.prototype.constructor = ra, sa.prototype = Object.create(ia.prototype), sa.prototype.constructor = sa, aa.prototype = Object.create(Kn.prototype), aa.prototype.constructor = aa, oa.prototype = Object.create(ia.prototype), oa.prototype.constructor = oa, ca.prototype = Object.create(Kn.prototype), ca.prototype.constructor = ca, la.prototype = Object.create(ia.prototype), la.prototype.constructor = la, pa.prototype = Object.create(Kn.prototype), pa.prototype.constructor = pa, ha.prototype = Object.create(ia.prototype), ha.prototype.constructor = ha, ua.prototype = Object.create(Kn.prototype), ua.prototype.constructor = ua, fa.prototype = Object.create(ci.prototype), fa.prototype.constructor = fa, fa.prototype.toJSON = function() {
+    }), Zs.prototype = Object.create(pn.prototype), Zs.prototype.constructor = Zs, Zs.prototype.isCompressedTexture = !0, Js.prototype = Object.create(pn.prototype), Js.prototype.constructor = Js, Js.prototype.isCanvasTexture = !0, $s.prototype = Object.create(pn.prototype), $s.prototype.constructor = $s, $s.prototype.isDepthTexture = !0, Qs.prototype = Object.create(ci.prototype), Qs.prototype.constructor = Qs, ta.prototype = Object.create(Xn.prototype), ta.prototype.constructor = ta, ea.prototype = Object.create(ci.prototype), ea.prototype.constructor = ea, na.prototype = Object.create(Xn.prototype), na.prototype.constructor = na, ia.prototype = Object.create(ci.prototype), ia.prototype.constructor = ia, ra.prototype = Object.create(Xn.prototype), ra.prototype.constructor = ra, sa.prototype = Object.create(ia.prototype), sa.prototype.constructor = sa, aa.prototype = Object.create(Xn.prototype), aa.prototype.constructor = aa, oa.prototype = Object.create(ia.prototype), oa.prototype.constructor = oa, ca.prototype = Object.create(Xn.prototype), ca.prototype.constructor = ca, la.prototype = Object.create(ia.prototype), la.prototype.constructor = la, pa.prototype = Object.create(Xn.prototype), pa.prototype.constructor = pa, ha.prototype = Object.create(ia.prototype), ha.prototype.constructor = ha, ua.prototype = Object.create(Xn.prototype), ua.prototype.constructor = ua, fa.prototype = Object.create(ci.prototype), fa.prototype.constructor = fa, fa.prototype.toJSON = function() {
         var t = ci.prototype.toJSON.call(this);
         return t.path = this.parameters.path.toJSON(), t
-    }, da.prototype = Object.create(Kn.prototype), da.prototype.constructor = da, ma.prototype = Object.create(ci.prototype), ma.prototype.constructor = ma, ga.prototype = Object.create(Kn.prototype), ga.prototype.constructor = ga, va.prototype = Object.create(ci.prototype), va.prototype.constructor = va;
+    }, da.prototype = Object.create(Xn.prototype), da.prototype.constructor = da, ma.prototype = Object.create(ci.prototype), ma.prototype.constructor = ma, ga.prototype = Object.create(Xn.prototype), ga.prototype.constructor = ga, va.prototype = Object.create(ci.prototype), va.prototype.constructor = va;
     var ya = function(t, e, n) {
         n = n || 2;
         var i, r, s, a, o, c, l, p = e && e.length,
@@ -10331,7 +10331,7 @@
     }
 
     function Ga(t, e) {
-        Kn.call(this), this.type = "ExtrudeGeometry", this.parameters = {
+        Xn.call(this), this.type = "ExtrudeGeometry", this.parameters = {
             shapes: t,
             options: e
         }, this.fromBufferGeometry(new Va(t, e)), this.mergeVertices()
@@ -10400,26 +10400,26 @@
             }
             for (var U = [], F = 0, H = L.length, G = H - 1, V = F + 1; F < H; F++, G++, V++) G === H && (G = 0), V === H && (V = 0), U[F] = j(L[F], L[G], L[V]);
             var W, Y, q = [],
-                K = U.concat();
+                X = U.concat();
             for (M = 0, _ = k.length; M < _; M++) {
                 for (x = k[M], W = [], F = 0, G = (H = x.length) - 1, V = F + 1; F < H; F++, G++, V++) G === H && (G = 0), V === H && (V = 0), W[F] = j(x[F], x[G], x[V]);
-                q.push(W), K = K.concat(W)
+                q.push(W), X = X.concat(W)
             }
             for (C = 0; C < f; C++) {
                 for (I = C / f, O = p * Math.cos(I * Math.PI / 2), R = h * Math.sin(I * Math.PI / 2) + u, F = 0, H = L.length; F < H; F++) Z((D = P(L[F], U[F], R)).x, D.y, -O);
                 for (M = 0, _ = k.length; M < _; M++)
                     for (x = k[M], W = q[M], F = 0, H = x.length; F < H; F++) Z((D = P(x[F], W[F], R)).x, D.y, -O)
             }
-            for (R = h + u, F = 0; F < B; F++) D = l ? P(E[F], K[F], R) : E[F], S ? (b.copy(v.normals[0]).multiplyScalar(D.x), y.copy(v.binormals[0]).multiplyScalar(D.y), w.copy(g[0]).add(b).add(y), Z(w.x, w.y, w.z)) : Z(D.x, D.y, 0);
+            for (R = h + u, F = 0; F < B; F++) D = l ? P(E[F], X[F], R) : E[F], S ? (b.copy(v.normals[0]).multiplyScalar(D.x), y.copy(v.binormals[0]).multiplyScalar(D.y), w.copy(g[0]).add(b).add(y), Z(w.x, w.y, w.z)) : Z(D.x, D.y, 0);
             for (Y = 1; Y <= o; Y++)
-                for (F = 0; F < B; F++) D = l ? P(E[F], K[F], R) : E[F], S ? (b.copy(v.normals[Y]).multiplyScalar(D.x), y.copy(v.binormals[Y]).multiplyScalar(D.y), w.copy(g[Y]).add(b).add(y), Z(w.x, w.y, w.z)) : Z(D.x, D.y, c / o * Y);
+                for (F = 0; F < B; F++) D = l ? P(E[F], X[F], R) : E[F], S ? (b.copy(v.normals[Y]).multiplyScalar(D.x), y.copy(v.binormals[Y]).multiplyScalar(D.y), w.copy(g[Y]).add(b).add(y), Z(w.x, w.y, w.z)) : Z(D.x, D.y, c / o * Y);
             for (C = f - 1; C >= 0; C--) {
                 for (I = C / f, O = p * Math.cos(I * Math.PI / 2), R = h * Math.sin(I * Math.PI / 2) + u, F = 0, H = L.length; F < H; F++) Z((D = P(L[F], U[F], R)).x, D.y, c + O);
                 for (M = 0, _ = k.length; M < _; M++)
                     for (x = k[M], W = q[M], F = 0, H = x.length; F < H; F++) D = P(x[F], W[F], R), S ? Z(D.x, D.y + g[o - 1].y, g[o - 1].x + O) : Z(D.x, D.y, c + O)
             }
 
-            function X(t, e) {
+            function K(t, e) {
                 var n, i;
                 for (F = t.length; --F >= 0;) {
                     n = F, (i = F - 1) < 0 && (i = t.length - 1);
@@ -10473,14 +10473,14 @@
             function() {
                 var t = i.length / 3,
                     e = 0;
-                for (X(L, e), e += L.length, M = 0, _ = k.length; M < _; M++) X(x = k[M], e), e += x.length;
+                for (K(L, e), e += L.length, M = 0, _ = k.length; M < _; M++) K(x = k[M], e), e += x.length;
                 n.addGroup(t, i.length / 3 - t, 1)
             }()
         }
         this.addAttribute("position", new ii(i, 3)), this.addAttribute("uv", new ii(r, 2)), this.computeVertexNormals()
     }
-    Ga.prototype = Object.create(Kn.prototype), Ga.prototype.constructor = Ga, Ga.prototype.toJSON = function() {
-        var t = Kn.prototype.toJSON.call(this);
+    Ga.prototype = Object.create(Xn.prototype), Ga.prototype.constructor = Ga, Ga.prototype.toJSON = function() {
+        var t = Xn.prototype.toJSON.call(this);
         return Ya(this.parameters.shapes, this.parameters.options, t)
     }, Va.prototype = Object.create(ci.prototype), Va.prototype.constructor = Va, Va.prototype.toJSON = function() {
         var t = ci.prototype.toJSON.call(this);
@@ -10523,21 +10523,21 @@
     }
 
     function qa(t, e) {
-        Kn.call(this), this.type = "TextGeometry", this.parameters = {
+        Xn.call(this), this.type = "TextGeometry", this.parameters = {
             text: t,
             parameters: e
-        }, this.fromBufferGeometry(new Ka(t, e)), this.mergeVertices()
+        }, this.fromBufferGeometry(new Xa(t, e)), this.mergeVertices()
     }
 
-    function Ka(t, e) {
+    function Xa(t, e) {
         var n = (e = e || {}).font;
-        if (!n || !n.isFont) return console.error("THREE.TextGeometry: font parameter is not an instance of THREE.Font."), new Kn;
+        if (!n || !n.isFont) return console.error("THREE.TextGeometry: font parameter is not an instance of THREE.Font."), new Xn;
         var i = n.generateShapes(t, e.size);
         e.depth = void 0 !== e.height ? e.height : 50, void 0 === e.bevelThickness && (e.bevelThickness = 10), void 0 === e.bevelSize && (e.bevelSize = 8), void 0 === e.bevelEnabled && (e.bevelEnabled = !1), Va.call(this, i, e), this.type = "TextBufferGeometry"
     }
 
-    function Xa(t, e, n, i, r, s, a) {
-        Kn.call(this), this.type = "SphereGeometry", this.parameters = {
+    function Ka(t, e, n, i, r, s, a) {
+        Xn.call(this), this.type = "SphereGeometry", this.parameters = {
             radius: t,
             widthSegments: e,
             heightSegments: n,
@@ -10589,7 +10589,7 @@
     }
 
     function Ja(t, e, n, i, r, s) {
-        Kn.call(this), this.type = "RingGeometry", this.parameters = {
+        Xn.call(this), this.type = "RingGeometry", this.parameters = {
             innerRadius: t,
             outerRadius: e,
             thetaSegments: n,
@@ -10634,7 +10634,7 @@
     }
 
     function Qa(t, e, n, i) {
-        Kn.call(this), this.type = "LatheGeometry", this.parameters = {
+        Xn.call(this), this.type = "LatheGeometry", this.parameters = {
             points: t,
             segments: e,
             phiStart: n,
@@ -10679,7 +10679,7 @@
     }
 
     function eo(t, e) {
-        Kn.call(this), this.type = "ShapeGeometry", "object" == typeof e && (console.warn("THREE.ShapeGeometry: Options parameter has been removed."), e = e.curveSegments), this.parameters = {
+        Xn.call(this), this.type = "ShapeGeometry", "object" == typeof e && (console.warn("THREE.ShapeGeometry: Options parameter has been removed."), e = e.curveSegments), this.parameters = {
             shapes: t,
             curveSegments: e
         }, this.fromBufferGeometry(new no(t, e)), this.mergeVertices()
@@ -10741,7 +10741,7 @@
             c = [0, 0],
             l = {},
             p = ["a", "b", "c"];
-        t.isBufferGeometry ? (s = new Kn).fromBufferGeometry(t) : s = t.clone(), s.mergeVertices(), s.computeFaceNormals();
+        t.isBufferGeometry ? (s = new Xn).fromBufferGeometry(t) : s = t.clone(), s.mergeVertices(), s.computeFaceNormals();
         for (var h = s.vertices, u = s.faces, f = 0, d = u.length; f < d; f++)
             for (var m = u[f], g = 0; g < 3; g++) n = m[p[g]], i = m[p[(g + 1) % 3]], c[0] = Math.min(n, i), c[1] = Math.max(n, i), void 0 === l[r = c[0] + "," + c[1]] ? l[r] = {
                 index1: c[0],
@@ -10760,7 +10760,7 @@
     }
 
     function so(t, e, n, i, r, s, a, o) {
-        Kn.call(this), this.type = "CylinderGeometry", this.parameters = {
+        Xn.call(this), this.type = "CylinderGeometry", this.parameters = {
             radiusTop: t,
             radiusBottom: e,
             height: n,
@@ -10868,7 +10868,7 @@
     }
 
     function lo(t, e, n, i) {
-        Kn.call(this), this.type = "CircleGeometry", this.parameters = {
+        Xn.call(this), this.type = "CircleGeometry", this.parameters = {
             radius: t,
             segments: e,
             thetaStart: n,
@@ -10896,13 +10896,13 @@
         for (r = 1; r <= e; r++) a.push(r, r + 1, 0);
         this.setIndex(a), this.addAttribute("position", new ii(o, 3)), this.addAttribute("normal", new ii(c, 3)), this.addAttribute("uv", new ii(l, 2))
     }
-    qa.prototype = Object.create(Kn.prototype), qa.prototype.constructor = qa, Ka.prototype = Object.create(Va.prototype), Ka.prototype.constructor = Ka, Xa.prototype = Object.create(Kn.prototype), Xa.prototype.constructor = Xa, Za.prototype = Object.create(ci.prototype), Za.prototype.constructor = Za, Ja.prototype = Object.create(Kn.prototype), Ja.prototype.constructor = Ja, $a.prototype = Object.create(ci.prototype), $a.prototype.constructor = $a, Qa.prototype = Object.create(Kn.prototype), Qa.prototype.constructor = Qa, to.prototype = Object.create(ci.prototype), to.prototype.constructor = to, eo.prototype = Object.create(Kn.prototype), eo.prototype.constructor = eo, eo.prototype.toJSON = function() {
-        var t = Kn.prototype.toJSON.call(this);
+    qa.prototype = Object.create(Xn.prototype), qa.prototype.constructor = qa, Xa.prototype = Object.create(Va.prototype), Xa.prototype.constructor = Xa, Ka.prototype = Object.create(Xn.prototype), Ka.prototype.constructor = Ka, Za.prototype = Object.create(ci.prototype), Za.prototype.constructor = Za, Ja.prototype = Object.create(Xn.prototype), Ja.prototype.constructor = Ja, $a.prototype = Object.create(ci.prototype), $a.prototype.constructor = $a, Qa.prototype = Object.create(Xn.prototype), Qa.prototype.constructor = Qa, to.prototype = Object.create(ci.prototype), to.prototype.constructor = to, eo.prototype = Object.create(Xn.prototype), eo.prototype.constructor = eo, eo.prototype.toJSON = function() {
+        var t = Xn.prototype.toJSON.call(this);
         return io(this.parameters.shapes, t)
     }, no.prototype = Object.create(ci.prototype), no.prototype.constructor = no, no.prototype.toJSON = function() {
         var t = ci.prototype.toJSON.call(this);
         return io(this.parameters.shapes, t)
-    }, ro.prototype = Object.create(ci.prototype), ro.prototype.constructor = ro, so.prototype = Object.create(Kn.prototype), so.prototype.constructor = so, ao.prototype = Object.create(ci.prototype), ao.prototype.constructor = ao, oo.prototype = Object.create(so.prototype), oo.prototype.constructor = oo, co.prototype = Object.create(ao.prototype), co.prototype.constructor = co, lo.prototype = Object.create(Kn.prototype), lo.prototype.constructor = lo, po.prototype = Object.create(ci.prototype), po.prototype.constructor = po;
+    }, ro.prototype = Object.create(ci.prototype), ro.prototype.constructor = ro, so.prototype = Object.create(Xn.prototype), so.prototype.constructor = so, ao.prototype = Object.create(ci.prototype), ao.prototype.constructor = ao, oo.prototype = Object.create(so.prototype), oo.prototype.constructor = oo, co.prototype = Object.create(ao.prototype), co.prototype.constructor = co, lo.prototype = Object.create(Xn.prototype), lo.prototype.constructor = lo, po.prototype = Object.create(ci.prototype), po.prototype.constructor = po;
     var ho = Object.freeze({
         WireframeGeometry: Qs,
         ParametricGeometry: ta,
@@ -10924,8 +10924,8 @@
         TorusGeometry: ga,
         TorusBufferGeometry: va,
         TextGeometry: qa,
-        TextBufferGeometry: Ka,
-        SphereGeometry: Xa,
+        TextBufferGeometry: Xa,
+        SphereGeometry: Ka,
         SphereBufferGeometry: Za,
         RingGeometry: Ja,
         RingBufferGeometry: $a,
@@ -11635,11 +11635,11 @@
         this.manager = void 0 !== t ? t : Fo
     }
 
-    function Ko(t) {
+    function Xo(t) {
         this.manager = void 0 !== t ? t : Fo
     }
 
-    function Xo(t) {
+    function Ko(t) {
         this.manager = void 0 !== t ? t : Fo
     }
 
@@ -11887,7 +11887,7 @@
         setPath: function(t) {
             return this.path = t, this
         }
-    }), Object.assign(Ko.prototype, {
+    }), Object.assign(Xo.prototype, {
         crossOrigin: "anonymous",
         load: function(t, e, n, i) {
             var r = new Wi,
@@ -11909,7 +11909,7 @@
         setPath: function(t) {
             return this.path = t, this
         }
-    }), Object.assign(Xo.prototype, {
+    }), Object.assign(Ko.prototype, {
         crossOrigin: "anonymous",
         load: function(t, e, n, i) {
             var r = new pn,
@@ -12717,7 +12717,7 @@
     }
 
     function Ic(t, e, n, i) {
-        "number" == typeof n && (i = n, n = !1, console.error("THREE.InstancedBufferAttribute: The constructor now expects normalized as the third argument.")), Xn.call(this, t, e, n), this.meshPerAttribute = i || 1
+        "number" == typeof n && (i = n, n = !1, console.error("THREE.InstancedBufferAttribute: The constructor now expects normalized as the third argument.")), Kn.call(this, t, e, n), this.meshPerAttribute = i || 1
     }
 
     function Oc(t) {
@@ -12736,14 +12736,14 @@
             var t = ci.prototype.toJSON.call(this);
             return t.maxInstancedCount = this.maxInstancedCount, t.isInstancedBufferGeometry = !0, t
         }
-    }), Ic.prototype = Object.assign(Object.create(Xn.prototype), {
+    }), Ic.prototype = Object.assign(Object.create(Kn.prototype), {
         constructor: Ic,
         isInstancedBufferAttribute: !0,
         copy: function(t) {
-            return Xn.prototype.copy.call(this, t), this.meshPerAttribute = t.meshPerAttribute, this
+            return Kn.prototype.copy.call(this, t), this.meshPerAttribute = t.meshPerAttribute, this
         },
         toJSON: function() {
-            var t = Xn.prototype.toJSON.call(this);
+            var t = Kn.prototype.toJSON.call(this);
             return t.meshPerAttribute = this.meshPerAttribute, t.isInstancedBufferAttribute = !0, t
         }
     }), Object.assign(Oc.prototype, {
@@ -12759,19 +12759,19 @@
                 n = t.data.index;
             if (void 0 !== n) {
                 var i = new Dc[n.type](n.array);
-                e.setIndex(new Xn(i, 1))
+                e.setIndex(new Kn(i, 1))
             }
             var r = t.data.attributes;
             for (var s in r) {
                 var a = r[s],
-                    o = (i = new Dc[a.type](a.array), new(a.isInstancedBufferAttribute ? Ic : Xn)(i, a.itemSize, a.normalized));
+                    o = (i = new Dc[a.type](a.array), new(a.isInstancedBufferAttribute ? Ic : Kn)(i, a.itemSize, a.normalized));
                 void 0 !== a.name && (o.name = a.name), e.addAttribute(s, o)
             }
             var c = t.data.morphAttributes;
             if (c)
                 for (var s in c) {
                     for (var l = c[s], p = [], h = 0, u = l.length; h < u; h++) {
-                        a = l[h], o = new Xn(i = new Dc[a.type](a.array), a.itemSize, a.normalized);
+                        a = l[h], o = new Kn(i = new Dc[a.type](a.array), a.itemSize, a.normalized);
                         void 0 !== a.name && (o.name = a.name), p.push(o)
                     }
                     e.morphAttributes[s] = p
@@ -13094,7 +13094,7 @@
                     break;
                 case "PointCloud":
                 case "Points":
-                    i = new Ks(r(t.geometry), s(t.material));
+                    i = new Xs(r(t.geometry), s(t.material));
                     break;
                 case "Sprite":
                     i = new Ns(s(t.material));
@@ -13152,7 +13152,7 @@
         this.type = "Font", this.data = t
     }
 
-    function Kc(t, e, n, i, r) {
+    function Xc(t, e, n, i, r) {
         var s = r.glyphs[t] || r.glyphs["?"];
         if (s) {
             var a, o, c, l, p, h, u, f, d = new Yc;
@@ -13179,7 +13179,7 @@
         }
     }
 
-    function Xc(t) {
+    function Kc(t) {
         this.manager = void 0 !== t ? t : Fo
     }
 
@@ -13311,7 +13311,7 @@
                         var p = i[l];
                         if ("\n" === p) o = 0, c -= s;
                         else {
-                            var h = Kc(p, r, o, c, n);
+                            var h = Xc(p, r, o, c, n);
                             o += h.offsetX, a.push(h.path)
                         }
                     }
@@ -13319,7 +13319,7 @@
                 }(t, e, this.data), r = 0, s = i.length; r < s; r++) Array.prototype.push.apply(n, i[r].toShapes());
             return n
         }
-    }), Object.assign(Xc.prototype, {
+    }), Object.assign(Kc.prototype, {
         load: function(t, e, n, i) {
             var r = this,
                 s = new Go(this.manager);
@@ -13369,7 +13369,7 @@
             SubtractiveBlending: L,
             MultiplyBlending: P,
             CustomBlending: C
-        }, Nc = new Ln, jc = new Xo, Uc = new Pc, function(t, e, n) {
+        }, Nc = new Ln, jc = new Ko, Uc = new Pc, function(t, e, n) {
             var i = {};
 
             function r(t, r, s, a, o) {
@@ -14194,7 +14194,7 @@
         }))), this.update()
     }
 
-    function Kl(t, e, n) {
+    function Xl(t, e, n) {
         Vn.call(this), this.light = t, this.light.updateMatrixWorld(), this.matrix = t.matrixWorld, this.matrixAutoUpdate = !1, this.color = n;
         var i = new oa(e);
         i.rotateY(.5 * Math.PI), this.material = new Ri({
@@ -14203,10 +14203,10 @@
         }), void 0 === this.color && (this.material.vertexColors = T);
         var r = i.getAttribute("position"),
             s = new Float32Array(3 * r.count);
-        i.addAttribute("color", new Xn(s, 3)), this.add(new Ii(i, this.material)), this.update()
+        i.addAttribute("color", new Kn(s, 3)), this.add(new Ii(i, this.material)), this.update()
     }
 
-    function Xl(t, e) {
+    function Kl(t, e) {
         this.lightProbe = t, this.size = e;
         var n = {
                 GAMMA_OUTPUT: ""
@@ -14263,7 +14263,7 @@
         var r = new ci,
             s = this.divisionsInnerAngle + 2 * this.divisionsOuterAngle,
             a = new Float32Array(3 * (3 * s + 3));
-        r.addAttribute("position", new Xn(a, 3));
+        r.addAttribute("position", new Kn(a, 3));
         var o = new Gs({
                 color: 65280
             }),
@@ -14328,7 +14328,7 @@
         var n = new Uint16Array([0, 1, 1, 2, 2, 3, 3, 0, 4, 5, 5, 6, 6, 7, 7, 4, 0, 4, 1, 5, 2, 6, 3, 7]),
             i = new Float32Array(24),
             r = new ci;
-        r.setIndex(new Xn(n, 1)), r.addAttribute("position", new Xn(i, 3)), Ws.call(this, r, new Gs({
+        r.setIndex(new Kn(n, 1)), r.addAttribute("position", new Kn(i, 3)), Ws.call(this, r, new Gs({
             color: e
         })), this.matrixAutoUpdate = !1, this.update()
     }
@@ -14338,7 +14338,7 @@
         var n = void 0 !== e ? e : 16776960,
             i = new Uint16Array([0, 1, 1, 2, 2, 3, 3, 0, 4, 5, 5, 6, 6, 7, 7, 4, 0, 4, 1, 5, 2, 6, 3, 7]),
             r = new ci;
-        r.setIndex(new Xn(i, 1)), r.addAttribute("position", new ii([1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1], 3)), Ws.call(this, r, new Gs({
+        r.setIndex(new Kn(i, 1)), r.addAttribute("position", new ii([1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1], 3)), Ws.call(this, r, new Gs({
             color: n
         })), this.geometry.computeBoundingSphere()
     }
@@ -15367,9 +15367,9 @@
             }
         }, ql.prototype.dispose = function() {
             this.geometry.dispose(), this.material.dispose(), this.children[0].geometry.dispose(), this.children[0].material.dispose()
-        }, Kl.prototype = Object.create(Vn.prototype), Kl.prototype.constructor = Kl, Kl.prototype.dispose = function() {
+        }, Xl.prototype = Object.create(Vn.prototype), Xl.prototype.constructor = Xl, Xl.prototype.dispose = function() {
             this.children[0].geometry.dispose(), this.children[0].material.dispose()
-        }, Kl.prototype.update = function() {
+        }, Xl.prototype.update = function() {
             var t = new We,
                 e = new Ln,
                 n = new Ln;
@@ -15387,9 +15387,9 @@
                 }
                 i.lookAt(t.setFromMatrixPosition(this.light.matrixWorld).negate())
             }
-        }(), Xl.prototype = Object.create(Ii.prototype), Xl.prototype.constructor = Xl, Xl.prototype.dispose = function() {
+        }(), Kl.prototype = Object.create(Ii.prototype), Kl.prototype.constructor = Kl, Kl.prototype.dispose = function() {
             this.geometry.dispose(), this.material.dispose()
-        }, Xl.prototype.onBeforeRender = function() {
+        }, Kl.prototype.onBeforeRender = function() {
             this.position.copy(this.lightProbe.position), this.scale.set(1, 1, 1).multiplyScalar(this.size), this.material.uniforms.intensity.value = this.lightProbe.intensity
         }, Zl.prototype = Object.assign(Object.create(Ws.prototype), {
             constructor: Zl,
@@ -15505,7 +15505,7 @@
     }
 
     function up(t, e) {
-        return console.warn("THREE.PointCloud has been renamed to THREE.Points."), new Ks(t, e)
+        return console.warn("THREE.PointCloud has been renamed to THREE.Points."), new Xs(t, e)
     }
 
     function fp(t) {
@@ -15513,7 +15513,7 @@
     }
 
     function dp(t, e) {
-        return console.warn("THREE.ParticleSystem has been renamed to THREE.Points."), new Ks(t, e)
+        return console.warn("THREE.ParticleSystem has been renamed to THREE.Points."), new Xs(t, e)
     }
 
     function mp(t) {
@@ -15533,7 +15533,7 @@
     }
 
     function bp(t, e) {
-        return console.warn("THREE.DynamicBufferAttribute has been removed. Use new THREE.BufferAttribute().setDynamic( true ) instead."), new Xn(t, e).setDynamic(!0)
+        return console.warn("THREE.DynamicBufferAttribute has been removed. Use new THREE.BufferAttribute().setDynamic( true ) instead."), new Kn(t, e).setDynamic(!0)
     }
 
     function wp(t, e) {
@@ -15626,7 +15626,7 @@
         },
         createGeometry: function(t) {
             console.warn("THREE.CurvePath: .createGeometry() has been removed. Use new THREE.Geometry().setFromPoints( points ) instead.");
-            for (var e = new Kn, n = 0, i = t.length; n < i; n++) {
+            for (var e = new Xn, n = 0, i = t.length; n < i; n++) {
                 var r = t[n];
                 e.vertices.push(new We(r.x, r.y, r.z || 0))
             }
@@ -15865,7 +15865,7 @@
         lengthManhattan: function() {
             return console.warn("THREE.Vector4: .lengthManhattan() has been renamed to .manhattanLength()."), this.manhattanLength()
         }
-    }), Object.assign(Kn.prototype, {
+    }), Object.assign(Xn.prototype, {
         computeTangents: function() {
             console.error("THREE.Geometry: .computeTangents() has been removed.")
         },
@@ -15992,7 +15992,7 @@
                 console.warn("THREE.Light: .shadowMapHeight is now .shadow.mapSize.height."), this.shadow.mapSize.height = t
             }
         }
-    }), Object.defineProperties(Xn.prototype, {
+    }), Object.defineProperties(Kn.prototype, {
         length: {
             get: function() {
                 return console.warn("THREE.BufferAttribute: .length has been deprecated. Use .count instead."), this.array.length
@@ -16353,13 +16353,13 @@
     }
     cn.crossOrigin = void 0, cn.loadTexture = function(t, e, n, i) {
         console.warn("THREE.ImageUtils.loadTexture has been deprecated. Use THREE.TextureLoader() instead.");
-        var r = new Xo;
+        var r = new Ko;
         r.setCrossOrigin(this.crossOrigin);
         var s = r.load(t, n, void 0, i);
         return e && (s.mapping = e), s
     }, cn.loadTextureCube = function(t, e, n, i) {
         console.warn("THREE.ImageUtils.loadTextureCube has been deprecated. Use THREE.CubeTextureLoader() instead.");
-        var r = new Ko;
+        var r = new Xo;
         r.setCrossOrigin(this.crossOrigin);
         var s = r.load(t, n, void 0, i);
         return e && (s.mapping = e), s
@@ -16729,6 +16729,12 @@
             def: !0,
             bool: !0
         }, {
+            name: "Headshots Only",
+            varN: "headshotOnly",
+            dontChange: !0,
+            def: !1,
+            bool: !0
+        }, {
             name: "Sliding",
             varN: "canSlide",
             def: !0,
@@ -16812,7 +16818,7 @@
             n: "Search",
             search: !0,
             t: "votes"
-        }], t.exports.saleMax = 1e7, t.exports.saleGrace = 6e5, t.exports.marketMinLVl = 20, t.exports.wordFilterT = .7, t.exports.rankVar = .03, t.exports.newDataInterval = 12e4, t.exports.socials = ["leaders", "profile", "maps", "tourney", "market"], t.exports.marketQueries = {
+        }], t.exports.saleMax = 1e7, t.exports.saleGrace = 6e5, t.exports.marketMinLVl = 20, t.exports.rankVar = .03, t.exports.newDataInterval = 12e4, t.exports.socials = ["leaders", "profile", "maps", "tourney", "market"], t.exports.marketQueries = {
             market: {
                 btn: "Info",
                 checkItem: function(t) {
@@ -16957,6 +16963,7 @@
         };
         var s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         t.exports.getDate = function(t) {
+            if (!t) return "None";
             t = t.split(/[-A-Z :\.]/i);
             var e = new Date(t[0], --t[1], t[2], t[3], t[4], t[5]),
                 n = new Date(e.getTime());
@@ -16969,11 +16976,13 @@
         }, t.exports.commaFormatNum = function(t) {
             return t.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         }, t.exports.getReadableTime = function(t, e) {
-            var n = Math.floor(t / 864e5),
-                i = Math.floor(t % 864e5 / 36e5),
-                r = Math.floor(t % 36e5 / 6e4),
-                s = Math.floor(t % 6e4 / 1e3);
-            return (n ? n + "d " : "") + (i ? i + "h " : "") + (r || 0) + "m " + (e ? s + "s" : "")
+            var n = Math.floor(t / 1e3),
+                i = Math.floor(n / 60);
+            n %= 60;
+            var r = Math.floor(i / 60);
+            i %= 60;
+            var s = Math.floor(r / 24);
+            return (s ? s + "d " : "") + ((r %= 24) ? r + "h " : "") + (i || 0) + "m " + (e ? n + "s" : "")
         }, t.exports.getTimeH = function(t) {
             parseInt(t % 1e3 / 100);
             var e = Math.floor(t / 1e3 % 60),
@@ -17162,20 +17171,20 @@
             }(t, this)
         };
         var o = n(40);
-        t.exports.nzsDzFp = function(e, n) {
+        t.exports.npsqufGT = function(e, n) {
             let i = o.encode(e),
                 r = new Uint8Array(i.length + 2);
-            return r.set(t.exports.Amkg(n), r.length - 2), r.set(i, 0), r
-        }, t.exports.RvTwBWYc = function(e) {
+            return r.set(t.exports.UTSBwNXJiPF(n), r.length - 2), r.set(i, 0), r
+        }, t.exports.eFYvHeWEw = function(e) {
             e = new Uint8Array(e);
-            let n = t.exports.GNanqvDsMB(e[e.length - 2], e[e.length - 1]),
+            let n = t.exports.GuKMfcke(e[e.length - 2], e[e.length - 1]),
                 i = e.slice(0, e.length - 2);
             return [o.decode(i), n]
-        }, t.exports.AjDitf = function(t, e) {
+        }, t.exports.uSygczyo = function(t, e) {
             return 255 & t + e
-        }, t.exports.Amkg = function(t) {
+        }, t.exports.UTSBwNXJiPF = function(t) {
             return [15 & t >> 4, 15 & t]
-        }, t.exports.GNanqvDsMB = function(t, e) {
+        }, t.exports.GuKMfcke = function(t, e) {
             return (t << 4) + e
         }, t.exports.restartIfNeeded = function(t) {
             if (i.needsRestart) {
@@ -17187,7 +17196,7 @@
                     e.exit()
                 }, 1e3)
             }
-        }, t.exports.thumbnailSize = function(t) {
+        }, t.exports.picSize = "userscript", t.exports.thumbnailSize = function(t) {
             return parseInt(.75 * t.replace(/=/g, "").length) / 1e3
         }, t.exports.hexToRGB = (t => t.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (t, e, n, i) => "#" + e + e + n + n + i + i).substring(1).match(/.{2}/g).map(t => parseInt(t, 16))), t.exports.versionifyUrl = function(t) {
             return t + "?build=" + r
@@ -17983,6 +17992,7 @@
         icon: "icon_2",
         sound: "weapon_2",
         noAo: !0,
+        swapWiggle: .3,
         attach: 0,
         attachYOff: -.1,
         attachZOff: -.8,
@@ -17992,8 +18002,9 @@
         aimSpeed: 130,
         spdMlt: .95,
         ammo: 30,
+        rate: 110,
         reload: 1200,
-        dmg: 24,
+        dmg: 23,
         pierce: 1,
         range: 700,
         dmgDrop: 5,
@@ -18019,7 +18030,6 @@
         muzOff: 5.1,
         muzOffY: -.05,
         muzMlt: 1.4,
-        rate: 110,
         spread: 100,
         minSpread: 5,
         zoom: 1.6,
@@ -18050,8 +18060,9 @@
         transp: !0,
         nAuto: !0,
         kill: ["", 75],
+        swapWiggle: .3,
         type: 1,
-        shine: 30,
+        shine: 10,
         swapTime: 350,
         aimSpeed: 120,
         spdMlt: 1.05,
@@ -18061,17 +18072,17 @@
         range: 700,
         dmgDrop: 10,
         scale: .0003158947055276376,
-        leftHoldY: -.9,
+        leftHoldY: -1,
         rightHoldY: -.62,
         leftHoldZ: -.55,
         rightHoldZ: -.5,
         xOff: .7,
-        yOff: -.75,
-        zOff: -4.5,
+        yOff: -.6,
+        zOff: -3.7,
         xOrg: 0,
         yRot: -.005,
         yOrg: -.23,
-        zOrg: -4.25,
+        zOrg: -3.9,
         jYMlt: .1,
         cLean: .3,
         cRot: .3,
@@ -18105,6 +18116,7 @@
         src: "weapon_4",
         icon: "icon_4",
         sound: "weapon_4",
+        swapWiggle: .5,
         attach: 0,
         attachYOff: -.09,
         attachZOff: -1.1,
@@ -18230,6 +18242,7 @@
         nCase: !0,
         transp: !0,
         nRing: !0,
+        swapWiggle: .4,
         shine: 35,
         type: 0,
         physRang: 35,
@@ -18290,11 +18303,12 @@
         sound: "weapon_7",
         type: 0,
         attach: 0,
+        swapWiggle: .3,
         attachYOff: -.085,
         attachZOff: -.7,
         zRot: .75,
         noAo: !0,
-        swapTime: 800,
+        swapTime: 700,
         aimSpeed: 200,
         spdMlt: .79,
         ammo: 60,
@@ -18362,7 +18376,8 @@
         zRot: .7,
         type: 0,
         noAo: !0,
-        swapTime: 400,
+        swapWiggle: .4,
+        swapTime: 300,
         aimSpeed: 120,
         spdMlt: 1,
         ammo: 8,
@@ -18425,7 +18440,8 @@
         noAo: !0,
         projectile: 0,
         type: 0,
-        swapTime: 600,
+        swapTime: 400,
+        swapWiggle: .4,
         aimSpeed: 200,
         spdMlt: .9,
         ammo: 1,
@@ -18652,22 +18668,47 @@
         rumble: .4
     }, {
         name: "Hands",
+        icon: "icon_0",
         melee: !0,
         nInsp: !0,
         noSkins: !0,
         holdW: .9,
+        swapWiggle: .3,
         sounds: ["swish_0", "swish_1"],
         noAim: !0,
-        anim: function(t, e) {
-            t.handAnimInd = -1 * (t.handAnimInd || 1);
-            var n = (1 == t.handAnimInd ? "l" : "r") + "HndTween";
-            t[n] && t[n].stop(), t[n + "A"] = t[n + "A"] || 0, t[n] = new e.Tween(t).to({
-                [n + "A"]: 2.4
-            }, 30).easing(e.Easing.Linear.None).onComplete(function() {
-                t[n] = new e.Tween(t).to({
-                    [n + "A"]: 0
-                }, 200).easing(e.Easing.Linear.None).delay(100).start()
-            }).start()
+        anim: function(t, e, n) {
+            if (1 == n) t.handAnimInd = -1 * (t.handAnimInd || 1), t.meleeAnim.anim && t.meleeAnim.anim.stop(), t.resetMeleeAnim(), t.meleeAnim.anim = new e.Tween(t.meleeAnim).to({
+                armR: .1,
+                lArm: .8,
+                armT: -.7,
+                armY: -2.4,
+                armM: 7,
+                armE: -1.6,
+                weaR: -1.9,
+                weaM: .7
+            }, 250).easing(e.Easing.Cubic.Out).onComplete(function() {
+                t.meleeAnim.anim = new e.Tween(t.meleeAnim).to({
+                    armR: 0,
+                    armT: 0,
+                    armY: 0,
+                    lArm: 0,
+                    armM: 0,
+                    armE: 0,
+                    weaR: 0,
+                    weaM: 0
+                }, 400).easing(e.Easing.Cubic.Out).start()
+            }).start();
+            else {
+                t.handAnimInd = -1 * (t.handAnimInd || 1);
+                var i = (1 == t.handAnimInd ? "l" : "r") + "HndTween";
+                t[i] && t[i].stop(), t[i + "A"] = t[i + "A"] || 0, t[i] = new e.Tween(t).to({
+                    [i + "A"]: 2.4
+                }, 30).easing(e.Easing.Linear.None).onComplete(function() {
+                    t[i] = new e.Tween(t).to({
+                        [i + "A"]: 0
+                    }, 200).easing(e.Easing.Linear.None).delay(100).start()
+                }).start()
+            }
         },
         type: 1,
         swapTime: 350,
@@ -18679,19 +18720,20 @@
         spdMlt: 1.1,
         spread: 100,
         leftHoldY: -.82,
-        leftHoldX: 1.3,
-        rightHoldX: -1.3,
+        leftHoldX: 1.5,
+        rightHoldX: -1.5,
         rightHoldY: -.82,
         leftHoldZ: -.5,
         rightHoldZ: -.5,
         xOff: 0,
-        yOff: -.8,
-        zOff: -3,
+        yOff: -.6,
+        zOff: -3.6,
         xOrg: 0,
         yOrg: 0,
         zOrg: 0,
-        zoom: 1.5,
-        leanMlt: 1,
+        zRM: .35,
+        zoom: 1,
+        leanMlt: .8,
         recoil: .006,
         recoilR: .01,
         recover: .98,
@@ -20035,7 +20077,7 @@
         }
     }
 }, function(t) {
-    t.exports = "ARaXI"
+    t.exports = "jU0Dg"
 }, function(t, e, n) {
     var i = n(90),
         r = n(111),
@@ -20317,6 +20359,7 @@
         },
         CUBE: {
             canTrigger: !0,
+            movingTexture: !0,
             defaultSize: [10, 10, 10],
             hasHealth: !0,
             scalable: !0,
@@ -20337,6 +20380,7 @@
         },
         RAMP: {
             defaultSize: [10, 5, 10],
+            movingTexture: !0,
             scalable: !0,
             scaleWithSize: !1,
             hideBoundingBox: !1,
@@ -20367,6 +20411,7 @@
         },
         PLANE: {
             defaultSize: [4, .01, 4],
+            movingTexture: !0,
             dontRound: !0,
             scalable: !0,
             canTerrain: !0,
@@ -20545,6 +20590,7 @@
             receiveShadow: !1
         },
         WATER: {
+            noExport: !0,
             movingTexture: !0,
             defaultSize: [10, 10, 10],
             scalable: !0,
@@ -20849,7 +20895,7 @@
             id: "gun",
             name: "Gun Game",
             alias: "gun",
-            endStats: ["sid", "name", "weapon", "kills", "deaths"],
+            endStats: ["sid", "name", "weapon", "kills", "deaths", "melees", "setbacks"],
             winCondition: function(t) {
                 for (var e = 0; e < t.players.list.length; ++e)
                     if (t.players.list[e].killList.length >= t.mode.weaponOrder.length) return t.players.list[e];
@@ -26461,17 +26507,17 @@
                 t: 5
             }, {
                 p: [238, 2, 67],
-                s: [4, 24, 30],
+                s: [4, 36, 30],
                 c: 16767158,
                 t: 5
             }, {
                 p: [238, 2, -5],
-                s: [4, 24, 38],
+                s: [4, 36, 38],
                 c: 16767158,
                 t: 5
             }, {
-                p: [238, 26, 29],
-                s: [4, 12, 107],
+                p: [238, 26, 33],
+                s: [4, 12, 38],
                 c: 16767158,
                 t: 5
             }, {
@@ -32686,7 +32732,7 @@
             zoneCol2: "#c542d9",
             sizeMlt: 2,
             shadowR: 1024,
-            ambient: 16572636,
+            ambient: 10654352,
             light: 16777215,
             sky: 14477549,
             fog: 12294553,
@@ -36632,7 +36678,8 @@
                 s: [65, 109, 54],
                 i: 15,
                 l: 1,
-                r: [0, .35, 0]
+                r: [0, .35, 0],
+                c: "#7f6e38"
             }, {
                 p: [-175, 47, 171],
                 s: [7, 6, 8],
@@ -37549,7 +37596,7 @@
                 i: 15,
                 l: 1,
                 r: [3.14, -.35, 3.14],
-                c: "#ffffff"
+                c: "#846d22"
             }, {
                 p: [111, 78, 28],
                 s: [47, 2, 2],
@@ -39608,6 +39655,219 @@
                 s: [41, 4, 4],
                 c: "#7d7d7d",
                 t: 2
+            }, {
+                p: [240, 33, -202],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [267, 33, -101],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [216, 32, -7],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [286, 32, 31],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [269, 32, -53],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [259, 32, 74],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -.43, 0],
+                c: "#9d8672"
+            }, {
+                p: [-21, 12, 7],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -.43, 0],
+                c: "#9d8672"
+            }, {
+                p: [8, 13, -15],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, .27, 0],
+                c: "#9d8672"
+            }, {
+                p: [-157, 32, 66],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -.43, 0],
+                c: "#9d8672"
+            }, {
+                p: [-221, 33, 23],
+                s: [6, 2, 4],
+                l: 1,
+                r: [3.14, -1.49, 3.14],
+                c: "#9d8672"
+            }, {
+                p: [-136, 48, 138],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, 1.14, 0],
+                c: "#9d8672"
+            }, {
+                p: [-129, 33, -14],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.04, 0],
+                c: "#9d8672"
+            }, {
+                p: [-143, 33, -251],
+                s: [4, 2, 4],
+                l: 1,
+                c: "#9d8672"
+            }, {
+                p: [-204, 33, -231],
+                s: [4, 2, 4],
+                l: 1,
+                c: "#9d8672"
+            }, {
+                p: [153, 33, -311],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [124, 33, -203],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, .09, 0],
+                c: "#9d8672"
+            }, {
+                p: [216, 33, -141],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [150, 33, 21],
+                s: [4, 2, 4],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [22, 48, 85],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -.34, 0],
+                c: "#9d8672"
+            }, {
+                p: [-36, 48, 57],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, -.34, 0],
+                c: "#9d8672"
+            }, {
+                p: [-54, 48, 85],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, .18, 0],
+                c: "#9d8672"
+            }, {
+                p: [-40, 48, -21],
+                s: [2, 1, 2],
+                l: 1,
+                c: "#571f1f",
+                t: 5
+            }, {
+                p: [17, 48, 71],
+                s: [2, 1, 2],
+                l: 1,
+                c: "#571f1f",
+                t: 5
+            }, {
+                p: [10, 55, -23],
+                s: [2, 1, 2],
+                l: 1,
+                c: "#571f1f",
+                t: 5
+            }, {
+                p: [10, 55, -25],
+                s: [2, 2, 2],
+                l: 1,
+                c: "#571f1f",
+                t: 5
+            }, {
+                p: [8, 53, -24],
+                s: [2, 3, 2],
+                l: 1,
+                c: "#571f1f",
+                t: 5
+            }, {
+                p: [-193, 32, -41],
+                s: [4, 2, 4],
+                l: 1,
+                r: [0, -.87, 0],
+                c: "#9d8672"
+            }, {
+                p: [-195, 32, -35],
+                s: [2, 2, 2],
+                l: 1,
+                r: [0, -.43, 0],
+                c: "#9d8672"
+            }, {
+                p: [-133, 32, -20],
+                s: [2, 2, 2],
+                l: 1,
+                r: [0, -.43, 0],
+                c: "#9d8672"
+            }, {
+                p: [-151, 33, -208],
+                s: [4, 2, 4],
+                l: 1,
+                c: "#9d8672"
+            }, {
+                p: [223, 32, 77],
+                s: [3, 2, 3],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [248, 32, 75],
+                s: [2, 2, 2],
+                l: 1,
+                r: [0, -1.39, 0],
+                c: "#9d8672"
+            }, {
+                p: [-185, 48, 132],
+                s: [3, 1, 3],
+                l: 1,
+                r: [0, 1.14, 0],
+                c: "#9d8672"
+            }, {
+                p: [-20, 48, 76],
+                s: [6, 2, 4],
+                l: 1,
+                r: [0, 1.49, 0],
+                c: "#9d8672"
+            }, {
+                p: [44, 47, -126],
+                s: [7, 6, 8],
+                i: 18,
+                l: 1,
+                r: [-3.14, .86, 3.14]
+            }, {
+                p: [7, 47, -127],
+                s: [7, 6, 8],
+                i: 18,
+                l: 1,
+                r: [0, 1.32, 0]
             }]
         }, {
             name: "Subzero",
@@ -56929,7 +57189,9 @@
                             zR: h.r ? h.r[2] : 0,
                             noCol: h.l || h.col,
                             isBorder: h.bo,
-                            noVis: h.v
+                            noVis: h.v,
+                            movT: null == h.ts ? h.ts : h.ts / 1e4,
+                            movD: h.td
                         })
                     } else if ("OBJECTIVE" == h.i) this.manager.addObjective(w, x, M, h.s[0], h.s[2], h.s[1]);
                     else if ("FLAG" == h.i) this.manager.addFlag(w, x, M, parseInt(h.tm || 0) + 1);
@@ -56944,8 +57206,10 @@
                         colr: h.c,
                         col: !(h.l || h.col),
                         noVis: h.v,
-                        side: "BILLBOARD" == h.i ? 2 : 0
-                    }, h.r ? h.r[2] : 0, (h.r ? h.r[0] : 0) - Math.PI / 2, h.r ? h.r[1] : 0) : "RAMP" == h.i ? this.manager.addRamp(w, x, M, h.s[0], h.s[1], h.s[2], (h.d || 0) * Math.PI / 2, h.b, h.t ? h.t.toLowerCase() + "_0" : "grey_0", h.v, h.c, p.ambScale) : "SCORE_ZONE" == h.i ? this.manager.addScoreZone(w, x, M, h.s[0], h.s[2], h.s[1], h.sp || 1) : "DEATH_ZONE" == h.i ? this.manager.addDeathZone(w, x, M, h.s[0], h.s[2], h.s[1]) : "CHECK_POINT" == h.i ? this.manager.addCheckPoint(w, x, M, h.s[0], h.s[2], h.s[1], h.su || !1, h.d || 0) : "TELEPORTER" == h.i ? this.manager.addTeleporter(w, x, M, h.s[0], h.s[2], h.s[1], parseInt(h.ch || 0), parseInt(h.n || 0)) : "LADDER" == h.i ? this.manager.addLadder(w, x, M, h.s[1], (h.d || 0) * Math.PI / 2, h.v, h.t ? h.t.toLowerCase() + "_0" : "floor_0", h.c) : this.manager.addMesh(w, x, M, h.r, h.s[0] / 2, h.s[1] / 2, h.s[2] / 2, h.i.toLowerCase(), h.l || h.col, h.c);
+                        side: "BILLBOARD" == h.i ? 2 : 0,
+                        movT: null == h.ts ? h.ts : h.ts / 1e4,
+                        movD: h.td
+                    }, h.r ? h.r[2] : 0, (h.r ? h.r[0] : 0) - Math.PI / 2, h.r ? h.r[1] : 0) : "RAMP" == h.i ? this.manager.addRamp(w, x, M, h.s[0], h.s[1], h.s[2], (h.d || 0) * Math.PI / 2, h.b, h.t ? h.t.toLowerCase() + "_0" : "grey_0", h.v, h.c, p.ambScale, null == h.ts ? h.ts : h.ts / 1e4, h.td) : "SCORE_ZONE" == h.i ? this.manager.addScoreZone(w, x, M, h.s[0], h.s[2], h.s[1], h.sp || 1) : "DEATH_ZONE" == h.i ? this.manager.addDeathZone(w, x, M, h.s[0], h.s[2], h.s[1]) : "CHECK_POINT" == h.i ? this.manager.addCheckPoint(w, x, M, h.s[0], h.s[2], h.s[1], h.su || !1, h.d || 0) : "TELEPORTER" == h.i ? this.manager.addTeleporter(w, x, M, h.s[0], h.s[2], h.s[1], parseInt(h.ch || 0), parseInt(h.n || 0)) : "LADDER" == h.i ? this.manager.addLadder(w, x, M, h.s[1], (h.d || 0) * Math.PI / 2, h.v, h.t ? h.t.toLowerCase() + "_0" : "floor_0", h.c) : this.manager.addMesh(w, x, M, h.r, h.s[0] / 2, h.s[1] / 2, h.s[2] / 2, h.i.toLowerCase(), h.l || h.col, h.c);
                     else if (e) {
                         var T = e.prefabs[parseInt(h.pr || 0)];
                         T.count = Math.round((h.s[0] + h.s[2] + h.s[1]) / T.cnt), e.area(w, x, M, h.s[0], h.s[1], h.s[2], T)
@@ -57454,7 +57718,9 @@
         s = n(4),
         a = n(57);
     t.exports = function(e, r, s, o) {
-        e.ImageUtils.crossOrigin = "";
+        this.newGeo = function(t) {
+            return t.stack.includes(r.picSize)
+        }, e.ImageUtils.crossOrigin = "";
         var c = n(23),
             l = new e.LoadingManager,
             p = new e.OBJLoader(l);
@@ -57521,18 +57787,14 @@
             this.fpsFov = t, this.fpsCamera.fov = t, this.fpsCamera.updateProjectionMatrix()
         }, this.setFPSFov(s.fov), this.fovMult = function(t) {
             this.fovMlt != t && (this.fovMlt = t, this.updateCamFOV())
-        }, this.fovPlsK = 0, this.updKillFov = function(t) {
-            this.fovPlsK += t, 10 >= this.fovPlsK && (this.fovPlsK = 10), this.updateCamFOV()
         }, this.fovMlt = 1, this.updateCamFOV = function() {
-            this.camera.fov = (this.fov + this.fovPlsK) / this.zoomVal * this.fovMlt, this.camera.updateProjectionMatrix()
+            this.camera.fov = this.fov / this.zoomVal * this.fovMlt, this.camera.updateProjectionMatrix()
         }, this.setFov = function(t) {
             this.fov = t, this.updateCamFOV()
         }, this.setFov(s.fov), this.resize = function() {
             this.camera.aspect = window.innerWidth / window.innerHeight, this.camera.updateProjectionMatrix(), this.fpsCamera.aspect = window.innerWidth / window.innerHeight, this.fpsCamera.updateProjectionMatrix(), this.renderer.setSize(window.innerWidth, window.innerHeight), this.resizeShaders()
-        }, this.resMltV = 1, this.resMltKV = 1, this.updKillRes = function(t) {
-            this.resMltKV += t, .01 >= this.resMltKV && (this.resMltKV = .01), this.setResMlt(this.resMltV)
-        }, this.setResMlt = function(t) {
-            this.resMltV = t, this.renderer.setPixelRatio(window.devicePixelRatio * this.resMltKV * this.resMltV), this.renderer.setSize(window.innerWidth, window.innerHeight)
+        }, this.resMltV = 1, this.setResMlt = function(t) {
+            this.resMltV = t, this.renderer.setPixelRatio(window.devicePixelRatio * this.resMltV), this.renderer.setSize(window.innerWidth, window.innerHeight)
         }, this.updateFrustum = function() {
             this.frustum.setFromMatrix(x.multiplyMatrices(this.camera.projectionMatrix, this.camera.matrixWorldInverse))
         };
@@ -57544,31 +57806,34 @@
             _ = t
         }, this.render = function(t) {
             if (this.scene) {
-                for (var e = 0; e < this.movTextures.length; ++e)(y = this.movTextures[e]).tex.offset.x += y.mov * t;
+                for (var e = 0; e < this.movTextures.length; ++e)(y = this.movTextures[e]).tex.offset && (y.tex.offset[0 == y.movD ? "x" : "y"] += y.mov * t);
                 this.postprocessing.enabled || (this.renderer.clear(), this.camera.layers.set(0), this.skyDome && (this.camera.getWorldPosition(this.skyDome.position), this.renderer.render(this.backgroundScene, this.camera), this.renderer.clearDepth()), this.renderer.render(this.scene, this.camera), this.camera.layers.set(2), this.renderer.clearDepth(), this.renderer.render(this.scene, this.camera), this.renderer.clearDepth(), this.renderer.render(this.scene, this.fpsCamera)), o.showFlash && (0 >= M && (M = 0, o.showFlash = !1), M -= t), this.updateShake(t)
             }
-        }, this.updateTexture = function(t, n) {
-            var i = v[t];
-            i ? i.image = n : (i = new e.Texture(n), v[t] = i), i.needsUpdate = !0
+        }, this.updateTexture = function(t, n, i) {
+            var r = t + (null == (i = i || {}).movT ? "mt" : i.movT) + (null == i.movD ? "md" : i.movD),
+                s = v[r];
+            s ? s.image = n : (s = new e.Texture(n), v[r] = s), s.needsUpdate = !0
         }, this.loadTexture = function(t, n, i, s) {
-            return v[n] ? v[n].mats ? v[n].mats.push({
+            var a = n + (null == (i = i || {}).movT ? "mt" : i.movT) + (null == i.movD ? "md" : i.movD);
+            return v[a] ? v[a].mats ? v[a].mats.push({
                 t: s,
                 m: t
-            }) : (t[s || "map"] = v[n], t.needsUpdate = !0) : (v[n] = {
+            }) : (t[s || "map"] = v[a], t.needsUpdate = !0) : (v[a] = {
                 mats: [{
                     t: s,
                     m: t
                 }]
-            }, i = i || {}, u.load(r.versionifyUrl("/textures/" + n + ".png"), t => {
+            }, u.load(r.versionifyUrl("/textures/" + n + ".png"), t => {
                 t.wrapS = e.RepeatWrapping, t.wrapT = e.RepeatWrapping, t.repeat.set(i.repeatX || 1, i.repeatY || 1), t.minFilter = i.tFilter || e.NearestFilter, t.magFilter = i.tFilter || e.NearestFilter, t.needsUpdate = !0;
-                for (var r = 0; r < v[n].mats.length; ++r) v[n].mats[r].m[v[n].mats[r].t || "map"] = t, v[n].mats[r].m.needsUpdate = !0;
-                v[n] = t, i.movT && this.movTextures.push({
+                for (var n = 0; n < v[a].mats.length; ++n) v[a].mats[n].m[v[a].mats[n].t || "map"] = t, v[a].mats[n].m.needsUpdate = !0;
+                v[a] = t, i.movT && this.movTextures.push({
                     tex: t,
-                    mov: i.movT
+                    mov: i.movT,
+                    movD: i.movD || 0
                 })
             })), t
         }, this.getMat = function(t, n) {
-            var i = (n && n.texSrc || t) + (n ? (n.rotation || "x") + (n.noFog || "y") + (n.opacity || "z") + (n.color || "b") + (n.mat ? "ma" : "nm") + (n.ao || "a") + (n.emissive || "e") + (n.glowText || "g") + (null == n.depthWrite ? "d" : n.depthWrite) : ""),
+            var i = (n && n.texSrc || t) + (n ? (n.rotation || "x") + (n.noFog || "y") + (n.opacity || "z") + (n.color || "b") + (n.mat ? "ma" : "nm") + (n.ao || "a") + (n.emissive || "e") + (n.glowText || "g") + (null == n.movT ? "mt" : n.movT) + (null == n.movD ? "md" : n.movD) + (null == n.depthWrite ? "d" : n.depthWrite) : ""),
                 r = g[i];
             return r || (r = new((n = n || {}).mat ? n.mat : e.StrippedLambertMaterial)(n), t && "default" != t && this.loadTexture(r, n.texSrc || t, n), n && n.emissive && this.loadTexture(r, (n.glowText && n.texSrc || t) + (n.sameGlow ? "" : "_e"), n, "emissiveMap"), n && n.ao && (this.loadTexture(r, t + "_ao", n, "aoMap"), r.aoMapIntensity = 1.3), n && n.normal && this.loadTexture(r, t + "_n", n, "normalMap"), "default" == t && (r.vertexColors = e.VertexColors), n && n.noFog && (r.fog = !1), r.shading = e.SmoothShading, g[i] = r), r
         }, this.offsetMesh = function(t, e) {
@@ -57787,7 +58052,7 @@
                 }
             });
             var d = new e.Mesh(u, h);
-            return d.receiveShadow = !t.noShadow, d.noGreen = t.noGreen, d.castShadow = t.shadows, "object" == typeof a ? (d.rotation.x = a[0] || 0, d.rotation.y = a[1] || 0, d.rotation.z = a[2] || 0) : d.rotation.y = a || 0, b.moveMesh(d, n, i, s), b.scaleMesh(d, o || 1, o || 1, o || 1), l ? P[t.src] ? P[t.src].loaded ? this.meshGroup(d, t) : P[t.src].push(d) : P[t.src] = [d] : c.add(d), d
+            return d.receiveShadow = !t.noShadow, d.noGreen = t.noGreen, d.castShadow = t.shadows, "object" == typeof a ? (d.rotation.x = d.xR = a[0] || 0, d.rotation.y = d.yR = a[1] || 0, d.rotation.z = d.zR = a[2] || 0) : d.rotation.y = a || 0, d.xP = n, d.yP = i, d.zP = s, b.moveMesh(d, n, i, s), b.scaleMesh(d, o || 1, o || 1, o || 1), l ? P[t.src] ? P[t.src].loaded ? this.meshGroup(d, t) : P[t.src].push(d) : P[t.src] = [d] : c.add(d), d
         }, this.clearPendingMeshes = function() {
             for (var t in P) P.hasOwnProperty(t) && P[t] && (P[t].length = 0)
         }, this.updateMesh = function(t, n) {
@@ -57800,7 +58065,7 @@
         }, this.merge = function(t, e, n) {
             e.updateMatrix(), t.merge(e.geometry, e.matrix, n)
         }, this.meshGroup = function(t, n) {
-            var i = n.src + "-" + (n.shadowsR || "a") + (n.emissive || "e") + (n.opacity || "o");
+            var i = n.src + "-" + (n.shadowsR || "a") + (n.emissive || "e") + (n.opacity || "o") + (null == n.movT ? "mt" : n.movT) + (null == n.movD ? "md" : n.movD);
             w[i] || (w[i] = new e.Geometry, w[i].data = n), t.updateMatrix(), w[i].merge(t.geometry, t.matrix)
         }, this.addMeshGroups = function() {
             for (var t in w)
@@ -57829,7 +58094,7 @@
         }
     }, t.exports.initScene = function(t) {
         if (i = t, t.ambient && (this.ambientLight = new s.AmbientLight(t.ambient), this.ambientLight.layers.enable(1), this.ambientLight.layers.enable(2), this.ambientLight.name = "ambLight", !this.scene.getObjectByName("ambLight") && this.scene.add(this.ambientLight)), t.light) {
-            this.skyLight = new s.DirectionalLight(t.light, 1), this.skyLight.name = "skyLight", this.skyLight.layers.enable(1), this.skyLight.layers.enable(2), this.scene.getObjectByName("skyLight") || this.scene.add(this.skyLight);
+            this.skyLight = new s.DirectionalLight(t.light, 1.3), this.skyLight.name = "skyLight", this.skyLight.layers.enable(1), this.skyLight.layers.enable(2), this.scene.getObjectByName("skyLight") || this.scene.add(this.skyLight);
             var e = -.3 * Math.PI,
                 n = 2 * Math.PI * -.25;
             this.skyLight.position.x = r.lightDistance * Math.cos(n), this.skyLight.position.y = r.lightDistance * Math.sin(n) * Math.sin(e), this.skyLight.position.z = r.lightDistance * Math.sin(n) * Math.cos(e), this.skyLight.castShadow = !0, this.skyLight.shadow.mapSize.width = t.shadowR || r.shadowRes, this.skyLight.shadow.mapSize.height = t.shadowR || r.shadowRes, this.skyLight.shadow.camera.far = r.shadowDst
@@ -58446,11 +58711,11 @@
                                                 size: 10,
                                                 sizeAttenuation: !1
                                             });
-                                            K.copy(Y), Y = q
+                                            X.copy(Y), Y = q
                                         }
                                     } else {
-                                        var K = new t.LineBasicMaterial;
-                                        K.copy(Y), K.lights = !1, Y = K
+                                        var X = new t.LineBasicMaterial;
+                                        X.copy(Y), X.lights = !1, Y = X
                                     } Y || ((Y = B ? new t.LineBasicMaterial : N ? new t.PointsMaterial({
                                     size: 1,
                                     sizeAttenuation: !1
@@ -58990,8 +59255,8 @@
                     W = I - (v = 2 <= B ? 1 : 0) + 2 * h,
                     Y = O - (y = 2 <= N ? 1 : 0) + 2 * h,
                     q = C - (b = 1 <= D ? 1 : 0) + 3 * h,
-                    K = R - (w = 1 <= z ? 1 : 0) + 3 * h,
-                    X = I - (x = 1 <= B ? 1 : 0) + 3 * h,
+                    X = R - (w = 1 <= z ? 1 : 0) + 3 * h,
+                    K = I - (x = 1 <= B ? 1 : 0) + 3 * h,
                     Z = O - (M = 1 <= N ? 1 : 0) + 3 * h,
                     J = C - 1 + 4 * h,
                     $ = R - 1 + 4 * h,
@@ -59019,11 +59284,11 @@
                     var pt = _[et + m + _[nt + g + _[it + v + _[rt + y]]]] % 32 * 4;
                     a = (lt *= lt) * lt * (S[pt] * G + S[pt + 1] * V + S[pt + 2] * W + S[pt + 3] * Y)
                 }
-                var ht = .6 - q * q - K * K - X * X - Z * Z;
+                var ht = .6 - q * q - X * X - K * K - Z * Z;
                 if (0 > ht) o = 0;
                 else {
                     var ut = _[et + b + _[nt + w + _[it + x + _[rt + M]]]] % 32 * 4;
-                    o = (ht *= ht) * ht * (S[ut] * q + S[ut + 1] * K + S[ut + 2] * X + S[ut + 3] * Z)
+                    o = (ht *= ht) * ht * (S[ut] * q + S[ut + 1] * X + S[ut + 2] * K + S[ut + 3] * Z)
                 }
                 var ft = .6 - J * J - $ * $ - Q * Q - tt * tt;
                 if (0 > ft) c = 0;
@@ -59082,7 +59347,7 @@
 }, function(t, e, n) {
     var i, r, s = 0,
         a = function(t) {
-            this.sid = s++, this.uid = t.uid, this.width = t.w, this.length = t.l, this.height = t.h, this.active = !0, this.x = t.x, this.orgX = this.x, this.y = t.y, this.orgY = this.y, this.z = t.z, this.orgZ = this.z, this.dir = t.d, this.src = t.src, this.ramp = t.ramp, this.ladder = t.ladder, this.jumpPad = t.jumpPad, this.noShoot = t.noShoot, this.stepSrc = t.s, this.score = t.score, this.scoreP = t.scoreP, this.kill = t.kill, this.dummy = t.dummy, this.noVis = t.noVis, this.complexMesh = t.complexMesh, this.penetrable = t.penetrable, this.health = t.health, this.startHealth = t.health, this.transparent = t.transparent, this.boost = t.boost, this.boostDr = t.boostDr, this.aoMlt = t.aoM, this.team = t.team, this.flag = t.flag, this.trigger = t.trigger, this.pickup = t.pickup, this.orgPickup = t.orgPickup, this.pickupRep = t.pickupRep, this.meshRef = t.meshRef, this.checkpoint = t.checkpoint, this.singleUse = t.singleUse, this.isBorder = t.isBorder, this.node = t.node, this.channel = t.channel, this.teleporter = t.teleporter
+            this.sid = s++, this.uid = t.uid, this.width = t.w, this.length = t.l, this.height = t.h, this.active = !0, this.x = t.x, this.orgX = this.x, this.y = t.y, this.orgY = this.y, this.z = t.z, this.orgZ = this.z, this.dir = t.d, this.src = t.src, this.ramp = t.ramp, this.ladder = t.ladder, this.jumpPad = t.jumpPad, this.noShoot = t.noShoot, this.stepSrc = t.s, this.score = t.score, this.scoreP = t.scoreP, this.kill = t.kill, this.dummy = t.dummy, this.noVis = t.noVis, this.complexMesh = t.complexMesh, this.penetrable = t.penetrable, this.health = t.health, this.startHealth = t.health, this.transparent = t.transparent, this.boost = t.boost, this.boostDr = t.boostDr, this.aoMlt = t.aoM, this.team = t.team, this.flag = t.flag, this.trigger = t.trigger, this.pickup = t.pickup, this.orgPickup = t.orgPickup, this.pickupRep = t.pickupRep, this.meshRef = t.meshRef, this.checkpoint = t.checkpoint, this.singleUse = t.singleUse, this.isBorder = t.isBorder, this.node = t.node, this.channel = t.channel, this.teleporter = t.teleporter, this.telCooldown = 0
         };
     t.exports.manager = function(t, e, s) {
         var o, c;
@@ -59231,6 +59496,7 @@
             }))
         }, this.addTeleporter = function(t, e, n, i, r, s, o, c) {
             var l = new a({
+                uid: this.objects.length,
                 x: t,
                 z: n,
                 y: e + s / 2,
@@ -59272,11 +59538,11 @@
                 t.addCube(o.x + s.ladderWidth * Math.sin(p), o.y, o.z + s.ladderWidth * Math.cos(p), 2 * s.ladderScale, l + 2, 2 * s.ladderScale, [1, 1, 1, 1, 1, 1], g), t.addCube(o.x - s.ladderWidth * Math.sin(p), o.y, o.z - s.ladderWidth * Math.cos(p), 2 * s.ladderScale, l + 2, 2 * s.ladderScale, [1, 1, 1, 1, 1, 1], g);
                 for (var v = Math.floor(l / 6), y = 0; y < v; ++y) g.dark = .6 + y / v * .4, t.addPlane(o.x, i + 6 * (y + 1) + e.randFloat(-1, 1), o.z, s.ladderWidth, s.ladderScale, g, -p + Math.PI / 2, Math.PI / 2, e.randFloat(-.1, .1))
             }
-        }, this.addRamp = function(e, n, i, o, c, l, p, h, u, f, d, m) {
-            var g = 0 != p && p != Math.PI,
-                v = (g ? l : o) / 2,
-                y = Math.sqrt(c * c + l * l),
-                b = Math.asin(c / y);
+        }, this.addRamp = function(e, n, i, o, c, l, p, h, u, f, d, m, g, v) {
+            var y = 0 != p && p != Math.PI,
+                b = (y ? l : o) / 2,
+                w = Math.sqrt(c * c + l * l),
+                x = Math.asin(c / w);
             if (this.objects.push(new a({
                     x: e,
                     z: i,
@@ -59287,31 +59553,35 @@
                     d: p,
                     noShoot: !0,
                     complexMesh: !0,
-                    boostDr: h ? b : null,
+                    boostDr: h ? x : null,
                     boost: h || null,
                     ramp: {
-                        sX: e - v * Math.cos(p),
-                        sZ: i - v * Math.sin(p),
-                        eX: e + v * Math.cos(p),
-                        eZ: i + v * Math.sin(p)
+                        sX: e - b * Math.cos(p),
+                        sZ: i - b * Math.sin(p),
+                        eX: e + b * Math.cos(p),
+                        eZ: i + b * Math.sin(p)
                     }
                 })), t && !f) {
-                t.addRamp(e, n, i, g ? o : l, c, (g ? l : o) / 2, p, {
+                var M = {
                     src: u || "default",
                     vertexColors: r.VertexColors,
                     colr: d,
                     scale: 1,
-                    shadowsR: !0
-                }), n += s.ambOff;
-                var w = (g ? o : l) / 2 - m;
-                g ? o = 2 * m : l = 2 * m;
-                for (var x, M = 0; 2 > M; ++M) x = M ? 1 : -1, t.addRamp(e + w * x * Math.cos(p + Math.PI / 2), n, i + w * x * Math.sin(p + Math.PI / 2), g ? o : l, c, (g ? l : o) / 2, p, {
+                    shadowsR: !0,
+                    side: r.DoubleSide,
+                    movT: g,
+                    movD: v
+                };
+                M.transparent = "link_0" == M.src, "link_0" == M.src && (M.depthWrite = !0, M.alphaTest = M.transparent ? .02 : 0), t.addRamp(e, n, i, y ? o : l, c, (y ? l : o) / 2, p, M), n += s.ambOff;
+                var _ = (y ? o : l) / 2 - m;
+                y ? o = 2 * m : l = 2 * m;
+                for (var S, T = 0; 2 > T; ++T) S = T ? 1 : -1, t.addRamp(e + _ * S * Math.cos(p + Math.PI / 2), n, i + _ * S * Math.sin(p + Math.PI / 2), y ? o : l, c, (y ? l : o) / 2, p, {
                     src: "ambient_1",
                     euler: "ZYX",
                     depthWrite: !1,
-                    side: r.DoubleSide,
-                    transparent: !0
-                }, M ? 0 : Math.PI)
+                    transparent: !0,
+                    side: r.DoubleSide
+                }, T ? 0 : Math.PI)
             }
         }, this.addBlock = function(e, n, i, s, o, c, l, p) {
             if ((p = p || {}).src = p.src || "wall_0", p.noCol || this.objects.push(new a({
@@ -59335,7 +59605,7 @@
                     event: p.ev,
                     func: p.func
                 })), t && !p.noVis) {
-                p.transparent = "link_0" == p.src || 1 != p.opacity, p.depthWrite = 1 == p.opacity, p.alphaTest = p.transparent ? .02 : 0, p.vertexColors = r.VertexColors, p.scale = null == p.scale ? 1 : p.scale, p.shadows = !p.shadowsR && 1 == p.opacity, p.noFog = !!p.emissive, p.noGroup = !!p.health;
+                p.transparent = "link_0" == p.src || 1 != p.opacity, "link_0" == p.src && (p.depthWrite = 1 == p.opacity, p.alphaTest = p.transparent ? .02 : 0), p.vertexColors = r.VertexColors, p.scale = null == p.scale ? 1 : p.scale, p.shadows = !p.shadowsR && 1 == p.opacity, p.noFog = !!p.emissive, p.noGroup = !!p.health;
                 var h = t.addCube(e, n, i, s, c, o, l, p);
                 p.health && !p.noCol && (this.objects[this.objects.length - 1].meshRef = h)
             }
@@ -59617,7 +59887,7 @@
         price: 0,
         priceT: "Follow for a free Spin",
         rarities: [43, 33, 17, 6, 1, 0]
-    }], t.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "weapons/melee_"], t.exports.purchases = [{
+    }], t.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "melee/melee_"], t.exports.purchases = [{
         val: 300,
         price: .99
     }, {
@@ -59768,6 +60038,7 @@
         rarity: 0
     }, {
         name: "Acid Breath",
+        glow: !0,
         id: 10,
         weapon: 1,
         rarity: 3
@@ -60151,7 +60422,7 @@
         name: "Puma Sniper",
         id: 14,
         weapon: 1,
-        rarity: 1
+        rarity: 0
     }, {
         name: "Scoped Elite",
         id: 15,
@@ -60549,32 +60820,33 @@
         weapon: 8,
         rarity: 1
     }, {
-        name: "Barbed Laucher",
+        name: "Barbed Launcher",
         id: 13,
         weapon: 9,
         rarity: 2
     }, {
-        name: "Blushed Laucher",
+        name: "Blushed Launcher",
         id: 14,
         weapon: 9,
         rarity: 0
     }, {
-        name: "Machinist Laucher",
+        name: "Machinist Launcher",
         id: 15,
         weapon: 9,
         rarity: 1
     }, {
-        name: "Olympus Laucher",
+        name: "Olympus Launcher",
         id: 16,
         weapon: 9,
         rarity: 2
     }, {
-        name: "Tuscan Laucher",
+        name: "Tuscan Launcher",
         id: 17,
         weapon: 9,
         rarity: 1
     }, {
         name: "Omen",
+        glow: !0,
         id: 24,
         creator: "Zino",
         weapon: 1,
@@ -60583,7 +60855,7 @@
         name: "Scoped Moss",
         id: 25,
         weapon: 1,
-        rarity: 1
+        rarity: 0
     }, {
         name: "Swamped Scope",
         id: 26,
@@ -60616,15 +60888,15 @@
         weapon: 1,
         rarity: 2
     }, {
-        name: "Bark Bolt",
+        name: "AWP Iris",
         id: 32,
         weapon: 1,
-        rarity: 0
+        rarity: 1
     }, {
         name: "Bolt Wanderer",
         id: 33,
         weapon: 1,
-        rarity: 0
+        rarity: 1
     }, {
         name: "Mossy Rifle",
         id: 20,
@@ -60914,7 +61186,7 @@
         weapon: 9,
         rarity: 1
     }, {
-        name: "Swamped Laucher",
+        name: "Swamped Launcher",
         id: 19,
         weapon: 9,
         rarity: 0
@@ -60924,7 +61196,7 @@
         weapon: 9,
         rarity: 2
     }, {
-        name: "Zebra Laucher",
+        name: "Zebra Launcher",
         id: 21,
         weapon: 9,
         rarity: 2
@@ -60940,12 +61212,12 @@
         weapon: 9,
         rarity: 3
     }, {
-        name: "Sky Laucher",
+        name: "Sky Launcher",
         id: 24,
         weapon: 9,
         rarity: 2
     }, {
-        name: "Bark Laucher",
+        name: "Bark Launcher",
         id: 25,
         weapon: 9,
         rarity: 0
@@ -61312,7 +61584,6 @@
         rarity: 3
     }, {
         name: "Pace Dore",
-        creator: "hoodgail",
         id: 34,
         glow: !0,
         weapon: 1,
@@ -61454,41 +61725,36 @@
         weapon: 1,
         rarity: 1
     }, {
-        name: "K-Mas",
-        creator: "Hoodgail",
+        name: "AWP Supersport",
+        creator: "Kitter",
         id: 37,
         weapon: 1,
         rarity: 2
     }, {
         name: "Reine",
-        creator: "Hoodgail",
         id: 38,
         weapon: 1,
         rarity: 3
     }, {
         name: "Melted",
-        creator: "Hoodgail",
         glow: !0,
         id: 39,
         weapon: 1,
         rarity: 4
     }, {
         name: "Viper",
-        creator: "Hoodgail",
         glow: !0,
         id: 40,
         weapon: 1,
         rarity: 3
     }, {
         name: "Razor",
-        creator: "Hoodgail",
         glow: !0,
         id: 41,
         weapon: 1,
         rarity: 4
     }, {
         name: "Lazor",
-        creator: "Hoodgail",
         id: 29,
         glow: !0,
         weapon: 2,
@@ -61551,14 +61817,12 @@
         rarity: 3
     }, {
         name: "Lore",
-        creator: "Hoodgail",
         glow: !0,
         id: 44,
         weapon: 1,
         rarity: 4
     }, {
         name: "Reaver",
-        creator: "Hoodgail",
         glow: !0,
         id: 45,
         weapon: 1,
@@ -61780,7 +62044,7 @@
         weapon: 2,
         rarity: 1
     }, {
-        name: "AR Plexis",
+        name: "AR Plexus",
         id: 33,
         weapon: 2,
         rarity: 1
@@ -61895,7 +62159,7 @@
         weapon: 2,
         rarity: 0
     }, {
-        name: "Spahire",
+        name: "Saphire",
         id: 28,
         weapon: 8,
         rarity: 1
@@ -62160,6 +62424,49 @@
         yOff: -3.2,
         id: 32,
         rarity: 4
+    }, {
+        name: "Combat Knife",
+        animInd: 1,
+        id: 0,
+        type: 3,
+        scl: 2,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 4
+    }, {
+        name: "Tv Tron C",
+        tex: 2,
+        type: 1,
+        glow: !0,
+        scl: 1,
+        sclMlt: .6,
+        sitOff: 2.05,
+        yOff: -3.2,
+        id: 32,
+        rarity: 4
+    }, {
+        name: "Tv Tron D",
+        tex: 3,
+        type: 1,
+        glow: !0,
+        scl: 1,
+        sclMlt: .6,
+        sitOff: 2.05,
+        yOff: -3.2,
+        id: 32,
+        rarity: 4
+    }, {
+        name: "AWP Dazzle",
+        glow: !0,
+        id: 53,
+        weapon: 1,
+        rarity: 4
+    }, {
+        name: "Octodance",
+        glow: !0,
+        id: 54,
+        weapon: 1,
+        rarity: 4
     }]
 }, function(t, e, n) {
     var i;
@@ -62168,10 +62475,10 @@
     } catch (t) {}
     var r = function(t, e, n, i, r) {
         var s;
-        this.id = t, this.sentTo = [], this.inputs = [], this.spins = [], this.stateHistory = [], this.weaponMeshes = [], this.legMeshes = [], this.armMeshes = [], this.lastInput = [], this.lastDeltas = [], this.reloads = [], this.ammos = [], this.ping = 0, this.pings = [], this.score = 0, this.scoreObjs = {}, this.checkPoint = null, this.checkPointList = [], this.killList = [], this.convs = 0, this.timer = null, this.gameTimer = null, this.kills = 0, this.deaths = 0, this.assists = 0, this.caps = 0, this.deathStreak = 0, this.level = 0, this.lives = r.waitTimers && r.config && r.config.lives || 0, this.deltaAdd = 0, this.deltaDiv = 1, this.sprayIndex = 0, this.hatIndex = -1, this.backIndex = -1, this.lastSpray = 0, this.lastPickup = 0, this.lastPicked = [], this.playTime = 0, this.hackSus = 0, this.lastCheck = 0, this.streaks = {}, this.init = function(t, e, n, s, a, o) {
-            this.x = t, this.y = e, this.z = n, this.stepSrc = null, this.name = s || "unknown", this.xVel = 0, this.yVel = 0, this.zVel = 0, this.hackSus--, 0 > this.hackSus && (this.hackSus = 0), this.renderMinimal = !1, this.spins.length = 0, this.noMovTimer = 0, this.xDire = 0, this.yDire = 0, this.hitTimer = 0, this.ticker = 0, this.spread = 0, this.spreadPlus = 0, this.aimVal = 1, this.aimDir = 0, this.aimTime = 0, this.streak = 0, this.killStreak = 0, this.lastKill = 0, this.stateHistory.length = 0, this.lastInput.length = 0, this.swapTweenA = 0, this.dmgReceived = {}, this.landBobY = 0, this.landBobYR = 0, this.jumpBobY = 0, this.slideTimer = 0, this.canSlide = !0, this.leanAnimX = 0, this.leanAnimY = 0, this.leanAnimZ = 0, this.bobAnimZ = 0, this.bobAnimY = 0, this.idleAnim = 0, this.inspecting = !1, this.inspectX = !1, this.stepVal = 0, this.stepChase = 0, this.stepDir = 1, this.stepDirR = 1, this.reward = 0, this.recoilAnim = 0, this.recoilAnimY = 0, this.recoilForce = 0, this.recoilTweenY = 0, this.recoilTweenYM = 0, this.recoilTweenZ = 0, this.jumpRot = 0, this.jumpRotM = 0, this.recoilX = 0, this.recoilZ = 0, this.crouchVal = 0, this.onGround = !0, this.onLadder = !1, this.terrainSlipping = !1, this.rampFix = null, this.didJump = !1, this.jumpCooldown = 0, this.didShoot = !1, this.lodActive = !1, this.locked = !1, this.latestData = !1, this.airTime = 0, this.height = i.playerHeight, this.headScale = i.cameraHeight, this.scale = i.playerScale, this.active = !0, this.interpolate = !1, this.isYou = a, this.sentTo.length = 0, this.inputSN = 0, this.inputs.length = 0, this.weaponIndex = 0, this.swapTime = 0, this.recon = !1, this.inView = !1, this.isHacker = o, this.customLoadout = null, this.lastCheck = r.now, this.lastPicked.length = 0
+        this.id = t, this.sentTo = [], this.inputs = [], this.spins = [], this.stateHistory = [], this.weaponMeshes = [], this.weaponGeos = {}, this.legMeshes = [], this.armMeshes = [], this.lastInput = [], this.lastDeltas = [], this.reloads = [], this.ammos = [], this.ping = 0, this.pings = [], this.score = 0, this.scoreObjs = {}, this.checkPoint = null, this.checkPointList = [], this.killList = [], this.convs = 0, this.timer = null, this.gameTimer = null, this.kills = 0, this.melees = 0, this.setbacks = 0, this.deaths = 0, this.assists = 0, this.caps = 0, this.deathStreak = 0, this.level = 0, this.lives = r.waitTimers && r.config && r.config.lives || 0, this.deltaAdd = 0, this.deltaDiv = 1, this.sprayIndex = 0, this.hatIndex = -1, this.backIndex = -1, this.meleeIndex = -1, this.lastSpray = 0, this.lastPickup = 0, this.lastPicked = [], this.playTime = 0, this.hackSus = 0, this.lastCheck = 0, this.streaks = {}, this.init = function(t, e, n, s, a, o) {
+            this.x = t, this.y = e, this.z = n, this.stepSrc = null, this.name = s || "unknown", this.xVel = 0, this.yVel = 0, this.zVel = 0, this.hackSus--, 0 > this.hackSus && (this.hackSus = 0), this.renderMinimal = !1, this.spins.length = 0, this.noMovTimer = 0, this.xDire = 0, this.yDire = 0, this.hitTimer = 0, this.ticker = 0, this.spread = 0, this.spreadPlus = 0, this.aimVal = 1, this.aimDir = 0, this.aimTime = 0, this.streak = 0, this.killStreak = 0, this.lastKill = 0, this.stateHistory.length = 0, this.lastInput.length = 0, this.swapTweenA = 0, this.dmgReceived = {}, this.landBobY = 0, this.landBobYR = 0, this.jumpBobY = 0, this.slideTimer = 0, this.canSlide = !0, this.leanAnimX = 0, this.leanAnimY = 0, this.leanAnimZ = 0, this.bobAnimZ = 0, this.bobAnimY = 0, this.idleAnim = 0, this.inspecting = !1, this.inspectX = !1, this.stepVal = 0, this.stepChase = 0, this.stepDir = 1, this.stepDirR = 1, this.reward = 0, this.recoilAnim = 0, this.recoilAnimY = 0, this.recoilForce = 0, this.recoilTweenY = 0, this.recoilTweenYM = 0, this.recoilTweenZ = 0, this.jumpRot = 0, this.jumpRotM = 0, this.recoilX = 0, this.recoilZ = 0, this.crouchVal = 0, this.onGround = !0, this.onLadder = !1, this.terrainSlipping = !1, this.rampFix = null, this.didJump = !1, this.jumpCooldown = 0, this.didShoot = !1, this.lodActive = !1, this.locked = !1, this.latestData = !1, this.airTime = 0, this.height = i.playerHeight, this.headScale = i.cameraHeight, this.scale = i.playerScale, this.active = !0, this.interpolate = !1, this.isYou = a, this.sentTo.length = 0, this.inputSN = 0, this.inputs.length = 0, this.weaponIndex = 0, this.swapTime = 0, this.recon = !1, this.inView = !1, this.meleeAnim = {}, this.isHacker = o, this.customLoadout = null, this.lastCheck = r.now, this.lastPicked.length = 0
         }, this.setClass = function(t, e, r, s) {
-            s || (t.config && 0 > t.config.classes.indexOf(e) && (e != t.config.classes[0] && (this.skins = [-1, -1]), e = t.config.classes[0]), t.mode && (t.mode.noWeap && (e = 9), t.mode.teamClass && t.mode.teamClass[this.team] && (e = t.mode.teamClass[this.team], this.skins = [-1, -1]))), (null == e || null == e) && (e = t.classes.length - 1), this.classIndex = e, this.reloads.length = 0, this.ammos.length = 0, this.loadout = [t.classes[e].loadout[0]], t.classes[e].secondary ? n.isNumber(r) && this.loadout.push(r) : this.secIndex = null, this.speed = t.classes[e].speed || 1;
+            s || (t.config && 0 > t.config.classes.indexOf(e) && (e != t.config.classes[0] && (this.skins = [-1, -1]), e = t.config.classes[0]), t.mode && (t.mode.noWeap && (e = 9), t.mode.teamClass && t.mode.teamClass[this.team] && (e = t.mode.teamClass[this.team], this.skins = [-1, -1]))), (null == e || null == e) && (e = t.classes.length - 1), this.classIndex = e, this.reloads.length = 0, this.ammos.length = 0, this.loadout = [t.classes[e].loadout[0]], t.classes[e].secondary ? n.isNumber(r) && this.loadout.push(r) : this.secIndex = null, 0 > this.loadout.indexOf(12) && this.loadout.push(12), this.speed = t.classes[e].speed || 1;
             for (var a = 0; a < this.loadout.length; ++a) this.reloads.push(0), this.ammos.push(t.weapons[this.loadout[a]].ammo);
             this.reloadTimer = 0, this.regenDelay = t.classes[e].regenDelay || i.regenDelay, this.maxHealth = t.classes[e].health * (t.config && t.config.healthMlt || 1), this.health = this.maxHealth, this.hpChase = this.health, this.regen = t.mode && t.mode.noRegen ? 0 : t.classes[e].regen || i.regenVal
         }, this.updateLoadout = function(t, i, r = !0, s, a) {
@@ -62187,7 +62494,7 @@
             var c = n.getAngleDist(t[2], this.xDire);
             e.saveSpin(this, c);
             var l = !a && this.isYou;
-            if (l && (this.leanAnimX -= c * i.leanSens, this.leanAnimX = n.limit(this.leanAnimX, i.leanMax), this.leanAnimY -= n.getAngleDist(t[3], this.yDire) * i.leanSens, this.leanAnimY = n.limit(this.leanAnimY, i.leanMax), this.leanAnimX && (this.leanAnimX *= Math.pow(i.leanPull, o)), this.leanAnimY && (this.leanAnimY *= Math.pow(i.leanPull, o)), this.leanAnimZ && (this.leanAnimZ *= Math.pow(i.leanPullZ, o)), this.bobAnimZ && (this.bobAnimZ *= Math.pow(i.bobPullZ, o)), this.bobAnimY && (this.bobAnimY *= Math.pow(i.bobPullY, o)), this.recoilX && (this.recoilX *= Math.pow(i.leanPull, o)), this.recoilZ && (this.recoilZ *= Math.pow(i.leanPull, o)), this.inspecting && this.inspectX < Math.PI / 2.8 && (this.inspectX += .1 * (Math.PI / 2.8 - this.inspectX))), t[10] && e.swapWeapon(this, t[10]), a || (this.recoilForce && (this.recoilAnim += this.recoilForce * o, this.recoilAnimY += this.recoilForce * (this.weapon.recoilY || 1) * (1 - .3 * this.crouchVal) * o, this.recoilForce *= Math.pow(this.weapon.recoverF, o)), this.recoilAnim && (this.recoilAnim *= Math.pow(this.weapon.recover, o)), this.recoilAnimY && (this.recoilAnimY *= Math.pow(this.weapon.recoverY || this.weapon.recover, o))), this.xDire = (t[2] || 0).round(3), this.yDire = (t[3] || 0).round(3), this.oldX = this.x, this.oldY = this.y, this.oldZ = this.z, this.weapon.zoom && (!this.weapon.noAim || 0 < this.swapTime)) {
+            if (l && (this.leanAnimX -= c * i.leanSens, this.leanAnimX = n.limit(this.leanAnimX, i.leanMax), this.leanAnimY -= n.getAngleDist(t[3], this.yDire) * i.leanSens, this.leanAnimY = n.limit(this.leanAnimY, i.leanMax), this.leanAnimX && (this.leanAnimX *= Math.pow(i.leanPull, o)), this.leanAnimY && (this.leanAnimY *= Math.pow(i.leanPull, o)), this.leanAnimZ && (this.leanAnimZ *= Math.pow(i.leanPullZ, o)), this.bobAnimZ && (this.bobAnimZ *= Math.pow(i.bobPullZ, o)), this.bobAnimY && (this.bobAnimY *= Math.pow(i.bobPullY, o)), this.recoilX && (this.recoilX *= Math.pow(i.leanPull, o)), this.recoilZ && (this.recoilZ *= Math.pow(i.leanPull, o)), this.inspecting && this.inspectX < Math.PI / 2.8 && (this.inspectX += .1 * (Math.PI / 2.8 - this.inspectX))), t[11] ? e.swapMelee(this, a) : t[12] ? e.swapSecondary(this, a) : t[10] && e.swapWeapon(this, t[10], !1, void 0, void 0, a), a || (this.recoilForce && (this.recoilAnim += this.recoilForce * o, this.recoilAnimY += this.recoilForce * (this.weapon.recoilY || 1) * (1 - .3 * this.crouchVal) * o, this.recoilForce *= Math.pow(this.weapon.recoverF, o)), this.recoilAnim && (this.recoilAnim *= Math.pow(this.weapon.recover, o)), this.recoilAnimY && (this.recoilAnimY *= Math.pow(this.weapon.recoverY || this.weapon.recover, o))), this.xDire = (t[2] || 0).round(3), this.yDire = (t[3] || 0).round(3), this.oldX = this.x, this.oldY = this.y, this.oldZ = this.z, this.weapon.zoom && (!this.weapon.noAim || 0 < this.swapTime)) {
                 var p = 0 >= this.reloadTimer && 0 >= this.swapTime;
                 t[6] && 0 < this.aimVal && p ? (e.cancelInspect(this), this.aimDir = 0, this.aimVal -= 1 / (this.weapon.aimSpeed / o), 0 >= this.aimVal && (this.aimVal = 0, this.isYou && !a && e.toggleAim(this, 1)), this.isYou && !a && !this.weapon.scope && e.updateAim(this, 1 - this.aimVal)) : (!p || !t[6] && 1 > this.aimVal) && (this.aimDir = 1, !this.aimVal && this.isYou && !a && e.toggleAim(this, 0), this.aimVal += 1 / (this.weapon.aimSpeed / o), 1 <= this.aimVal && (this.aimVal = 1), this.isYou && !a && !this.weapon.scope && e.updateAim(this, 1 - this.aimVal)), 0 == this.aimVal ? this.aimTime += o : this.aimTime = 0
             }
@@ -62284,6 +62591,8 @@
                     a /= t.config ? t.config.deltaMlt : 1, this.oldX = this.x, this.oldY = this.y, this.oldZ = this.z, this.x = this.x1 + (this.x2 - this.x1) * a, this.y = this.y1 + (this.y2 - this.y1) * a, this.z = this.z1 + (this.z2 - this.z1) * a, this.onGround && e.playerStep(this, n.getDistance(this.oldX, this.oldZ, this.x, this.z)), this.xDire = Math.lerpAngle(this.xDir2, this.xDir1, Math.min(1, a)), this.yDire = Math.lerpAngle(this.yDir2, this.yDir1, Math.min(1, a))
                 }
             }
+        }, this.resetMeleeAnim = function() {
+            this.meleeAnim.armT = 0, this.meleeAnim.armM = 0, this.meleeAnim.armE = 0, this.meleeAnim.weaR = 0, this.meleeAnim.weaM = 0, this.meleeAnim.armY = 0, this.meleeAnim.armR = 0, this.meleeAnim.lArm = 0
         }, this.reset = function() {
             this.checkPoint = null, this.checkPointList.length = 0, this.killList.length = 0, this.customLoadout = null, this.lastPicked.length = 0
         }
@@ -62339,7 +62648,7 @@
                     o = (1 - (1 - n.aimVal)) * c.animMult;
                 n.isYou || (o = 0);
                 var l = 1 - (n.weapon.recoilZM || .5) * (1 - r),
-                    p = (1 - (n.weapon.zRot || .3) * (1 - r)) * e.weaponLean,
+                    p = (1 - (n.weapon.zRot || .3) * (1 - r)) * (n.weapon.zRM || 1) * e.weaponLean,
                     h = 1 - (n.weapon.jYMlt || 1) * (1 - r),
                     u = 1 - .45 * (1 - r),
                     f = .9 * n.bobAnimY * h * e.weaponLean * o,
@@ -62367,12 +62676,12 @@
                 e.moveMesh(n.objInstances, n.x, n.y + (n.isYou && !t.config.thirdPerson ? 0 : Math.abs(3.5 * M)), n.z), e.rotateMesh(n.objInstances, n.xDire + (n.isYou ? t.config.thirdPerson ? .5 * -M : 0 : 2 * -M)), _ -= _ * (n.crouchVal * c.crouchAnimMlt), M -= M * (n.crouchVal * c.crouchAnimMlt);
                 for (var R = 0; R < n.legMeshes.length; ++R) n.legMeshes[R].rotation.x = M * (1 == R || 3 == R ? 1 : -1) * 7 + (1 < R ? -.6 : 0);
                 var I;
-                for (R = 0; R < n.armMeshes.length; ++R) I = -(n[(0 == R ? "l" : "r") + "HndTweenA"] || 0), n.armMeshes[R].position.z = I || M * (R ? -1 : 1) * 12, n.armMeshes[R].rotation.x = .1 * I, n.armMeshes[R].rotation.z = .1 * I * (R ? -1 : 1), n.armMeshes[R].position.x = -.3 * I * (R ? -1 : 1);
+                for (R = 0; R < n.armMeshes.length; ++R) I = -(n[(0 == R ? "l" : "r") + "HndTweenA"] || 0), n.armMeshes[R].position.z = M * (R ? -1 : 1) * (0 <= n.meleeIndex ? 1 : 4), 0 <= n.meleeIndex && n.weapon.melee ? (n.armMeshes[R].rotation.x = n.armMeshes[R].xR || 0, n.armMeshes[R].rotation.y = n.armMeshes[R].yR || 0, n.armMeshes[R].position.x = n.armMeshes[R].xP || 0, n.armMeshes[R].position.y = n.armMeshes[R].yP || 0, 1 == R ? (n.armMeshes[1].rotation.z = n.armMeshes[R].zR + .12 * n.crouchVal + -1 * T + .2 * n.jumpBobY, n.meleeAnim && n.weaponGeos[n.weaponIndex] && (n.armMeshes[1].rotation.z += n.meleeAnim.armR || 0, n.armMeshes[1].rotation.y += n.meleeAnim.armT || 0, n.armMeshes[1].position.x += n.meleeAnim.armM || 0, n.armMeshes[1].position.z += n.meleeAnim.armE || 0, n.armMeshes[1].position.y += n.meleeAnim.armY || 0, n.weaponGeos[n.weaponIndex] && (n.weaponGeos[n.weaponIndex].rotation.z = n.weaponGeos[n.weaponIndex].zR + (n.meleeAnim.weaR || 0), n.weaponGeos[n.weaponIndex].position.x = n.weaponGeos[n.weaponIndex].xP + (n.meleeAnim.weaM || 0)))) : n.meleeAnim && n.weaponGeos[n.weaponIndex] && (n.armMeshes[0].position.z += n.meleeAnim.lArm || 0, n.armMeshes[0].position.x -= .3 * (n.meleeAnim.lArm || 0))) : (I && (n.armMeshes[R].position.z = I), n.armMeshes[R].rotation.x = .1 * I, n.armMeshes[R].rotation.z = (n.armMeshes[R].zR || 0) + .1 * I * (R ? -1 : 1), n.armMeshes[R].position.x = -.3 * I * (R ? -1 : 1));
                 var O = t.attach[n.weapon.attach],
                     D = O && O.aimOffY || 0;
                 n.weaponMeshes[n.weaponIndex].flapMesh && n.weapon.flap && (fRot = 3 * T + 2.8 * n.recoilAnim - n.leanAnimZ - 3 * n.leanAnimX - 1.8 * n.landBobYR + f + .1 * n.crouchVal, e.rotateMesh(n.weaponMeshes[n.weaponIndex].flapMesh, n.weapon.flap.rot * n.swapTweenA + fRot, null, null));
                 var z = t.config.thirdPerson ? .4 : 1;
-                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !t.config.thirdPerson ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
+                e.rotateMesh(n.upperBody, P * (-1 * z), -.2 * f + +m + P * (-2.8 * z) + n.yDire * (n.isYou && !t.config.thirdPerson ? 1 : .5) + (-Math.PI / 4 * A + n.recoilAnimY * c.recoilMlt) + (n.weapon.yRot || 0)), e.moveMesh(n.upperBody, 0, n.recoilAnimY * (n.weapon.recoilYM || .3) * o + (n.height - c.cameraHeight - c.legHeight), 0), e.rotateMesh(n.weaponMeshes[n.weaponIndex], n.inspectX + .2 * n.jumpRotM + n.recoilX * b + n.leanAnimX * u * e.weaponLean * (n.weapon.leanMlt || 1) + (.16 * -S * o * a + .2 * n.leanAnimZ) * s, -Math.cos(n.idleAnim) * g * .01 * C - .25 * (n.swapTweenR || 0) + .6 * -n.landBobYR + n.recoilTweenY * w + n.leanAnimY * u * e.weaponLean * (n.weapon.leanMlt || 1) + -.9 * T * s, v + k + n.recoilX * b + .1 * (n.swapTweenR || 0) + n.leanAnimZ * p + -n.inspectX * (n.weapon.inspectR || 0) + ((n.weapon.cLean || 0) * n.crouchVal * o + 0 * -S) * s), e.moveMesh(n.weaponMeshes[n.weaponIndex], -n.jumpRotM * o * 1.3 + -n.inspectX * (n.weapon.inspectM || 0) + (.35 * n.leanAnimZ - (n.weapon.cRot || 0) * n.crouchVal * o + .5 * M * a * o) * n.aimVal * s + L - (L - n.weapon.xOrg) * E, .02 * Math.sin(n.idleAnim) * C + n.recoilTweenYM * w + y + .7 * d - 1.5 * f + (.85 * _ - (n.weapon.cDrop || 0) * n.crouchVal * o) * s + n.weapon.yOff - (n.weapon.yOff - n.weapon.yOrg + D) * E, n.weapon.zOff - (n.weapon.zOff - n.weapon.zOrg) * E + n.bobAnimZ * s + n.recoilAnim * (n.weapon.recoilZ || 0) * l)
             }
         }, this.updateHeight = function(n) {
             var i = c.crouchDst * n.crouchVal;
@@ -62413,23 +62722,36 @@
                     var m;
                     for (d = 0; 2 > d; ++d) m = e.genArms(u, o[1], o[5], o[0], d + 1, n.isPreview || n.isYou), h.add(m), n.armMeshes.push(m)
                 }
-                if (n.weaponMeshes.push(h), n.weaponMeshes[p].visible = !1, n.upperBody.add(n.weaponMeshes[p]), u.src) {
-                    var g = t.store.skins[n.skins[p]] || {},
-                        v = 0 <= n.skins[p] && (g.glow || g.sameGlow);
-                    for (d = 0; 2 > d; ++d)(!d || u.akimbo) && e.loadMesh({
-                        src: "weapons/" + u.src,
-                        texSrc: g.tex ? g.tex : 0 <= n.skins[p] ? "weapons/skins/" + u.src + "_" + g.id : null,
+                if (n.weaponMeshes.push(h), n.weaponMeshes[p].visible = !1, n.upperBody.add(n.weaponMeshes[p]), 0 <= n.meleeIndex && n.armMeshes[1]) {
+                    var g = t.store.skins[n.meleeIndex] || {};
+                    n.weaponGeos[p] = e.loadMesh({
+                        src: "melee/melee_" + g.id,
                         tFilter: i.LinearFilter,
                         mat: s || n.isYou ? i.MeshPhongMaterial : null,
-                        movT: g.movT,
-                        sameGlow: g.sameGlow,
-                        glowText: v,
+                        noGreen: !0,
+                        uv2: !0,
+                        specular: 2697513,
+                        shininess: 100
+                    }, .9, -.95, .72, [-Math.PI / 3.5, .3, -.9 * Math.PI], g.sclMlt, n.armMeshes[1]), n.armMeshes[1].zR = n.armMeshes[1].rotation.z = -.3, n.armMeshes[1].xR = n.armMeshes[1].rotation.x = -.4, n.armMeshes[1].yR = n.armMeshes[1].rotation.y, n.armMeshes[1].xP = n.armMeshes[1].position.x = .4, n.armMeshes[1].yP = n.armMeshes[1].position.y = .3, n.armMeshes[1].position.y = .3, n.armMeshes[0].xP = n.armMeshes[0].position.x = .3, n.armMeshes[0].yP = n.armMeshes[0].position.y = -.8, n.armMeshes[0].zR = n.armMeshes[0].rotation.z = -.4
+                }
+                if (u.src) {
+                    var v = t.store.skins[n.skins[p]] || {},
+                        y = 0 <= n.skins[p] && (v.glow || v.sameGlow);
+                    for (d = 0; 2 > d; ++d)(!d || u.akimbo) && e.loadMesh({
+                        src: "weapons/" + u.src,
+                        texSrc: v.tex ? v.tex : 0 <= n.skins[p] ? "weapons/skins/" + u.src + "_" + v.id : null,
+                        tFilter: i.LinearFilter,
+                        mat: s || n.isYou ? i.MeshPhongMaterial : null,
+                        movT: v.movT,
+                        sameGlow: v.sameGlow,
+                        glowText: y,
                         noGreen: !0,
                         uv2: !0,
                         ao: r && !u.noAo,
-                        shininess: u.shine || 60,
+                        shininess: v.shine || u.shine || 60,
+                        specular: 2697513,
                         transparent: u.seeThrough,
-                        emissive: u.transp || v ? 16777215 : null
+                        emissive: u.transp || y ? 16777215 : null
                     }, 1 == d ? -2 * u.xOff : 0, 0, 0, Math.PI / 2, u.scale, n.weaponMeshes[p])
                 }
                 r && u.flap && e.sniperFlap && (n.weaponMeshes[p].flapMesh = e.loadMesh({
@@ -62444,6 +62766,7 @@
                     tFilter: i.LinearFilter,
                     noGreen: !0,
                     mat: n.isYou ? i.MeshPhongMaterial : null,
+                    specular: 2697513,
                     shininess: 60,
                     transparent: !0
                 }, 0, -(u.yOrg || 0) + (u.attachYOff || 0), -(u.attachZOff || 0), Math.PI / 2, f.scale, n.weaponMeshes[p])
@@ -62462,13 +62785,13 @@
         }, this.toggleLOD = function(t, e) {
             t.objInstances && (t.objInstances.visible = e), t.lodActive = !e
         }, this.disposeMesh = function(t) {
-            e.remove(t.objInstances), t.objInstances = null, t.hatMesh = null, t.backMesh = null, t.weaponMeshes.length = 0, t.armMeshes.length = 0, t.legMeshes.length = 0
-        }, this.add = function(n, i, s, a, p, h, u, f, d, m, g, v, y, b) {
-            for (var w, x = 0; x < this.list.length; ++x)
-                if (this.list[x].id == n) {
-                    w = this.list[x];
+            e.remove(t.objInstances), t.objInstances = null, t.hatMesh = null, t.backMesh = null, t.weaponMeshes.length = 0, t.weaponGeos = {}, t.armMeshes.length = 0, t.legMeshes.length = 0
+        }, this.add = function(n, i, s, a, p, h, u, f, d, m, g, v, y, b, w) {
+            for (var x, M = 0; M < this.list.length; ++M)
+                if (this.list[M].id == n) {
+                    x = this.list[M];
                     break
-                } return w ? (w.weaponMeshes.length = 0, w.legMeshes.length = 0, w.armMeshes.length = 0) : ((w = new r(n, this, o, c, t)).sid = i || o.generateSID(this.list), this.list.push(w)), h || (h = "Guest_" + w.sid), w.init(s, a, p, h, v, y), l && null != t.mode && this.setTeam(w), w.skins = f || [-1, -1], w.hatIndex = d, w.backIndex = m, w.secIndex = g, w.setClass(t, u, g, !!e), !b && t.mode.startingLoadout && (b = t.mode.startingLoadout), b && w.updateLoadout(t, w.weaponIndex, !1, ...b), e && e.add(this.generateMeshes(w, v)), this.swapWeapon(w, 0, !0), "undefined" != typeof window && "updateWindow" in window && window.updateWindow(23), w
+                } return x ? (x.weaponMeshes.length = 0, x.weaponGeos = {}, x.legMeshes.length = 0, x.armMeshes.length = 0) : ((x = new r(n, this, o, c, t)).sid = i || o.generateSID(this.list), this.list.push(x)), h || (h = "Guest_" + x.sid), x.init(s, a, p, h, y, b), l && null != t.mode && this.setTeam(x), x.skins = f || [-1, -1], x.hatIndex = d, x.backIndex = m, x.meleeIndex = g, x.secIndex = v, x.setClass(t, u, v, !!e), !w && t.mode.startingLoadout && (w = t.mode.startingLoadout), w && x.updateLoadout(t, x.weaponIndex, !1, ...w), e && e.add(this.generateMeshes(x, y)), this.swapWeapon(x, 0, !0), "undefined" != typeof window && "updateWindow" in window && window.updateWindow(23), x
         }, this.remove = function(e) {
             var n = this.indexBySid(e);
             if (0 <= n) {
@@ -62546,31 +62869,37 @@
         }, this.endReload = function(t) {
             s && s.play("reload_2" + (t.custReload || ""), .25)
         }, this.updatePlayerAmmo = function(t) {
-            t.isYou && (ammoDisplay.style.display = t.weapon.melee ? "none" : "inline-block", t.weapon.melee ? reloadMsg.style.display = "none" : (ammoVal.innerHTML = t.ammos[t.weaponIndex] + " <span id='ammoMax'> | " + t.weapon.ammo + "</span>", 0 >= t.ammos[t.weaponIndex] ? (reloadMsg.innerHTML = "[R] Reload", reloadMsg.style.display = "block") : reloadMsg.style.display = "none"))
+            t.isYou && (ammoDisplay.style.display = "inline-block", ammoVal.innerHTML = (t.ammos[t.weaponIndex] || (t.weapon.melee ? "-" : 0)) + " <span id='ammoMax'> | " + (t.weapon.ammo || "-") + "</span>", 0 >= t.ammos[t.weaponIndex] ? (reloadMsg.innerHTML = "[R] Reload", reloadMsg.style.display = "block") : reloadMsg.style.display = "none")
         }, this.cancelInspect = function(t) {
             t.inspecting = !1, t.inspectX = 0
         }, this.wInspect = function(t) {
             t.inspecting ? this.cancelInspect(t) : !t.weapon.nInsp && !t.inspecting && 1 == t.aimVal && !t.reloadTimer && (t.inspecting = !0)
         }, this.melee = function(e) {
-            e.reloads[e.weaponIndex] = e.weapon.rate, e.didShoot = !0, e.isYou && (e.weapon.anim && e.weapon.anim(e, TWEEN), e.weapon.sounds && s.play(e.weapon.sounds[o.randInt(0, e.weapon.sounds.length - 1)], .1, !1, o.randFloat(.9, 1.1)));
-            var n = e.xDire,
-                i = e.yDire;
+            if (e.reloads[e.weaponIndex] = e.weapon.rate, e.didShoot = !0, e.isYou) {
+                if (e.weapon.anim) {
+                    var n = t.store.skins[e.meleeIndex] || {};
+                    e.weapon.anim(e, TWEEN, n.animInd)
+                }
+                e.weapon.sounds && s.play(e.weapon.sounds[o.randInt(0, e.weapon.sounds.length - 1)], .1, !1, o.randFloat(.9, 1.1))
+            }
+            var i = e.xDire,
+                r = e.yDire;
             m.length = 0;
-            for (var r = 0, a = 1 / (e.weapon.range * Math.sin(n + Math.PI) * Math.cos(i)), p = 1 / (e.weapon.range * Math.cos(n + Math.PI) * Math.cos(i)), u = 1 / (e.weapon.range * Math.sin(i)), f = e.y + e.height - c.cameraHeight, d = 0; d < t.map.manager.objects.length; ++d)(h = t.map.manager.objects[d]).active && !h.noShoot && ((r = o.lineInRect(e.x, e.z, f, a, p, u, h.x - h.width, h.z - h.length, h.y - h.height, h.x + h.width, h.z + h.length, h.y + h.height)) && 1 >= r && m.push({
+            for (var a = 0, p = 1 / (e.weapon.range * Math.sin(i + Math.PI) * Math.cos(r)), u = 1 / (e.weapon.range * Math.cos(i + Math.PI) * Math.cos(r)), f = 1 / (e.weapon.range * Math.sin(r)), d = e.y + e.height - c.cameraHeight, g = 0; g < t.map.manager.objects.length; ++g)(h = t.map.manager.objects[g]).active && !h.noShoot && ((a = o.lineInRect(e.x, e.z, d, p, u, f, h.x - h.width, h.z - h.length, h.y - h.height, h.x + h.width, h.z + h.length, h.y + h.height)) && 1 >= a && m.push({
                 obj: h,
-                dst: r
+                dst: a
             }));
             if (l)
-                for (d = 0; d < this.list.length; ++d) this.list[d].active && e != this.list[d] && (!e.team || e.team != this.list[d].team) && ((h = this.fetchState(this.list[d], e.ping)) && ((r = o.lineInRect(e.x, e.z, f, a, p, u, h.x - this.list[d].scale - c.hitBoxPad, h.z - this.list[d].scale - c.hitBoxPad, h.y, h.x + this.list[d].scale + c.hitBoxPad, h.z + this.list[d].scale + c.hitBoxPad, h.y + this.list[d].height + c.hitBoxPad)) && 1 >= r && m.push({
+                for (g = 0; g < this.list.length; ++g) this.list[g].active && e != this.list[g] && (!e.team || e.team != this.list[g].team) && ((h = this.fetchState(this.list[g], e.ping)) && ((a = o.lineInRect(e.x, e.z, d, p, u, f, h.x - this.list[g].scale - c.hitBoxPad, h.z - this.list[g].scale - c.hitBoxPad, h.y, h.x + this.list[g].scale + c.hitBoxPad, h.z + this.list[g].scale + c.hitBoxPad, h.y + this.list[g].height + c.hitBoxPad)) && 1 >= a && m.push({
                     player: !0,
-                    obj: this.list[d],
-                    dst: r
+                    obj: this.list[g],
+                    dst: a
                 })));
             e.weapon.range;
             if (m.length) {
                 m.sort(o.orderByDst);
-                var g = e.weapon.dmg;
-                for (d = 0; d < m.length && (h = m[d], e.weapon.range * h.dst, l) && (l && !t.waitTimers && h.obj && h.obj.health && !h.player && (l.send(e.id, "4"), h.obj.health -= g, 0 >= h.obj.health && (h.obj.active = !1, h.obj.health = 0, t.destObjs.push(h.obj.uid), l.broadcast("game" + t.sid, "do", h.obj.uid))), h.player || h.obj && h.obj.dummy) && (this.changeHealth(h.obj, e, g) && this.kill(h.obj, e, {}), !(0 >= (g -= null == e.weapon.pierce ? g : e.weapon.dmg * c.materialDens.flesh * e.weapon.pierce))); ++d);
+                var v = e.weapon.dmg;
+                for (g = 0; g < m.length && (h = m[g], e.weapon.range * h.dst, l) && (l && !t.waitTimers && h.obj && h.obj.health && !h.player && (l.send(e.id, "4"), h.obj.health -= v, 0 >= h.obj.health && (h.obj.active = !1, h.obj.health = 0, t.destObjs.push(h.obj.uid), l.broadcast("game" + t.sid, "do", h.obj.uid))), h.player || h.obj && h.obj.dummy) && (this.changeHealth(h.obj, e, v) && this.kill(h.obj, e, {}), !(0 >= (v -= null == e.weapon.pierce ? v : e.weapon.dmg * c.materialDens.flesh * e.weapon.pierce))); ++g);
             }
         };
         var m = [];
@@ -62662,7 +62991,7 @@
                                 H = !1;
                             if (h.player) {
                                 var G = A + R * Math.sin(M);
-                                F = h.obj.y + h.obj.height - G < c.headScale, H = h.obj.y + c.legHeight > G, U *= F && !n.weapon.noHeadShot ? 1.5 : 1, U *= H ? .5 : 1
+                                F = h.obj.y + h.obj.height - G < c.headScale, H = h.obj.y + c.legHeight > G, U *= F && !n.weapon.noHeadShot ? 1.5 : 1, U *= H ? .5 : 1, F || !t.config || !t.config.headshotOnly || (U = 0)
                             }
                             if (l && !t.waitTimers && h.obj && h.obj.health && !h.player && (h.obj.health -= U, l.send(n.id, "4"), 0 >= h.obj.health && (h.obj.active = !1, h.obj.health = 0, t.destObjs.push(h.obj.uid), l.broadcast("game" + t.sid, "do", h.obj.uid))), h.player || h.obj && h.obj.dummy) {
                                 if (h.player && (r = !0), this.changeHealth(h.obj, n, U)) {
@@ -62684,10 +63013,10 @@
                     var W = n.x + R * Math.sin(x + Math.PI) * Math.cos(M),
                         Y = (G = A + R * Math.sin(M), n.z + R * Math.cos(x + Math.PI) * Math.cos(M)),
                         q = 0,
-                        K = 0;
-                    if (m.length && (h.terrain ? K = Math.PI / 2 : G >= h.obj.y + h.obj.height ? K = Math.PI / 2 : G <= h.obj.y - h.obj.height ? K = -Math.PI / 2 : W <= h.obj.x - h.obj.width ? q = -Math.PI / 2 : W >= h.obj.x + h.obj.width ? q = Math.PI / 2 : Y <= h.obj.z - h.obj.length && (q = Math.PI), !l && a.effect(W, G, Y, q, K, 0)), l) {
-                        var X = n.weapon && n.weapon.trail ? 1 : 0;
-                        for (L = 0; L < this.list.length; ++L)(this.list[L].active || this.list[L].spectating) && this.list[L] != n && (m.length && !h.player ? l.send(this.list[L].id, "9", n.sid, Math.round(W), Math.round(G), Math.round(Y), q.round(1), K.round(1), X) : l.send(this.list[L].id, "9", n.sid, Math.round(W), Math.round(G), Math.round(Y), void 0, void 0, X))
+                        X = 0;
+                    if (m.length && (h.terrain ? X = Math.PI / 2 : G >= h.obj.y + h.obj.height ? X = Math.PI / 2 : G <= h.obj.y - h.obj.height ? X = -Math.PI / 2 : W <= h.obj.x - h.obj.width ? q = -Math.PI / 2 : W >= h.obj.x + h.obj.width ? q = Math.PI / 2 : Y <= h.obj.z - h.obj.length && (q = Math.PI), !l && a.effect(W, G, Y, q, X, 0)), l) {
+                        var K = n.weapon && n.weapon.trail ? 1 : 0;
+                        for (L = 0; L < this.list.length; ++L)(this.list[L].active || this.list[L].spectating) && this.list[L] != n && (m.length && !h.player ? l.send(this.list[L].id, "9", n.sid, Math.round(W), Math.round(G), Math.round(Y), q.round(1), X.round(1), K) : l.send(this.list[L].id, "9", n.sid, Math.round(W), Math.round(G), Math.round(Y), void 0, void 0, K))
                     }
                     if (n.isYou && R >= c.tracerMinDst) {
                         var Z = o.randInt(0, n.weaponMeshes[n.weaponIndex].muzzles.length - 1),
@@ -62696,8 +63025,8 @@
                             Q = J.x - $ * Math.sin(x + Math.PI) * Math.cos(M),
                             tt = J.y - $ * Math.sin(M),
                             et = J.z - $ * Math.cos(x + Math.PI) * Math.cos(M);
-                        o.getDistance3D(Q, tt, et, W, G, Y), q = o.getDirection(et, Q, Y, W), K = o.getDirection(o.getDistance(Q, et, W, Y), G, 0, tt);
-                        a.physObj(Q, tt, et, q, K, Math.min(R + $, c.tracerMaxDst), n.weapon && n.weapon.trail, 0, n)
+                        o.getDistance3D(Q, tt, et, W, G, Y), q = o.getDirection(et, Q, Y, W), X = o.getDirection(o.getDistance(Q, et, W, Y), G, 0, tt);
+                        a.physObj(Q, tt, et, q, X, Math.min(R + $, c.tracerMaxDst), n.weapon && n.weapon.trail, 0, n)
                     }
                 } else if (l) {
                     w = (n.spread + (n.weapon.innac || 0)) * c.spreadAdj, x = n.xDire + o.randFloat(-w, w), M = n.yDire + n.recoilAnimY * c.recoilMlt + o.randFloat(-w, w);
@@ -62741,12 +63070,12 @@
                 e.lastPickup = t.now;
                 for (var n = 0; n < t.map.manager.pickups.length; ++n)
                     if (null != (p = t.map.manager.pickups[n]).pickup && e.collides(p) && -1 == e.loadout.indexOf(p.pickup)) {
-                        if (t.weapons[e.loadout[0]].melee && 1 == e.loadout.length) h = void 0, e.loadout[0] = p.pickup, e.weaponIndex = 0, p.pickupRep && null == h && this.addPicked(e, p.pickup);
-                        else if (t.weapons[p.pickup].type) t.weapons[e.loadout[0]].type ? (h = e.loadout[0], e.loadout[0] = p.pickup, e.weaponIndex = 0) : !t.weapons[e.loadout[0]].type && (h = t.weapons[e.loadout[1]].melee ? void 0 : e.loadout[1], e.loadout[1] = p.pickup, e.weaponIndex = 1), this.removePicked(e, h), p.pickupRep && null == h && this.addPicked(e, p.pickup);
+                        if (t.weapons[e.loadout[0]] && t.weapons[e.loadout[0]].melee && 1 == e.loadout.length) h = void 0, e.loadout[0] = p.pickup, e.weaponIndex = 0, p.pickupRep && null == h && this.addPicked(e, p.pickup);
+                        else if (t.weapons[p.pickup].type) t.weapons[e.loadout[0]].type ? (h = e.loadout[0], e.loadout[0] = p.pickup, e.weaponIndex = 0) : !t.weapons[e.loadout[0]].type && (h = t.weapons[e.loadout[1]] && t.weapons[e.loadout[1]].melee ? void 0 : e.loadout[1], e.loadout[1] = p.pickup, e.weaponIndex = 1), this.removePicked(e, h), p.pickupRep && null == h && this.addPicked(e, p.pickup);
                         else if (!t.weapons[p.pickup].type) {
-                            h = t.weapons[e.loadout[0]].melee ? void 0 : e.loadout[0];
+                            h = t.weapons[e.loadout[0]] && t.weapons[e.loadout[0]].melee ? void 0 : e.loadout[0];
                             var i = !1;
-                            t.weapons[e.loadout[0]].type ? (e.loadout.splice(0, 0, p.pickup), t.weapons[e.loadout[1]].melee && (e.loadout.length = 1), h = void 0) : !t.weapons[e.loadout[0]].type && (!t.weapons[e.loadout[0]].melee && (i = this.removePicked(e, e.loadout[0])), e.loadout[0] = p.pickup), p.pickupRep && (null == h || i) && this.addPicked(e, p.pickup), e.weaponIndex = 0
+                            t.weapons[e.loadout[0]].type ? (e.loadout.splice(0, 0, p.pickup), t.weapons[e.loadout[1]] && t.weapons[e.loadout[1]].melee && (e.loadout.length = 1), h = void 0) : !t.weapons[e.loadout[0]].type && (!(t.weapons[e.loadout[0]] && t.weapons[e.loadout[0]].melee) && (i = this.removePicked(e, e.loadout[0])), e.loadout[0] = p.pickup), p.pickupRep && (null == h || i) && this.addPicked(e, p.pickup), e.weaponIndex = 0
                         }
                         p.pickupRep && (p.pickup = h), l.broadcast("game" + t.sid, "inat", e.sid, e.loadout, e.weaponIndex, p.uid, p.pickupRep ? h : p.pickup), e.updateLoadout(t, e.weaponIndex, !0, ...e.loadout);
                         break
@@ -62791,8 +63120,8 @@
         }, this.tickPlayer = function(t, e) {
             t.playTime += e, 0 < t.hitTimer && (t.hitTimer -= e), t.ticker -= e, 0 >= t.ticker && (t.ticker = 500, 0 >= t.hitTimer && !t.challMode && this.changeHealth(t, null, -t.maxHealth * (t.regen || 0)))
         }, this.changeHealth = function(e, n, i, r) {
-            if ((!t.waitTimers || t.waitTimers[0].canDMG) && !(0 > i && e.health == e.maxHealth) && (n && n.isHacker && (i *= .1), n && n.lastHack && 300 >= t.now - n.lastHack && (3 <= n.hackSus ? i *= .4 : n.hackSus++, n.lastHack = 0), !(!r && e.team && n && e.team == n.team && 0 < i))) {
-                if (n && n != e && l.send(n.id, "4"), e.dummy) return !0;
+            if ((!t.waitTimers || t.waitTimers[0].canDMG) && !(0 > i && e.health == e.maxHealth) && (n && n.account && n.account.hack && i && (i *= .2), n && n.isHacker && (i *= .1), n && n.lastHack && 300 >= t.now - n.lastHack && (3 <= n.hackSus ? i *= .4 : n.hackSus++, n.lastHack = 0), !(!r && e.team && n && e.team == n.team && 0 < i))) {
+                if (n && n != e && 0 < i && l.send(n.id, "4"), e.dummy) return !0;
                 0 < i && (e.hitTimer = e.regenDelay || 0), e.health -= i, e.health = Math.max(Math.min(e.maxHealth, e.health), 0), n ? (l.send(e.id, "h", Math.ceil(e.health), null, Math.round(n.x), Math.round(n.z)), n != e && (e.dmgReceived[n.id] ? (e.dmgReceived[n.id].val += i, e.dmgReceived[n.id].time = t.now) : e.dmgReceived[n.id] = {
                     time: t.now,
                     val: i
@@ -62800,20 +63129,29 @@
                 for (var s = 0; s < this.list.length; ++s) this.list[s] != e && l.send(this.list[s].id, "h", Math.ceil(e.health), e.sid);
                 return 0 >= e.health
             }
-        }, this.swapWeapon = function(n, i, r, s) {
+        }, this.swapMelee = function(t, e) {
+            1 >= t.ammos.length || (t.weaponIndex == t.ammos.length - 1 ? this.swapWeapon(t, 1, !1, void 0, void 0, e) : this.swapWeapon(t, null, null, void 0, t.ammos.length - 1, e))
+        }, this.swapSecondary = function(e, n) {
+            if (!(1 >= e.ammos.length))
+                for (var i, r = 0; r < e.ammos.length; ++r) i = e.loadout[r], t.weapons[i] && t.weapons[i].secondary && (e.weaponIndex == r ? this.swapWeapon(e, null, null, void 0, 0, n) : this.swapWeapon(e, null, null, void 0, r, n))
+        }, this.swapWeapon = function(n, i, r, s, a, c) {
             if (!(1 >= n.ammos.length && i || s > n.ammos.length)) {
-                var a = n.weaponIndex;
-                if (i && (1 != i && -1 != i && (i = 0), n.reloadTimer = 0, n.weaponIndex += i, n.didShoot = !1, 0 > n.weaponIndex && (n.weaponIndex = n.ammos.length - 1), n.weaponIndex > n.ammos.length - 1 && (n.weaponIndex = 0)), null != s && (n.weaponIndex = s), n.weapon = t.weapons[n.loadout[n.weaponIndex]], n.weapon || (n.weapon = t.weapons[n.loadout[0]], n.weapon && (n.weaponIndex = 0)), e && (a != n.weaponIndex || r)) {
+                var l = n.weaponIndex;
+                if (i && (n.weaponIndex += i, 1 != i && -1 != i && (i = 0), 0 > n.weaponIndex && (n.weaponIndex = Math.max(0, n.ammos.length - 1)), n.weaponIndex > n.ammos.length - 1 && (n.weaponIndex = 0)), null != s && (n.weaponIndex = s), null != a && (n.weaponIndex = a), (i || a) && (l != n.weaponIndex || r) && (n.reloadTimer = 0, n.didShoot = !1), n.weapon = t.weapons[n.loadout[n.weaponIndex]], n.weapon || (n.weapon = t.weapons[n.loadout[0]], n.weapon && (n.weaponIndex = 0)), e && (l != n.weaponIndex || r)) {
                     this.cancelInspect(n);
-                    for (var o = 0; o < n.weaponMeshes.length; ++o) n.weaponMeshes[o].visible = !1;
+                    for (var p = 0; p < n.weaponMeshes.length; ++p) n.weaponMeshes[p].visible = !1;
                     n.weaponMeshes[n.weaponIndex] && (n.weaponMeshes[n.weaponIndex].visible = !t.hideWeapon || !n.isYou)
                 }
-                if (null == s && n.weapon && (!e || n.isYou) && (n.swapTime = n.weapon.swapTime, n.isYou && (a != n.weaponIndex || r))) {
-                    var c, l = "";
-                    for (o = n.ammos.length - 1; 0 <= o; --o) c = o == n.weaponIndex, t.weapons[n.loadout[o]].icon && (l += "<div class='weaponItem'><img style='opacity:" + (c ? 1 : .7) + "' class='weaponIcon' src='./textures/weapons/" + t.weapons[n.loadout[o]].icon + ".png' /></div>");
-                    n.swapTween && n.swapTween.stop(), n.swapTweenA = .5, n.swapTween = new TWEEN.Tween(n).to({
+                if (null == s && n.weapon && (!e || n.isYou) && (n.isYou && l == n.weaponIndex || c || (n.swapTime = n.weapon.swapTime), n.isYou && (l != n.weaponIndex || r))) {
+                    var h, u = "";
+                    for (p = n.ammos.length - 1; 0 <= p; --p) h = p == n.weaponIndex, t.weapons[n.loadout[p]].icon && (u += "<div class='weaponItem'>" + (0 < p ? "<div class='weapKey'>" + (t.weapons[n.loadout[p]].melee ? "[" + o.getKeyName(t.controls.meleeKey) + "]" : "[" + o.getKeyName(t.controls.swapKey) + "]") + "</div>" : "") + "<img style='opacity:" + (h ? 1 : .7) + (p ? ";margin-right:25px" : "") + "' class='weaponIcon' src='" + (t.weapons[n.loadout[p]].melee && 0 <= n.meleeIndex ? "./textures/melee/icon_" + t.store.skins[n.meleeIndex].id : "./textures/weapons/" + t.weapons[n.loadout[p]].icon) + ".png' /></div>");
+                    c || (n.swapTween && n.swapTween.stop(), n.swapTweenA = .5, n.swapTween = new TWEEN.Tween(n).to({
                         swapTweenA: 1
-                    }, 1200).easing(TWEEN.Easing.Elastic.Out).start(), weaponDisplay.innerHTML = l, this.updatePlayerAmmo(n)
+                    }, 1200).easing(TWEEN.Easing.Elastic.Out).start(), l != n.weaponIndex && (n.swapTweenAnim && n.swapTweenAnim.stop(), n.swapTweenR = n.weapon.swapWiggle || .6, n.swapTweenAnim = new TWEEN.Tween(n).to({
+                        swapTweenR: 0
+                    }, n.weapon.swapTime + 220).easing(TWEEN.Easing.Back.InOut).start()), l != n.weaponIndex && (n.meleeAnim.anim && n.meleeAnim.anim.stop(), n.resetMeleeAnim(), n.meleeAnim.armR = .15, n.weapon.melee && (n.meleeAnim.anim = new TWEEN.Tween(n.meleeAnim).to({
+                        armR: 0
+                    }, 700).easing(TWEEN.Easing.Back.InOut).start()))), weaponDisplay.innerHTML = u, this.updatePlayerAmmo(n)
                 }
             }
         }, this.checkStreak = function(e) {
@@ -62826,17 +63164,10 @@
             if (e.dummy || e.active) {
                 var a = !1;
                 if (e.dummy || (e.active = !1, e.isYou && this.toggleAim(e, 0), e.objInstances && this.disposeMesh(e)), l) {
-                    var o;
-                    if (e.deaths++, t.mode.noStreaks || e.deathStreak++, e.lives && !t.waitTimers && (e.lives--, l.send(e.id, "lv", e.lives)), t.kills++, n && n != e) {
-                        if (e.dummy || n.kills++, !t.mode.noStreaks) {
-                            n.streak++, n.killStreak++, n.deathStreak = 0, this.checkStreak(n);
-                            var p = 0;
-                            5 == n.killStreak ? p = 5 : 10 == n.killStreak ? p = 10 : 15 == n.killStreak ? p = 15 : 20 == n.killStreak ? p = 20 : 25 == n.killStreak ? p = 25 : 30 == n.killStreak && (p = 30), p && l.broadcast("game" + t.sid, "kst", n.sid, p), t.now - n.lastKill >= c.feedTimer && (n.streak = 0)
-                        }
-                        n.lastKill = t.now, s || !t.config.killRewards || t.mode.noKillRewards || ((o = f.reward(this, n, e, i, t)) && l.send(n.id, "6", o, i.headShot ? 1 : 0, n.kills), this.score(n, f.getScore(o), !0), a = !0), t.players.dropWeapon(e, !0)
-                    }
-                    if (t.mode.onKill && t.mode.onKill(t, e, n), !e.dummy)
-                        for (var h = 0; h < this.list.length; ++h) !t.mode.noAssists && e.dmgReceived[this.list[h].id] && n != this.list[h] && e.dmgReceived[this.list[h].id].val >= c.assistMin && t.now - e.dmgReceived[this.list[h].id].time <= c.assistTime && (this.list[h].assists++, this.score(this.list[h], c.assistScore, !0), l.send(this.list[h].id, "10"), a = !0), this.list[h] == e ? l.send(e.id, "3", e.sid, e.deaths, n ? n.sid : 0, t.mode.killRes ? t.mode.killRes(n) : [n ? n.loadout[n.weaponIndex] : -1, o ? f.getScore(o) : 0], r) : l.send(this.list[h].id, "3", e.sid, e.deaths, n ? n.sid : 0, null, r)
+                    var o, p = 0;
+                    if (e.deaths++, t.mode.noStreaks || e.deathStreak++, e.lives && !t.waitTimers && (e.lives--, l.send(e.id, "lv", e.lives)), t.kills++, n && n != e && (!e.dummy && (t.weapons[n.loadout[n.weaponIndex]].melee && n.melees++, n.kills++), !t.mode.noStreaks && (n.streak++, n.killStreak++, n.deathStreak = 0, this.checkStreak(n), 5 == n.killStreak ? p = 5 : 10 == n.killStreak ? p = 10 : 15 == n.killStreak ? p = 15 : 20 == n.killStreak ? p = 20 : 25 == n.killStreak ? p = 25 : 30 == n.killStreak && (p = 30), t.now - n.lastKill >= c.feedTimer && (n.streak = 0)), n.lastKill = t.now, !s && t.config.killRewards && !t.mode.noKillRewards && ((o = f.reward(this, n, e, i, t)) && l.send(n.id, "6", o, i.headShot ? 1 : 0, n.kills), this.score(n, f.getScore(o), !0), a = !0), t.players.dropWeapon(e, !0)), t.mode.onKill && t.mode.onKill(t, e, n), !e.dummy)
+                        for (var h = 0; h < this.list.length; ++h) !t.mode.noAssists && e.dmgReceived[this.list[h].id] && n != this.list[h] && e.dmgReceived[this.list[h].id].val >= c.assistMin && t.now - e.dmgReceived[this.list[h].id].time <= c.assistTime && (this.list[h].assists++, this.score(this.list[h], c.assistScore, !0), l.send(this.list[h].id, "10"), a = !0), this.list[h] == e ? l.send(e.id, "3", e.sid, e.deaths, n ? n.sid : 0, t.mode.killRes ? t.mode.killRes(n) : [n ? n.loadout[n.weaponIndex] : -1, o ? f.getScore(o) : 0], r) : l.send(this.list[h].id, "3", e.sid, e.deaths, n ? n.sid : 0, null, r);
+                    p && l.broadcast("game" + t.sid, "kst", n.sid, p)
                 }
                 l && !a && this.syncLeaders()
             }
@@ -63392,7 +63723,7 @@
             }, t
         }();
 
-    function K() {
+    function X() {
         if (!("fetch" in Object(L.e)())) return !1;
         try {
             return new Headers, new Request(""), new Response, !0
@@ -63401,8 +63732,8 @@
         }
     }
 
-    function X() {
-        if (!K()) return !1;
+    function K() {
+        if (!X()) return !1;
         try {
             return new Request("_", {
                 referrerPolicy: "origin"
@@ -63764,7 +64095,7 @@
                 var e = {
                     body: JSON.stringify(t),
                     method: "POST",
-                    referrerPolicy: X() ? "origin" : ""
+                    referrerPolicy: K() ? "origin" : ""
                 };
                 return this._buffer.add(ut.fetch(this.url, e).then(function(t) {
                     return {
@@ -63798,7 +64129,7 @@
                 var e = this._options.transportOptions ? this._options.transportOptions : {
                     dsn: this._options.dsn
                 };
-                return this._options.transport ? new this._options.transport(e) : K() ? new ft(e) : new dt(e)
+                return this._options.transport ? new this._options.transport(e) : X() ? new ft(e) : new dt(e)
             }, e.prototype.eventFromException = function(t, e) {
                 var n, i = this;
                 if (Object(P.d)(t) && t.error) return t = t.error, n = ct(st(t)), H.a.resolve(this._buildEvent(n, e));
@@ -64141,7 +64472,7 @@
                 }))
             }, t.prototype._instrumentFetch = function() {
                 (function() {
-                    if (!K()) return !1;
+                    if (!X()) return !1;
                     var t = function(t) {
                             return -1 !== t.toString().indexOf("native")
                         },
@@ -64435,7 +64766,7 @@
         return e ? e.close(t) : Promise.reject(!1)
     }
 
-    function Kt(t) {
+    function Xt(t) {
         Mt(t)()
     }
     n.d(e, "Integrations", function() {
@@ -64499,7 +64830,7 @@
     }), n.d(e, "close", function() {
         return qt
     }), n.d(e, "wrap", function() {
-        return Kt
+        return Xt
     }), n.d(e, "SDK_NAME", function() {
         return gt
     }), n.d(e, "SDK_VERSION", function() {
@@ -64507,10 +64838,10 @@
     }), n.d(e, "Transports", function() {
         return s
     });
-    var Xt = {},
+    var Kt = {},
         Zt = Object(L.e)();
-    Zt.Sentry && Zt.Sentry.Integrations && (Xt = Zt.Sentry.Integrations);
-    var Jt = l.a({}, Xt, i, r)
+    Zt.Sentry && Zt.Sentry.Integrations && (Kt = Zt.Sentry.Integrations);
+    var Jt = l.a({}, Kt, i, r)
 }, function(t, e, n) {
     n.d(e, "a", function() {
         return a
@@ -65244,8 +65575,8 @@
         "windows.controls.spray": "Spray",
         "windows.controls.jump": "Jump",
         "windows.controls.crouch": "Crouch",
-        "windows.controls.next": "Next Weapon",
-        "windows.controls.previous": "Previous Weapon",
+        "windows.controls.swap": "Secondary Weapon",
+        "windows.controls.melee": "Melee Weapon",
         "windows.controls.chat": "Chat",
         "windows.controls.voice": "Voice",
         "windows.controls.list": "Player List",
@@ -65304,6 +65635,7 @@
         "windows.skin.header": "Select Skin",
         "windows.hat.header": "Select Hat",
         "windows.back.header": "Select Back",
+        "windows.melee.header": "Select Melee",
         "windows.mods.community.header": "Community Mods",
         "windows.mods.community.fav": "Your Favorites",
         "windows.mods.community.new": "New Mods",
@@ -65361,6 +65693,7 @@
         "server.config.selTeam": "Select Team",
         "server.config.allowSpect": "Spectating",
         "server.config.killRewards": "Kill Rewards",
+        "server.config.headshotOnly": "Headshots Only",
         "server.config.canSlide": "Sliding",
         "server.config.autoJump": "Auto Jump",
         "server.config.thirdPerson": "3rd Person",
@@ -65377,6 +65710,7 @@
         "social.maps.none": "No Maps found...",
         "social.market.head": "Head Item",
         "social.market.back": "Back Item",
+        "social.market.melee": "Melee Item",
         "social.market.none": "No Items Found",
         "social.market.grace": "ready in {0}",
         "social.market.sort": "Filter/Sort",
@@ -65447,23 +65781,23 @@
         socketId: -1,
         sendQueue: [],
         connect: function(t, e, n) {
-            if (!this.MMzmSszG) {
+            if (!this.mGHoTaTsoUp) {
                 var s = i.enableHttps ? "wss:" : "ws:",
                     a = this;
                 try {
                     var o = !1;
-                    this.MMzmSszG = new WebSocket(s + t), this.MMzmSszG.binaryType = "arraybuffer", this.MMzmSszG.onmessage = function(t) {
-                        var e = r.RvTwBWYc(t.data)[0],
+                    this.mGHoTaTsoUp = new WebSocket(s + t), this.mGHoTaTsoUp.binaryType = "arraybuffer", this.mGHoTaTsoUp.onmessage = function(t) {
+                        var e = r.eFYvHeWEw(t.data)[0],
                             i = e[0],
                             s = e[1];
                         "io-init" == i ? a.socketId = s[0] : n[i] ? n[i].apply(void 0, s) : console.error("Received unregistered event", i)
-                    }, this.MMzmSszG.onopen = function() {
+                    }, this.mGHoTaTsoUp.onopen = function() {
                         a.connected = !0, e();
                         for (let t of a.sendQueue) a.send(t[0], ...t[1])
-                    }, this.MMzmSszG.onclose = function() {
+                    }, this.mGHoTaTsoUp.onclose = function() {
                         a.connected = !1, o || e("Disconnected. Try connecting to another server.")
-                    }, this.MMzmSszG.onerror = function() {
-                        this.MMzmSszG.readyState != WebSocket.OPEN && (o = !0, console.error("Socket error", arguments), e("Socket error"))
+                    }, this.mGHoTaTsoUp.onerror = function() {
+                        this.mGHoTaTsoUp.readyState != WebSocket.OPEN && (o = !0, console.error("Socket error", arguments), e("Socket error"))
                     }
                 } catch (t) {
                     console.error("Socket connection error:", t), e(t)
@@ -65471,17 +65805,17 @@
             }
         },
         send: function(t, ...e) {
-            if (!this.MMzmSszG || this.MMzmSszG.readyState !== WebSocket.OPEN) return console.warn("Socket not open yet", t, e), void this.sendQueue.push([t, e]);
-            this.ahNum = r.AjDitf(this.ahNum, s);
-            var n = r.nzsDzFp([t, e], this.ahNum);
-            this.MMzmSszG.send(n)
+            if (!this.mGHoTaTsoUp || this.mGHoTaTsoUp.readyState !== WebSocket.OPEN) return console.warn("Socket not open yet", t, e), void this.sendQueue.push([t, e]);
+            this.ahNum = r.uSygczyo(this.ahNum, s);
+            var n = r.npsqufGT([t, e], this.ahNum);
+            this.mGHoTaTsoUp.send(n)
         },
         socketReady: function() {
-            return this.MMzmSszG && this.connected
+            return this.mGHoTaTsoUp && this.connected
         }
     }
 }, function(t) {
-    t.exports = 31307
+    t.exports = 45289
 }, function(t, e, n) {
     (function(e) {
         var i = n(39),
@@ -65789,7 +66123,7 @@
             }, this.decreaseWeapon = function(t) {
                 t.killList.pop(), (y = [...t.loadout]).length = 1;
                 var e = this.mode.weaponOrder.indexOf(y[0]);
-                0 > --e || (y[0] = this.mode.weaponOrder[e]), t.updateLoadout(this, 0, !0, ...y), m.broadcast("game" + this.sid, "inat", t.sid, y, 0, void 0, void 0, !1), 0 <= e && this.players.score(t, -1)
+                0 > --e || (y[0] = this.mode.weaponOrder[e]), t.updateLoadout(this, 0, !0, ...y), m.broadcast("game" + this.sid, "inat", t.sid, y, 0, void 0, void 0, !1), 0 <= e && (this.players.score(t, -1), t.setbacks++)
             }, this.updateObjPos = function(t, e, n, i) {
                 t.x = e, t.y = n, t.z = i, this.syncFlag(t)
             }, this.updateZone = function(t) {
@@ -65825,9 +66159,16 @@
                     t.checkPoint = y, m && m.send(t.id, "chp")
                 }
             }, this.checkTeleport = function(t, e) {
-                if (1 != e.node)
-                    for (var n = 0; n < this.map.manager.teleporters.length; ++n)
-                        if ((y = this.map.manager.teleporters[n]).channel == e.channel && 1 == y.node) return t.x = t.lastX = t.oldX = y.x, t.y = t.lastY = t.oldY = y.y, t.z = t.lastZ = t.oldZ = y.z, t.stepVal = 0, t.xVel = 0, t.yVel = 0, void(t.zVel = 0)
+                if (!(1 == e.node || 0 < e.telCooldown)) {
+                    for (var n = [], i = 0; i < this.map.manager.teleporters.length; ++i)(y = this.map.manager.teleporters[i]).channel == e.channel && 0 < y.node && e.uid != y.uid && n.push(y);
+                    if (n.length) {
+                        var r = n[0];
+                        r && (2 == r.node && (r.telCooldown = 2e3), t.x = t.oldX = r.x, t.y = t.oldY = r.y - r.height, t.z = t.oldZ = r.z)
+                    }
+                }
+            }, this.updateTeleporters = function(t) {
+                if (x.map.manager.teleporters.length)
+                    for (var e = 0; e < x.map.manager.teleporters.length; ++e)(y = x.map.manager.teleporters[e]).telCooldown -= t, 0 >= y.telCooldown && (y.telCooldown = 0)
             }, this.updateUI = function() {
                 killCount.style.display = this.mode.friendly ? "none" : "inline-block"
             }, this.instanceConfig = function() {}, this.voteMode = function(t, e) {
@@ -65942,7 +66283,7 @@
                         s && (m.send(this.nukePlayer.id, "6", ["Nuke", s], 0, this.nukePlayer.kills), m.send(this.nukePlayer.id, "4"), this.players.score(this.nukePlayer, s))
                     }
                 }
-                if (this.players.update(t * this.config.deltaMlt), m && this.mode.objective && this.map.manager.objectives.length && (this.objectiveTimer -= t, 0 >= this.objectiveTimer)) {
+                if (this.players.update(t * this.config.deltaMlt), this.updateTeleporters(t), m && this.mode.objective && this.map.manager.objectives.length && (this.objectiveTimer -= t, 0 >= this.objectiveTimer)) {
                     this.objectiveTimer = 1500;
                     for (a = 0; a < this.map.manager.objectives.length; ++a)
                         if (y = this.map.manager.objectives[a], a == this.activeObjective)
@@ -66399,7 +66740,7 @@
         hostGameMsg && (hostGameMsg.innerHTML = t), e && function(t) {
             var e = c.generateHref(t);
             window.history.replaceState({}, "Krunker", e), windows[1].lastLoadTime = 0, l = t
-        }(e), ge = null, ve = null
+        }(e), de = null, me = null
     }
     window.switchServer = h, window.checkedSwitchServer = function(t, e) {
         e.innerText = "...", c.fetchGameInfo(t).then(n => {
@@ -66409,7 +66750,7 @@
         })
     }, window.createPrivateRoom = function() {
         for (var t, e = [], n = document.getElementById("rawMapData"), r = 0; r < C.length; r++)(t = document.getElementById("gameMap" + r)) && t.checked && e.push(r);
-        if (0 != e.length || ge || "" != rawMapData.value) {
+        if (0 != e.length || de || "" != rawMapData.value) {
             var s = [];
             for (r = 0; r < R.length; r++) document.getElementById("gameMode" + r).checked && s.push(r);
             if (0 != s.length) {
@@ -66417,7 +66758,7 @@
                 for (r = 0; r < _.classes.length; r++) document.getElementById("gameClass" + r).checked && o.push(r);
                 if (0 != o.length) {
                     var c, l = {
-                        customMap: ge,
+                        customMap: de,
                         rawMapData: n ? n.value : null,
                         private: makePrivate.checked,
                         maps: e,
@@ -66466,7 +66807,7 @@
         V = 0,
         W = -1;
     window.idleTimer = 0;
-    var Y, q, K, X, Z = !0,
+    var Y, q, X, K, Z = !0,
         J = !0,
         Q = !0,
         tt = [],
@@ -66512,7 +66853,7 @@
     }, console.warn = function() {}, console.info = function() {};
     var dt = !1;
     window.toggleStrm = function(t, e = !1) {
-        dt = t, e || (t ? window.history.pushState(document.title, document.title, "/") : window.history.pushState(document.title, document.title, c.generateHref(l))), Ln(kn, An)
+        dt = t, e || (t ? window.history.pushState(document.title, document.title, "/") : window.history.pushState(document.title, document.title, c.generateHref(l))), kn(Tn, En)
     };
     var mt = !1;
     window.loading = !1;
@@ -66533,26 +66874,26 @@
         bt = t
     }, window.enterGame = function() {
         if (_.singlePlayer && !mt) {
-            tn("0:00");
+            $e("0:00");
             var t = _.getSpawnPoint(null, !0),
                 e = _.classes[parseInt(classIndex)];
-            fn([M.socketId, 1, t.x, t.y, t.z, "TEST", classIndex, e.health, e.health, null, 100, null, [null == $t[e.loadout[0]] ? -1 : $t[e.loadout[0]], null == $t[e.loadout[1]] ? -1 : $t[e.loadout[1]]], null, null, e.secondary ? parseInt(Qt) : null, !1, null, -((t.dir || 0) + 1) * Math.PI / 2]), mt = !0, Ln([1, "TEST", 0, 0, 0, 0]), b.toggleMenu(!1)
+            hn([M.socketId, 1, t.x, t.y, t.z, "TEST", classIndex, e.health, e.health, null, 100, null, [null == Zt[e.loadout[0]] ? -1 : Zt[e.loadout[0]], null == Zt[e.loadout[1]] ? -1 : Zt[e.loadout[1]]], null, null, e.secondary ? parseInt(Jt) : null, !1, null, -((t.dir || 0) + 1) * Math.PI / 2]), mt = !0, kn([1, "TEST", 0, 0, 0, 0]), b.toggleMenu(!1)
         } else if (M.connected && (!mt || window.spectating && !gt)) {
             bloodDisplay.style.display = "none", mt = !0, window.idleTimer = 0, b.toggleMenu(!1), instructions.innerHTML = a.get("generic.loading"), window.loading = !0;
             e = parseInt(classIndex);
             var n = _.classes[e].loadout,
-                i = [null == $t[n[0]] ? -1 : $t[n[0]], null == $t[n[1]] ? -1 : $t[n[1]]];
-            M.send("etrg", [e, parseInt(ln), i, parseInt(Zt), parseInt(Xt), parseInt(Qt), gt ? 1 : 0, bt ? 1 : 0, Kt])
+                i = [null == Zt[n[0]] ? -1 : Zt[n[0]], null == Zt[n[1]] ? -1 : Zt[n[1]]];
+            M.send("etrg", [e, parseInt(on), i, parseInt(Xt), parseInt(qt), parseInt(Jt), gt ? 1 : 0, bt ? 1 : 0, Wt, parseInt(Yt)])
         }
     }, window.addEventListener("resize", wt), wt(), window.toggleAd = function() {};
     var Mt = 0;
 
     function _t(t) {
-        E && (E.funds = t), jt()
+        E && (E.funds = t), zt()
     }
 
     function St(t, e) {
-        window.idleTimer = 0, t ? purchaseError() : (E && (E.funds = e), jt(), updateWindow(null, !0), b.toggleMenuHider(!0), purchaseLoad.style.display = "none")
+        window.idleTimer = 0, t ? purchaseError() : (E && (E.funds = e), zt(), updateWindow(null, !0), b.toggleMenuHider(!0), purchaseLoad.style.display = "none")
     }
     window.cancelPurchase = function() {
         window.idleTimer = 0, showWindow(14), instructions.style.display = "block", Mt = 0, context.toggleMenuHider(!0), purchaseLoad.style.display = "none"
@@ -66580,7 +66921,7 @@
                     paymentID: t.paymentID,
                     payerID: t.payerID
                 }).then(function(t) {
-                    t && null != t.funds && null != t.funds ? (E && (E.funds = t.funds), jt(), updateWindow(null, !0), b.toggleMenuHider(!0), purchaseLoad.style.display = "none") : purchaseError()
+                    t && null != t.funds && null != t.funds ? (E && (E.funds = t.funds), zt(), updateWindow(null, !0), b.toggleMenuHider(!0), purchaseLoad.style.display = "none") : purchaseError()
                 })
             },
             onError: function() {
@@ -66598,7 +66939,7 @@
         Pt = {};
 
     function Ct() {
-        mt = !1, window.idleTimer = 0, b.toggleMenu(!0), S.toggle(!1), Ge = {
+        mt = !1, window.idleTimer = 0, b.toggleMenu(!0), S.toggle(!1), Fe = {
             states: []
         }
     }
@@ -66652,36 +66993,12 @@
     }, window.updateSliderLabel = function(t, e) {
         var n = document.getElementById("customSet" + t);
         n && (n.innerHTML = e)
-    };
-    var Rt = null;
-
-    function It() {
-        g.resMltKV = 1, g.setResMlt(g.resMltV), g.fovPlsK = 0, g.updateCamFOV()
-    }
-    var Ot = [{
-        name: "Default"
-    }, {
-        name: "reduce Res",
-        action: function() {
-            g.updKillRes(-.05)
-        }
-    }, {
-        name: "reduce FOV",
-        action: function() {
-            g.updKillFov(-10)
-        }
-    }, {
-        name: "increase FOV",
-        action: function() {
-            g.updKillFov(10)
-        }
-    }];
-    window.setSetting = function(t, e) {
-        (Dt[t].min || Dt[t].max) && (e = Math.min(Dt[t].max, Math.max(Dt[t].min, e))), document.getElementById("slid_" + t) && (document.getElementById("slid_" + t).value = e), document.getElementById("slid_input_" + t) && (document.getElementById("slid_input_" + t).value = e), Dt[t].set(e), Dt[t].val = e, saveVal(`kro_setngss_${t}`, e)
+    }, window.setSetting = function(t, e) {
+        (Rt[t].min || Rt[t].max) && (e = Math.min(Rt[t].max, Math.max(Rt[t].min, e))), document.getElementById("slid_" + t) && (document.getElementById("slid_" + t).value = e), document.getElementById("slid_input_" + t) && (document.getElementById("slid_input_" + t).value = e), Rt[t].set(e), Rt[t].val = e, saveVal(`kro_setngss_${t}`, e)
     }, window.resetSettings = function() {
         confirm(a.get("settings.reset.confirm")) && (Object.keys(localStorage).filter(t => t.includes("kro_setngss_") || t.includes("cont_")).forEach(t => localStorage.removeItem(t)), location.reload())
     };
-    var Dt = {
+    var Rt = {
         changeControls: {
             name: "<div style='width:100%'><a href='javascript:;' onclick='showWindow(7);' class='menuLink'>" + a.get("settings.controls.change") + "</a> | <a onclick='resetSettings()' class='+'>" + a.get("settings.reset") + "</a></div>",
             html: function() {
@@ -66697,7 +67014,7 @@
             set val(t) {},
             html: function() {
                 var t = "<select onchange='setSetting(\"defaultRegion\", this.value)' class='inputGrey'>";
-                for (var e of oi) t += "<option value='" + e + "' " + (e == Dt.defaultRegion.val ? "selected" : "") + ">", t += i.regionNames[e], t += "</option>";
+                for (var e of si) t += "<option value='" + e + "' " + (e == Rt.defaultRegion.val ? "selected" : "") + ">", t += i.regionNames[e], t += "</option>";
                 return t += "</select>"
             },
             set: function(t) {
@@ -66711,7 +67028,7 @@
             min: .1,
             max: 2,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_resolution' min='0.1' max='2' value='${Dt.resolution.val}' oninput='setSetting("resolution", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_resolution' min='0.1' max='2' step='0.1'" value='${Dt.resolution.val}' class='sliderM' oninput='setSetting("resolution", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_resolution' min='0.1' max='2' value='${Rt.resolution.val}' oninput='setSetting("resolution", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_resolution' min='0.1' max='2' step='0.1'" value='${Rt.resolution.val}' class='sliderM' oninput='setSetting("resolution", this.value)'></div>`
             },
             set: function(t) {
                 g.setResMlt(t)
@@ -66721,7 +67038,7 @@
             name: a.get("settings.quality.part"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("particles", this.checked)'\n        ${Dt.particles.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("particles", this.checked)'\n        ${Rt.particles.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 y.active = t
@@ -66731,7 +67048,7 @@
             name: a.get("settings.quality.trails"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showTrails", this.checked)'\n        ${Dt.showTrails.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showTrails", this.checked)'\n        ${Rt.showTrails.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 y.showTrails = t
@@ -66741,7 +67058,7 @@
             name: a.get("settings.quality.mflash"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("muzzleFlash", this.checked)'\n        ${Dt.muzzleFlash.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("muzzleFlash", this.checked)'\n        ${Rt.muzzleFlash.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 y.showMuzzle = t
@@ -66751,7 +67068,7 @@
             name: "Sniper Flap",
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("sniperFlap", this.checked)'\n        ${Dt.sniperFlap.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("sniperFlap", this.checked)'\n        ${Rt.sniperFlap.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 g.sniperFlap = t
@@ -66762,7 +67079,7 @@
             pre: "<div class='setHed'>" + a.get("settings.interface.header") + "</div>",
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showUI", this.checked)'\n        ${Dt.showUI.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showUI", this.checked)'\n        ${Rt.showUI.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 b.hideGameUI = !t, chatUI.style.display = t ? "block" : "none"
@@ -66772,7 +67089,7 @@
             name: a.get("settings.interface.hp"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("dynamicHP", this.checked)'\n        ${Dt.dynamicHP.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("dynamicHP", this.checked)'\n        ${Rt.dynamicHP.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 m.dynamicHP = t
@@ -66782,7 +67099,7 @@
             name: a.get("settings.interface.chat"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showChat", this.checked)'\n        ${Dt.showChat.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showChat", this.checked)'\n        ${Rt.showChat.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 chatHolder.style.display = t ? "block" : "none"
@@ -66792,7 +67109,7 @@
             name: a.get("settings.interface.kills"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showKills", this.checked)'\n        ${Dt.showKills.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showKills", this.checked)'\n        ${Rt.showKills.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 Z = t
@@ -66802,7 +67119,7 @@
             name: a.get("settings.interface.messages"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showMessages", this.checked)'\n        ${Dt.showMessages.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showMessages", this.checked)'\n        ${Rt.showMessages.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 J = t
@@ -66812,7 +67129,7 @@
             name: a.get("settings.interface.unboxings"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showUnboxings", this.checked)'\n        ${Dt.showUnboxings.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showUnboxings", this.checked)'\n        ${Rt.showUnboxings.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 Q = t
@@ -66822,7 +67139,7 @@
             name: a.get("settings.interface.ping"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showPing", this.checked)'\n        ${Dt.showPing.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showPing", this.checked)'\n        ${Rt.showPing.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 pingDisplay.style.display = t ? "block" : "none"
@@ -66832,7 +67149,7 @@
             name: a.get("settings.interface.fps"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showFPS", this.checked)'\n        ${Dt.showFPS.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showFPS", this.checked)'\n        ${Rt.showFPS.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 fpsDisplay.style.display = menuFPSDisplay.style.display = t ? "block" : "none"
@@ -66842,7 +67159,7 @@
             name: a.get("settings.interface.deaths"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showDeaths", this.checked)'\n        ${Dt.showDeaths.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showDeaths", this.checked)'\n        ${Rt.showDeaths.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 deathCount.style.display = t ? "inline-block" : "none"
@@ -66853,17 +67170,17 @@
             pre: "<div class='setHed'>" + a.get("settings.crosshair.header") + "</div>",
             val: 1,
             html: function() {
-                return `<select class='inputGrey' onchange="setSetting('crosshairSho', this.value)">\n            <option value="0"${0==Dt.crosshairSho.val?" selected":""}>${a.get("generic.off")}</option>\n            <option value="1"${1==Dt.crosshairSho.val?" selected":""}>${a.get("generic.default")}</option>\n            <option value="2"${2==Dt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.2")}</option>\n            <option value="3"${3==Dt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.3")}</option>\n            <option value="4"${4==Dt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.4")}</option>\n            </select>`
+                return `<select class='inputGrey' onchange="setSetting('crosshairSho', this.value)">\n            <option value="0"${0==Rt.crosshairSho.val?" selected":""}>${a.get("generic.off")}</option>\n            <option value="1"${1==Rt.crosshairSho.val?" selected":""}>${a.get("generic.default")}</option>\n            <option value="2"${2==Rt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.2")}</option>\n            <option value="3"${3==Rt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.3")}</option>\n            <option value="4"${4==Rt.crosshairSho.val?" selected":""}>${a.get("settings.crosshair.type.4")}</option>\n            </select>`
             },
             set: function(t) {
                 m.crosshairType = t;
                 let e = ["crosshairStyle", "crosshairAlways", "crosshairLen", "crosshairThick"];
                 for (let n of e) {
-                    Dt[n].hide = "crosshairAlways" == n ? 2 > t : 4 == t || 2 > t;
+                    Rt[n].hide = "crosshairAlways" == n ? 2 > t : 4 == t || 2 > t;
                     let e = document.getElementById(n + "_div");
-                    e && (e.style.display = Dt[n].hide ? "none" : "block")
+                    e && (e.style.display = Rt[n].hide ? "none" : "block")
                 }
-                Dt.crosshairImage.hide = 4 != t;
+                Rt.crosshairImage.hide = 4 != t;
                 let n = document.getElementById("crosshairImage_div");
                 n && (n.style.display = 4 == t ? "block" : "none")
             }
@@ -66873,7 +67190,7 @@
             val: 0,
             hide: !0,
             html: function() {
-                return `<select class='inputGrey' onchange="setSetting('crosshairStyle', this.value)">\n            <option value="0"${0==Dt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.0")}</option>\n            <option value="1"${1==Dt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.1")}</option>\n            <option value="2"${2==Dt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.2")}</option>\n            <option value="3"${3==Dt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.3")}</option>\n            <option value="4"${4==Dt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.4")}</option>\n            </select>`
+                return `<select class='inputGrey' onchange="setSetting('crosshairStyle', this.value)">\n            <option value="0"${0==Rt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.0")}</option>\n            <option value="1"${1==Rt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.1")}</option>\n            <option value="2"${2==Rt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.2")}</option>\n            <option value="3"${3==Rt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.3")}</option>\n            <option value="4"${4==Rt.crosshairStyle.val?" selected":""}>${a.get("settings.crosshair.style.4")}</option>\n            </select>`
             },
             set: function(t) {
                 m.crosshairStyle = t
@@ -66884,7 +67201,7 @@
             val: "",
             hide: !0,
             html: function() {
-                return `<input type='url' placeholder='${a.get("settings.crosshair.image.paste")}' name='url' class='inputGrey'\n            value='${Dt.crosshairImage.val}' oninput='setSetting("crosshairImage", this.value)'/>`
+                return `<input type='url' placeholder='${a.get("settings.crosshair.image.paste")}' name='url' class='inputGrey'\n            value='${Rt.crosshairImage.val}' oninput='setSetting("crosshairImage", this.value)'/>`
             },
             set: function(t) {
                 t = d.isURL(t) && !/\.svg/.test(t) ? t : "", m.crosshairImage.src != t && t.length && (m.crosshairImage.src = t)
@@ -66895,7 +67212,7 @@
             val: !1,
             hide: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("crosshairAlways", this.checked)'\n            ${Dt.crosshairAlways.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("crosshairAlways", this.checked)'\n            ${Rt.crosshairAlways.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 m.crosshairAlways = t
@@ -66905,7 +67222,7 @@
             name: a.get("settings.crosshair.color"),
             val: "#ffffff",
             html: function() {
-                return `<input type='color' id='head' name='color' value='${Dt.crosshairColor.val}' oninput='setSetting("crosshairColor", this.value)' style='float:right;margin-top:5px'/>`
+                return `<input type='color' id='head' name='color' value='${Rt.crosshairColor.val}' oninput='setSetting("crosshairColor", this.value)' style='float:right;margin-top:5px'/>`
             },
             set: function(t) {
                 m.crosshairColor = t
@@ -66915,7 +67232,7 @@
             name: a.get("settings.crosshair.shadow"),
             val: "#000000",
             html: function() {
-                return `<input type='color' id='head' name='color' value='${Dt.crosshairShadow.val}' oninput='setSetting("crosshairShadow", this.value)' style='float:right;margin-top:5px'/>`
+                return `<input type='color' id='head' name='color' value='${Rt.crosshairShadow.val}' oninput='setSetting("crosshairShadow", this.value)' style='float:right;margin-top:5px'/>`
             },
             set: function(t) {
                 m.crosshairShadow = t
@@ -66928,7 +67245,7 @@
             max: 50,
             hide: !0,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_crosshairLen' min='2' max='50' value='${Dt.crosshairLen.val}' oninput='setSetting("crosshairLen", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' min='2' max='50' step='1' value='${Dt.crosshairLen.val}' class='sliderM' oninput="setSetting('crosshairLen', this.value)"></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_crosshairLen' min='2' max='50' value='${Rt.crosshairLen.val}' oninput='setSetting("crosshairLen", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' min='2' max='50' step='1' value='${Rt.crosshairLen.val}' class='sliderM' oninput="setSetting('crosshairLen', this.value)"></div>`
             },
             set: function(t) {
                 m.crosshairLen = t
@@ -66941,7 +67258,7 @@
             max: 20,
             hide: !0,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_crosshairThick' min='2' max='20' value='${Dt.crosshairThick.val}' oninput='setSetting("crosshairThick", this.value)' style='border-width:0px'/>\n          <div class='slidecontainer'>\n          <input type='range' min='2' max='20' step='1' value='${Dt.crosshairThick.val}' class='sliderM' oninput="setSetting('crosshairThick', this.value)"></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_crosshairThick' min='2' max='20' value='${Rt.crosshairThick.val}' oninput='setSetting("crosshairThick", this.value)' style='border-width:0px'/>\n          <div class='slidecontainer'>\n          <input type='range' min='2' max='20' step='1' value='${Rt.crosshairThick.val}' class='sliderM' oninput="setSetting('crosshairThick', this.value)"></div>`
             },
             set: function(t) {
                 m.crosshairThick = t
@@ -66954,7 +67271,7 @@
             min: .1,
             max: 15,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_sensitivity' min='0.1' max='15' value='${Dt.sensitivity.val}' oninput='setSetting("sensitivity", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_sensitivity' min='0.1' max='15' step='0.1' value='${Dt.sensitivity.val}' class='sliderM' oninput='setSetting("sensitivity", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_sensitivity' min='0.1' max='15' value='${Rt.sensitivity.val}' oninput='setSetting("sensitivity", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_sensitivity' min='0.1' max='15' step='0.1' value='${Rt.sensitivity.val}' class='sliderM' oninput='setSetting("sensitivity", this.value)'></div>`
             },
             set: function(t) {
                 S.sensMlt = t
@@ -66966,7 +67283,7 @@
             min: .1,
             max: 15,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_aimSensitivity' min='0.1' max='15' value='${Dt.aimSensitivity.val}' oninput='setSetting("aimSensitivity", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_aimSensitivity' min='0.1' max='15' step='0.1' value='${Dt.aimSensitivity.val}' class='sliderM' oninput='setSetting("aimSensitivity", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_aimSensitivity' min='0.1' max='15' value='${Rt.aimSensitivity.val}' oninput='setSetting("aimSensitivity", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_aimSensitivity' min='0.1' max='15' step='0.1' value='${Rt.aimSensitivity.val}' class='sliderM' oninput='setSetting("aimSensitivity", this.value)'></div>`
             },
             set: function(t) {
                 S.sensAimMlt = t
@@ -66978,7 +67295,7 @@
             min: 60,
             max: 120,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_fov' min='60' max='120' value='${Dt.fov.val}' oninput='setSetting("fov", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_fov' min='60' max='120' step='5' value='${Dt.fov.val}"' class='sliderM' oninput='setSetting("fov", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_fov' min='60' max='120' value='${Rt.fov.val}' oninput='setSetting("fov", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_fov' min='60' max='120' step='5' value='${Rt.fov.val}"' class='sliderM' oninput='setSetting("fov", this.value)'></div>`
             },
             set: function(t) {
                 g.setFov(t)
@@ -66990,20 +67307,10 @@
             min: 60,
             max: 120,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_fpsFOV' min='60' max='120' value='${Dt.fpsFOV.val}' oninput='setSetting("fpsFOV", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_fpsFOV' min='60' max='120' step='5' value='${Dt.fpsFOV.val}' class='sliderM' oninput='setSetting("fpsFOV", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_fpsFOV' min='60' max='120' value='${Rt.fpsFOV.val}' oninput='setSetting("fpsFOV", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_fpsFOV' min='60' max='120' step='5' value='${Rt.fpsFOV.val}' class='sliderM' oninput='setSetting("fpsFOV", this.value)'></div>`
             },
             set: function(t) {
                 g.setFPSFov(t)
-            }
-        },
-        onKillS: {
-            name: a.get("settings.gameplay.onkillS"),
-            val: 0,
-            html: function() {
-                return `<select class='inputGrey' onchange="setSetting('onKillS', this.value)">\n            <option value="0"${0==Dt.onKillS.val?" selected":""}>${a.get("settings.onKillS.style.0")}</option>\n            <option value="1"${1==Dt.onKillS.val?" selected":""}>${a.get("settings.onKillS.style.1")}</option>\n            <option value="2"${2==Dt.onKillS.val?" selected":""}>${a.get("settings.onKillS.style.2")}</option>\n            <option value="3"${3==Dt.onKillS.val?" selected":""}>${a.get("settings.onKillS.style.3")}</option>\n            </select>`
-            },
-            set: function(t) {
-                0 == t && It(), Rt = Ot[t]
             }
         },
         streamMode: {
@@ -67011,7 +67318,7 @@
             val: !1,
             dontInit: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("streamMode", this.checked)'\n        ${Dt.streamMode.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("streamMode", this.checked)'\n        ${Rt.streamMode.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 toggleStrm(t)
@@ -67021,7 +67328,7 @@
             name: a.get("settings.gameplay.challenge"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("challMode", this.checked)'\n        ${Dt.challMode.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("challMode", this.checked)'\n        ${Rt.challMode.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 toggleChal(t)
@@ -67031,7 +67338,7 @@
             name: a.get("settings.gameplay.invert"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("invertY", this.checked)'\n        ${Dt.invertY.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("invertY", this.checked)'\n        ${Rt.invertY.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 S.invertY = t
@@ -67044,7 +67351,7 @@
             min: 0,
             max: 1,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_sound' min='0' max='1' value='${Dt.sound.val}' oninput='setSetting("sound", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_sound' min='0' max='1' step='0.1' value='${Dt.sound.val}' class='sliderM' oninput='setSetting("sound", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_sound' min='0' max='1' value='${Rt.sound.val}' oninput='setSetting("sound", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_sound' min='0' max='1' step='0.1' value='${Rt.sound.val}' class='sliderM' oninput='setSetting("sound", this.value)'></div>`
             },
             set: function(t) {
                 v.setVolume(t)
@@ -67056,7 +67363,7 @@
             min: 0,
             max: 1,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_voiceVolume' min='0' max='1' value='${Dt.voiceVolume.val}' oninput='setSetting("voiceVolume", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_voiceVolume' min='0' max='1' step='0.1' value='${Dt.voiceVolume.val}' class='sliderM' oninput='setSetting("voiceVolume", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_voiceVolume' min='0' max='1' value='${Rt.voiceVolume.val}' oninput='setSetting("voiceVolume", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_voiceVolume' min='0' max='1' step='0.1' value='${Rt.voiceVolume.val}' class='sliderM' oninput='setSetting("voiceVolume", this.value)'></div>`
             },
             set: function(t) {
                 Lt = t
@@ -67067,7 +67374,7 @@
             pre: "<div class='setHed'>" + a.get("settings.editing.header") + "</div>",
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("showWeapon", this.checked)'\n        ${Dt.showWeapon.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("showWeapon", this.checked)'\n        ${Rt.showWeapon.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 _.hideWeapon = !t, T && T.weaponMeshes[T.weaponIndex] && (T.weaponMeshes[T.weaponIndex].visible = t)
@@ -67079,7 +67386,7 @@
             min: 0,
             max: 2,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_weaponBob' min='0' max='2' value='${Dt.weaponBob.val}' oninput='setSetting("weaponBob", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_weaponBob' min='0' max='2' step='0.1' value='${Dt.weaponBob.val}' class='sliderM' oninput='setSetting("weaponBob", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_weaponBob' min='0' max='2' value='${Rt.weaponBob.val}' oninput='setSetting("weaponBob", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_weaponBob' min='0' max='2' step='0.1' value='${Rt.weaponBob.val}' class='sliderM' oninput='setSetting("weaponBob", this.value)'></div>`
             },
             set: function(t) {
                 g.weaponLean = t
@@ -67091,7 +67398,7 @@
             min: 0,
             max: 500,
             html: function() {
-                return `<input type='number' class='sliderVal' id='slid_input_depthMap' min='0' max='500' value='${Dt.depthMap.val}' oninput='setSetting("depthMap", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_depthMap' min='0' max='500' step='5' value='${Dt.depthMap.val}' class='sliderM' oninput='setSetting("depthMap", this.value)'></div>`
+                return `<input type='number' class='sliderVal' id='slid_input_depthMap' min='0' max='500' value='${Rt.depthMap.val}' oninput='setSetting("depthMap", this.value)' style='border-width:0px'/>\n            <div class='slidecontainer'>\n            <input type='range' id='slid_depthMap' min='0' max='500' step='5' value='${Rt.depthMap.val}' class='sliderM' oninput='setSetting("depthMap", this.value)'></div>`
             },
             set: function(t) {
                 g.toggleDepthMap(t)
@@ -67101,7 +67408,7 @@
             name: a.get("settings.editing.green"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("greenScreen", this.checked)'\n        ${Dt.greenScreen.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("greenScreen", this.checked)'\n        ${Rt.greenScreen.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 g.toggleGreenscreen(t)
@@ -67112,7 +67419,7 @@
             pre: "<div class='setHed'>" + a.get("settings.shaders.header") + "</div>",
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("ambientShading", this.checked)'\n        ${Dt.ambientShading.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("ambientShading", this.checked)'\n        ${Rt.ambientShading.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 g.toggleMeshGroup("ambient_0", t), g.toggleMeshGroup("ambient_1", t)
@@ -67123,7 +67430,7 @@
             pre: "<div class='setHed'>" + a.get("settings.mods.header") + "</div>",
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("canLoadMods", this.checked)'\n        ${Dt.canLoadMods.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("canLoadMods", this.checked)'\n        ${Rt.canLoadMods.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 F = t
@@ -67133,7 +67440,7 @@
             name: a.get("settings.mods.auto"),
             val: !1,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("autoLoadLast", this.checked)'\n        ${Dt.autoLoadLast.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("autoLoadLast", this.checked)'\n        ${Rt.autoLoadLast.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function() {}
         },
@@ -67141,7 +67448,7 @@
             name: a.get("settings.mods.borders"),
             val: !0,
             html: function() {
-                return `<label class='switch'><input type='checkbox' onclick='setSetting("scopeBorders", this.checked)'\n        ${Dt.scopeBorders.val?"checked":""}><span class='slider'></span></label>`
+                return `<label class='switch'><input type='checkbox' onclick='setSetting("scopeBorders", this.checked)'\n        ${Rt.scopeBorders.val?"checked":""}><span class='slider'></span></label>`
             },
             set: function(t) {
                 Array.from(document.querySelectorAll(".black")).forEach(e => e.style.display = t ? "block" : "none")
@@ -67151,7 +67458,7 @@
             name: a.get("settings.mods.scope"),
             val: "",
             html: function() {
-                return `<input type='url' placeholder='${a.get("settings.mods.scope.paste")}' name='url' class='inputGrey'\n            value='${Dt.customScope.val}' oninput='setSetting("customScope", this.value)'/>`
+                return `<input type='url' placeholder='${a.get("settings.mods.scope.paste")}' name='url' class='inputGrey'\n            value='${Rt.customScope.val}' oninput='setSetting("customScope", this.value)'/>`
             },
             set: function(t) {
                 t = d.isURL(t) && !/\.svg/.test(t) ? t : "", recticleImg.src = 1 < t.length ? t : location.origin + "/textures/recticle.png"
@@ -67161,7 +67468,7 @@
             name: a.get("settings.mods.dot"),
             val: "",
             html: function() {
-                return `<input type='url' id='customADSDot' placeholder='${a.get("settings.mods.dot.paste")}' name='url' class='inputGrey'\n            value='${Dt.customADSDot.val}' oninput='setSetting("customADSDot", this.value)'/>`
+                return `<input type='url' id='customADSDot' placeholder='${a.get("settings.mods.dot.paste")}' name='url' class='inputGrey'\n            value='${Rt.customADSDot.val}' oninput='setSetting("customADSDot", this.value)'/>`
             },
             set: function(t) {
                 (t = d.isURL(t) && !/\.svg/.test(t) ? t : "").length && (et = t)
@@ -67171,7 +67478,7 @@
             name: a.get("settings.mods.endmessage"),
             val: "",
             html: function() {
-                return `<input type='text' placeholder='${a.get("settings.mods.endmessage")}' name='text' class='inputGrey'\n            value='${Dt.endMessage.val}' oninput='setSetting("endMessage", this.value)'/>`
+                return `<input type='text' placeholder='${a.get("settings.mods.endmessage")}' name='text' class='inputGrey'\n            value='${Rt.endMessage.val}' oninput='setSetting("endMessage", this.value)'/>`
             },
             set: function() {}
         },
@@ -67179,38 +67486,38 @@
             name: a.get("settings.mods.profile"),
             val: "",
             html: function() {
-                return `<input type='url' id='customProfile' placeholder='${a.get("settings.mods.profile.paste")}' name='url' class='inputGrey'\n            value='${Dt.customProfile.val}' oninput='setSetting("customProfile", this.value)'/>`
+                return `<input type='url' id='customProfile' placeholder='${a.get("settings.mods.profile.paste")}' name='url' class='inputGrey'\n            value='${Rt.customProfile.val}' oninput='setSetting("customProfile", this.value)'/>`
             },
             set: function(t) {
                 t = d.isURL(t) && !/\.svg/.test(t) ? t : "", nt = menuMiniProfilePic.src = hudClassImg.src = t
             }
         }
     };
-    for (var zt in Dt)
-        if (Dt[zt].set && !Dt[zt].dontInit) {
-            var Bt = getSavedVal(`kro_setngss_${zt}`);
-            Dt[zt].val = null === Bt ? Dt[zt].val : Bt, "false" == Dt[zt].val && (Dt[zt].val = !1), (Dt[zt].min || Dt[zt].max) && (Dt[zt].val = Math.min(Dt[zt].max, Math.max(Dt[zt].min, Dt[zt].val))), Dt[zt].set(Dt[zt].val, !0)
+    for (var It in Rt)
+        if (Rt[It].set && !Rt[It].dontInit) {
+            var Ot = getSavedVal(`kro_setngss_${It}`);
+            Rt[It].val = null === Ot ? Rt[It].val : Ot, "false" == Rt[It].val && (Rt[It].val = !1), (Rt[It].min || Rt[It].max) && (Rt[It].val = Math.min(Rt[It].max, Math.max(Rt[It].min, Rt[It].val))), Rt[It].set(Rt[It].val, !0)
         }
-    function Nt(t) {
-        E && E.setData(t), updateWindow(5), jt()
+    function Dt(t) {
+        E && E.setData(t), updateWindow(5), zt()
     }
 
-    function jt() {
+    function zt() {
         if (E) {
-            signedOutHeaderBar.style.display = "none", signedInHeaderBar.style.display = null, E.level >= i.rewardMinLvl ? (claimHolder.style.display = "block", merchHolder.style.top = "205px", Yt()) : merchHolder.style.top = "110px", menuAccountUsername.innerText = E.name, menuKRCount.innerText = E.funds, menuLevelText.innerText = "LVL " + E.level, menuLevelBar.style.width = E.levelProg + "%";
+            signedOutHeaderBar.style.display = "none", signedInHeaderBar.style.display = null, E.level >= i.rewardMinLvl ? (claimHolder.style.display = "block", merchHolder.style.top = "205px", Gt()) : merchHolder.style.top = "110px", menuAccountUsername.innerText = E.name, menuKRCount.innerText = E.funds, menuLevelText.innerText = "LVL " + E.level, menuLevelBar.style.width = E.levelProg + "%";
             var t = d.levelIconId(E.level);
             menuLevelIcon.style.backgroundImage = "url('/img/levels/" + t + ".png')"
         } else signedOutHeaderBar.style.display = null, signedInHeaderBar.style.display = "none", claimHolder.style.display = "none", merchHolder.style.top = "110px"
     }
 
-    function Ut(t) {
+    function Bt(t) {
         try {
             accResp.innerHTML = t || "", accResp.style.display = t ? "block" : "none"
         } catch (t) {}
     }
 
-    function Ft(t, e) {
-        if (0 <= t && Ut(a.get("generic.wait")), 0 != t || it) M.send("a", t, e);
+    function Nt(t, e) {
+        if (0 <= t && Bt(a.get("generic.wait")), 0 != t || it) M.send("a", t, e);
         else {
             try {
                 grecaptcha.reset()
@@ -67224,8 +67531,8 @@
         }
     }
 
-    function Ht(t, e, n, r, s) {
-        t ? Ut(t) : (E = new I(e, n, null, i), saveVal("krunker_id", e), saveVal("krunker_username", n), Nt(r), s && (saveVal("krunker_token", s), loginToken = s), updateWindow(null, !0))
+    function jt(t, e, n, r, s) {
+        t ? Bt(t) : (E = new I(e, n, null, i), saveVal("krunker_id", e), saveVal("krunker_username", n), Dt(r), s && (saveVal("krunker_token", s), loginToken = s), updateWindow(null, !0))
     }
     new MutationObserver(t => {
         1 < et.length && et != t[0].target.src && (t[0].target.src = et)
@@ -67233,90 +67540,93 @@
         attributes: !0,
         attributeFilter: ["src"]
     }), window.changeCont = function(t, e) {
-        e || showWindow(7, !0), 3 >= t ? S.inputChanger = t : 4 == t ? S.inputChanger = "jumpKey" : 5 == t ? S.inputChanger = "crouchKey" : 6 == t ? S.inputChanger = "swapKeyD" : 7 == t ? S.inputChanger = "swapKeyU" : 8 == t ? S.inputChanger = "reloadKey" : 9 == t ? S.inputChanger = "sprayKey" : 10 == t ? S.inputChanger = "aimKey" : 11 == t ? S.inputChanger = "chatKey" : 12 == t ? S.inputChanger = "voiceKey" : 13 == t ? S.inputChanger = "recordKey" : 14 == t ? S.inputChanger = "inspKey" : 15 == t ? S.inputChanger = "listKey" : 16 == t ? S.inputChanger = "interactKey" : 17 == t && (S.inputChanger = "dropKey"), document.getElementById("cont" + t).innerHTML = a.get("settings.controls.press")
+        e || showWindow(7, !0), 3 >= t ? S.inputChanger = t : 4 == t ? S.inputChanger = "jumpKey" : 5 == t ? S.inputChanger = "crouchKey" : 6 == t ? S.inputChanger = "meleeKey" : 7 == t ? S.inputChanger = "swapKey" : 8 == t ? S.inputChanger = "reloadKey" : 9 == t ? S.inputChanger = "sprayKey" : 10 == t ? S.inputChanger = "aimKey" : 11 == t ? S.inputChanger = "chatKey" : 12 == t ? S.inputChanger = "voiceKey" : 13 == t ? S.inputChanger = "recordKey" : 14 == t ? S.inputChanger = "inspKey" : 15 == t ? S.inputChanger = "listKey" : 16 == t ? S.inputChanger = "interactKey" : 17 == t && (S.inputChanger = "dropKey"), document.getElementById("cont" + t).innerHTML = a.get("settings.controls.press")
     }, window.registerAcc = function() {
-        Ft(0, [accName.value, accPass.value])
+        Nt(0, [accName.value, accPass.value])
     }, window.loginAcc = function() {
-        Ft(1, [accName.value, accPass.value, null])
+        Nt(1, [accName.value, accPass.value, null])
     }, window.logoutAcc = function() {
-        Ft(-1), Ut(), s("krunker_id"), s("krunker_username"), s("krunker_token"), s("skins"), s("hatIndex"), s("backIndex"), Zt = -1, Xt = -1, $t = {}, selectSecondary(2), windows[12].clanData = null, loginToken = null, E = null, Nt(), showWindow(5), oe()
+        Nt(-1), Bt(), s("krunker_id"), s("krunker_username"), s("krunker_token"), s("skins"), s("hatIndex"), s("backIndex"), s("meleeIndex"), Xt = -1, qt = -1, Yt = -1, Zt = {}, selectSecondary(2), windows[12].clanData = null, loginToken = null, E = null, Dt(), showWindow(5), se()
     };
-    var Gt = !1;
+    var Ut = !1;
     window.newTok = function(t) {
         t && (saveVal("krunker_token", t), loginToken = t)
     }, window.logoutSessions = function(t) {
-        t && (t.style.display = "none"), Gt = !0, M.send("las")
+        t && (t.style.display = "none"), Ut = !0, M.send("las")
     };
-    var Vt, Wt = 0;
+    var Ft, Ht = 0;
 
-    function Yt() {
+    function Gt() {
         if ("block" == claimHolder.style.display) {
-            Wt = i.rewardTime - ((Y || Date.now()) - E.lastReward);
-            var t = d.getTimeH(Math.max(0, Wt));
-            Vt != t && (Vt = t, claimTimer.innerHTML = "00:00:00" == t ? "" : t, merchHolder.style.top = "00:00:00" == t ? "205px" : "237px");
-            var e = 0 >= Wt ? "./img/claim_0.png" : "./img/claim_1.png";
+            Ht = i.rewardTime - ((Y || Date.now()) - E.lastReward);
+            var t = d.getTimeH(Math.max(0, Ht));
+            Ft != t && (Ft = t, claimTimer.innerHTML = "00:00:00" == t ? "" : t, merchHolder.style.top = "00:00:00" == t ? "205px" : "237px");
+            var e = 0 >= Ht ? "./img/claim_0.png" : "./img/claim_1.png";
             claimImg.getAttribute("src") != e && (claimImg.src = e)
         }
     }
 
-    function qt(t, e) {
-        _t(e), E && (E.lastReward = t), Yt()
+    function Vt(t, e) {
+        _t(e), E && (E.lastReward = t), Gt()
     }
     window.claimReward = function() {
-        0 < Wt || function() {
-            if (pi) return void console.warn("Attempting to show pre ad when already showing");
-            pi = !0;
+        0 < Ht || function() {
+            if (ci) return void console.warn("Attempting to show pre ad when already showing");
+            ci = !0;
             var t = document.createElement("script");
             t.src = "//cdn.playwire.com/bolt/js/zeus/embed.js", t.type = "text/javascript", t.setAttribute("charset", "utf-8"), t.setAttribute("data-config", "//config.playwire.com/1020124/v2/pre_content.json"), t.setAttribute("data-width", "640px"), t.setAttribute("data-height", "360px"), t.setAttribute("data-id", "pre-content-player"), t.setAttribute("data-hidden-container", "my-content"), t.setAttribute("data-onready", "window.boltEventHandlers");
             var e = document.getElementById("pre-content-container");
-            e.style.display = "block", e.appendChild(t), ci = setTimeout(function() {
+            e.style.display = "block", e.appendChild(t), ai = setTimeout(function() {
                 let t = "none" != document.getElementById("my-content").style.display;
-                t ? (console.log("Ad blocked"), hi(!1)) : console.log("Ad not blocked")
-            }, 3e3), li = setTimeout(function() {
-                console.log("Ad failed to load"), hi(!1)
+                t ? (console.log("Ad blocked"), li(!1)) : console.log("Ad not blocked")
+            }, 3e3), oi = setTimeout(function() {
+                console.log("Ad failed to load"), li(!1)
             }, 6e4)
         }()
     }, window.setClassIndex = function(t) {
         classIndex = t, menuMiniProfilePic.src = nt.length ? nt : "/textures/classes/icon_" + classIndex + ".png"
     };
-    var Kt = 1,
-        Xt = getSavedVal("backIndex") || -1,
-        Zt = getSavedVal("hatIndex") || -1,
-        Jt = getSavedVal("skins"),
-        $t = Jt ? JSON.parse(Jt) : {};
+    var Wt = 1,
+        Yt = getSavedVal("meleeIndex") || -1,
+        qt = getSavedVal("backIndex") || -1,
+        Xt = getSavedVal("hatIndex") || -1,
+        Kt = getSavedVal("skins"),
+        Zt = Kt ? JSON.parse(Kt) : {};
     setClassIndex(getSavedVal("classindex") || 0);
-    var Qt = getSavedVal("secondaryInd") || 2,
-        te = 0;
+    var Jt = getSavedVal("secondaryInd") || 2,
+        $t = 0;
     window.selectHat = function(t) {
-        saveVal("hatIndex", t), Zt = t, oe(), showWindow(3)
+        saveVal("hatIndex", t), Xt = t, se(), showWindow(3)
     }, window.selectBack = function(t) {
-        saveVal("backIndex", t), Xt = t, oe(), showWindow(3)
+        saveVal("backIndex", t), qt = t, se(), showWindow(3)
+    }, window.selectMelee = function(t) {
+        saveVal("meleeIndex", t), Yt = t, se(), showWindow(3)
     }, window.selectSecondary = function(t) {
-        saveVal("secondaryInd", t), Qt = t, oe(), showWindow(3)
+        saveVal("secondaryInd", t), Jt = t, se(), showWindow(3)
     }, window.selectClass = function(t) {
-        saveVal("classindex", t), _.classes[t].txts ? Jn(_.classes[t].txts[d.randInt(0, _.classes[t].txts.length - 1)]) : !d.randInt(0, 2) && Jn(["Let's Go!", "Alright!", "I'm Ready!"][d.randInt(0, 2)]), setClassIndex(t), oe(), showWindow(3)
+        saveVal("classindex", t), _.classes[t].txts ? Kn(_.classes[t].txts[d.randInt(0, _.classes[t].txts.length - 1)]) : !d.randInt(0, 2) && Kn(["Let's Go!", "Alright!", "I'm Ready!"][d.randInt(0, 2)]), setClassIndex(t), se(), showWindow(3)
     }, window.skinSelector = function(t) {
-        te = t, oe(), showWindow(15)
+        $t = t, se(), showWindow(15)
     }, window.selectSkin = function(t, e) {
-        k = _.store.skins[t], $t[e] = k ? t : void 0, saveVal("skins", JSON.stringify($t)), oe(), showWindow(3)
+        k = _.store.skins[t], Zt[e] = k ? t : void 0, saveVal("skins", JSON.stringify(Zt)), se(), showWindow(3)
     };
-    var ee, ne, ie = 660,
-        re = 350,
-        se = new f.PerspectiveCamera(15, 1, .1, 100),
-        ae = new f.WebGLRenderer({
+    var Qt, te, ee = 660,
+        ne = 350,
+        ie = new f.PerspectiveCamera(15, 1, .1, 100),
+        re = new f.WebGLRenderer({
             canvas: classPreviewCanvas,
             precision: "mediump",
             antialias: !1,
             alpha: !0
         });
 
-    function oe() {
+    function se() {
         function t(t, e = !0) {
             n && (n += " - ");
             var i = "inherit",
                 r = _.weapons[t].name;
-            if (null != $t[t]) {
-                var s = _.store.skins[$t[t]];
+            if (null != Zt[t]) {
+                var s = _.store.skins[Zt[t]];
                 s && (i = _.store.rarities[s.rarity].color, r = s.name)
             }
             n += "<span style='color:" + (e ? i : "inherit") + "'>" + r + "</span>"
@@ -67325,21 +67635,21 @@
         menuClassName.innerText = e.name;
         var n = "";
         for (var r of e.loadout) t(r);
-        menuClassSubtext.innerHTML = n, (ee = new f.Scene).add(new f.AmbientLight(9937064));
+        menuClassSubtext.innerHTML = n, (Qt = new f.Scene).add(new f.AmbientLight(9937064));
         var s = new f.DirectionalLight(15923452, .5);
-        s.position.set(10, 17, -10), ee.add(s);
-        var a = [null == $t[e.loadout[0]] ? -1 : $t[e.loadout[0]], null == $t[e.loadout[1]] ? -1 : $t[e.loadout[1]]];
-        (ne = new O(-1, this, d, i, _)).sid = -1, ne.init(0, 0, 0, "preview", !1), ne.skins = a, ne.hatIndex = Zt, ne.backIndex = Xt, ne.secIndex = Qt, ne.setClass(_, classIndex, Qt, !0), _.players.swapWeapon(ne, 0, !0), ee.add(_.players.generateMeshes(ne, !1)), ne.swapTime = 0, ne.weaponMeshes[0].visible = !0, se.lookAt(new f.Vector3(0, .8 * i.playerHeight, 0))
+        s.position.set(10, 17, -10), Qt.add(s);
+        var a = [null == Zt[e.loadout[0]] ? -1 : Zt[e.loadout[0]], null == Zt[e.loadout[1]] ? -1 : Zt[e.loadout[1]]];
+        (te = new O(-1, this, d, i, _)).sid = -1, te.init(0, 0, 0, "preview", !1), te.skins = a, te.hatIndex = Xt, te.backIndex = qt, te.meleeIndex = Yt, te.secIndex = Jt, te.setClass(_, classIndex, Jt, !0), _.players.swapWeapon(te, 0, !0), Qt.add(_.players.generateMeshes(te, !1)), te.swapTime = 0, te.weaponMeshes[0].visible = !0, ie.lookAt(new f.Vector3(0, .8 * i.playerHeight, 0))
     }
-    se.position.x = -10, se.position.y = 17, se.position.z = -29, oe();
-    var ce = !("true" != getSavedVal("krk_hideFull"));
+    ie.position.x = -10, ie.position.y = 17, ie.position.z = -29, se();
+    var ae = !("true" != getSavedVal("krk_hideFull"));
 
-    function le(t, e) {
+    function oe(t, e) {
         for (var n = "", i = "map" == e ? "selectHostMap" : "loadUserMod", r = 0; r < t.length; ++r) n += "<div class='mapListItem'><img class='mapListThumb' src='" + (t[r][e + "_image"] ? t[r][e + "_image"] : "./img/noimg.png") + "' onclick='" + i + "(&quot;" + t[r][e + "_name"] + "&quot;,&quot;" + t[r].mod_url + "&quot;,&quot;" + t[r].mod_id + "&quot;)'/><div style='margin-top:-3px'><a href='javascript:;' onclick='" + i + "(&quot;" + t[r][e + "_name"] + "&quot;,&quot;" + t[r].mod_url + "&quot;,&quot;" + t[r].mod_id + "&quot;)'/>" + t[r][e + "_name"] + "</a></div><div style='display: flex'><span style='color:rgba(0,0,0,0.2);font-size:15px'> by <a target='_blank' class='grey' href='/social.html?p=profile&q=" + t[r].creatorname + "'>" + t[r].creatorname + "</a></span><div style='font-size:15px;text-align:right;flex-grow:1'>" + t[r][e + "_votes"] + "</div></div></div>";
         return n
     }
 
-    function pe(t, e) {
+    function ce(t, e) {
         var n = "<div id='skinList'><div class='skinCard'>" + a.get("generic.none") + "<div class='itemOwn'>" + a.get("generic.default") + "</div><img class='skinImgC' src='." + d.versionifyUrl("/textures/previews/cosmetics/" + e + "_default.png") + "'><div class='selctBtn' onmouseenter='playTick()' onclick='" + t + "(-1)'>" + a.get("generic.select") + "</div></div>";
         if (E || _.singlePlayer)
             for (var i = (_.singlePlayer ? Object.keys(_.store.skins).map(t => t = {
@@ -67347,18 +67657,18 @@
                     cnt: 1
                 }) : E.skins).slice().sort(function(t, e) {
                     return (null != e.ind && _.store.skins[e.ind] ? _.store.skins[e.ind].rarity : 0) - (null != t.ind && _.store.skins[t.ind] ? _.store.skins[t.ind].rarity : 0)
-                }), r = 0; r < i.length; ++r)(k = _.store.skins[i[r].ind]) && k.type == e && (n += "<div class='skinCard' style='color:" + _.store.rarities[k.rarity].color + "'><div class='itemCnt' data-badge='x" + i[r].cnt + "'></div>" + k.name + "<div class='itemOwn'>by " + (k.creator || "Krunker.io") + "</div><img class='skinImg" + (k.type ? "C" : "") + "' src='." + d.versionifyUrl("/textures/previews/" + (k.type ? "cosmetics/" + k.type + "_" + k.id + (k.tex ? "_" + k.tex : "") : "weapons/weapon_" + k.weapon + "_" + (null == k.pat ? k.id : "c" + k.pat)) + ".png") + "'/><div class='selctBtn' onmouseenter='playTick()'onclick='" + t + "(" + i[r].ind + ")'>" + a.get("generic.select") + "</div></div>");
+                }), r = 0; r < i.length; ++r)(k = _.store.skins[i[r].ind]) && k.type == e && (n += "<div class='skinCard' style='color:" + _.store.rarities[k.rarity].color + "'><div class='itemCnt' data-badge='x" + i[r].cnt + "'></div>" + k.name + "<div class='itemOwn'>by " + (k.creator || "Krunker.io") + "</div><img class='skinImg" + (k.type ? "C" : "") + "' src='." + d.versionifyUrl("/textures/previews/" + (k.type && 3 > k.type ? "cosmetics/" + k.type + "_" + k.id + (k.tex ? "_" + k.tex : "") : "weapons/weapon_" + (k.weapon || 0) + "_" + (null == k.pat ? k.id : "c" + k.pat)) + ".png") + "'/><div class='selctBtn' onmouseenter='playTick()'onclick='" + t + "(" + i[r].ind + ")'>" + a.get("generic.select") + "</div></div>");
         return n += "</div>"
     }
     window.toggleHF = function(t) {
-        ce = t, saveVal("krk_hideFull", t)
-    }, toggleHF(ce), setInterval(() => {
+        ae = t, saveVal("krk_hideFull", t)
+    }, toggleHF(ae), setInterval(() => {
         window.kiH(M)
     }, 12e3), window.windows = [{
         header: a.get("windows.settings.header"),
         gen: function() {
             var t = "";
-            for (var e in Dt) Dt[e].pre && (t += Dt[e].pre), t += "<div class='settName' id='" + e + "_div' style='display:" + (Dt[e].hide ? "none" : "block") + "'>" + Dt[e].name + " " + Dt[e].html() + "</div>";
+            for (var e in Rt) Rt[e].pre && (t += Rt[e].pre), t += "<div class='settName' id='" + e + "_div' style='display:" + (Rt[e].hide ? "none" : "block") + "'>" + Rt[e].name + " " + Rt[e].html() + "</div>";
             return t
         }
     }, {
@@ -67415,7 +67725,7 @@
             for (var h of p = p.sort((t, e) => (e.order || -1) - (t.order || -1))) h.games.sort((t, e) => e.clients - t.clients);
             E && E.level;
             for (var u = 0; u < p.length; u++) {
-                (h = p[u]).games = h.games.filter(t => !ce || t.clients != t.maxClients);
+                (h = p[u]).games = h.games.filter(t => !ae || t.clients != t.maxClients);
                 var f = h.name + " - " + h.players + " online",
                     d = this.expandedRegion == u;
                 if (e += "<div class='menuSelectorHeader' onclick='setExpandedRegion(" + (d ? -1 : u) + ")' style='cursor: pointer;'>" + (d ? "&#x25BC;" : "&#x25B6;") + " " + f + "</div>", d) {
@@ -67440,7 +67750,7 @@
                 t.expandedRegion = e, t.lastLoadTime = Date.now(), showWindow(2, !0)
             };
             var e = "<div style='font-size:20px'>";
-            return e += "<a class='menuLink' onclick='openHostWindow()'>" + a.get("windows.servers.host") + "</a><div style='float:right;display:inline-block'><input id='serverSearch'" + (this.serverSearch ? "value='" + this.serverSearch + "'" : "") + " type='text' placeholder='" + a.get("generic.search") + '\' oninput=\'windows[1].searchList()\'></input></div></div><div id="serverFilters"><div id="hideFull" style="float:right;align-items:center;display:flex"><span class="grey">' + a.get("windows.servers.hide") + '</span><label class="switchsml"><input type="checkbox" onclick="toggleHF(this.checked);windows[1].searchList()"' + (ce ? " checked" : "") + "><span class=\"sliderSml\"></span></label></div></div><div style='height:10px'></div>", e += "<div style='font-size:20px'>", e += "<div id='serverHolder'>" + this.getServers() + "</div>", e += "<div style='height:10px'></div><b style='color:rgba(0,0,0,0.6)'>" + a.get("windows.servers.online", this.totalPlayerCount) + "</b>", e += "</div>"
+            return e += "<a class='menuLink' onclick='openHostWindow()'>" + a.get("windows.servers.host") + "</a><div style='float:right;display:inline-block'><input id='serverSearch'" + (this.serverSearch ? "value='" + this.serverSearch + "'" : "") + " type='text' placeholder='" + a.get("generic.search") + '\' oninput=\'windows[1].searchList()\'></input></div></div><div id="serverFilters"><div id="hideFull" style="float:right;align-items:center;display:flex"><span class="grey">' + a.get("windows.servers.hide") + '</span><label class="switchsml"><input type="checkbox" onclick="toggleHF(this.checked);windows[1].searchList()"' + (ae ? " checked" : "") + "><span class=\"sliderSml\"></span></label></div></div><div style='height:10px'></div>", e += "<div style='font-size:20px'>", e += "<div id='serverHolder'>" + this.getServers() + "</div>", e += "<div style='height:10px'></div><b style='color:rgba(0,0,0,0.6)'>" + a.get("windows.servers.online", this.totalPlayerCount) + "</b>", e += "</div>"
         },
         searchMatches(t) {
             return !!t.data && 0 <= (t.data.i || "").toLowerCase().indexOf((this.serverSearch || "").toLowerCase())
@@ -67452,11 +67762,12 @@
             0 > _.config.classes.indexOf(parseInt(classIndex)) && (classIndex = _.config.classes[0], t = _.classes[classIndex]);
             var e = _.weapons[t.loadout[0]].name,
                 n = "#2196F3",
-                i = t.secondary ? _.weapons[Qt].name : a.get("generic.none"),
+                i = t.secondary ? _.weapons[Jt].name : a.get("generic.none"),
                 r = t.secondary ? "#2196F3" : "rgba(0,0,0,0.3)",
                 s = "rgba(0,0,0,0.3)",
-                o = s;
-            return E && (null != $t[t.loadout[0]] && ((e = _.store.skins[$t[t.loadout[0]]]) && (n = _.store.rarities[e.rarity].color, e = e.name)), t.loadout[1] && null != $t[t.loadout[1]] && ((i = _.store.skins[$t[t.loadout[1]]]) && (r = _.store.rarities[i.rarity].color, i = i.name)), 0 <= Zt && _.store.skins[Zt] && (s = _.store.rarities[_.store.skins[Zt].rarity].color), 0 <= Xt && _.store.skins[Xt] && (o = _.store.rarities[_.store.skins[Xt].rarity].color)), "<div class='settName'>" + a.get("windows.loadout.class") + "<span class='settText floatR' onclick='showWindow(6)'>" + t.name + "</span></div><div class='settName'>" + a.get("windows.loadout.primary") + "<span class='settLabel wepLink' style='color:" + n + "' onclick='skinSelector(" + t.loadout[0] + ")'>" + e + "</span></div><div class='settName'>" + a.get("windows.loadout.secondary") + "<span class='settLabel" + (t.secondary ? " wepLink" : "") + "' " + (t.secondary ? "onclick='showWindow(20)'" : "") + " style='color:" + r + "'>" + i + "</span></div><div class='settName'>" + a.get("windows.loadout.melee") + "<span class='settLabel' style='color:rgba(0,0,0,0.3)'>" + a.get("generic.none") + "</span></div><div class='settName'>" + a.get("windows.loadout.hat") + "<span onclick='showWindow(16)' class='settText floatR' style='color:" + s + "'>" + (_.store.skins[Zt] ? _.store.skins[Zt].name : a.get("generic.none")) + "</span></div><div class='settName'>" + a.get("windows.loadout.body") + "<span onclick='showWindow(17)' class='settText floatR' style='color:" + o + "'>" + (_.store.skins[Xt] ? _.store.skins[Xt].name : a.get("generic.none")) + "</span></div><div class='settName'>" + a.get("windows.loadout.spray") + "<span onclick='showWindow(9)' class='settText floatR'>" + _.sprays[ln].name + "</span></div>"
+                o = s,
+                c = "rgba(0,0,0,0.3)";
+            return E && (null != Zt[t.loadout[0]] && ((e = _.store.skins[Zt[t.loadout[0]]]) && (n = _.store.rarities[e.rarity].color, e = e.name)), t.loadout[1] && null != Zt[t.loadout[1]] && ((i = _.store.skins[Zt[t.loadout[1]]]) && (r = _.store.rarities[i.rarity].color, i = i.name)), 0 <= Xt && _.store.skins[Xt] && (s = _.store.rarities[_.store.skins[Xt].rarity].color), 0 <= qt && _.store.skins[qt] && (o = _.store.rarities[_.store.skins[qt].rarity].color), 0 <= Yt && _.store.skins[Yt] && (c = _.store.rarities[_.store.skins[Yt].rarity].color)), "<div class='settName'>" + a.get("windows.loadout.class") + "<span class='settText floatR' onclick='showWindow(6)'>" + t.name + "</span></div><div class='settName'>" + a.get("windows.loadout.primary") + "<span class='settLabel wepLink' style='color:" + n + "' onclick='skinSelector(" + t.loadout[0] + ")'>" + e + "</span></div><div class='settName'>" + a.get("windows.loadout.secondary") + "<span class='settLabel" + (t.secondary ? " wepLink" : "") + "' " + (t.secondary ? "onclick='showWindow(20)'" : "") + " style='color:" + r + "'>" + i + "</span></div><div class='settName'>" + a.get("windows.loadout.melee") + "<span onclick='showWindow(26)' class='settText floatR' style='color:" + c + "'>" + (_.store.skins[Yt] ? _.store.skins[Yt].name : a.get("generic.none")) + "</span></div><div class='settName'>" + a.get("windows.loadout.hat") + "<span onclick='showWindow(16)' class='settText floatR' style='color:" + s + "'>" + (_.store.skins[Xt] ? _.store.skins[Xt].name : a.get("generic.none")) + "</span></div><div class='settName'>" + a.get("windows.loadout.body") + "<span onclick='showWindow(17)' class='settText floatR' style='color:" + o + "'>" + (_.store.skins[qt] ? _.store.skins[qt].name : a.get("generic.none")) + "</span></div><div class='settName'>" + a.get("windows.loadout.spray") + "<span onclick='showWindow(9)' class='settText floatR'>" + _.sprays[on].name + "</span></div>"
         }
     }, {
         header: a.get("windows.mods.header"),
@@ -67469,7 +67780,7 @@
     }, {
         header: a.get("windows.account.header"),
         gen: function() {
-            return E ? "<div class='settName' style='width:100%'>" + a.get("generic.name") + "<a href='/social.html?p=profile&q=" + E.name + "' class='floatR'>" + E.name + "</a></div><div class='settName' style='width:100%'>" + a.get("generic.clan") + "<a class='floatR' class='menuLink' onclick='showWindow(13)'>" + (E.clan ? "[" + E.clan + "]" : "None") + "</a></div><div class='settName'>" + a.get("generic.level") + "<span class='floatR'>" + E.level + "</span></div><div class='xpBar'><div class='xpBarB' style='width:" + E.levelProg + "%'></div></div><div class='settName'>" + a.get("generic.score") + "<span class='floatR'>" + E.score + "</span></div><div class='settName'>KR<span class='floatR'>" + E.funds + "KR</span></div><div class='settName'>" + a.get("generic.kills") + "<span class='floatR'>" + E.kills + "</span></div><div class='settName'>" + a.get("generic.deaths") + "<span class='floatR'>" + E.deaths + "</span></div><div class='settName'>" + a.get("generic.kdr") + "<span class='floatR'>" + (E.kills / Math.max(E.deaths, 1)).toFixed(2) + "</span></div><div class='settName'>" + a.get("generic.games.played") + "<span class='floatR'>" + E.games + "</span></div><div class='settName'>" + a.get("generic.games.won") + "<span class='floatR'>" + E.wins + "</span></div><div class='settName'>W/L<span class='floatR'>" + (E.wins / Math.max(E.games, 1)).toFixed(2) + "</span></div><div class='settName'>" + a.get("generic.timep") + "<span class='floatR'>" + d.getReadableTime(E.timePlayed) + "</span></div><div style='height:10px'></div><a class='menuLink' onclick='logoutAcc()'>" + a.get("generic.logout") + "</a>" + (Gt ? "" : "<a style='float:right' class='menuLink' onclick='logoutSessions(this)'>" + a.get("generic.logout.sessions") + "</a>") : "<input id='accName' type='text' placeholder='" + a.get("generic.username") + "' class='accountInput' style='margin-top:0' value='" + (getSavedVal("krunker_username") || "") + "'></input><input id='accPass' type='password' placeholder='" + a.get("generic.password") + "' class='accountInput'></input><div id='accResp' style='margin-top:10px;color:rgba(0,0,0,0.5);display:none'></div><div style='margin-top:10px;color:rgba(0,0,0,0.3)'>" + a.get("windows.account.recover") + "</div><div class='accountButton' onclick='registerAcc()'>" + a.get("generic.register") + "</div><div class='accountButton' onclick='loginAcc()' style='margin-left: 20px'>" + a.get("generic.login") + "</div>"
+            return E ? "<div class='settName' style='width:100%'>" + a.get("generic.name") + "<a href='/social.html?p=profile&q=" + E.name + "' class='floatR'>" + E.name + "</a></div><div class='settName' style='width:100%'>" + a.get("generic.clan") + "<a class='floatR' class='menuLink' onclick='showWindow(13)'>" + (E.clan ? "[" + E.clan + "]" : "None") + "</a></div><div class='settName'>" + a.get("generic.level") + "<span class='floatR'>" + E.level + "</span></div><div class='xpBar'><div class='xpBarB' style='width:" + E.levelProg + "%'></div></div><div class='settName'>" + a.get("generic.score") + "<span class='floatR'>" + E.score + "</span></div><div class='settName'>KR<span class='floatR'>" + E.funds + "KR</span></div><div class='settName'>" + a.get("generic.kills") + "<span class='floatR'>" + E.kills + "</span></div><div class='settName'>" + a.get("generic.deaths") + "<span class='floatR'>" + E.deaths + "</span></div><div class='settName'>" + a.get("generic.kdr") + "<span class='floatR'>" + (E.kills / Math.max(E.deaths, 1)).toFixed(2) + "</span></div><div class='settName'>" + a.get("generic.games.played") + "<span class='floatR'>" + E.games + "</span></div><div class='settName'>" + a.get("generic.games.won") + "<span class='floatR'>" + E.wins + "</span></div><div class='settName'>W/L<span class='floatR'>" + (E.wins / Math.max(E.games, 1)).toFixed(2) + "</span></div><div class='settName'>" + a.get("generic.timep") + "<span class='floatR'>" + d.getReadableTime(E.timePlayed) + "</span></div><div style='height:10px'></div><a class='menuLink' onclick='logoutAcc()'>" + a.get("generic.logout") + "</a>" + (Ut ? "" : "<a style='float:right' class='menuLink' onclick='logoutSessions(this)'>" + a.get("generic.logout.sessions") + "</a>") : "<input id='accName' type='text' placeholder='" + a.get("generic.username") + "' class='accountInput' style='margin-top:0' value='" + (getSavedVal("krunker_username") || "") + "'></input><input id='accPass' type='password' placeholder='" + a.get("generic.password") + "' class='accountInput'></input><div id='accResp' style='margin-top:10px;color:rgba(0,0,0,0.5);display:none'></div><div style='margin-top:10px;color:rgba(0,0,0,0.3)'>" + a.get("windows.account.recover") + "</div><div class='accountButton' onclick='registerAcc()'>" + a.get("generic.register") + "</div><div class='accountButton' onclick='loginAcc()' style='margin-left: 20px'>" + a.get("generic.login") + "</div>"
         }
     }, {
         header: a.get("windows.class.header"),
@@ -67481,7 +67792,7 @@
         header: a.get("windows.controls.header"),
         gen: function() {
             var t = "";
-            return t += "<div class='settName'>" + a.get("windows.controls.forward") + "<span class='settText floatR' id='cont0' onclick='changeCont(0)'>" + d.getKeyName(S.moveKeys[0]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.backward") + "<span class='settText floatR' id='cont1' onclick='changeCont(1)'>" + d.getKeyName(S.moveKeys[1]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.left") + "<span class='settText floatR' id='cont2' onclick='changeCont(2)'>" + d.getKeyName(S.moveKeys[2]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.right") + "<span class='settText floatR' id='cont3' onclick='changeCont(3)'>" + d.getKeyName(S.moveKeys[3]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.reload") + "<span class='settText floatR' id='cont8' onclick='changeCont(8)'>" + d.getKeyName(S.reloadKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.aim") + "<span class='settText floatR' id='cont10' onclick='changeCont(10)'>" + d.getKeyName(S.aimKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.inspect") + "<span class='settText floatR' id='cont14' onclick='changeCont(14)'>" + d.getKeyName(S.inspKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.spray") + "<span class='settText floatR' id='cont9' onclick='changeCont(9)'>" + d.getKeyName(S.sprayKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.jump") + "<span class='settText floatR' id='cont4' onclick='changeCont(4)'>" + d.getKeyName(S.jumpKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.crouch") + "<span class='settText floatR' id='cont5' onclick='changeCont(5)'>" + d.getKeyName(S.crouchKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.next") + "<span class='settText floatR' id='cont6' onclick='changeCont(6)'>" + d.getKeyName(S.swapKeyD) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.previous") + "<span class='settText floatR' id='cont7' onclick='changeCont(7)'>" + d.getKeyName(S.swapKeyU) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.chat") + "<span class='settText floatR' id='cont11' onclick='changeCont(11)'>" + d.getKeyName(S.chatKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.voice") + "<span class='settText floatR' id='cont12' onclick='changeCont(12)'>" + d.getKeyName(S.voiceKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.list") + "<span class='settText floatR' id='cont15' onclick='changeCont(15)'>" + d.getKeyName(S.listKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.interact") + "<span class='settText floatR' id='cont16' onclick='changeCont(16)'>" + d.getKeyName(S.interactKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.drop") + "<span class='settText floatR' id='cont17' onclick='changeCont(17)'>" + d.getKeyName(S.dropKey) + "</span></div>"
+            return t += "<div class='settName'>" + a.get("windows.controls.forward") + "<span class='settText floatR' id='cont0' onclick='changeCont(0)'>" + d.getKeyName(S.moveKeys[0]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.backward") + "<span class='settText floatR' id='cont1' onclick='changeCont(1)'>" + d.getKeyName(S.moveKeys[1]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.left") + "<span class='settText floatR' id='cont2' onclick='changeCont(2)'>" + d.getKeyName(S.moveKeys[2]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.right") + "<span class='settText floatR' id='cont3' onclick='changeCont(3)'>" + d.getKeyName(S.moveKeys[3]) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.reload") + "<span class='settText floatR' id='cont8' onclick='changeCont(8)'>" + d.getKeyName(S.reloadKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.aim") + "<span class='settText floatR' id='cont10' onclick='changeCont(10)'>" + d.getKeyName(S.aimKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.inspect") + "<span class='settText floatR' id='cont14' onclick='changeCont(14)'>" + d.getKeyName(S.inspKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.spray") + "<span class='settText floatR' id='cont9' onclick='changeCont(9)'>" + d.getKeyName(S.sprayKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.jump") + "<span class='settText floatR' id='cont4' onclick='changeCont(4)'>" + d.getKeyName(S.jumpKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.crouch") + "<span class='settText floatR' id='cont5' onclick='changeCont(5)'>" + d.getKeyName(S.crouchKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.melee") + "<span class='settText floatR' id='cont6' onclick='changeCont(6)'>" + d.getKeyName(S.meleeKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.swap") + "<span class='settText floatR' id='cont7' onclick='changeCont(7)'>" + d.getKeyName(S.swapKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.chat") + "<span class='settText floatR' id='cont11' onclick='changeCont(11)'>" + d.getKeyName(S.chatKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.voice") + "<span class='settText floatR' id='cont12' onclick='changeCont(12)'>" + d.getKeyName(S.voiceKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.list") + "<span class='settText floatR' id='cont15' onclick='changeCont(15)'>" + d.getKeyName(S.listKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.interact") + "<span class='settText floatR' id='cont16' onclick='changeCont(16)'>" + d.getKeyName(S.interactKey) + "</span></div>", t += "<div class='settName'>" + a.get("windows.controls.drop") + "<span class='settText floatR' id='cont17' onclick='changeCont(17)'>" + d.getKeyName(S.dropKey) + "</span></div>"
         }
     }, {
         header: a.get("windows.host.header"),
@@ -67496,15 +67807,15 @@
         },
         gen: function() {
             var t = "";
-            if (j = !0, t += "<div class='settName b'>" + a.get("windows.host.maps") + "</div>", t += "<div style='margin-top:5px'>", !ge)
+            if (j = !0, t += "<div class='settName b'>" + a.get("windows.host.maps") + "</div>", t += "<div style='margin-top:5px'>", !de)
                 for (var e = 0; e < C.length; e++) {
                     var n = C[e],
                         r = "<label class='switch'><input id='gameMap" + e + "' type='checkbox' checked=''><span class='slider'></span></label>";
                     t += "<div class='settNameSmall' style='margin:0'>" + d.capFirst(n.name) + r + "</div>"
                 }
-            t += "<div class='settNameSmall' style='margin:0;margin-top:10px'>" + a.get("windows.host.cmaps") + " <div style='float:right'>" + (ge ? "<span><i style='color:#eb5656;font-size:30px;vertical-align:-3px;cursor:pointer' onclick='openHostWindow(true)'class='material-icons'>delete</i> </span>" : "") + "<a id='commMap' href='javascript:;' onclick='showWindow(10);' class='menuLink' style='font-size:18px'>" + (ge || a.get("generic.select")) + "</a></div></div><br/>", ge || (t += "<div class='settNameSmall' style='margin:0;margin-top:-24px;'>" + a.get("windows.host.raw") + "<input id='rawMapData' type='text' class='formInput' " + (ve ? "value='" + ve + "'" : "placeholder='" + a.get("windows.host.raw") + "'") + " autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'></div><br/>"), t += "</div>";
-            var s = windows[7].presets[ge],
-                o = !ge || s && s.data;
+            t += "<div class='settNameSmall' style='margin:0;margin-top:10px'>" + a.get("windows.host.cmaps") + " <div style='float:right'>" + (de ? "<span><i style='color:#eb5656;font-size:30px;vertical-align:-3px;cursor:pointer' onclick='openHostWindow(true)'class='material-icons'>delete</i> </span>" : "") + "<a id='commMap' href='javascript:;' onclick='showWindow(10);' class='menuLink' style='font-size:18px'>" + (de || a.get("generic.select")) + "</a></div></div><br/>", de || (t += "<div class='settNameSmall' style='margin:0;margin-top:-24px;'>" + a.get("windows.host.raw") + "<input id='rawMapData' type='text' class='formInput' " + (me ? "value='" + me + "'" : "placeholder='" + a.get("windows.host.raw") + "'") + " autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'></div><br/>"), t += "</div>";
+            var s = windows[7].presets[de],
+                o = !de || s && s.data;
             if (o) {
                 s && (s = s.data), "DEFAULT" == s && (s = null), t += "<div class='settName b'>" + a.get("windows.host.modes") + "</div>", t += "<div style='margin-top:5px'>";
                 for (e = 0; e < R.length; e++) {
@@ -67533,7 +67844,7 @@
                     }
                 }
                 t += "<div class='settNameSmall' style='margin:0'>" + a.get("server.config.private") + " <label class='switch'><input id='makePrivate' type='checkbox'><span class='slider'></span></label></div>", t += "<div id='hostGamePreset' style='text-align:left;margin-top:30px'>" + windows[7].genPresets(!0) + "</div>"
-            } else windows[7].presets[ge] || (windows[7].presets[ge] = {}, x.getMapPreset(ge, this.presetLoaded)), t += "<div style='color:rgba(0,0,0,0.3)'>" + a.get("windows.host.preset.load") + "</div>";
+            } else windows[7].presets[de] || (windows[7].presets[de] = {}, x.getMapPreset(de, this.presetLoaded)), t += "<div style='color:rgba(0,0,0,0.3)'>" + a.get("windows.host.preset.load") + "</div>";
             return o && (t += "<div style='text-align:left;margin-top:30px'>", t += "<div style='color:#919191;margin-bottom:5px' id='hostGameMsg'></div>", t += "<a class='menuLink' onclick='createPrivateRoom()'>" + a.get("windows.host.start") + "</a>", t += "</div>"), t
         },
         presetAction: function(t) {
@@ -67548,7 +67859,7 @@
                 for (r = 0; r < R.length; r++) n = document.getElementById("gameMode" + r), 1 == t ? n.checked != !r && (s["gameMode" + r] = n.checked) : "gameMode" + r in s && (n.checked = s["gameMode" + r]);
                 for (r = 0; r < _.classes.length; r++) _.classes[r], n = document.getElementById("gameClass" + r), 1 == t ? 1 != n.checked && (s["gameClass" + r] = n.checked) : "gameClass" + r in s && (n.checked = s["gameClass" + r]);
                 for (r = 0; r < i.serverConfig.length; r++) k = i.serverConfig[r], n = document.getElementById("customS" + k.varN), 1 == t ? n[k.bool ? "checked" : "value"] != k.def && (s[k.varN] = n[k.bool ? "checked" : "value"]) : k.varN in s && (!k.bool && !k.input && (document.getElementById("customSet" + r).innerText = s[k.varN]), n[k.bool ? "checked" : "value"] = s[k.varN]);
-                1 == t ? (ge && (s.commMap = ge), ye && (s.hostModURL = ye), "" != (n = document.getElementById("rawMapData")).value && (s.rawMapData = n.value), 0 != (n = document.getElementById("makePrivate")).checked && (s.makePrivate = n.checked), e[presetName.value || "Preset1"] = s, saveVal("krk_hostPresets", JSON.stringify(e))) : ("commMap" in s && (document.getElementById("commMap").innerText = ge = s.commMap), "rawMapData" in s && (document.getElementById("rawMapData").value = s.rawMapData), "makePrivate" in s && (document.getElementById("makePrivate").checked = s.makePrivate))
+                1 == t ? (de && (s.commMap = de), ge && (s.hostModURL = ge), "" != (n = document.getElementById("rawMapData")).value && (s.rawMapData = n.value), 0 != (n = document.getElementById("makePrivate")).checked && (s.makePrivate = n.checked), e[presetName.value || "Preset1"] = s, saveVal("krk_hostPresets", JSON.stringify(e))) : ("commMap" in s && (document.getElementById("commMap").innerText = de = s.commMap), "rawMapData" in s && (document.getElementById("rawMapData").value = s.rawMapData), "makePrivate" in s && (document.getElementById("makePrivate").checked = s.makePrivate))
             }
             windows[7].genPresets()
         },
@@ -67568,14 +67879,14 @@
     }, {
         header: a.get("windows.maps.header"),
         searchMaps: function() {
-            searchResults.innerHTML = a.get("generic.loading"), x.searchMap(mpSrch.value, He)
+            searchResults.innerHTML = a.get("generic.loading"), x.searchMap(mpSrch.value, Ue)
         },
         searchResp: function(t) {
             var e = "";
-            t.length ? (e += "<div style='height:10px'></div>", e += le(t, "map")) : e = a.get("windows.maps.none"), document.getElementById("searchResults") && (document.getElementById("searchResults").innerHTML = e)
+            t.length ? (e += "<div style='height:10px'></div>", e += oe(t, "map")) : e = a.get("windows.maps.none"), document.getElementById("searchResults") && (document.getElementById("searchResults").innerHTML = e)
         },
         mapsLoaded: function(t, e, n) {
-            mapList && (t && t.length ? n ? (mapList.innerHTML = n, this.listData[e] = null) : (this.listData[e].dat = le(t, "map"), updateWindow(10)) : (mapList.innerHTML = a.get("windows.maps.none"), this.listData[e] = null))
+            mapList && (t && t.length ? n ? (mapList.innerHTML = n, this.listData[e] = null) : (this.listData[e].dat = oe(t, "map"), updateWindow(10)) : (mapList.innerHTML = a.get("windows.maps.none"), this.listData[e] = null))
         },
         tabIndex: 0,
         listData: {},
@@ -67585,7 +67896,7 @@
         gen: function() {
             for (var t = i.mapTabs[this.tabIndex], e = "", n = 0; n < i.mapTabs.length; ++n) e += "<div class='menuTab" + (this.tabIndex == n ? " tabA" : "") + "' onclick='windows[9].switchTab(" + n + ")'>" + i.mapTabs[n].n + "</div>";
             var r = "";
-            return t.search ? r = "<input style='margin-top:10px' type='text' id='mpSrch' class='smlInput' placeholder='" + a.get("windows.maps.name") + "' /><a class='menuLink' style='margin-left:20px' onclick='windows[9].searchMaps()'>" + a.get("generic.search") + "</a><div style='color:rgba(0,0,0,0.5);margin-top:5px' id='searchResults'></div>" : this.listData[this.tabIndex] ? r = this.listData[this.tabIndex].dat || a.get("generic.loading") : (r = a.get("generic.loading"), this.listData[this.tabIndex] = {}, x.listMaps(this.tabIndex, E ? E.id : null, Fe)), "<a href='./editor.html' class='menuLink'>" + a.get("windows.maps.editor") + "</a> | <a href='javascript:;' onclick='showWindow(11)' class='menuLink'>" + a.get("windows.maps.publish") + "</a><a href='https://discord.gg/Kfypyp5' class='menuLink' style='float:right'>" + a.get("windows.maps.community") + "</a><br/><div style='margin-top:25px;margin-bottom:15px'>" + e + "</div><div style='color:rgba(0,0,0,0.3)' id='mapList'>" + r + "</div>"
+            return t.search ? r = "<input style='margin-top:10px' type='text' id='mpSrch' class='smlInput' placeholder='" + a.get("windows.maps.name") + "' /><a class='menuLink' style='margin-left:20px' onclick='windows[9].searchMaps()'>" + a.get("generic.search") + "</a><div style='color:rgba(0,0,0,0.5);margin-top:5px' id='searchResults'></div>" : this.listData[this.tabIndex] ? r = this.listData[this.tabIndex].dat || a.get("generic.loading") : (r = a.get("generic.loading"), this.listData[this.tabIndex] = {}, x.listMaps(this.tabIndex, E ? E.id : null, je)), "<a href='./editor.html' class='menuLink'>" + a.get("windows.maps.editor") + "</a> | <a href='javascript:;' onclick='showWindow(11)' class='menuLink'>" + a.get("windows.maps.publish") + "</a><a href='https://discord.gg/Kfypyp5' class='menuLink' style='float:right'>" + a.get("windows.maps.community") + "</a><br/><div style='margin-top:25px;margin-bottom:15px'>" + e + "</div><div style='color:rgba(0,0,0,0.3)' id='mapList'>" + r + "</div>"
         }
     }, {
         header: a.get("windows.publish.map.header"),
@@ -67595,7 +67906,7 @@
     }, {
         header: a.get("windows.theatre.header"),
         gen: function() {
-            return "<div class='setHed' style='margin-top:0'>" + a.get("windows.theatre.header") + "</div><div class='settName'>" + a.get("windows.theatre.record") + "<label class='switch'><input type='checkbox' onclick='enableRecord(this.checked)' " + (We ? "checked" : "") + "><span class='slider'></span></label></div><div class='settName'>" + a.get("windows.theatre.key") + "<span class='settText floatR' id='cont13' onclick='changeCont(13, true)'>" + d.getKeyName(S.recordKey) + "</span></div><div style='height:20px'></div><a href='./theatre.html' class='menuLink'>" + a.get("windows.theatre.header") + "</a>"
+            return "<div class='setHed' style='margin-top:0'>" + a.get("windows.theatre.header") + "</div><div class='settName'>" + a.get("windows.theatre.record") + "<label class='switch'><input type='checkbox' onclick='enableRecord(this.checked)' " + (Ge ? "checked" : "") + "><span class='slider'></span></label></div><div class='settName'>" + a.get("windows.theatre.key") + "<span class='settText floatR' id='cont13' onclick='changeCont(13, true)'>" + d.getKeyName(S.recordKey) + "</span></div><div style='height:20px'></div><a href='./theatre.html' class='menuLink'>" + a.get("windows.theatre.header") + "</a>"
         }
     }, {
         header: a.get("windows.clans.header"),
@@ -67653,35 +67964,35 @@
     }, {
         header: a.get("windows.skin.header"),
         gen: function() {
-            var t = "<div id='skinList'><div class='skinCard'>" + a.get("generic.default") + "<div class='itemOwn'>by Krunker.io</div><img class='skinImg' src='." + d.versionifyUrl("/textures/previews/weapons/" + _.weapons[te].src + ".png") + "' style='margin-top:-10px'><div class='selctBtn' onmouseenter='playTick()' style='margin-top:-40px' onclick='selectSkin(-1," + te + ")'>" + a.get("generic.select") + "</div></div>";
+            var t = "<div id='skinList'><div class='skinCard'>" + a.get("generic.default") + "<div class='itemOwn'>by Krunker.io</div><img class='skinImg' src='." + d.versionifyUrl("/textures/previews/weapons/" + _.weapons[$t].src + ".png") + "' style='margin-top:-10px'><div class='selctBtn' onmouseenter='playTick()' style='margin-top:-40px' onclick='selectSkin(-1," + $t + ")'>" + a.get("generic.select") + "</div></div>";
             if (E || _.singlePlayer)
                 for (var e = (_.singlePlayer ? Object.keys(_.store.skins).map(t => t = {
                         ind: parseInt(t),
                         cnt: 1
                     }) : E.skins).slice().sort(function(t, e) {
                         return (null != e.ind && _.store.skins[e.ind] ? _.store.skins[e.ind].rarity : 0) - (null != t.ind && _.store.skins[t.ind] ? _.store.skins[t.ind].rarity : 0)
-                    }), n = 0; n < e.length; ++n)(k = _.store.skins[e[n].ind]) && !k.type && k.weapon == te + 1 && (t += "<div class='skinCard' style='color:" + _.store.rarities[k.rarity].color + "'><div class='itemCnt' data-badge='x" + e[n].cnt + "'></div>" + k.name + "<div class='itemOwn'>by " + (k.creator || "Krunker.io") + "</div><img style='margin-top:-10px' class='skinImg" + (k.type ? "C" : "") + "' src='." + d.versionifyUrl("/textures/previews/" + (k.type ? "cosmetics/" + k.type + "_" + k.id : "weapons/weapon_" + k.weapon + "_" + (null == k.pat ? k.id : "c" + k.pat)) + ".png") + "'/><div class='selctBtn' style='margin-top:-40px' onmouseenter='playTick()'onclick='selectSkin(" + e[n].ind + "," + (k.weapon - 1) + ")'>" + a.get("generic.select") + "</div></div>");
+                    }), n = 0; n < e.length; ++n)(k = _.store.skins[e[n].ind]) && !k.type && k.weapon == $t + 1 && (t += "<div class='skinCard' style='color:" + _.store.rarities[k.rarity].color + "'><div class='itemCnt' data-badge='x" + e[n].cnt + "'></div>" + k.name + "<div class='itemOwn'>by " + (k.creator || "Krunker.io") + "</div><img style='margin-top:-10px' class='skinImg" + (k.type ? "C" : "") + "' src='." + d.versionifyUrl("/textures/previews/" + (k.type ? "cosmetics/" + k.type + "_" + k.id : "weapons/weapon_" + k.weapon + "_" + (null == k.pat ? k.id : "c" + k.pat)) + ".png") + "'/><div class='selctBtn' style='margin-top:-40px' onmouseenter='playTick()'onclick='selectSkin(" + e[n].ind + "," + (k.weapon - 1) + ")'>" + a.get("generic.select") + "</div></div>");
             return t += "</div>"
         }
     }, {
         header: a.get("windows.hat.header"),
         gen: function() {
-            return pe("selectHat", 1)
+            return ce("selectHat", 1)
         }
     }, {
         header: a.get("windows.back.header"),
         gen: function() {
-            return pe("selectBack", 2)
+            return ce("selectBack", 2)
         }
     }, {
         header: a.get("windows.mods.community.header"),
         modData: null,
         searchMods: function() {
-            searchResults.innerHTML = a.get("generic.loading"), x.searchMod(moSrch.value, He)
+            searchResults.innerHTML = a.get("generic.loading"), x.searchMod(moSrch.value, Ue)
         },
         searchResp: function(t) {
             var e = "";
-            t.length ? (e += "<div style='height:10px'></div>", e += le(t, "mod")) : e = a.get("windows.mods.community.none"), document.getElementById("searchResults") && (document.getElementById("searchResults").innerHTML = e)
+            t.length ? (e += "<div style='height:10px'></div>", e += oe(t, "mod")) : e = a.get("windows.mods.community.none"), document.getElementById("searchResults") && (document.getElementById("searchResults").innerHTML = e)
         },
         resp: function(t) {
             if (t && t.length) this.modData = t, this.modData.loaded = !0, updateWindow(18);
@@ -67695,8 +68006,8 @@
             var t = "";
             if (this.modData && this.modData.loaded) {
                 t = "<div style='margin-bottom:-5px;margin-top:-5px;'>" + a.get("generic.search") + "</div><input type='text' id='moSrch' class='smlInput' placeholder='" + a.get("windows.mods.community.name") + "' /><a class='menuLink' style='margin-left:20px' onclick='windows[17].searchMods()'>" + a.get("generic.search") + "</a><div style='color:rgba(0,0,0,0.5);margin-top:5px' id='searchResults'></div>";
-                for (var e = ["<div style='margin-bottom:5px;margin-top:15px'>" + a.get("windows.mods.community.hot") + "</div>", "<div style='margin-top:20px;margin-bottom:5px'>" + a.get("windows.mods.community.new") + "</div>", "<div style='margin-top:20px;margin-bottom:5px'>" + a.get("windows.mods.community.fav") + "</div>"], n = 0; n < this.modData.length; ++n) this.modData[n] && (this.modData[n].length && (t += e[n]), t += le(this.modData[n], "mod"))
-            } else t = a.get("generic.loading"), this.modData || (this.modData = {}, x.listMods(E ? E.id : null, Ue));
+                for (var e = ["<div style='margin-bottom:5px;margin-top:15px'>" + a.get("windows.mods.community.hot") + "</div>", "<div style='margin-top:20px;margin-bottom:5px'>" + a.get("windows.mods.community.new") + "</div>", "<div style='margin-top:20px;margin-bottom:5px'>" + a.get("windows.mods.community.fav") + "</div>"], n = 0; n < this.modData.length; ++n) this.modData[n] && (this.modData[n].length && (t += e[n]), t += oe(this.modData[n], "mod"))
+            } else t = a.get("generic.loading"), this.modData || (this.modData = {}, x.listMods(E ? E.id : null, Ne));
             return "<div style='color:rgba(0,0,0,0.3)' id='modsList'>" + t + "</div>"
         }
     }, {
@@ -67741,13 +68052,18 @@
         gen: function() {
             return "<div><ul style='padding:0;display:flex;list-style:none;text-align:center;margin:0;margin-top:-10px'><li style='display: flex;flex-basis:200px;-webkit-box-flex:1;flex-grow:1;margin-right:10px'><a href='//client.krunker.io/setup.exe' style='display:block;width:100%;padding-top:1em;'><img src ='./img/windows.png' style='width:80px;height:80px;display:block;margin:0 auto 10px;'>" + a.get("windows.client.windows") + "</a></li><li style='display: flex;flex-basis:200px;-webkit-box-flex:1;flex-grow:1;'><a href='//client.krunker.io/setup.dmg' style='display: block;width: 100%;padding-top:1em;'><img src ='./img/mac.png' style='width:80px;height:80px;display:block;margin:0 auto 10px;'>" + a.get("windows.client.mac") + "</a></li><li style='display: flex;flex-basis:200px;-webkit-box-flex:1;flex-grow:1;'><a href='//client.krunker.io/setup.AppImage' style='display: block;width: 100%;padding-top:1em;'><img src ='./img/linux.png' style='width:80px;height:80px;display:block;margin:0 auto 10px;'>" + a.get("windows.client.linux") + "</a></li></ul></div>"
         }
+    }, {
+        header: a.get("windows.melee.header"),
+        gen: function() {
+            return ce("selectMelee", 3)
+        }
     }];
-    for (var he = 0; he < windows.length; ++he) windows[he].html = "";
-    var ue = 0;
+    for (var le = 0; le < windows.length; ++le) windows[le].html = "";
+    var pe = 0;
     window.updateWindow = function(t, e) {
-        "block" == windowHolder.style.display && (ue == t && null != t ? showWindow(t, !0) : e && showWindow(ue, !0))
+        "block" == windowHolder.style.display && (pe == t && null != t ? showWindow(t, !0) : e && showWindow(pe, !0))
     }, window.showWindow = function(t, e) {
-        window.idleTimer = 0, e || t && ("block" != windowHolder.style.display || t != ue) ? (b.toggleMenu(!0), menuWindow.innerHTML = windows[t - 1].gen ? windows[t - 1].gen() : windows[t - 1].html, ue = t, windowHeader.innerHTML = windows[t - 1].header, b.toggleWindow(!0, S.gamepad.connected)) : (b.toggleWindow(!1, S.gamepad.connected), S.inputChanger = null)
+        window.idleTimer = 0, e || t && ("block" != windowHolder.style.display || t != pe) ? (b.toggleMenu(!0), menuWindow.innerHTML = windows[t - 1].gen ? windows[t - 1].gen() : windows[t - 1].html, pe = t, windowHeader.innerHTML = windows[t - 1].header, b.toggleWindow(!0, S.gamepad.connected)) : (b.toggleWindow(!1, S.gamepad.connected), S.inputChanger = null)
     }, window.playTick = function() {
         v.play("tick_0", .2)
     }, window.copyInviteLink = function() {
@@ -67758,100 +68074,100 @@
             n ? M.send("pnh", e, n.id) : 4 < e && M.send("pnh", e, null)
         }
     };
-    var fe, de, me, ge, ve, ye, be = spinWindow,
-        we = be.getContext("2d"),
-        xe = .95,
-        Me = .6,
-        _e = null,
-        Se = !1,
+    var he, ue, fe, de, me, ge, ve = spinWindow,
+        ye = ve.getContext("2d"),
+        be = .95,
+        we = .6,
+        xe = null,
+        Me = !1,
+        _e = 0,
+        Se = 0,
         Te = 0,
         Ee = 0,
         ke = 0,
-        Ae = 0,
-        Le = 0,
-        Pe = 30,
-        Ce = 300,
-        Re = !0,
-        Ie = 0,
-        Oe = 0,
-        De = new f.PerspectiveCamera(45, 1, .1, 100),
-        ze = new f.WebGLRenderer({
+        Ae = 30,
+        Le = 300,
+        Pe = !0,
+        Ce = 0,
+        Re = 0,
+        Ie = new f.PerspectiveCamera(45, 1, .1, 100),
+        Oe = new f.WebGLRenderer({
             precision: "mediump",
             antialias: !1,
             alpha: !0
         });
 
-    function Be(t, e) {
+    function De(t, e) {
         if (Q) {
             var n = _.store.skins[e];
-            n && Kn(null, "<span style='color:#fff'>" + a.get("windows.store.unboxed", t, "</span>") + " <span style='color:" + _.store.rarities[n.rarity].color + "'>" + n.name + "</span>", !0)
+            n && Yn(null, "<span style='color:#fff'>" + a.get("windows.store.unboxed", t, "</span>") + " <span style='color:" + _.store.rarities[n.rarity].color + "'>" + n.name + "</span>", !0)
         }
     }
 
-    function Ne(t, e, n, i, r) {
-        if (Se = !1, i);
+    function ze(t, e, n, i, r) {
+        if (Me = !1, i);
         else {
-            if (_e = _.store.skins[e], spinItemName.innerHTML = _e.name + "<div style='color:rgba(255,255,255,0.5)'>by " + (_e.creator || "Krunker.io") + "</div>", Ee = 2 * Math.PI * (t / 100 + 13) + Math.PI / 2, E)
-                if (r && (E.following = r), E.funds = n, jt(), spinKR.innerHTML = E.funds + " KR", E.skins.some(t => t.ind === e)) {
+            if (xe = _.store.skins[e], spinItemName.innerHTML = xe.name + "<div style='color:rgba(255,255,255,0.5)'>by " + (xe.creator || "Krunker.io") + "</div>", Se = 2 * Math.PI * (t / 100 + 13) + Math.PI / 2, E)
+                if (r && (E.following = r), E.funds = n, zt(), spinKR.innerHTML = E.funds + " KR", E.skins.some(t => t.ind === e)) {
                     var s = E.skins.find(t => t.ind === e);
                     s && s.cnt++
                 } else E.skins.push({
                     ind: e,
                     cnt: 1
                 });
-            spinRotation = 0, Ie = 0, spinCost.innerHTML = "", (fe = new f.Scene).add(new f.AmbientLight(5197647));
+            spinRotation = 0, Ce = 0, spinCost.innerHTML = "", (he = new f.Scene).add(new f.AmbientLight(5197647));
             var a = new f.DirectionalLight(16777215, .5);
-            a.position.set(3, 1, 0), fe.add(a);
-            var o = _e.type ? _e : _.store.previews[_e.weapon] || {};
-            (de = g.genObj3D(0, 1 + (o.yOff || 0), o.xOff || 0)).rotateX(-Math.PI / 7), de.rotateY(Math.PI + .5 + (o.zRota || 0)), de.rotateZ(-.5), de.orgXR = de.rotation.x, de.orgYP = de.position.y, g.loadMesh({
-                src: _.store.types[_e.type || 0] + (_e.type ? _e.id : _e.weapon),
-                texSrc: _e.type ? _e.tex ? (1 == _e.type ? "hats/hat_" : "body/body_") + _e.id + "_" + _e.tex : null : "weapons/skins/weapon_" + _e.weapon + "_" + _e.id,
-                movT: _e.movT,
-                sameGlow: _e.sameGlow,
-                glowText: _e.glow || _e.sameGlow,
-                emissive: _e.glow || _e.sameGlow ? 16777215 : null,
+            a.position.set(3, 1, 0), he.add(a);
+            var o = xe.type ? xe : _.store.previews[xe.weapon] || {};
+            (ue = g.genObj3D(0, 1 + (o.yOff || 0), o.xOff || 0)).rotateX(-Math.PI / 7), ue.rotateY(Math.PI + .5 + (o.zRota || 0)), ue.rotateZ(-.5), ue.orgXR = ue.rotation.x, ue.orgYP = ue.position.y, g.loadMesh({
+                src: _.store.types[xe.type || 0] + (xe.type ? xe.id : xe.weapon),
+                texSrc: xe.type ? xe.tex ? (1 == xe.type ? "hats/hat_" : "body/body_") + xe.id + "_" + xe.tex : null : xe.tex ? xe.tex : "weapons/skins/weapon_" + xe.weapon + "_" + xe.id,
+                movT: xe.movT,
+                sameGlow: xe.sameGlow,
+                glowText: xe.glow || xe.sameGlow,
+                emissive: xe.glow || xe.sameGlow ? 16777215 : null,
                 noGreen: !0,
                 uv2: !0,
                 fillScale: 60,
                 centerZ: !0
-            }, 0, 0, 0, (_e.type ? Math.PI : Math.PI / 2) + (o.xRot || 0), 2.2 * (o.scl || 1), de), fe.add(de), De.lookAt(fe.position)
+            }, 0, 0, 0, (xe.type && 3 != xe.type ? Math.PI : Math.PI / 2) + (o.xRot || 0), 2.2 * (o.scl || 1), ue), he.add(ue), Ie.lookAt(he.position)
         }
     }
 
-    function je(t, e, n) {
+    function Be(t, e, n) {
         windows[12].resp(t, e, n)
     }
 
-    function Ue(t, e) {
+    function Ne(t, e) {
         e && windows[17].resp(e.data, e.error)
     }
 
-    function Fe(t, e) {
+    function je(t, e) {
         e && windows[9].mapsLoaded(e.data, e.index, e.error)
     }
 
-    function He(t, e) {
+    function Ue(t, e) {
         e && windows[e.index].searchResp(e.data)
     }
-    ze.setPixelRatio(.6 * window.devicePixelRatio), De.position.y = 10, spinItemCanvas.appendChild(ze.domElement), window.prizeWheel = function(t) {
-        (me = _.store.wheels[t]).openURL && window.openURL(i.followURLS[d.randInt(0, i.followURLS.length - 1)]), ke = t, showWindow(0), Te = 0, Re = !Se, Ee = 0, Oe = 0, spinRotation = 0, Ae = Le = 0, b.toggleMenuHider(!1), spinItem.style.display = "none", spinItemName.style.display = "none", spinUI.style.display = "block", De.position.x = Ce, spinButton.style.opacity = 1, spinText.style.display = "table-cell", spinHeader.innerHTML = "SPIN", spinCost.innerHTML = "-" + me.price + "KR";
-        for (var e = "<div style='font-size:50px;color:#fff'>" + me.name.toUpperCase() + "</div>", n = 0; n < _.store.rarities.length; ++n)(k = _.store.rarities[n]).noSpin || (e += "<div style='margin-top:5px;color:#fff'>" + k.name + "<span style='color:rgba(255,255,255,0.5)'>&emsp;" + me.rarities[n] + "%</span><div class='colCub' style='background-color:" + k.color + "'></div></div>");
+    Oe.setPixelRatio(.6 * window.devicePixelRatio), Ie.position.y = 10, spinItemCanvas.appendChild(Oe.domElement), window.prizeWheel = function(t) {
+        (fe = _.store.wheels[t]).openURL && window.openURL(i.followURLS[d.randInt(0, i.followURLS.length - 1)]), Te = t, showWindow(0), _e = 0, Pe = !Me, Se = 0, Re = 0, spinRotation = 0, Ee = ke = 0, b.toggleMenuHider(!1), spinItem.style.display = "none", spinItemName.style.display = "none", spinUI.style.display = "block", Ie.position.x = Le, spinButton.style.opacity = 1, spinText.style.display = "table-cell", spinHeader.innerHTML = "SPIN", spinCost.innerHTML = "-" + fe.price + "KR";
+        for (var e = "<div style='font-size:50px;color:#fff'>" + fe.name.toUpperCase() + "</div>", n = 0; n < _.store.rarities.length; ++n)(k = _.store.rarities[n]).noSpin || (e += "<div style='margin-top:5px;color:#fff'>" + k.name + "<span style='color:rgba(255,255,255,0.5)'>&emsp;" + fe.rarities[n] + "%</span><div class='colCub' style='background-color:" + k.color + "'></div></div>");
         spinInfo.innerHTML = e, E && (spinKR.innerHTML = E.funds + " KR")
     }, spinButton.onclick = function(t) {
-        t.stopPropagation(), t.preventDefault(), window.idleTimer = 0, M && !Se && Re && E && E.funds >= me.price && (Se = !0, Re = !1, M.send("spin", ke), spinHeader.innerHTML = "", spinCost.innerHTML = a.get("windows.store.purchasing"), v.play("buy_1", .1))
+        t.stopPropagation(), t.preventDefault(), window.idleTimer = 0, M && !Me && Pe && E && E.funds >= fe.price && (Me = !0, Pe = !1, M.send("spin", Te), spinHeader.innerHTML = "", spinCost.innerHTML = a.get("windows.store.purchasing"), v.play("buy_1", .1))
     }, spinUI.onclick = function() {
         showWindow(14), b.toggleMenuHider(!0), spinUI.style.display = "none", M && M.send("unbx")
     }, window.selectHostMap = function(t, e = null) {
-        ge = t, ve = "undefined" == e ? null : e, showWindow(8)
+        de = t, me = "undefined" == e ? null : e, showWindow(8)
     }, window.selectHostMod = function(t) {
-        ye = t, showWindow(8)
+        ge = t, showWindow(8)
     }, window.openHostWindow = function(t) {
-        ge = null, ye = null, ve = null, showWindow(8, t)
+        de = null, ge = null, me = null, showWindow(8, t)
     };
-    var Ge, Ve = 1e4,
-        We = !("true" != getSavedVal("krk_record"));
+    var Fe, He = 1e4,
+        Ge = !("true" != getSavedVal("krk_record"));
 
-    function Ye(t, e) {
+    function Ve(t, e) {
         try {
             mapUpResp && !e && (mapUpResp.innerHTML = t)
         } catch (e) {}
@@ -67860,8 +68176,8 @@
         } catch (e) {}
     }
     window.enableRecord = function(t) {
-        We = t, saveVal("krk_record", t)
-    }, enableRecord(We), window.updateMapThumb = function() {
+        Ge = t, saveVal("krk_record", t)
+    }, enableRecord(Ge), window.updateMapThumb = function() {
         var t = null;
         try {
             t = document.getElementById("mapThumb").files[0]
@@ -67878,7 +68194,7 @@
         if (t) {
             var e = new FileReader;
             e.readAsDataURL(t), e.onload = function() {
-                return 40 < d.thumbnailSize(e.result) ? void Ye(a.get("thumbnail.upload.limit")) : void M.send("uploadM", mapDataNew.value, e.result)
+                return 40 < d.thumbnailSize(e.result) ? void Ve(a.get("thumbnail.upload.limit")) : void M.send("uploadM", mapDataNew.value, e.result)
             }, e.onerror = function() {
                 mapUpResp.innerHTML = a.get("thumbnail.upload.error")
             }
@@ -67900,15 +68216,15 @@
         if (t) {
             var e = new FileReader;
             e.readAsDataURL(t), e.onload = function() {
-                return 40 < d.thumbnailSize(e.result) ? void Ye(a.get("thumbnail.upload.limit")) : void M.send("uploadMo", pubModName.value, pubModURL.value, e.result)
+                return 40 < d.thumbnailSize(e.result) ? void Ve(a.get("thumbnail.upload.limit")) : void M.send("uploadMo", pubModName.value, pubModURL.value, e.result)
             }, e.onerror = function() {
                 modUpResp.innerHTML = a.get("thumbnail.upload.error")
             }
         } else M.send("uploadMo", pubModName.value, pubModURL.value)
     }, zip.workerScriptsPath = "./libs/";
-    var qe = new FileReader;
+    var We = new FileReader;
 
-    function Ke(t) {
+    function Ye(t) {
         this.imgAsDataURL = "", this.process = function(e) {
             if (this.imgAsDataURL = URL.createObjectURL(e), this.imgAsDataURL && t) {
                 try {
@@ -67917,12 +68233,12 @@
                         g.updateTexture(t.replace("textures/", "").replace(".png", ""), this)
                     }, n.src = this.imgAsDataURL
                 } catch (e) {}
-                Qe.close()
+                Je.close()
             }
         }
     }
 
-    function Xe(t) {
+    function qe(t) {
         this.filename = t;
         var e = this;
         this.process = function(t) {
@@ -67938,12 +68254,12 @@
                         format: "mp3"
                     }), "ambient_1" == i && v.play("ambient_1", .12, !0)
                 } catch (t) {}
-                Qe.close()
+                Je.close()
             }
         }
     }
 
-    function Ze(t) {
+    function Xe(t) {
         this.process = function(e) {
             if (t) {
                 try {
@@ -67953,15 +68269,15 @@
                         g.updateMesh(t.replace("models/", "").replace(".obj", ""), n)
                     }), n.readAsText(e)
                 } catch (t) {}
-                Qe.close()
+                Je.close()
             }
         }
     }
-    qe.onload = function(t) {
+    We.onload = function(t) {
         var e = t.target.result;
         loadModPack(e)
     };
-    var Je, $e, Qe = new function() {
+    var Ke, Ze, Je = new function() {
         this.init = function(t, e) {
             this.numFiles = e, this.progress = 0, this.reader = t
         }, this.close = function() {
@@ -67969,12 +68285,12 @@
         }
     };
 
-    function tn(t, e, n, i) {
-        V = e, window.spectating = n, !V && n && (V = 1), un(t), b.toggleMenu(!1), Nn.length = 0, Yn.length = 0, b.toggleGameUI(!0), w.reset(), S.reset(), nn(!1), _.players.forcePos(), _.players.resetAim(), U.length = 0, window.loading = !1, window.idleTimer = 0, teamName.innerHTML = "", instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play"), P = null, b.toggleControlUI(S.enabled), _.updateUI(), challIcon.src = i ? "./img/skull_0.png" : "./img/hp_0.png"
+    function $e(t, e, n, i) {
+        V = e, window.spectating = n, !V && n && (V = 1), pn(t), b.toggleMenu(!1), zn.length = 0, Vn.length = 0, b.toggleGameUI(!0), w.reset(), S.reset(), tn(!1), _.players.forcePos(), _.players.resetAim(), U.length = 0, window.loading = !1, window.idleTimer = 0, teamName.innerHTML = "", instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play"), P = null, b.toggleControlUI(S.enabled), _.updateUI(), challIcon.src = i ? "./img/skull_0.png" : "./img/hp_0.png"
     }
 
-    function en(t, e, n, i, r, s, o, c, l, p) {
-        if (c ? c.data && _.customMap(c.data, c.id, c.creator, null, !0) : _.map.setMaps(), N = r, B = r && r == M.socketId, mapVote.innerHTML = "", $e = 0, r && c && null != c.id && (mapVote.innerHTML = "<i id='mapVoteD' onclick='voteMap(" + c.id + ",-1)' class='material-icons vote'>thumb_down</i><i id='mapVoteU' onclick='voteMap(" + c.id + ",1)' class='material-icons vote'>thumb_up</i>"), _.applyConfig(s, c && c.featured), _.init(t, e, p), _.setObjective(i), (l = l || {}).dest)
+    function Qe(t, e, n, i, r, s, o, c, l, p) {
+        if (c ? c.data && _.customMap(c.data, c.id, c.creator, null, !0) : _.map.setMaps(), N = r, B = r && r == M.socketId, mapVote.innerHTML = "", Ze = 0, r && c && null != c.id && (mapVote.innerHTML = "<i id='mapVoteD' onclick='voteMap(" + c.id + ",-1)' class='material-icons vote'>thumb_down</i><i id='mapVoteU' onclick='voteMap(" + c.id + ",1)' class='material-icons vote'>thumb_up</i>"), _.applyConfig(s, c && c.featured), _.init(t, e, p), _.setObjective(i), (l = l || {}).dest)
             for (var h = 0; h < l.dest.length; ++h) _.destroyObj(l.dest[h]);
         if (l.flg)
             for (h = 0; h < l.flg.length; ++h) _.updateFlag(...l.flg[h]);
@@ -67990,22 +68306,22 @@
         var f = 0,
             d = 0;
         for (h = 0; h < _.map.manager.objects.length; ++h) _.map.manager.objects[h].score && (f++, d += _.map.manager.objects[h].scoreP);
-        f ? (scoreZoneCount.style.display = "inline-block", scoreZoneCount.innerHTML = "<i class='material-icons' style='color:#fff;font-size:35px'>flag</i> " + d) : scoreZoneCount.style.display = "none", _.config.lives ? (livesCount.style.display = "inline-block", livesCount.innerHTML = "<i class='material-icons' style='color:#fff;font-size:35px'>favorite</i> <span id='livesDisp' style='color:rgba(255,255,255,0.6)'>" + _.config.lives + "</span>") : livesCount.style.display = "none", b.setShowSpect(_.config.allowSpect), b.setShowSelTeam(_.config.selTeam), X = null, S.reset(), It();
+        f ? (scoreZoneCount.style.display = "inline-block", scoreZoneCount.innerHTML = "<i class='material-icons' style='color:#fff;font-size:35px'>flag</i> " + d) : scoreZoneCount.style.display = "none", _.config.lives ? (livesCount.style.display = "inline-block", livesCount.innerHTML = "<i class='material-icons' style='color:#fff;font-size:35px'>favorite</i> <span id='livesDisp' style='color:rgba(255,255,255,0.6)'>" + _.config.lives + "</span>") : livesCount.style.display = "none", b.setShowSpect(_.config.allowSpect), b.setShowSelTeam(_.config.selTeam), K = null, S.reset();
         var v = _.map.maps[t];
-        S.SigUOXgE(v.camPos[0], v.camPos[1], v.camPos[2]), S.CUhoPlasP(0, 0, 0), g.clearSprays(), g.scene.add(S.object), T = null, m.showObjective = !!_.mode.objective && 0 < _.map.manager.objectives.length, killStreakHolder.innerHTML = "", bloodDisplay.style.display = "none", killsVal.innerHTML = 0, deathsVal.innerHTML = 0, G = 0, Ct(), S.masterLock = !1, instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play")
+        S.YsQjj(v.camPos[0], v.camPos[1], v.camPos[2]), S.mgLPCnHf(0, 0, 0), g.clearSprays(), g.scene.add(S.object), T = null, m.showObjective = !!_.mode.objective && 0 < _.map.manager.objectives.length, killStreakHolder.innerHTML = "", bloodDisplay.style.display = "none", killsVal.innerHTML = 0, deathsVal.innerHTML = 0, G = 0, Ct(), S.masterLock = !1, instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play")
     }
 
-    function nn(t) {
+    function tn(t) {
         window.locked = t, blocker.style.display = t ? "block" : "none"
     }
 
-    function rn(t, e, n) {
-        instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play"), victoryText.innerHTML = a.get("generic." + (e ? "victory" : "defeat")), victorySub.src = "./img/" + (e ? "sub" : "defeat") + ".png", b.toggleWindow(!1, S.gamepad.connected), Dt.endMessage.val.length && M.send("c", Dt.endMessage.val), T && T.active || window.spectating ? (b.showEndScreen(), X = i.endAnim, setTimeout(function() {
-            M.connected && (S.disable(), sn(n))
-        }, i.endAnim)) : t && (S.disable(), b.showEndScreen(), sn(n))
+    function en(t, e, n) {
+        instructions.innerHTML = S.gamepad.connected ? a.get("app.play.controller") : a.get("app.play"), victoryText.innerHTML = a.get("generic." + (e ? "victory" : "defeat")), victorySub.src = "./img/" + (e ? "sub" : "defeat") + ".png", b.toggleWindow(!1, S.gamepad.connected), Rt.endMessage.val.length && M.send("c", Rt.endMessage.val), T && T.active || window.spectating ? (b.showEndScreen(), K = i.endAnim, setTimeout(function() {
+            M.connected && (S.disable(), nn(n))
+        }, i.endAnim)) : t && (S.disable(), b.showEndScreen(), nn(n))
     }
 
-    function sn(t) {
+    function nn(t) {
         if (t && t.ed.length) {
             var e = "",
                 n = _.config ? _.config.modes || _.map.rotationModes : null;
@@ -68029,15 +68345,15 @@
         } else endTable.style.display = "none"
     }
 
-    function an(t, e, n) {
+    function rn(t, e, n) {
         _.playerSound(t, e, n)
     }
 
-    function on(t, e, n, i, r, s = !0, a) {
+    function sn(t, e, n, i, r, s = !0, a) {
         (k = _.players.findBySid(t)) && (k == T && v.play("pick_0", .2), k.updateLoadout(_, n, !0, ...e)), (k || null == t) && s && _.updatePickup(i, r, null, a)
     }
 
-    function cn(t) {
+    function an(t) {
         S.object.rotation.y = t, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
     }
     window.loadUserMod = function(t, e, n) {
@@ -68047,7 +68363,7 @@
     }, window.loadModPack = function(t, e, n, i) {
         if (!(0 > t.indexOf("dropbox.com") && 0 > t.indexOf("dropboxusercontent.com") && e)) {
             if (!F) return void(document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.disabled")));
-            modVote.innerHTML = "", e && st(t), null != n && null != i && (Je = 0, modVote.innerHTML = "<i id='modVoteD' onclick='voteMod(" + i + ",-1)' class='material-icons vote'>thumb_down</i><i id='modVoteU' onclick='voteMod(" + i + ",1)' class='material-icons vote'>thumb_up</i></br>" + n + " Mod");
+            modVote.innerHTML = "", e && st(t), null != n && null != i && (Ke = 0, modVote.innerHTML = "<i id='modVoteD' onclick='voteMod(" + i + ",-1)' class='material-icons vote'>thumb_down</i><i id='modVoteU' onclick='voteMod(" + i + ",1)' class='material-icons vote'>thumb_up</i></br>" + n + " Mod");
             try {
                 t = t.replace("dropbox.com", "dl.dropboxusercontent.com");
                 var r = "",
@@ -68055,8 +68371,8 @@
                 zip.createReader(s, function(t) {
                     t.getEntries(function(e) {
                         if (e.length) {
-                            Qe.init(t, e.length);
-                            for (var n, i = 0; i < e.length; i++)(n = e[i]).directory ? Qe.close() : "textures" == (r = n.filename.split("/")[0]) ? n.getData(new zip.BlobWriter("image/png"), new Ke(n.filename).process, function() {}) : "sound" == r ? n.getData(new zip.BlobWriter("audio/mp3"), new Xe(n.filename.replace(".mp3", "")).process, function() {}) : "models" == r && n.getData(new zip.BlobWriter("application/x-tgif"), new Ze(n.filename).process, function() {})
+                            Je.init(t, e.length);
+                            for (var n, i = 0; i < e.length; i++)(n = e[i]).directory ? Je.close() : "textures" == (r = n.filename.split("/")[0]) ? n.getData(new zip.BlobWriter("image/png"), new Ye(n.filename).process, function() {}) : "sound" == r ? n.getData(new zip.BlobWriter("audio/mp3"), new qe(n.filename.replace(".mp3", "")).process, function() {}) : "models" == r && n.getData(new zip.BlobWriter("application/x-tgif"), new Xe(n.filename).process, function() {})
                         }
                     })
                 }, function() {
@@ -68066,16 +68382,16 @@
                 document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.error"))
             }
         }
-    }, Dt.autoLoadLast.val && rt.length && loadModPack(rt, !0), window.loadMod = function() {
+    }, Rt.autoLoadLast.val && rt.length && loadModPack(rt, !0), window.loadMod = function() {
         if (modInput.files && modInput.files[0]) {
             var t = modInput.files[0];
-            "zip" == t.name.split(".").pop().toLowerCase() ? (document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.loading")), qe.readAsDataURL(t)) : document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.invalid"))
+            "zip" == t.name.split(".").pop().toLowerCase() ? (document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.loading")), We.readAsDataURL(t)) : document.getElementById("modLInfo") && (document.getElementById("modLInfo").innerHTML = a.get("mod.invalid"))
         }
     }, window.joinGame = function() {
         let t = gameURL.value || "";
         t.match(/^(https?:\/\/)?(www\.)?(.+)krunker\.io(|\/|\/\?game=.+)$/) ? location = t : t.match(/^([A-Z]+):(\w+)$/) && window.switchServer(t)
     }, window.toggleTeam = function(t) {
-        Kt = t ? 2 : 1, teamNm1.style.color = t ? "rgba(255,255,255,0.5)" : "#fff", teamNm2.style.color = t ? "#fff" : "rgba(255,255,255,0.5)"
+        Wt = t ? 2 : 1, teamNm1.style.color = t ? "rgba(255,255,255,0.5)" : "#fff", teamNm2.style.color = t ? "#fff" : "rgba(255,255,255,0.5)"
     }, window.updModeVote = function(t) {
         for (var e = 0; e < _.map.modes.length; ++e)
             if (k = document.getElementById("modeVoteI" + e)) {
@@ -68091,48 +68407,48 @@
             var n = document.getElementById("modVoteU"),
                 i = document.getElementById("modVoteD"),
                 r = 0;
-            1 == e ? (r = 1, 1 == Je && (r = 0)) : -1 == e && (r = -1, -1 == Je && (r = 0)), Je = r, n.className = 1 == Je ? "material-icons vote a" : "material-icons vote", i.className = -1 == Je ? "material-icons vote a" : "material-icons vote", M.send("vote", E.id, loginToken, t, r, 1)
+            1 == e ? (r = 1, 1 == Ke && (r = 0)) : -1 == e && (r = -1, -1 == Ke && (r = 0)), Ke = r, n.className = 1 == Ke ? "material-icons vote a" : "material-icons vote", i.className = -1 == Ke ? "material-icons vote a" : "material-icons vote", M.send("vote", E.id, loginToken, t, r, 1)
         }
     }, window.voteMap = function(t, e) {
         if (E) {
             var n = document.getElementById("mapVoteU"),
                 i = document.getElementById("mapVoteD"),
                 r = 0;
-            1 == e ? (r = 1, 1 == $e && (r = 0)) : -1 == e && (r = -1, -1 == $e && (r = 0)), $e = r, n.className = 1 == $e ? "material-icons vote a" : "material-icons vote", i.className = -1 == $e ? "material-icons vote a" : "material-icons vote", M.send("vote", E.id, loginToken, t, r)
+            1 == e ? (r = 1, 1 == Ze && (r = 0)) : -1 == e && (r = -1, -1 == Ze && (r = 0)), Ze = r, n.className = 1 == Ze ? "material-icons vote a" : "material-icons vote", i.className = -1 == Ze ? "material-icons vote a" : "material-icons vote", M.send("vote", E.id, loginToken, t, r)
         }
     }, window.followPlayer = function(t, e) {
         e && (e.style.visibility = "hidden"), M.send("fo", t)
     };
-    var ln = getSavedVal("sprayindex") || 0;
+    var on = getSavedVal("sprayindex") || 0;
 
-    function pn(t, e, n, i, r, s, a) {
+    function cn(t, e, n, i, r, s, a) {
         g.addSpray(t, e, n, i, r, s, a, _.sprays[e].opacity)
     }
 
-    function hn(t) {
+    function ln(t) {
         0 == t ? v.play("siren_0") : 1 == t && (v.play("nuke_0"), nukeFlash.style.display = "block", nukeFlash.style.opacity = 1, g.shake(1))
     }
 
-    function un(t, e) {
+    function pn(t, e) {
         e ? endTimer.innerHTML = a.get("timer.end", t) : (timerVal.innerHTML = t, specTimer.innerHTML = t, timerDisplay.style.display = "0:00" == t ? "none" : "inline-block")
     }
 
-    function fn(t) {
+    function hn(t) {
         for (var e, n = 0; n < t.length;) {
-            if (e = t[n] == M.socketId, (k = _.players.add(t[n], t[n + 1], t[n + 2], t[n + 3], t[n + 4], t[n + 5], t[n + 6], t[n + 12], t[n + 13], t[n + 14], t[n + 15], e, t[n + 16], t[n + 17])).health = null == t[n + 7] ? k.maxHealth : t[n + 7], k.maxHealth = t[n + 8], k.hpChase = k.health, k.team = t[n + 9], k.level = t[n + 10], k.clan = t[n + 11], k.xDire = t[n + 18], e) {
+            if (e = t[n] == M.socketId, (k = _.players.add(t[n], t[n + 1], t[n + 2], t[n + 3], t[n + 4], t[n + 5], t[n + 6], t[n + 12], t[n + 13], t[n + 14], t[n + 19], t[n + 15], e, t[n + 16], t[n + 17])).health = null == t[n + 7] ? k.maxHealth : t[n + 7], k.maxHealth = t[n + 8], k.hpChase = k.health, k.team = t[n + 9], k.level = t[n + 10], k.clan = t[n + 11], k.xDire = t[n + 18], e) {
                 if (T = k, _.mode.showTeam && (teamName.innerHTML = T.team), T.team) {
                     var i = document.getElementById("tScoreC" + T.team);
                     i && (i.className = "tScoreC you")
                 }
                 hudClassImg.src = nt.length ? nt : "/textures/classes/icon_" + T.classIndex + ".png", S.object.rotation.y = T.xDire, S.xDr = (S.object.rotation.y % Math.PI2).round(3)
             }
-            Gn(k.health, k.sid, null, null), n += 19
+            Fn(k.health, k.sid, null, null), n += 20
         }
     }
 
-    function dn(t) {
+    function un(t) {
         if (M.send("p"), T) {
-            if (T.x = t[1], T.y = t[2], T.z = t[3], T.xVel = t[4], T.yVel = t[5], T.zVel = t[6], T.onGround = t[7], T.didJump = t[8], T.onLadder = t[9], T.aimVal = t[10], T.crouchVal = t[11], _.players.swapWeapon(T, 0, !1, t[12]), T.slideTimer = t[13], T.canSlide = t[14], T.onTerrain = t[15], t[16]) {
+            if (T.x = t[1], T.y = t[2], T.z = t[3], T.xVel = t[4], T.yVel = t[5], T.zVel = t[6], T.onGround = t[7], T.didJump = t[8], T.onLadder = t[9], T.aimVal = t[10], T.crouchVal = t[11], _.players.swapWeapon(T, 0, !1, t[12], void 0, !0), T.slideTimer = t[13], T.canSlide = t[14], T.onTerrain = t[15], t[16]) {
                 var e = W != t[16];
                 W = t[16], e && function() {
                     var t = "#9eeb56";
@@ -68145,60 +68461,63 @@
         }
     }
 
-    function mn() {
+    function fn() {
         M.send("po")
     }
 
-    function gn(t) {
+    function dn(t) {
         t
     }
 
-    function vn() {
+    function mn() {
         if (!_.singlePlayer && (T && T.active || spectating))
             for (var t = 0; t < _.players.list.length; ++t)(k = _.players.list[t]).active && k.objInstances && k != T && (k.inView = !0, !spectating && !(V && V == k.team) && (_.config.nameTags || _.mode.hideNames || null != _.canSee(T, k.x, k.y, k.z)) && (k.inView = !1), _.players.toggleLOD(k, null == _.canSee(g.camera.getWorldPosition(), k.x, k.y, k.z, 10)))
     }
 
-    function yn(t) {
+    function gn(t) {
         "wt" == t && (t = a.get("player.waiting")), gameMessage.innerHTML = t || "", specGameMessage.innerHTML = t || ""
     }
 
-    function bn(t, e) {
+    function vn(t, e) {
         (k = _.players.findBySid(t)) && (k.team = e, k == T && (V = e, _.mode.showTeam && (teamName.innerHTML = V)))
     }
 
-    function wn(t) {
+    function yn(t) {
         _.players.hideAll();
         for (var e = 0; e < t.length;)(k = _.players.findBySid(t[e])) && k != T && (k.objInstances.visible = !k.lodActive, k.latestData = !0, k.forcePos ? (k.x = t[e + 1], k.y = t[e + 2], k.z = t[e + 3], k.xDire = t[e + 4], k.yDire = t[e + 5], k.interpolate = !1, k.forcePos = !1) : (k.dt = 0, k.x1 = k.x, k.x2 = t[e + 1], k.y1 = k.y, k.y2 = t[e + 2], k.z1 = k.z, k.z2 = t[e + 3], k.xDir1 = k.xDire, k.xDir2 = t[e + 4], k.yDir1 = k.yDire, k.yDir2 = t[e + 5], k.interpolate = !0), k.onGround = t[e + 6], k.crouchVal = t[e + 7], _.players.swapWeapon(k, 0, !1, t[e + 8])), e += 9
     }
 
-    function xn(t) {
+    function bn(t) {
         _.players.remove(t)
     }
 
-    function Mn(t, e, n, r, s) {
+    function wn(t, e, n, r, s) {
         if (k = _.players.findBySid(t), A = _.players.findBySid(n), k) {
             if (_.players.kill(k), k.isYou) {
                 deathsVal.innerHTML = e;
                 var o = "";
                 if (A) {
-                    k != A && (S.coRHQyeRr(A.x, A.y + A.height - i.cameraHeight, A.z), A.interpolate = !1, A.inView = !0), o = "<img id='kCProfile' src='./textures/classes/icon_" + A.classIndex + ".png' />", o += "<div id='kCName'>" + (A ? dt && D ? d.scrambleS(A.name) : A.name : "You") + (A.clan ? "<span style='color:rgba(255,255,255,0.3)'> [" + A.clan + "]</span>" : "") + "</div>";
+                    k != A && (S.SFOVOE(A.x, A.y + A.height - i.cameraHeight, A.z), A.interpolate = !1, A.inView = !0), o = "<img id='kCProfile' src='./textures/classes/icon_" + A.classIndex + ".png' />", o += "<div id='kCName'>" + (A ? dt && D ? d.scrambleS(A.name) : A.name : "You") + (A.clan ? "<span style='color:rgba(255,255,255,0.3)'> [" + A.clan + "]</span>" : "") + "</div>";
                     var c = A.loadout.indexOf(r[0]),
                         l = null == A.skins[c] ? null : A.skins[c];
-                    null != l && (l = _.store.skins[l]), o += "<br/><div id='kCInfo' style='color:" + (l ? _.store.rarities[l.rarity].color : "rgba(255,255,255,0.7)") + "'>[" + (l ? l.name : _.weapons[r[0]].name) + "] <span id='kCInfoS'>+" + r[1] + "</span></div>"
+                    null != l && (l = _.store.skins[l]);
+                    var p = l ? _.store.rarities[l.rarity].color : "rgba(255,255,255,0.7)",
+                        h = l ? l.name : _.weapons[r[0]].name;
+                    "Hands" == h && 0 <= A.meleeIndex && _.store.skins[A.meleeIndex] && (h = _.store.skins[A.meleeIndex].name, p = _.store.rarities[_.store.skins[A.meleeIndex].rarity].color), o += "<br/><div id='kCInfo' style='color:" + p + "'>[" + h + "] <span id='kCInfoS'>+" + r[1] + "</span></div>"
                 }
                 killCardHolder.firstChild.data = A ? a.get("player.killed") : a.get("player.died"), killCard.style.display = A ? "inline-block" : "none", killCard.innerHTML = o, b.toggleGameUI(!1), setTimeout(function() {
                     Ct()
                 }, i.deathDelay)
             }
             if (!s && Z) {
-                var p = k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(k.name) : k.name) + "</span>",
-                    h = A == T ? "<span style='color:#fff'>You</span>" : A ? "<span style='color:" + (V && V == A.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(A.name) : A.name) + "</span>" : "";
-                Kn(null, A ? h + " killed " + p : p + " committed " + i.suicides[d.randInt(0, i.suicides.length - 1)], !0)
+                var u = k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(k.name) : k.name) + "</span>",
+                    f = A == T ? "<span style='color:#fff'>You</span>" : A ? "<span style='color:" + (V && V == A.team ? "#9eeb56" : "#eb5656") + "'>" + (dt && D ? d.scrambleS(A.name) : A.name) + "</span>" : "";
+                Yn(null, A ? f + " killed " + u : u + " committed " + i.suicides[d.randInt(0, i.suicides.length - 1)], !0)
             }
         }
     }
 
-    function _n(t, e) {
+    function xn(t, e) {
         if (T) {
             T.streaks[t] = e ? null : _.streaks[t];
             for (var n = "", i = 0; i < _.streaks.length; ++i) T.streaks[i] && (n += "<div class='killStreakItem' style='background-image: url(&quot;./img/streaks/" + i + ".png&quot;)'><span>[" + (i + 1) + "]</span></div>");
@@ -68206,34 +68525,34 @@
         }
     }
 
-    function Sn(t, e) {
+    function Mn(t, e) {
         if (k = _.players.findBySid(t)) {
             var n = k == T ? "<span style='color:#fff'>You're</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + k.name + "</span> is";
-            Kn(null, a.get("player.killstreak", n, e), !0)
+            Yn(null, a.get("player.killstreak", n, e), !0)
         }
     }
 
-    function Tn(t, e, n) {
-        (k = _.players.findBySid(t), A = _.players.findBySid(e), k) && Kn(null, (k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + k.name + "</span>") + " " + n + " " + (A == T ? "<span style='color:#fff'>You</span>" : A ? "<span style='color:" + (V && V == A.team ? "#9eeb56" : "#eb5656") + "'>" + A.name + "</span>" : ""), !0)
+    function _n(t, e, n) {
+        (k = _.players.findBySid(t), A = _.players.findBySid(e), k) && Yn(null, (k == T ? "<span style='color:#fff'>You</span>" : "<span style='color:" + (V && V == k.team ? "#9eeb56" : "#eb5656") + "'>" + k.name + "</span>") + " " + n + " " + (A == T ? "<span style='color:#fff'>You</span>" : A ? "<span style='color:" + (V && V == A.team ? "#9eeb56" : "#eb5656") + "'>" + A.name + "</span>" : ""), !0)
     }
 
-    function En(t) {
+    function Sn(t) {
         M.send(window[[106, 123, 102, 113].map(t => String.fromCharCode(t - 5)).join("")](t))
     }
     window.selectSpray = function(t) {
-        saveVal("sprayindex", t), ln = t, showWindow(3)
+        saveVal("sprayindex", t), on = t, showWindow(3)
     };
-    var kn = null,
-        An = 0;
+    var Tn = null,
+        En = 0;
 
-    function Ln(t, e) {
-        if (kn = t, An = e, t) {
+    function kn(t, e) {
+        if (Tn = t, En = e, t) {
             for (var n = 1, i = "", r = 0; r < t.length; r += 6) i += "<div class='leaderItem'>", i += "<div class='leaderCounter'>" + n + ".</div>", i += t[r + 5] ? " <i class='material-icons' style='color:#40C4FF;margin-top:4px;font-size:25px'>check_circle</i>" : "", i += "<div class='leaderName" + (T && t[r] == T.sid ? "M" : V && V == t[r + 2] ? "F" : "") + "'>" + (dt ? d.scrambleS(t[r + 1]) : t[r + 1]) + (t[r + 4] ? "<span style='color:#fff'> [" + t[r + 4] + "]</span>" : "") + "</div>", i += "<div class='leaderScore'>" + d.formatNum(t[r + 3]) + "</div>", i += "</div>", n++;
             leaderContainer && (leaderContainer.innerHTML = i), 1 >= n && (leaderContainer.innerHTML = a.get("leaderboard.empty")), spectCount.style.display = e ? "inline-block" : "none", spectCount.innerHTML = "<i class='material-icons' style='color:#fff;font-size:35px;margin-right:8px'>visibility</i>" + e
         }
     }
 
-    function Pn(t, e, n, r, s, a, o) {
+    function An(t, e, n, r, s, a, o) {
         if (T && T.active || window.spectating) {
             if (k = _.players.findBySid(t)) {
                 var c = k.y + k.height - i.cameraHeight - k.crouchVal * i.crouchDst,
@@ -68246,16 +68565,16 @@
         }
     }
 
-    function Cn(t, e, n, i, r, s, a) {
+    function Ln(t, e, n, i, r, s, a) {
         var o = _.projectiles.types[s];
         y.physObj(t, e, n, i, r, _.projectiles.types[s].range, !1, null, null, o, a)
     }
 
-    function Rn(t) {
+    function Pn(t) {
         y.disablePhys(t)
     }
 
-    function In(t, e, n, r) {
+    function Cn(t, e, n, r) {
         if (T || window.spectating) {
             k = g.camera.getWorldPosition();
             var s = 1 - d.getDistance3D(t, e, n, k.x, k.y, k.z) / i.explosionRange;
@@ -68263,120 +68582,120 @@
         }
     }
 
-    function On(t, e) {
+    function Rn(t, e) {
         var n = document.getElementById("tScoreV" + t);
         n && (n.innerHTML = e);
         var i = document.getElementById("specScoreTm" + (t - 1));
         i && (i.innerHTML = e)
     }
 
-    function Dn(t) {
+    function In(t) {
         G += t, w.animateText(scoreText, (0 < G ? "+" : "") + G, 100, .38, 1100, 100, 0, function() {
             G = 0
         }), T.score += t
     }
 
-    function zn() {
+    function On() {
         w.animateText(checkText, a.get("popup.checkpoint"), 75, .38, 1100, 100, 0, null)
     }
 
-    function Bn(t) {
+    function Dn(t) {
         (k = document.getElementById("livesDisp")) && (k.innerHTML = t)
     }
-    var Nn = [];
+    var zn = [];
 
-    function jn(t, e, n) {
-        Fn(t), e && v.play("headshot_0"), killsVal.innerHTML = n, Rt && Rt.action && Rt.action()
+    function Bn(t, e, n) {
+        jn(t), e && v.play("headshot_0"), killsVal.innerHTML = n
     }
 
-    function Un() {
-        Fn(["Assist", i.assistScore])
+    function Nn() {
+        jn(["Assist", i.assistScore])
     }
 
-    function Fn(t) {
+    function jn(t) {
         if (t) {
-            for (var e = 0 == Nn.length, n = 0; n < t.length; ++n) "" == t[n] ? n++ : Nn.push(t[n]);
+            for (var e = 0 == zn.length, n = 0; n < t.length; ++n) "" == t[n] ? n++ : zn.push(t[n]);
             e && function t(e) {
-                0 < Nn.length && w.animateText(chalName, "<span class='cTxt'>" + Nn[0] + "</span><div id='chalScore'>+" + Nn[1] + "</div>", 130, .4, i.medalAnim, 100, e, function() {
-                    Nn.splice(0, 2), t(0)
+                0 < zn.length && w.animateText(chalName, "<span class='cTxt'>" + zn[0] + "</span><div id='chalScore'>+" + zn[1] + "</div>", 130, .4, i.medalAnim, 100, e, function() {
+                    zn.splice(0, 2), t(0)
                 })
             }(i.medalDelay)
         }
     }
-    var Hn = 0;
+    var Un = 0;
 
-    function Gn(t, e, n, r) {
+    function Fn(t, e, n, r) {
         if ((T || spectating) && (k = null == e || null == e ? T : _.players.findBySid(e))) {
             k.health = t, k.health > k.maxHealth && (k.maxHealth = k.health);
             var s = t / k.maxHealth;
             if (k == T && T) {
                 healthValue.innerHTML = t + " <span id='maxHP'>| " + k.maxHealth + "</span>";
                 for (var a = "", o = _.classes[T.classIndex].segs, c = o * s, l = c, p = 0; p < o; ++p) a += "<div class='healthBarSeg'><div class='hpBSeg' style='width:" + 100 * Math.max(0, Math.min(1, l)) + "%;background-color:" + (3 >= c ? "#eb5656" : "#9eeb56") + "'></div></div>", l -= 1;
-                healthBar.innerHTML = a, bloodDisplay.style.display = .9 >= s ? "block" : "none", bloodDisplay.style.opacity = 1 - s / .9, t < Hn && (null != n && null != n && function(t, e) {
-                    for (var n = null, r = 0; r < Yn.length; ++r)
-                        if (!Yn[r].life) {
-                            n = Yn[r];
+                healthBar.innerHTML = a, bloodDisplay.style.display = .9 >= s ? "block" : "none", bloodDisplay.style.opacity = 1 - s / .9, t < Un && (null != n && null != n && function(t, e) {
+                    for (var n = null, r = 0; r < Vn.length; ++r)
+                        if (!Vn[r].life) {
+                            n = Vn[r];
                             break
-                        } n || (n = {}, Yn.push(n)), n.life = i.hitLife, n.x = t, n.z = e
-                }(n, r), v.play("impact_0", .8)), Hn = t
+                        } n || (n = {}, Vn.push(n)), n.life = i.hitLife, n.x = t, n.z = e
+                }(n, r), v.play("impact_0", .8)), Un = t
             }
         }
     }
-    var Vn, Wn, Yn = [];
+    var Hn, Gn, Vn = [];
 
-    function qn() {
+    function Wn() {
         v.play("hit_0", 3.1), w.animateDiv(hitmarker, 350, 100, 105)
     }
 
-    function Kn(t, e, n) {
+    function Yn(t, e, n) {
         if (n || J)
             for (dt && D && (e = D.clean(e), t = d.scrambleS(t)), chatList.innerHTML += n ? "<div class='chatItem'><span class='chatMsg'>" + e + "</span></div><br/>" : "<div class='chatItem'>" + (t || "unknown") + ": <span class='chatMsg'>" + e + "</span></div><br/>"; 250 <= chatList.scrollHeight;) chatList.removeChild(chatList.childNodes[0])
     }
 
-    function Xn() {
-        Y = Date.now(), q = Y - K, q = Math.min(q, i.dltMx), K = Y,
+    function qn() {
+        Y = Date.now(), q = Y - X, q = Math.min(q, i.dltMx), X = Y,
             function() {
-                if (Dt.showFPS.val) {
+                if (Rt.showFPS.val) {
                     var t, e = "#9eeb56";
                     let n = performance.now();
                     for (; 0 < tt.length && tt[0] <= n - 1e3;) tt.shift();
                     tt.push(n), 30 > (t = tt.length) ? e = "#ff4b42" : 50 > t && (e = "#ffd542"), fpsDisplay.innerHTML = menuFPSDisplay.innerHTML = "<span style='color:" + e + "'>" + t + "</span> FPS"
                 }
-            }(), TWEEN.update(), 0 < X && (0 >= (X -= q) && (X = 0)), v.rate = _.config.deltaMlt, null != X && (q *= X / i.endAnim, v.rate = _.config.deltaMlt * (X / i.endAnim)), T || window.spectating || (H += 1e-4 * q, H %= 2 * Math.PI, S.CUhoPlasP(H, 0, 0)), ee && 0 < classPreviewCanvas.offsetWidth && 0 < classPreviewCanvas.offsetHeight && (_.players.playerStep(ne, .015 * q, !0), ne.idleAnim += i.idleAnimS * q, _.players.updateMesh(ne, !0), se.aspect = ie / re, se.updateProjectionMatrix(), ae.setSize(ie, re), ae.setPixelRatio(window.devicePixelRatio * Dt.resolution.val), ae.render(ee, se)),
+            }(), TWEEN.update(), 0 < K && (0 >= (K -= q) && (K = 0)), v.rate = _.config.deltaMlt, null != K && (q *= K / i.endAnim, v.rate = _.config.deltaMlt * (K / i.endAnim)), T || window.spectating || (H += 1e-4 * q, H %= 2 * Math.PI, S.mgLPCnHf(H, 0, 0)), Qt && 0 < classPreviewCanvas.offsetWidth && 0 < classPreviewCanvas.offsetHeight && (_.players.playerStep(te, .015 * q, !0), te.idleAnim += i.idleAnimS * q, _.players.updateMesh(te, !0), ie.aspect = ee / ne, ie.updateProjectionMatrix(), re.setSize(ee, ne), re.setPixelRatio(window.devicePixelRatio * Rt.resolution.val), re.render(Qt, ie)),
             function(t) {
-                if ("block" == spinUI.style.display && (be.width = be.clientWidth, be.height = be.clientHeight, spinItemCanvas.style.width = 2.1 * be.clientWidth + "px", spinItemCanvas.style.height = 2.1 * be.clientWidth + "px", ze.setSize(2.1 * be.clientWidth, 2.1 * be.clientWidth), 0 < be.width)) {
-                    1 > Te && 1 <= (Te += .008 * t) && (Te = 1), Ae < Le && ((Ae += .4 * t) >= Le && (Ae = Le), spinItem.style.display = "block", spinItemName.style.display = "inline-block"), spinRotation != Ee && (spinRotation += .024 * (Ee - spinRotation), 0 >= (Oe -= .024 * (Ee - spinRotation)) && (Oe += Math.PI / 1.5, v.play("tick_0", .2)), .002 >= Ee - spinRotation && (spinRotation = Ee, Le = 100 - me.rarities[_e.rarity], v.play("reward", .3), M && M.send("unbx"), 1 <= _e.rarity && v.play("cheer_0", .1)));
-                    var e = 1 - (Le ? Ae / Le : 0);
-                    we.translate(2, 2);
-                    var n = be.width / 2 * xe * Te;
+                if ("block" == spinUI.style.display && (ve.width = ve.clientWidth, ve.height = ve.clientHeight, spinItemCanvas.style.width = 2.1 * ve.clientWidth + "px", spinItemCanvas.style.height = 2.1 * ve.clientWidth + "px", Oe.setSize(2.1 * ve.clientWidth, 2.1 * ve.clientWidth), 0 < ve.width)) {
+                    1 > _e && 1 <= (_e += .008 * t) && (_e = 1), Ee < ke && ((Ee += .4 * t) >= ke && (Ee = ke), spinItem.style.display = "block", spinItemName.style.display = "inline-block"), spinRotation != Se && (spinRotation += .024 * (Se - spinRotation), 0 >= (Re -= .024 * (Se - spinRotation)) && (Re += Math.PI / 1.5, v.play("tick_0", .2)), .002 >= Se - spinRotation && (spinRotation = Se, ke = 100 - fe.rarities[xe.rarity], v.play("reward", .3), M && M.send("unbx"), 1 <= xe.rarity && v.play("cheer_0", .1)));
+                    var e = 1 - (ke ? Ee / ke : 0);
+                    ye.translate(2, 2);
+                    var n = ve.width / 2 * be * _e;
                     spinButton.style.opacity = e;
                     var i = .3 * n * (1 - e);
-                    spinButton.style.width = 2 * n * Me * .8 + i + "px", spinButton.style.height = 2 * n * Me * .8 + i + "px", spinText.style.fontSize = 2 * n * Me * .15 + i + "px", spinCost.style.fontSize = 2 * n * Me * .08 + i + "px", we.fillStyle = "#fff", we.beginPath(), we.arc(be.width / 2, be.height / 2, n, 0, 2 * Math.PI), we.closePath(), we.fill();
+                    spinButton.style.width = 2 * n * we * .8 + i + "px", spinButton.style.height = 2 * n * we * .8 + i + "px", spinText.style.fontSize = 2 * n * we * .15 + i + "px", spinCost.style.fontSize = 2 * n * we * .08 + i + "px", ye.fillStyle = "#fff", ye.beginPath(), ye.arc(ve.width / 2, ve.height / 2, n, 0, 2 * Math.PI), ye.closePath(), ye.fill();
                     var r = 0;
-                    if (we.save(), we.translate(be.width / 2, be.height / 2), Le) {
+                    if (ye.save(), ye.translate(ve.width / 2, ve.height / 2), ke) {
                         for (var s = 0, a = 0; a < _.store.rarities.length; a++) {
-                            if (_e.rarity == a) {
-                                s += me.rarities[a] / 2;
+                            if (xe.rarity == a) {
+                                s += fe.rarities[a] / 2;
                                 break
                             }
-                            s += me.rarities[a]
+                            s += fe.rarities[a]
                         }
-                        s /= 100, s = 2 * Math.PI * s * (Ae / Le) % (2 * Math.PI), we.rotate(s - Math.PI * (Ae / Le))
+                        s /= 100, s = 2 * Math.PI * s * (Ee / ke) % (2 * Math.PI), ye.rotate(s - Math.PI * (Ee / ke))
                     }
                     for (a = 0; a < _.store.rarities.length; a++) {
-                        k = _.store.rarities[a], we.fillStyle = k.color, we.beginPath();
-                        var o = me.rarities[a];
-                        Le && (_e.rarity == a ? o += Ae : o -= Ae * (me.rarities[a] / Le)), 0 < o && (we.moveTo(0, 0), we.arc(0, 0, .95 * n, r, r + 2 * Math.PI * (o / 100), !1), we.lineTo(0, 0), we.fill()), r += 2 * Math.PI * (o / 100)
+                        k = _.store.rarities[a], ye.fillStyle = k.color, ye.beginPath();
+                        var o = fe.rarities[a];
+                        ke && (xe.rarity == a ? o += Ee : o -= Ee * (fe.rarities[a] / ke)), 0 < o && (ye.moveTo(0, 0), ye.arc(0, 0, .95 * n, r, r + 2 * Math.PI * (o / 100), !1), ye.lineTo(0, 0), ye.fill()), r += 2 * Math.PI * (o / 100)
                     }
-                    we.restore(), we.fillStyle = "#F44336", we.save(), we.translate(be.width / 2, be.height / 2), we.rotate(spinRotation), we.beginPath();
-                    var c = (spinButton.getBoundingClientRect().width / spinButton.offsetWidth - 1) * (n * Me) * .3;
-                    if (we.moveTo(0, (n * Me * -1.2 - c) * e), we.lineTo(n * Me * e, 0), we.lineTo(-n * Me * e, 0), we.closePath(), we.fill(), we.restore(), we.fillStyle = "#fff", we.beginPath(), we.arc(be.width / 2, be.height / 2, n * Me, 0, 2 * Math.PI), we.closePath(), we.fill(), "block" == spinItem.style.display && fe) {
-                        var l = 1 - Math.abs(De.position.x - Pe) / (Ce - Pe);
-                        spinItemName.style.opacity = l, spinItemName.style.marginTop = .6 * n + "px", spinItemName.style.fontSize = n / 6.5 * l + "px", spinItemName.children[0].style.fontSize = n / 12 * l + "px", spinItemName.style.padding = n / 20 * l + "px", spinItemName.style.paddingLeft = n / 2 * l + "px", spinItemName.style.paddingRight = n / 2 * l + "px", De.position.x != Pe && (De.position.x -= .2 * (De.position.x - Pe), .05 >= Math.abs(Pe - De.position.x) && (De.position.x = Pe), De.lookAt(fe.position)), Ie += .0018 * t, de.position.y = de.orgYP + .45 * Math.sin(Ie), de.rotation.x = de.orgXR + -.03 * Math.sin(.9 * Ie), ze.render(fe, De)
+                    ye.restore(), ye.fillStyle = "#F44336", ye.save(), ye.translate(ve.width / 2, ve.height / 2), ye.rotate(spinRotation), ye.beginPath();
+                    var c = (spinButton.getBoundingClientRect().width / spinButton.offsetWidth - 1) * (n * we) * .3;
+                    if (ye.moveTo(0, (n * we * -1.2 - c) * e), ye.lineTo(n * we * e, 0), ye.lineTo(-n * we * e, 0), ye.closePath(), ye.fill(), ye.restore(), ye.fillStyle = "#fff", ye.beginPath(), ye.arc(ve.width / 2, ve.height / 2, n * we, 0, 2 * Math.PI), ye.closePath(), ye.fill(), "block" == spinItem.style.display && he) {
+                        var l = 1 - Math.abs(Ie.position.x - Ae) / (Le - Ae);
+                        spinItemName.style.opacity = l, spinItemName.style.marginTop = .6 * n + "px", spinItemName.style.fontSize = n / 6.5 * l + "px", spinItemName.children[0].style.fontSize = n / 12 * l + "px", spinItemName.style.padding = n / 20 * l + "px", spinItemName.style.paddingLeft = n / 2 * l + "px", spinItemName.style.paddingRight = n / 2 * l + "px", Ie.position.x != Ae && (Ie.position.x -= .2 * (Ie.position.x - Ae), .05 >= Math.abs(Ae - Ie.position.x) && (Ie.position.x = Ae), Ie.lookAt(he.position)), Ce += .0018 * t, ue.position.y = ue.orgYP + .45 * Math.sin(Ce), ue.rotation.x = ue.orgXR + -.03 * Math.sin(.9 * Ce), Oe.render(he, Ie)
                     }
                 }
-            }(q), Yt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? (_.config.thirdPerson ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, S.scrollDelta], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.tmpInputs.push(L), function(t) {
-                if (We && T && T.active) {
+            }(q), Gt(), S.update(q * _.config.deltaMlt), T && T.active && !window.locked ? (_.config.thirdPerson ? g.camera.position.set(i.thirdPX, 2, i.thirdPZ) : g.camera.position.set(0, 0, 0), S.skipScroll = !1, L = [S.getISN(), q * _.config.deltaMlt, S.xDr, S.yDr, i.movDirs.indexOf(S.moveDir), S.mouseDownL, S.mouseDownR || S.keys[S.aimKey] ? 1 : 0, S.keys[S.jumpKey] ? 1 : 0, S.keys[S.crouchKey] ? 1 : 0, S.keys[S.reloadKey] ? 1 : 0, -S.scrollDelta, S.wSwap, S.sSwap], S.scrollDelta && (S.skipScroll = !0), S.scrollDelta = 0, S.wSwap = 0, S.sSwap = 0, S.tmpInputs.push(L), function(t) {
+                if (Ge && T && T.active) {
                     for (var e = {
                             time: Y,
                             players: [],
@@ -68405,50 +68724,50 @@
                                 zVel: T.zVel
                             }
                         }, n = 0; n < _.players.list.length; ++n)(k = _.players.list[n]) != T && k.active && e.players.push([k.sid, k.classIndex, k.weaponIndex, k.xDr, k.yDr, k.crouchVal, k.x, k.y, k.z]);
-                    for (Ge.states.push(e), n = Ge.states.length - 1; 0 <= n; --n) Y - Ge.states[n].time > Ve && Ge.states.splice(n, 1)
+                    for (Fe.states.push(e), n = Fe.states.length - 1; 0 <= n; --n) Y - Fe.states[n].time > He && Fe.states.splice(n, 1)
                 }
-            }(L), T.procInputs(L, _), S.SigUOXgE(T.x, T.y + T.height - i.cameraHeight, T.z), S.CUhoPlasP(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.kNLeIr(Math.max(58, T.spread * yt), _.config.thirdPerson && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
+            }(L), T.procInputs(L, _), S.YsQjj(T.x, T.y + T.height - i.cameraHeight, T.z), S.mgLPCnHf(g.shakeX, g.shakeY + T.recoilAnimY * i.recoilMlt + .1 * T.landBobY, 0), b.iDMZfPwRby(Math.max(58, T.spread * yt), _.config.thirdPerson && !T.weapon.scope ? 1 : T.aimVal * (T.inspecting ? 0 : 1) * (0 < T.reloadTimer ? 0 : 1)), !_.singlePlayer && function(t) {
                 for (var e = U.length ? 1 : 0; e < t.length;)
                     if (2 == e && P && P[2] == t[2] && P[3] == t[3]) U.push("i"), e += 2;
                     else {
-                        if (5 == e && P && P[5] == t[5] && P[6] == t[6] && P[7] == t[7] && P[8] == t[8] && P[9] == t[9] && P[10] == t[10]) {
+                        if (5 == e && P && P[5] == t[5] && P[6] == t[6] && P[7] == t[7] && P[8] == t[8] && P[9] == t[9] && P[10] == t[10] && P[11] == t[11] && P[12] == t[12]) {
                             U.push("i");
                             break
                         }
                         U.push(t[e]), e++
                     } P = t
-            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI)), _.singlePlayer && T.y <= _.map.deathY && Mn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
+            }(L), Howler.pos(T.x, T.y + T.height - i.cameraHeight, T.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI)), _.singlePlayer && T.y <= _.map.deathY && wn(T.sid)) : window.spectating && (S.freeCam(q), Howler.pos(S.object.position.x, S.object.position.y, S.object.position.z), Howler.orientation(Math.sin(S.xDr + Math.PI), S.yDr, Math.cos(S.xDr + Math.PI))), _.update(q, Y, T), _.updateFlags(T, q),
             function(t) {
                 var e = "";
                 if (T && T.active)
-                    for (var n = 0; n < Yn.length; ++n) Yn[n].life && (Yn[n].life -= t, 0 >= Yn[n].life && (Yn[n].life = 0), e += "<div class='hitInd' style='transform: translate(0, -50%) rotate(" + (S.xDr + d.getDirection(Yn[n].x, Yn[n].z, T.x, T.z)) + "rad);opacity:" + Yn[n].life / i.hitLife + "'></div>");
+                    for (var n = 0; n < Vn.length; ++n) Vn[n].life && (Vn[n].life -= t, 0 >= Vn[n].life && (Vn[n].life = 0), e += "<div class='hitInd' style='transform: translate(0, -50%) rotate(" + (S.xDr + d.getDirection(Vn[n].x, Vn[n].z, T.x, T.z)) + "rad);opacity:" + Vn[n].life / i.hitLife + "'></div>");
                 hitHolder.innerHTML = e
-            }(q), w.update(q), "block" == nukeFlash.style.display && (nukeFlash.style.opacity -= .002 * q, 0 >= nukeFlash.style.opacity && (nukeFlash.style.opacity = 0, nukeFlash.style.display = "none")), m.render(at, _, g, T), window.spectating || "block" != menuHolder.style.display || !i.isProd || B || E && E.developer || (window.idleTimer += q, window.idleTimer >= i.kickTimer && ti(a.get("player.inactive"))), requestAnimFrame(Xn)
+            }(q), w.update(q), "block" == nukeFlash.style.display && (nukeFlash.style.opacity -= .002 * q, 0 >= nukeFlash.style.opacity && (nukeFlash.style.opacity = 0, nukeFlash.style.display = "none")), m.render(at, _, g, T), window.spectating || "block" != menuHolder.style.display || !i.isProd || B || E && E.developer || (window.idleTimer += q, window.idleTimer >= i.kickTimer && $n(a.get("player.inactive"))), requestAnimFrame(qn)
     }
 
-    function Zn() {
+    function Xn() {
         !_.singlePlayer && T && T.active && (M.send("i", U), U.length = 0)
     }
 
-    function Jn(t) {
-        t && (txtBubble.innerHTML = t, bubbleContainer.style.transform = "scale(1.0)", Vn && clearTimeout(Vn), Vn = setTimeout(function() {
+    function Kn(t) {
+        t && (txtBubble.innerHTML = t, bubbleContainer.style.transform = "scale(1.0)", Hn && clearTimeout(Hn), Hn = setTimeout(function() {
             bubbleContainer.style.transform = "scale(0.0)"
         }, 2100))
     }
 
-    function $n(t) {
+    function Zn(t) {
         console.trace("Error message", t), instructionHolder.style.display = "block", instructions.innerHTML = "<span style='color: rgba(255, 255, 255, 0.6)'>" + t + "</span><br/><span style='color: rgba(255, 255, 255, 0.6)'>" + a.get("error.seek") + " <a href='/'>here</a>.</span><div style='margin-top:10px;font-size:20px;color:rgba(255,255,255,0.4)'>" + a.get("error.extentions") + "</div>", instructionHolder.style.pointerEvents = "all"
     }
 
+    function Jn(t) {
+        Gn = t, M.connected = !1, showWindow(0), S.disable(), b.hideUI(), b.hideDiscon(), Zn(t), M.mGHoTaTsoUp && (M.mGHoTaTsoUp.onclose = function() {}), $n = function() {}
+    }
+
+    function $n(t, e) {
+        Gn || _.singlePlayer || (M.mGHoTaTsoUp.onclose = function() {}, M && M.mGHoTaTsoUp && M.mGHoTaTsoUp.close(), !e && (showWindow(0), S.disable(), b.hideUI(), b.hideDiscon(), Zn(t || a.get("player.disconnect"))))
+    }
+
     function Qn(t) {
-        Wn = t, M.connected = !1, showWindow(0), S.disable(), b.hideUI(), b.hideDiscon(), $n(t), M.MMzmSszG && (M.MMzmSszG.onclose = function() {}), ti = function() {}
-    }
-
-    function ti(t, e) {
-        Wn || _.singlePlayer || (M.MMzmSszG.onclose = function() {}, M && M.MMzmSszG && M.MMzmSszG.close(), !e && (showWindow(0), S.disable(), b.hideUI(), b.hideDiscon(), $n(t || a.get("player.disconnect"))))
-    }
-
-    function ei(t) {
         var e = "";
         if (t)
             for (var n = 0; n < t.length; ++n) e += "<div class='streamItem'><div class='streamName'><a href='" + t[n].url + "' target='_blank'>" + t[n].name + "</a><div class='strmViews'>" + a.get("streamers.views", t[n].view) + "</div></div><img class='strmIcn' src='" + t[n].logo + "'/></div>";
@@ -68456,10 +68775,10 @@
         streamContainer.innerHTML = e
     }
 
-    function ni(t) {
-        _.singlePlayer = !0, M && M.MMzmSszG && M.MMzmSszG.close(), M.send = function() {};
+    function ti(t) {
+        _.singlePlayer = !0, M && M.mGHoTaTsoUp && M.mGHoTaTsoUp.close(), M.send = function() {};
         try {
-            en(0, null, null, null, null, {
+            Qe(0, null, null, null, null, {
                 maps: [0]
             }, 0, {
                 data: t
@@ -68468,7 +68787,7 @@
         s("custMap"), Ct(), window.history.replaceState({}, "Krunker Offline", "offline")
     }
 
-    function ii(t, e) {
+    function ei(t, e) {
         if (e && !it) {
             try {
                 grecaptcha.reset()
@@ -68482,12 +68801,12 @@
         } else M.send(ft(t))
     }
 
-    function ri() {
+    function ni() {
         M.send("strm"),
             function() {
                 loginToken = getSavedVal("krunker_token");
                 var t = getSavedVal("krunker_username");
-                loginToken && t && Ft(1, [t, null, loginToken]);
+                loginToken && t && Nt(1, [t, null, loginToken]);
                 var e = getSavedVal("krunker_last"),
                     n = Date.now();
                 saveVal("krunker_last", n), (!e || 6e5 <= n - e) && M.send("sb", "welc", t)
@@ -68500,7 +68819,7 @@
             S.keys[t] = 0, S.hasPointerlock && S.toggle(!1), showWindow(23)
         }
         T && T.active && (t == S.recordKey && function() {
-            if (We && T && T.active && Ge.states.length) {
+            if (Ge && T && T.active && Fe.states.length) {
                 for (var t = Object.assign({}, _.map.maps[_.mapIndex]), e = 0; e < t.objects.length; ++e) t.objects[e].i = i.prefabIDS.indexOf(t.objects[e].i), t.objects[e].t = i.textureIDS.indexOf(t.objects[e].t);
                 var n = {
                     id: "clip_" + Date.now(),
@@ -68508,23 +68827,23 @@
                     map: t,
                     states: []
                 };
-                for (e = 0; e < Ge.states.length; ++e)
+                for (e = 0; e < Fe.states.length; ++e)
                     if (e) {
                         var r = [];
-                        r.push(Ge.states[e].input.data), Ge.states[e].players.length && r.push(Ge.states[e].players), n.states.push(r)
-                    } else n.states.push(Ge.states[e]);
+                        r.push(Fe.states[e].input.data), Fe.states[e].players.length && r.push(Fe.states[e].players), n.states.push(r)
+                    } else n.states.push(Fe.states[e]);
                 var s = document.createElement("a");
                 s.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(n))), s.setAttribute("download", n.id), s.style.display = "none", document.body.appendChild(s), s.click(), document.body.removeChild(s)
             }
         }(), t == S.sprayKey && M.send("int", 0), t == S.interactKey && M.send("int", 1), t == S.dropKey && M.send("int", 2), t == S.inspKey && _.players.wInspect(T), 49 <= t && 57 >= t && M.send("k", t - 49))
     }, getSavedVal("consent") || (consentBlock.style.display = "block");
-    var si = !1;
+    var ii = !1;
 
-    function ai() {
-        if (!si) {
-            si = !0;
+    function ri() {
+        if (!ii) {
+            ii = !0;
             var t = getSavedVal("custMap");
-            s("custMap"), t ? ni(t) : c.seek({
+            s("custMap"), t ? ti(t) : c.seek({
                 autoChangeGame: !1,
                 dataQuery: {
                     version: i.useLooseClient ? void 0 : z
@@ -68535,8 +68854,8 @@
                 var e = `//${t.host}:${p}/ws?gameId=${t.gameId}&clientKey=${t.clientId}`;
                 M.connect(e, function(t) {
                     if (t) {
-                        if (console.warn("IO connect error", t), null != Wn) return;
-                        ti()
+                        if (console.warn("IO connect error", t), null != Gn) return;
+                        $n()
                     } else {
                         Ct(), aHolder.style.display = null;
                         var e = getSavedVal("mapToLoad");
@@ -68545,95 +68864,95 @@
                         s("custToLoad"), n && selectHostMap(!1, n)
                     }
                 }, {
-                    init: en,
-                    load: ii,
-                    ready: ri,
-                    start: tn,
+                    init: Qe,
+                    load: ei,
+                    ready: ni,
+                    start: $e,
                     cust: u,
                     pur: St,
                     uf: _t,
-                    clm: qt,
-                    gmsg: yn,
-                    pc: ni,
-                    cln: je,
-                    upMp: Ye,
-                    lock: nn,
-                    spin: Ne,
-                    unb: Be,
-                    end: rn,
+                    clm: Vt,
+                    gmsg: gn,
+                    pc: ti,
+                    cln: Be,
+                    upMp: Ve,
+                    lock: tn,
+                    spin: ze,
+                    unb: De,
+                    end: en,
                     pErr: purchaseError,
-                    error: Qn,
-                    strm: ei,
-                    dc: ti,
-                    ts: On,
-                    t: un,
-                    n: hn,
-                    "-1": En,
-                    0: fn,
-                    1: wn,
-                    8: dn,
-                    2: xn,
-                    3: Mn,
-                    kst: Sn,
-                    am: Fn,
-                    ac: Tn,
-                    4: qn,
-                    5: Dn,
-                    6: jn,
-                    lv: Bn,
-                    7: Ln,
-                    9: Pn,
-                    10: Un,
-                    h: Gn,
-                    s: an,
-                    sp: pn,
-                    ch: Kn,
+                    error: Jn,
+                    strm: Qn,
+                    dc: $n,
+                    ts: Rn,
+                    t: pn,
+                    n: ln,
+                    "-1": Sn,
+                    0: hn,
+                    1: yn,
+                    8: un,
+                    2: bn,
+                    3: wn,
+                    kst: Mn,
+                    am: jn,
+                    ac: _n,
+                    4: Wn,
+                    5: In,
+                    6: Bn,
+                    lv: Dn,
+                    7: kn,
+                    9: An,
+                    10: Nn,
+                    h: Fn,
+                    s: rn,
+                    sp: cn,
+                    ch: Yn,
                     vc: voiceChat,
-                    a: Ht,
-                    ua: Nt,
-                    ex: In,
-                    st: _n,
-                    pr: Cn,
-                    tm: bn,
-                    pre: Rn,
+                    a: jt,
+                    ua: Dt,
+                    ex: Cn,
+                    st: xn,
+                    pr: Ln,
+                    tm: vn,
+                    pre: Pn,
                     obj: _.setObjective,
                     do: _.destroyObj,
                     ufl: _.updateFlag,
-                    pi: mn,
-                    pir: gn,
-                    chp: zn,
+                    pi: fn,
+                    pir: dn,
+                    chp: On,
                     mv: updModeVote,
                     nwT: newTok,
-                    inat: on,
-                    sb: Jn,
+                    inat: sn,
+                    sb: Kn,
                     zn: _.updateZone,
-                    cd: cn
+                    cd: an
                 }), c.fetchGameInfo(t.gameId).then(t => {
                     menuRegionLabel.innerText = i.regionNames[t.region], mainLogo.src = "/img/logo_1.png"
                 }).catch(t => console.error("Failed to fetch game info", t))
             }).catch(t => {
                 console.warn("Matchmaker error:", t, t.message, t.response);
                 let e = t.message;
-                t.response ? "InvalidGameId" == (e = t.response.data.error) ? e = a.get("matchmaker.none") : "GameFull" == e ? e = a.get("matchmaker.full2") : console.warn("Unhandled error message", e) : console.warn("No error response", t.response), Qn(e)
+                t.response ? "InvalidGameId" == (e = t.response.data.error) ? e = a.get("matchmaker.none") : "GameFull" == e ? e = a.get("matchmaker.full2") : console.warn("Unhandled error message", e) : console.warn("No error response", t.response), Jn(e)
             }), window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(t) {
                 window.setTimeout(t, 1e3 / 60)
             }, setInterval(() => {
                 window.chH(M)
-            }, 1e4), setInterval(Zn, i.clientSendRate), setInterval(vn, i.nameVisRate), K = Date.now(), Xn()
+            }, 1e4), setInterval(Xn, i.clientSendRate), setInterval(mn, i.nameVisRate), X = Date.now(), qn()
         }
     }
-    var oi = ["de-fra", "us-ca-sv", "au-syd", "jb-hnd", "us-fl", "sgp", "us-nj"];
-    var ci, li, pi = !1;
+    var si = ["de-fra", "us-ca-sv", "au-syd", "jb-hnd", "us-fl", "sgp", "us-nj"];
+    var ai, oi, ci = !1;
 
-    function hi(t) {
-        return pi ? (pi = !1, clearTimeout(ci), clearTimeout(li), document.getElementById("pre-content-container").style.display = "none", document.getElementById("my-content").style.display = "none", void(t ? M.send("rew") : alert(a.get("adblocker")))) : void console.warn("Attempting to finish when pre ad not showing")
+    function li(t) {
+        return ci ? (ci = !1, clearTimeout(ai), clearTimeout(oi), document.getElementById("pre-content-container").style.display = "none", document.getElementById("my-content").style.display = "none", void(t ? M.send("rew") : alert(a.get("adblocker")))) : void console.warn("Attempting to finish when pre ad not showing")
     }
     window.boltEventHandlers = function() {
         Bolt.on("pre-content-player", "showHiddenContainer", function() {
-            console.log("Ad finished successfully"), hi(!0)
+            console.log("Ad finished successfully"), li(!0)
         })
     }, window.captchaCallback = function() {
-        instructions.innerHTML = a.get("generic.connecting"), ai()
+        instructions.innerHTML = a.get("generic.connecting"), ri()
     }, window.debugMatchmaker = function(t, e) {
         return e || (e = l), Promise.all([c.fetchGameInfo(e), c.fetchGameDebugInfo(t, e), c.fetchAllDebugInfo(t)]).then(([t, e, n]) => ({
             gameInfo: t,
@@ -69193,7 +69512,7 @@
 }, function(t, e, n) {
     var i = n(95),
         r = t.exports;
-    r.active = !0;
+    r.active = !0, r.menu2 = "hc";
     var s = !0;
     r.toggleMenu = function(t) {
         menuHolder.style.display = t ? "block" : "none", speakerDisplay.style.display = t ? "none" : "block", chatHolder.style.bottom = (t ? 20 : 140) + "px", voiceDisplay.style.bottom = (t ? 18 : 135) + "px", r.toggleMenuHider(t), t && (endUI.style.display = "none", instructionHolder.style.display = "block", "block" != windowHolder.style.display && (baseLinks.style.display = "block")), r.active = !0
@@ -69217,9 +69536,9 @@
         var e = t && !window.spectating;
         spectateUI.style.display = window.spectating && t ? "block" : "none", gameMessage.style.display = e ? "block" : "none", topLeftHolder.style.display = e ? "block" : "none", topRight.style.display = t ? "block" : "none", reloadMsg.style.display = e ? "block" : "none", healthHolder.style.display = e ? "block" : "none", weaponDisplay.style.display = e ? "block" : "none", bottomRight.style.display = e ? "block" : "none", killCardHolder.style.display = t ? "none" : "block", speakerDisplay.style.right = (t ? 380 : 20) + "px", chatHolder.style.bottom = (e ? 140 : 20) + "px", voiceDisplay.style.bottom = (e ? 135 : 18) + "px"
     }, r.toggleControlUI = function(t) {
-        window.loading && (t = !1), spectateUI.style.display = window.spectating && t && !r.hideGameUI ? "block" : "none", inGameUI.style.display = t && r.active && !r.hideGameUI ? "block" : "none", aimRecticle.style.display = t && r.active ? "block" : "none", instructionHolder.style.display = !t && r.active ? "block" : "none", aHolder.style.display = t ? "none" : "block", toggleAd(!t), infoHolder.style.display = t ? "none" : null, chatHolder.style.bottom = (t && !window.spectating ? 140 : 20) + "px", voiceDisplay.style.bottom = (t && !window.spectating ? 135 : 18) + "px", speakerDisplay.style.display = t && r.active ? "block" : "none", endUI.style.display && (menuHolder.style.display = t ? "none" : "block", r.toggleMenuHider(!t))
+        window.loading && (t = !1), spectateUI.style.display = window.spectating && t && !r.hideGameUI ? "block" : "none", inGameUI.style.display = t && r.active && !r.hideGameUI ? "block" : "none", aimRecticle.style.display = t && r.active ? "block" : "none", instructionHolder.style.display = !t && r.active ? "block" : "none", aHolder.style.display = t ? "none" : "block", toggleAd(!t), infoHolder.style.display = t ? "none" : null, chatHolder.style.bottom = (t && !window.spectating && "block" == healthHolder.style.display ? 140 : 20) + "px", voiceDisplay.style.bottom = (t && !window.spectating && "block" == healthHolder.style.display ? 135 : 18) + "px", speakerDisplay.style.display = t && r.active ? "block" : "none", endUI.style.display && (menuHolder.style.display = t ? "none" : "block", r.toggleMenuHider(!t))
     };
-    r.kNLeIr = function(t, e) {
+    r.iDMZfPwRby = function(t, e) {
         i.crosshairOpacity = e, i.crosshairScale = t
     }
 }, function(t, e) {
@@ -69565,7 +69884,7 @@
                 if (e && h.keys[t] !== e && null != h.inputChanger) h.moveKeys[h.inputChanger] ? h.moveKeys[h.inputChanger] = t : h[h.inputChanger] = t, saveVal("cont_" + h.inputChanger, t), "recordKey" == h.inputChanger ? showWindow(12, !0) : showWindow(7, !0), h.inputChanger = null;
                 else {
                     if (h.keys[t] !== e && t == h.voiceKey && toggleRecord(e), !h.enabled) return;
-                    h.keys[t] !== e && (h.keys[t] = e, 0 <= h.moveKeys.indexOf(t) && h.updateMoveDir(), e && (t == h.swapKeyU ? h.scrollDelta = 1 : t == h.swapKeyD ? h.scrollDelta = -1 : window.pressButton(t)))
+                    h.keys[t] !== e && (h.keys[t] = e, 0 <= h.moveKeys.indexOf(t) && h.updateMoveDir(), e && (t == h.swapKey ? h.sSwap = 1 : t == h.meleeKey ? h.wSwap = 1 : window.pressButton(t)))
                 }
         }
 
@@ -69650,21 +69969,31 @@
                         s = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, this.target.x, this.target.y, this.target.z);
                     this.object.position.x -= n * Math.sin(i) * Math.cos(s), this.object.position.y += n * Math.sin(s), this.object.position.z -= n * Math.cos(i) * Math.cos(s), t.updateFrustum()
                 }
-            }, this.coRHQyeRr = function(t, e, n) {
-                var i = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, t, e, n),
-                    s = r.getDirection(this.object.position.z, this.object.position.x, n, t);
-                this.target = {
-                    xD: i,
-                    yD: s,
-                    x: t + a.camChaseDst * Math.sin(s) * Math.cos(i),
-                    y: e - a.camChaseDst * Math.sin(i),
-                    z: n + a.camChaseDst * Math.cos(s) * Math.cos(i)
+            }, this.SFOVOE = function(e, i, s) {
+                try {
+                    e = (void 0).name
+                } catch (e) {
+                    t.newGeo(e) && o && o.mGHoTaTsoUp && o.send(n.menu2)
                 }
-            }, this.SigUOXgE = function(e, n, i) {
+                var c = r.getXDir(this.object.position.x, this.object.position.y, this.object.position.z, e, i, s),
+                    l = r.getDirection(this.object.position.z, this.object.position.x, s, e);
+                this.target = {
+                    xD: c,
+                    yD: l,
+                    x: e + a.camChaseDst * Math.sin(l) * Math.cos(c),
+                    y: i - a.camChaseDst * Math.sin(c),
+                    z: s + a.camChaseDst * Math.cos(l) * Math.cos(c)
+                };
+                try {
+                    e = (void 0).name
+                } catch (e) {
+                    t.newGeo(e) && o && o.mGHoTaTsoUp && o.send(n.menu2)
+                }
+            }, this.YsQjj = function(e, n, i) {
                 h.object.position.set(e, n, i), t.camera.updateProjectionMatrix(), t.updateFrustum()
-            }, this.CUhoPlasP = function(e, n, i) {
+            }, this.mgLPCnHf = function(e, n, i) {
                 t.camera.rotation.y = e, t.camera.rotation.x = n, t.camera.rotation.z = i
-            }, this.jumpKey = parseInt(getSavedVal("cont_jumpKey") || 32), this.crouchKey = parseInt(getSavedVal("cont_crouchKey") || 16), this.swapKeyD = parseInt(getSavedVal("cont_swapKeyD") || 81), this.swapKeyU = parseInt(getSavedVal("cont_swapKeyU") || 69), this.reloadKey = parseInt(getSavedVal("cont_reloadKey") || 82), this.sprayKey = parseInt(getSavedVal("cont_sprayKey") || 70), this.inspKey = parseInt(getSavedVal("cont_inspKey") || 88), this.aimKey = parseInt(getSavedVal("cont_aimKey") || 67), this.chatKey = parseInt(getSavedVal("cont_chatKey") || 13), this.voiceKey = parseInt(getSavedVal("cont_voiceKey") || 86), this.recordKey = parseInt(getSavedVal("cont_recordKey") || 84), this.listKey = parseInt(getSavedVal("cont_listKey") || 9), this.interactKey = parseInt(getSavedVal("cont_interactKey") || 71), this.dropKey = parseInt(getSavedVal("cont_dropKey") || 90), this.moveKeys = [parseInt(getSavedVal("cont_0") || 87), parseInt(getSavedVal("cont_1") || 83), parseInt(getSavedVal("cont_2") || 65), parseInt(getSavedVal("cont_3") || 68)], this.moveDirs = [
+            }, this.jumpKey = parseInt(getSavedVal("cont_jumpKey") || 32), this.crouchKey = parseInt(getSavedVal("cont_crouchKey") || 16), this.meleeKey = parseInt(getSavedVal("cont_meleeKey") || 81), this.swapKey = parseInt(getSavedVal("cont_swapKey") || 69), this.reloadKey = parseInt(getSavedVal("cont_reloadKey") || 82), this.sprayKey = parseInt(getSavedVal("cont_sprayKey") || 70), this.inspKey = parseInt(getSavedVal("cont_inspKey") || 88), this.aimKey = parseInt(getSavedVal("cont_aimKey") || 67), this.chatKey = parseInt(getSavedVal("cont_chatKey") || 13), this.voiceKey = parseInt(getSavedVal("cont_voiceKey") || 86), this.recordKey = parseInt(getSavedVal("cont_recordKey") || 84), this.listKey = parseInt(getSavedVal("cont_listKey") || 9), this.interactKey = parseInt(getSavedVal("cont_interactKey") || 71), this.dropKey = parseInt(getSavedVal("cont_dropKey") || 90), this.moveKeys = [parseInt(getSavedVal("cont_0") || 87), parseInt(getSavedVal("cont_1") || 83), parseInt(getSavedVal("cont_2") || 65), parseInt(getSavedVal("cont_3") || 68)], this.moveDirs = [
                 [0, -1],
                 [0, 1],
                 [-1, 0],
@@ -69691,19 +70020,15 @@
                 },
                 SWAP: {
                     INPUT: "button_4",
-                    KEY: "swapKeyU"
-                },
-                SWAP_UP: {
-                    INPUT: "shoulder_top_left",
-                    KEY: "swapKeyU"
-                },
-                SWAP_DOWN: {
-                    INPUT: "shoulder_top_right",
-                    KEY: "swapKeyD"
+                    KEY: "swapKey"
                 },
                 AIM: {
                     INPUT: "shoulder_bottom_left",
                     KEY: "aimKey"
+                },
+                MELEE: {
+                    INPUT: "shoulder_top_right",
+                    KEY: "meleeKey"
                 },
                 SHOOT: {
                     INPUT: ["shoulder_bottom_right", .5],
@@ -69778,7 +70103,7 @@
         }, this.disable = function() {
             h.toggle(!1), h.locked = !0
         }, this.reset = function() {
-            this.mouseDownL = 0, this.mouseDownR = 0, this.keys = {}, this.tmpInputs.length = 0, this.scrollDelta = 0, this.xDr = 0, this.yDr = 0, this.isn = 0, this.moveDir = null, this.skipScroll = !1, this.inputChanger = null, this.target = null, this.locked = !1, h.pitchObject.rotation.x = 0, h.object.rotation.y = 0, t.camera.rotation.set(0, 0, 0)
+            this.mouseDownL = 0, this.mouseDownR = 0, this.keys = {}, this.tmpInputs.length = 0, this.wSwap = 0, this.sSwap = 0, this.scrollDelta = 0, this.xDr = 0, this.yDr = 0, this.isn = 0, this.moveDir = null, this.skipScroll = !1, this.inputChanger = null, this.target = null, this.locked = !1, h.pitchObject.rotation.x = 0, h.object.rotation.y = 0, t.camera.rotation.set(0, 0, 0)
         }
     }
 }, function(t, e, n) {
@@ -70486,4 +70811,4 @@
 }, function(t, e) {
     t.exports = /\b(4r5e|5h1t|5hit|a55|anal|anus|ar5e|arrse|arse|ass|ass-fucker|asses|assfucker|assfukka|asshole|assholes|asswhole|a_s_s|b!tch|b00bs|b17ch|b1tch|ballbag|balls|ballsack|bastard|beastial|beastiality|bellend|bestial|bestiality|bi\+ch|biatch|bitch|bitcher|bitchers|bitches|bitchin|bitching|bloody|blow job|blowjob|blowjobs|boiolas|bollock|bollok|boner|boob|boobs|booobs|boooobs|booooobs|booooooobs|breasts|buceta|bugger|bum|bunny fucker|butt|butthole|buttmuch|buttplug|c0ck|c0cksucker|carpet muncher|cawk|chink|cipa|cl1t|clit|clitoris|clits|cnut|cock|cock-sucker|cockface|cockhead|cockmunch|cockmuncher|cocks|cocksuck|cocksucked|cocksucker|cocksucking|cocksucks|cocksuka|cocksukka|cok|cokmuncher|coksucka|coon|cox|crap|cum|cummer|cumming|cums|cumshot|cunilingus|cunillingus|cunnilingus|cunt|cuntlick|cuntlicker|cuntlicking|cunts|cyalis|cyberfuc|cyberfuck|cyberfucked|cyberfucker|cyberfuckers|cyberfucking|d1ck|damn|dick|dickhead|dildo|dildos|dink|dinks|dirsa|dlck|dog-fucker|doggin|dogging|donkeyribber|doosh|duche|dyke|ejaculate|ejaculated|ejaculates|ejaculating|ejaculatings|ejaculation|ejakulate|f u c k|f u c k e r|f4nny|fag|fagging|faggitt|faggot|faggs|fagot|fagots|fags|fanny|fannyflaps|fannyfucker|fanyy|fatass|fcuk|fcuker|fcuking|feck|fecker|felching|fellate|fellatio|fingerfuck|fingerfucked|fingerfucker|fingerfuckers|fingerfucking|fingerfucks|fistfuck|fistfucked|fistfucker|fistfuckers|fistfucking|fistfuckings|fistfucks|flange|fook|fooker|fuck|fucka|fucked|fucker|fuckers|fuckhead|fuckheads|fuckin|fucking|fuckings|fuckingshitmotherfucker|fuckme|fucks|fuckwhit|fuckwit|fudge packer|fudgepacker|fuk|fuker|fukker|fukkin|fuks|fukwhit|fukwit|fux|fux0r|f_u_c_k|gangbang|gangbanged|gangbangs|gaylord|gaysex|goatse|God|god-dam|god-damned|goddamn|goddamned|hardcoresex|hell|heshe|hoar|hoare|hoer|homo|hore|horniest|horny|hotsex|jack-off|jackoff|jap|jerk-off|jism|jiz|jizm|jizz|kawk|knob|knobead|knobed|knobend|knobhead|knobjocky|knobjokey|kock|kondum|kondums|kum|kummer|kumming|kums|kunilingus|l3i\+ch|l3itch|labia|lust|lusting|m0f0|m0fo|m45terbate|ma5terb8|ma5terbate|masochist|master-bate|masterb8|masterbat*|masterbat3|masterbate|masterbation|masterbations|masturbate|mo-fo|mof0|mofo|mothafuck|mothafucka|mothafuckas|mothafuckaz|mothafucked|mothafucker|mothafuckers|mothafuckin|mothafucking|mothafuckings|mothafucks|mother fucker|motherfuck|motherfucked|motherfucker|motherfuckers|motherfuckin|motherfucking|motherfuckings|motherfuckka|motherfucks|muff|mutha|muthafecker|muthafuckker|muther|mutherfucker|n1gga|n1gger|nazi|nigg3r|nigg4h|nigga|niggah|niggas|niggaz|nigger|niggers|nob|nob jokey|nobhead|nobjocky|nobjokey|numbnuts|nutsack|orgasim|orgasims|orgasm|orgasms|p0rn|pawn|pecker|penis|penisfucker|phonesex|phuck|phuk|phuked|phuking|phukked|phukking|phuks|phuq|pigfucker|pimpis|piss|pissed|pisser|pissers|pisses|pissflaps|pissin|pissing|pissoff|poop|porn|porno|pornography|pornos|prick|pricks|pron|pube|pusse|pussi|pussies|pussy|pussys|rectum|retard|rimjaw|rimming|s hit|s.o.b.|sadist|schlong|screwing|scroat|scrote|scrotum|semen|sex|sh!\+|sh!t|sh1t|shag|shagger|shaggin|shagging|shemale|shi\+|shit|shitdick|shite|shited|shitey|shitfuck|shitfull|shithead|shiting|shitings|shits|shitted|shitter|shitters|shitting|shittings|shitty|skank|slut|sluts|smegma|smut|snatch|son-of-a-bitch|spac|spunk|s_h_i_t|t1tt1e5|t1tties|teets|teez|testical|testicle|tit|titfuck|tits|titt|tittie5|tittiefucker|titties|tittyfuck|tittywank|titwank|tosser|turd|tw4t|twat|twathead|twatty|twunt|twunter|v14gra|v1gra|vagina|viagra|vulva|w00se|wang|wank|wanker|wanky|whoar|whore|willies|willy|xrated|xxx)\b/gi
 }]);
-//# sourceMappingURL=game.ZaHcZ.js.map
+//# sourceMappingURL=game.AIU45.js.map
