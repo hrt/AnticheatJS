@@ -1,4 +1,4 @@
-This repository is no longer updated and is now just an informational page on things I learnt whilst developing cheats for https://krunker.io.
+This repository is no longer updated and is now just an informational page on things I learnt whilst developing cheats (aimbot, wallhack, skin changer, instant respawn etc.) and anti anti cheats for https://krunker.io.
 
 ## [Javascript Anti Cheats 101](https://github.com/hrt/AnticheatJS#javascript-anti-cheats-101)
 
