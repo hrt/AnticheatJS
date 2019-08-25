@@ -94,7 +94,7 @@ Not really a bannable offense, but if users are using an old version of the Krun
 Most cheats have hooks on ```mousedown```, ```mouseup```, ```keydown``` and ```keyup``` but code running within script tags cannot access ```getEventListeners``` so this isn't really a detection vector.
 
 # Krunker Exploits
-Some things you accidentally bump into and realise it isn't right. Just to clarify, no game breaking exploits were shared until they were fixed.
+Some things you accidentally bump into and realise it isn't right. Just to clarify, no <b>game breaking</b> exploits were posted publicly until they were fixed.
 
 ## Spinning and invisibility
 Fixed in 1.4.x
