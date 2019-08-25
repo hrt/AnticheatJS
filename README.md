@@ -17,6 +17,7 @@ This repository is no longer updated and is now just an informational page on th
 ## [Krunker Exploits](https://github.com/hrt/GamingChair#krunker-exploits)
 
 * [Spinning and invisibility](https://github.com/hrt/AnticheatJS#spinning-and-invisibility)
+* [Fake lag](https://github.com/hrt/AnticheatJS#fake-lag)
 * [Session token generation](https://github.com/hrt/GamingChair#session-token-generation)
 * [Server crasher / kick players](https://github.com/hrt/GamingChair#server-crasher--kick-players)
 * [Extreme XP farming](https://github.com/hrt/GamingChair#extreme-xp-farming)
@@ -99,6 +100,11 @@ Some things you accidentally bump into and realise it isn't right.
 Fixed in 1.4.x
 
 Krunker clamps angles on client side before sending it to the server but does not do re-clamp on the server side. If we remove the clamp checks and add multiples of ```2 PI``` to our yaw, our character appears to spin insanely on everyone elses screen whilst completely unaffecting ourselves. This can also be abused to cause the top half of our player model to go invisble by forcing our pitch to go upside down (head towards ground).
+
+## Fake lag
+Fixed in 1.4.x
+
+Player inputs get sent to the server in intervals of ```clientSendRate```. We can hold and queue up a buffer of inputs to send to the server instead of sending it instantly to cause ourselves to heavily lag and teleport on other players screens whilst leaving us largely affected. This can be combined with some logic that only releases the buffer if someone is about to shoot us to make us very hard to hit.
 
 ## Session token generation
 Fixed in 1.5.3
