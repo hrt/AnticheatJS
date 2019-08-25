@@ -1,26 +1,26 @@
 This repository is no longer updated and is now just an informational page on things I learnt whilst developing cheats for https://krunker.io.
 
-## [Javascript Anti Cheats 101](https://github.com/hrt/GamingChair#javascript-anti-cheats-101)
+## [Javascript Anti Cheats 101](https://github.com/hrt/AnticheatJS#javascript-anti-cheats-101)
 
-* [Stack trace detection](https://github.com/hrt/GamingChair#stack-trace-detection)
-* [XHR script modification detection](https://github.com/hrt/GamingChair#xhr-script-modification-detection)
-* [Global variable detection #1](https://github.com/hrt/GamingChair#global-variable-detection-1)
-* [Global variable detection #2](https://github.com/hrt/GamingChair#global-variable-detection-2)
-* [Global variable detection #3](https://github.com/hrt/GamingChair#global-variable-detection-3)
-* [DOM modification detection](https://github.com/hrt/GamingChair#dom-modification-detection)
-* [Function use detection](https://github.com/hrt/GamingChair#function-use-detection)
-* [Function modification detection](https://github.com/hrt/GamingChair#function-modification-detection)
-* [Local storage detection](https://github.com/hrt/GamingChair#local-storage-detection)
-* [User agent detection](https://github.com/hrt/GamingChair#user-agent-detection)
-* [Event handler detection](https://github.com/hrt/GamingChair#event-handler-detection)
+* [Stack trace detection](https://github.com/hrt/AnticheatJS#stack-trace-detection)
+* [XHR script modification detection](https://github.com/hrt/AnticheatJS#xhr-script-modification-detection)
+* [Global variable detection #1](https://github.com/hrt/AnticheatJS#global-variable-detection-1)
+* [Global variable detection #2](https://github.com/hrt/AnticheatJS#global-variable-detection-2)
+* [Global variable detection #3](https://github.com/hrt/AnticheatJS#global-variable-detection-3)
+* [DOM modification detection](https://github.com/hrt/AnticheatJS#dom-modification-detection)
+* [Function use detection](https://github.com/hrt/AnticheatJS#function-use-detection)
+* [Function modification detection](https://github.com/hrt/AnticheatJS#function-modification-detection)
+* [Local storage detection](https://github.com/hrt/AnticheatJS#local-storage-detection)
+* [User agent detection](https://github.com/hrt/AnticheatJS#user-agent-detection)
+* [Event handler detection](https://github.com/hrt/AnticheatJS#event-handler-detection)
 
-## [Krunker Exploits](https://github.com/hrt/GamingChair#krunker-exploits)
+## [Krunker Exploits](https://github.com/hrt/AnticheatJS#krunker-exploits)
 
 * [Spinning and invisibility](https://github.com/hrt/AnticheatJS#spinning-and-invisibility)
 * [Fake lag](https://github.com/hrt/AnticheatJS#fake-lag)
-* [Session token generation](https://github.com/hrt/GamingChair#session-token-generation)
-* [Server crasher / kick players](https://github.com/hrt/GamingChair#server-crasher--kick-players)
-* [Extreme XP farming](https://github.com/hrt/GamingChair#extreme-xp-farming)
+* [Session token generation](https://github.com/hrt/AnticheatJS#session-token-generation)
+* [Server crasher / kick players](https://github.com/hrt/AnticheatJS#server-crasher--kick-players)
+* [Extreme XP farming](https://github.com/hrt/AnticheatJS#extreme-xp-farming)
 
 
 # Javascript Anti Cheats 101
