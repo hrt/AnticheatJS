@@ -94,6 +94,11 @@ Most cheats have hooks on ```mousedown```, ```mouseup```, ```keydown``` and ```k
 # Krunker Exploits
 Some things you accidentally bump into and realise it isn't right.
 
+## Client side clamping and invisibility
+Fixed in __
+
+Krunker clamps angles on client side before sending it to the server but does not do re-clamp on the server side. If we remove the clamp checks and add multiples of ```2 PI``` to our yaw, our character appears to spin insanely on everyone elses screen whilst completely unaffecting ourselves. This can also be abused to cause the top half of our player model to go invisble by forcing our pitch to go upside down (head towards ground).
+
 ## Session token generation
 Fixed in 1.5.3
 
