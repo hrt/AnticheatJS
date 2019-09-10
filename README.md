@@ -151,7 +151,7 @@ However the max length imposed on usernames limits the potential - yet we can st
 
 
 ## Persistent XSS Vulnerability
-Privately reported - attempted fix in 1.5.8, actual fix in 1.6.3
+Privately reported - attempted fix in 1.5.8, actual fix in 1.6.5
 
 Krunker allows users to publish custom maps/mods, taking user inputs as names for the map. These maps can be accessed either ingame or through social. Anyone can create a custom map. Before playing on a custom map, a user must first click on the preview of said map.
 
