@@ -18,7 +18,7 @@ This repository is no longer updated and is now just an informational page on th
 
 * [Spinning and invisibility](https://github.com/hrt/AnticheatJS#spinning-and-invisibility)
 * [Fake lag](https://github.com/hrt/AnticheatJS#fake-lag)
-* [Login to any account](https://github.com/hrt/AnticheatJS#login-to-any-account)
+* [Session Exploit](https://github.com/hrt/AnticheatJS#session-exploit)
 * [Server crasher / kick players](https://github.com/hrt/AnticheatJS#server-crasher--kick-players)
 * [Extreme XP farming](https://github.com/hrt/AnticheatJS#extreme-xp-farming)
 * [Any username and broken profiles](https://github.com/hrt/AnticheatJS#any-username-and-broken-profiles)
@@ -110,7 +110,7 @@ Publicly reported - weird fix that didn't work in 1.4.x. Still works
 
 Player inputs get sent to the server in intervals of ```clientSendRate```. We can hold and queue up a buffer of inputs to send to the server instead of sending it instantly to cause ourselves to heavily lag and teleport on other players screens whilst leaving us largely affected. This can be combined with some logic that only releases the buffer if someone is about to shoot us to make us very hard to hit. Extreme uses of fake lag allow players to shoot players from spawn to spawn.
 
-## Login to any account
+## Session Exploit
 Privately reported - fixed in 1.5.3
 
 One could observe that the session tokens used to login Krunker accounts are short. With further inspection we can extract public information from any account, and use this information to generate a session token for that account:
