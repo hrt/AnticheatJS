@@ -23,6 +23,9 @@ This repository is no longer updated and is now just an informational page on th
 * [Extreme XP farming](https://github.com/hrt/AnticheatJS#extreme-xp-farming)
 * [Any username and broken profiles](https://github.com/hrt/AnticheatJS#any-username-and-broken-profiles)
 * [Persistent XSS Vulnerability](https://github.com/hrt/AnticheatJS#persistent-xss-vulnerability)
+* [Denial Of Service 1](https://github.com/hrt/AnticheatJS#denial-of-service-1)
+* [Denial Of Service 2](https://github.com/hrt/AnticheatJS#denial-of-service-2)
+* [Speed hack](https://github.com/hrt/AnticheatJS#speed-hack)
 
 
 # Javascript Anti Cheats 101
@@ -163,3 +166,19 @@ A map name would generate DOM using the following template:
 
 Knowing this, we can create a custom map with name ```&quot|alert())//``` which causes the ```onclick``` handler to become ```playMap(""|alert())//")```, a.k.a ```playMap(""|alert())``` which bypasses the string and causes a pop up to appear.
 
+
+## Denial Of Service 1
+Privately reported - Fixed in 1.6.7
+
+You can reserve all slots for every server by spamming calls to `seek-game` API.
+
+## Denial Of Service 2
+Privately reported - Fixed in 1.6.9
+
+Newly introduced captcha system on the games critical API `seek-game` causes trouble when given large inputs. Since the entire krunker eco system relies on this API being alive, the end result is no one on any server being able to play a single game.
+
+
+## Speed hack
+Unreported - (re?)patched 1.7.0
+
+How to perform speed hacks are self explanatory. Lets you shoot faster, move faster, reload faster etc.
