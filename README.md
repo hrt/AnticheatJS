@@ -55,6 +55,7 @@ Send a XHR request to the same game file that has been loaded and check whether 
 Blacklist against public cheat(s) by checking for global variables.
 
 * Avoided by dynamically generating random variable names.
+* Avoided by anonymous function call
 
 ## Global variable detection #2
 We can dynamically find the global variable of a cheat by iterating the keys in window
@@ -62,12 +63,13 @@ We can dynamically find the global variable of a cheat by iterating the keys in 
 and then checking the attributes of each variable for a known cheat attribute.
 
 * Avoided by defining the cheat global variable using ```Object.defineProperty``` with ```enumerable``` set to ```false```.
-
+* Avoided by anonymous function call
 
 ## Global variable detection #3
 We can still iterate and find hidden global variables using ```Object.getOwnPropertyNames(window)```and ```getOwnPropertyDescriptors(window)```.
 
 * Avoided by injecting javascript before anything else loads (using preload scripts in electron), to hook these two functions to hide our variable. If doing so, you also would want to hide the presence of the hook by modifying the hooked functions attributes such as ```toString```, ```toString.toString..```, ```prototype```, ```hasOwnProperty```, ```constructor``` and ```name```.
+* Avoided by anonymous function call
 
 ## DOM modification detection
 This is really a no go since it's easy to detect. For example we can search through DOM for cheat strings used in GUIs by ```document.documentElement.innerHTML.indexOf('aimbot')```.
