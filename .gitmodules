@@ -1,0 +1,3 @@
+[submodule "KrunkerBypass"]
+	path = KrunkerBypass
+	url = https://github.com/hrt/KrunkerBypass
