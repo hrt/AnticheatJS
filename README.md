@@ -68,7 +68,7 @@ and then checking the attributes of each variable for a known cheat attribute.
 ## Global variable detection #3
 We can still iterate and find hidden global variables using ```Object.getOwnPropertyNames(window)```and ```getOwnPropertyDescriptors(window)```.
 
-* Avoided by injecting javascript before anything else loads (using preload scripts in electron), to hook these two functions to hide our variable. If doing so, you also would want to hide the presence of the hook by modifying the hooked functions attributes such as ```toString```, ```toString.toString..```, ```prototype```, ```hasOwnProperty```, ```constructor``` and ```name```.
+* Avoided by injecting javascript before anything else loads (using preload scripts in electron), to hook these two functions to hide our variable. If doing so, you also would want to hide the presence of the hook by modifying the hooked functions attributes such as ```toString```, ```prototype```, ```hasOwnProperty```, ```constructor``` and ```name```.
 * Avoided by anonymous function call
 
 ## DOM modification detection
@@ -82,9 +82,14 @@ Hook canvas draw functions such as ```fillText``` to detect cheat strings. We ca
 * Avoided by injecting javascript as soon as DOM is ready, keeping a copy of the original functions and using them instead.
 
 ## Function modification detection
-Detect game function modifications by checking the ```toString()``` of said function.
+Detect game function modifications by checking the ```
+()``` of said function.
 
 * Avoid by also modifying the ```toString``` of the function being modified
+
+```js
+var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); }
+```
 
 ## Local storage detection
 Detect cheats by checking the storage for any settings saved.
