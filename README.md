@@ -1,4 +1,4 @@
-This repository is no longer updated and is now just an informational page on things I learnt whilst playing and developing cheats for https://krunker.io during my vacation.
+This repository is no longer updated and is now just an informational page on things I learnt whilst playing and bypassing anti cheats for https://krunker.io during my vacation. For in depth analysis of detecting function hooking / modification take a look at [Tamper detect JS](https://github.com/hrt/TamperDetectJS/blob/main/index.html#L27)
 
 ## [Javascript Anti Cheats 101](https://github.com/hrt/AnticheatJS#javascript-anti-cheats-101)
 
@@ -49,13 +49,13 @@ Send a XHR request to the same game file that has been loaded and check whether 
 
 1. Avoided by cheats that do not modify the game file (e.g. console cheats).
 
-2. Avoided by cheats that only modify requests from script tags. Electron can look out for non script requests inside of ```session.defaultSession.webRequest.onBeforeRequest``` using ```details.resourceType !== "script"```
+2. Avoided by cheats that only modify requests from script tags (a.k.a do not modify XHR requests). Chrome extensions and Electron can look out for non script requests inside of ```session.defaultSession.webRequest.onBeforeRequest``` using ```details.resourceType !== "script"```.
 
 ## Global variable detection #1
 Blacklist against public cheat(s) by checking for global variables.
 
 * Avoided by dynamically generating random variable names.
-* Avoided by anonymous function call
+* Avoided by using anonymous functions `(function(){var your_hidden_variable = null;})()`
 
 ## Global variable detection #2
 We can dynamically find the global variable of a cheat by iterating the keys in window
@@ -63,13 +63,13 @@ We can dynamically find the global variable of a cheat by iterating the keys in 
 and then checking the attributes of each variable for a known cheat attribute.
 
 * Avoided by defining the cheat global variable using ```Object.defineProperty``` with ```enumerable``` set to ```false```.
-* Avoided by anonymous function call
+* Avoided by using anonymous functions
 
 ## Global variable detection #3
 We can still iterate and find hidden global variables using ```Object.getOwnPropertyNames(window)```and ```getOwnPropertyDescriptors(window)```.
 
-* Avoided by injecting javascript before anything else loads (using preload scripts in electron), to hook these two functions to hide our variable. If doing so, you also would want to hide the presence of the hook by modifying the hooked functions attributes such as ```toString```, ```prototype```, ```hasOwnProperty```, ```constructor``` and ```name```.
-* Avoided by anonymous function call
+* Avoided by injecting javascript before anything else loads, to hook these two functions to hide our variable. If doing so, you also would want to hide the presence of the hook by modifying the hooked functions attributes such as ```toString```, ```prototype```, ```hasOwnProperty```, ```constructor``` and ```name```.
+* Avoided by using anonymous functions
 
 ## DOM modification detection
 This is really a no go since it's easy to detect. For example we can search through DOM for cheat strings used in GUIs by ```document.documentElement.innerHTML.indexOf('aimbot')```.
@@ -82,18 +82,21 @@ Hook canvas draw functions such as ```fillText``` to detect cheat strings. We ca
 * Avoided by injecting javascript as soon as DOM is ready, keeping a copy of the original functions and using them instead.
 
 ## Function modification detection
-Detect game function modifications by checking the ```
-()``` of said function.
+Detect game function modifications by checking the ```toString()``` of said function.
+
+Update: in recent patches to Krunker anticheat they have been using this
 
 * Avoid by also modifying the ```toString``` of the function being modified
 
 ```js
-var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); }
+var hideHook = function(fn, originalFunction) { fn.toString = originalFunction.toString.bind(originalFunction); }
 ```
+
 
 ## Local storage detection
 Detect cheats by checking the storage for any settings saved.
 
+* Either hide the things you store in local storage or don't use it at all.
 * Avoided by storing settings on file system rather than local storage. Electron was modified to intercept XHR requests to a youtube URL with a secret key to save and load settings.
 
 ## User agent detection
